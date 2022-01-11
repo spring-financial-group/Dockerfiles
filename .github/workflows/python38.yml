@@ -1,4 +1,4 @@
-name: Python3.8 Image Build
+name: Python3.8 Image
 
 on:
   schedule:

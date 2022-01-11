@@ -1,4 +1,4 @@
-name: JDK14 Image Build
+name: OpenJDK14 Image
 
 on:
   schedule:

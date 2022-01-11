@@ -1,3 +1,5 @@
+name: Trivy offline database for CI/CD
+
 on:
   schedule:
     - cron:  '0 7 * * *'

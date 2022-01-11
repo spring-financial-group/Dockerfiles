@@ -1,4 +1,4 @@
-name: JRE11 Image Build
+name: OpenJRE11 Image
 
 on:
   schedule:
