@@ -1,0 +1,26 @@
+name: JRE11 Image Build
+
+on:
+  schedule:
+    - cron:  '0 0 * * 0'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout v2
+      uses: actions/checkout@v2
+
+    - name: Login to ghcr.io
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ secrets.USER }}
+        password: ${{ secrets.TOKEN }}
+
+    - name: Build the Docker image
+      run: |
+        docker build openjre11 -t ghcr.io/spring-financial-group/openjre11:latest
+        docker push ghcr.io/spring-financial-group/openjre11:latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      USER: ${{ secrets.USER }}
