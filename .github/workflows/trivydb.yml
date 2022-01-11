@@ -1,4 +1,4 @@
-name: Trivy offline database for CI/CD
+name: Trivy offline DB
 
 on:
   schedule:
