@@ -1,4 +1,4 @@
-name: Python3.8 Image
+name: .Net6 SDK image from official dockerfile
 
 on:
   schedule:
