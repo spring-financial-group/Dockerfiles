@@ -22,15 +22,19 @@ spec:
           name: ""
           resources: {}
         - name: jx-variables
-          resources:
-            # override requests for the pod here
-            requests:
-              cpu: 400m
-              memory: 512Mi
-        - name: check-registry
           resources: {}
-        - name: build-container-build
-          resources: {}
+        - image: gcr.io/kaniko-project/executor:v1.8.0-debug
+          name: build-containers
+          resources: { }
+          script: |
+            chmod +x build_containers.sh
+            ./build_containers.sh
+        - image: ghcr.io/spring-financial-group/container-tools:latest
+          name: push-containers
+          resources: { }
+          script: |
+            chmod +x push_containers.sh
+            ./push_containers.sh
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
