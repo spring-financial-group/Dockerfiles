@@ -49,6 +49,12 @@ spec:
             
             for image in $(find . -maxdepth 1 -type d | sed 's|^./||' | grep -F -v .); do
               echo -e "\n------------------ PUSHING CONTAINER $image ------------------\n"
+              # Update latest image
+              crane push /workspace/source/"$image".tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:latest
+              cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:latest
+              cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:latest
+            
+              # Push versioned image
               crane push /workspace/source/"$image".tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
               cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
               cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
