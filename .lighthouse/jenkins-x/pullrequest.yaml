@@ -23,35 +23,50 @@ spec:
           resources: {}
         - name: jx-variables
           resources: {}
-        - image: gcr.io/kaniko-project/executor:v1.8.0-debug
-          name: build-containers
-          resources: { }
+        - image: ghcr.io/jenkins-x/trivydb:latest
+          name: copy-vulns-db
+          resources: {}
           script: |
-            #!/busybox/sh
-            set -e
-            source .jx/variables.sh
-            cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson /kaniko/.docker/config.json
-            
-            for image in $(find . -maxdepth 1 -type d | sed 's|^./||' | grep -F -v .); do
-              echo -e "\n------------------ BUILDING CONTAINER $image ------------------\n"
-              /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$image --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION --no-push --tarPath "$image".tar
-            done
-        - image: ghcr.io/spring-financial-group/container-tools:latest
-          name: push-containers
-          resources: { }
-          script: |
-            #!/bin/bash
-            set -e
-            source .jx/variables.sh
-            cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
-            
-            for image in $(find . -maxdepth 1 -type d | sed 's|^./||' | grep -F -v .); do
-              echo -e "\n------------------ PUSHING CONTAINER $image ------------------\n"          
-              # Push preview image
-              crane push /workspace/source/"$image".tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
-              cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
-              cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
-            done
+            #!/bin/sh
+            mkdir -p ~/.cache/trivy/db
+            mv /trivydb/* ~/.cache/trivy/db/
+        - name: build-scan-push
+          resources: {}
+          loop:
+            variable: "image"
+            values: ["dotnet6sdk", "openjdk14", "openjre11", "python38", "python38-torch-cpu", "python38-torch-cuda"]
+            steps:
+            - image: gcr.io/kaniko-project/executor:v1.8.0-debug
+              name: build
+              resources: {}
+              script: |
+                #!/busybox/sh
+                set -e
+                source .jx/variables.sh
+                
+                cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson /kaniko/.docker/config.json
+                echo -e "\n------------------ BUILDING CONTAINER $image ------------------\n"
+                /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$image --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION --no-push --tarPath "$image".tar
+            - image: aquasec/trivy:0.28.0
+              name: scan
+              resources: {}
+              script: |
+                echo -e "\n------------------ SCANNING CONTAINER $image ------------------\n"
+                trivy image --exit-code 1 --severity HIGH,CRITICAL --no-progress --ignore-unfixed --input "$image".tar
+            - image: ghcr.io/spring-financial-group/container-tools:latest
+              name: push
+              resources: {}
+              script: |
+                #!/bin/bash
+                set -e
+                source .jx/variables.sh
+                cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
+                
+                echo -e "\n------------------ PUSHING CONTAINER $image ------------------\n"          
+                # Push preview image
+                crane push /workspace/source/"$image".tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
+                cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
+                cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$image:$VERSION
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
