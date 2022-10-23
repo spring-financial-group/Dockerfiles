@@ -32,7 +32,7 @@ spec:
             #!/bin/sh
             mkdir -p ~/.cache/trivy/db
             mv /trivydb/* ~/.cache/trivy/db/
-        - name: build-scan-push
+        - name: "build-scan-push"
           resources: {}
           loop:
             variable: "image"
