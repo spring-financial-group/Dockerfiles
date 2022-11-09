@@ -7,5 +7,4 @@ RUN ln -s /usr/bin/pydoc3 /usr/local/bin/pydoc \
     && ln -s /usr/bin/python3 /usr/local/bin/python \
     && ln -s /usr/bin/python3-config /usr/local/bin/python-config \
     && python get-pip.py
-RUN python3 --version
 CMD ["bash"]
