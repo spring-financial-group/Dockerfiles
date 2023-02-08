@@ -1,4 +1,4 @@
-FROM ubuntu:23.04
+FROM ubuntu:22.10
 RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y git libglib2.0-0 libsm6 libxrender1 libxext6 libexpat1-dev libpython3-dev python3-dev python3 python3-distutils wget curl ca-certificates \
     && rm -rf /var/lib/apt/lists/* \ 
