@@ -1,4 +1,4 @@
-FROM ubuntu:22.10
+FROM ubuntu:22.04
 RUN apt-get update \
     && apt-get install gcc -y
 RUN apt update \
