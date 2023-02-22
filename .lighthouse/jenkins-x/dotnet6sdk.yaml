@@ -1,22 +1,13 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  creationTimestamp: null
-  name: pullrequest
+  name: dotnet6sdk
 spec:
   pipelineSpec:
     tasks:
-      - name: echo-stuff
-        matrix:
-            params:
-              - name: DOCKERIMAGE
-                value:
-                  - dotnet6sdk
-                  - java11
+      - name: from-build-pack
         resources: {}
         taskSpec:
-          params:
-            - name: DOCKERIMAGE
           metadata: {}
           stepTemplate:
             image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
@@ -25,15 +16,36 @@ spec:
               # override limits for all containers here
               limits: {}
             workingDir: /workspace/source
-            env:
-              - name: IMAGE_NAME
+            envs:
+              - name: IMAGE
                 value: dotnet6sdk
           steps:
-            - name: echo
-              image: alpine
+            - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+              name: ""
+              resources: {}
+            - name: jx-variables
+              resources: {}
+            - image: gcr.io/kaniko-project/executor:v1.8.0-debug
+              name: build-containers
+              resources: {}
               script: |
-                  #!/bin/sh
-                  echo "$(params.DOCKERIMAGE)"
+                #!/busybox/sh
+                set -e
+                source .jx/variables.sh
+                cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson /kaniko/.docker/config.json
+                /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/"$IMAGE" --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE:$VERSION --no-push --tarPath "$IMAGE".tar
+            - image: ghcr.io/spring-financial-group/container-tools:latest
+              name: push-containers
+              resources: {}
+              script: |
+                #!/bin/bash
+                set -e
+                source .jx/variables.sh
+                cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
+                crane push /workspace/source/"$IMAGE".tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE:$VERSION
+                cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE:$VERSION
+                cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE:$VERSION
+  podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
 status: {}
