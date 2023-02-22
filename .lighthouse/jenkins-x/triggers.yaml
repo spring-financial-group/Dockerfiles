@@ -7,6 +7,11 @@ spec:
     always_run: true
     optional: false
     source: "pullrequest.yaml"
+  - name: dotnet6sdk
+    context: "dotnet6sdk"
+    always_run: true
+    optional: false
+    source: "dotnet6sdk.yaml"
   postsubmits:
   - name: release
     context: "release"
