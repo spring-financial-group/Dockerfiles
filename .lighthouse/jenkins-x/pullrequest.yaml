@@ -25,7 +25,7 @@ spec:
           resources: {}
         - image: gcr.io/kaniko-project/executor:v1.8.0-debug
           name: build-containers
-          resources: { }
+          resources: {}
           script: |
             #!/busybox/sh
             set -e
@@ -38,7 +38,7 @@ spec:
             done
         - image: ghcr.io/spring-financial-group/container-tools:latest
           name: push-containers
-          resources: { }
+          resources: {}
           script: |
             #!/bin/bash
             set -e
