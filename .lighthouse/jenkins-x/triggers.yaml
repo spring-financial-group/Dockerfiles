@@ -43,6 +43,11 @@ spec:
     optional: false
     source: "/python310-torch-cuda/pr.yaml"
   postsubmits:
+  - name: release
+    source: "release.yaml"
+    branches:
+      - ^main$
+      - ^master$
   - name: container-tools-release
     source: "/container-tools/release.yaml"
     branches:
