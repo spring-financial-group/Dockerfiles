@@ -2,6 +2,10 @@ apiVersion: config.lighthouse.jenkins-x.io/v1alpha1
 kind: TriggerConfig
 spec:
   presubmits:
+  - name: container-tools-pr
+    always_run: true
+    optional: false
+    source: "container-tools-pr.yaml"
   - name: dotnet6sdk-pr
     always_run: true
     optional: false
@@ -39,6 +43,11 @@ spec:
     optional: false
     source: "python310-torch-cuda-pr.yaml"
   postsubmits:
+  - name: container-tools-release
+    source: "container-tools-release.yaml"
+    branches:
+      - ^main$
+      - ^master$
   - name: dotnet6sdk-release
     source: "dotnet6sdk-release.yaml"
     branches:
