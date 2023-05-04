@@ -1,8 +1,9 @@
 # Dockerfiles
-Container images without high and critical vulnerabilities.
+Top level container images used in MQube services.
 
 ## Adding a new container image
-To add a new container image create a new folder containing the new Dockerfile. The name of the folder will become the name 
-of the image in the registry.
-
-The PR pipeline will build the images for testing. On release the containers will be pushed to the registry.  
+1. Create a folder containing the Dockerfile you wish to use in the root of the repository. The name of this folder
+will become the name of the generated image.
+2. In `/.lighthouse/jenkins-x/` copy one of the existing folders and rename it to the name of image.
+3. Change the environment variable `IMAGE_NAME` in `pr.yaml` & `release.yaml` to be the name of the image.
+4. Open a PR with your changes.
