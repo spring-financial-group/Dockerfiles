@@ -5,91 +5,91 @@ spec:
   - name: container-tools-pr
     always_run: true
     optional: false
-    source: "container-tools-pr.yaml"
+    source: "/container-tools/pr.yaml"
   - name: dotnet6sdk-pr
     always_run: true
     optional: false
-    source: "dotnet6sdk-pr.yaml"
+    source: "/dotnet6sdk/pr.yaml"
   - name: openjdk14-pr
     always_run: true
     optional: false
-    source: "openjdk14-pr.yaml"
+    source: "/openjdk14/pr.yaml"
   - name: openjre11-pr
     always_run: true
     optional: false
-    source: "openjre11-pr.yaml"
+    source: "/openjre11/pr.yaml"
   - name: python38-pr
     always_run: true
     optional: false
-    source: "python38-pr.yaml"
+    source: "pr.yaml"
   - name: python38-torch-cpu-pr
     always_run: true
     optional: false
-    source: "python38-torch-cpu-pr.yaml"
+    source: "/python38-torch-cpu/pr.yaml"
   - name: python38-torch-cuda-pr
     always_run: true
     optional: false
-    source: "python38-torch-cuda-pr.yaml"
+    source: "/python38-torch-cuda/pr.yaml"
   - name: python310-pr
     always_run: true
     optional: false
-    source: "python310-pr.yaml"
+    source: "/python310/pr.yaml"
   - name: python310-torch-cpu-pr
     always_run: true
     optional: false
-    source: "python310-torch-cpu-pr.yaml"
+    source: "/python310-torch-cpu/pr.yaml"
   - name: python310-torch-cuda-pr
     always_run: true
     optional: false
-    source: "python310-torch-cuda-pr.yaml"
+    source: "/python310-torch-cuda/pr.yaml"
   postsubmits:
   - name: container-tools-release
-    source: "container-tools-release.yaml"
+    source: "/container-tools/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: dotnet6sdk-release
-    source: "dotnet6sdk-release.yaml"
+    source: "/dotnet6sdk/release.yaml"
     branches:
     - ^main$
     - ^master$
   - name: openjdk14-release
-    source: "openjdk14-release.yaml"
+    source: "/openjdk14/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: openjre11-release
-    source: "openjre11-release.yaml"
+    source: "/openjre11/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python38-release
-    source: "python38-release.yaml"
+    source: "/python38/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python38-torch-cpu-release
-    source: "python38-torch-cpu-release.yaml"
+    source: "/python38-torch-cpu/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python38-torch-cuda-release
-    source: "python38-torch-cuda-release.yaml"
+    source: "/python38-torch-cuda/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python310-release
-    source: "python310-release.yaml"
+    source: "/python310/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python310-torch-cpu-release
-    source: "python310-torch-cpu-release.yaml"
+    source: "/python310-torch-cpu/release.yaml"
     branches:
       - ^main$
       - ^master$
   - name: python310-torch-cuda-release
-    source: "python310-torch-cuda-release.yaml"
+    source: "/python310-torch-cuda/release.yaml"
     branches:
       - ^main$
       - ^master$
