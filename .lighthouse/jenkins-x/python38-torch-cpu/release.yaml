@@ -10,7 +10,7 @@ spec:
       taskSpec:
         metadata: {}
         stepTemplate:
-          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/release.yaml@versionStream
           name: ""
           resources:
             # override limits for all containers here
@@ -22,6 +22,8 @@ spec:
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
+          resources: {}
+        - name: next-version
           resources: {}
         - name: jx-variables
           resources: {}
