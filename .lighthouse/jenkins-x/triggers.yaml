@@ -21,7 +21,7 @@ spec:
   - name: python38-pr
     always_run: true
     optional: false
-    source: "pr.yaml"
+    source: "/python38/pr.yaml"
   - name: python38-torch-cpu-pr
     always_run: true
     optional: false
