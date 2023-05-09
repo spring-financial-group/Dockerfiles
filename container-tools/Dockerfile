@@ -13,5 +13,6 @@ RUN mkdir /source && cd /source \
 FROM ubuntu:20.04 AS final
 COPY --from=builder /bin/cosign /bin/docker-credential-acr-env /bin/crane /bin/
 
-CMD ["bash"]
+RUN apt update && apt install -y apt-transport-https
 
+CMD ["bash"]
