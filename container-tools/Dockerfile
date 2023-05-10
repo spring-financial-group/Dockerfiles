@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:3.16
 
-RUN apt update && apt install -y ca-certificates curl wget apt-transport-https
+RUN apk add --no-cache ca-certificates curl wget bash
 
 RUN mkdir /source && cd /source \
     && wget https://github.com/spring-financial-group/docker-credential-acr-env/releases/download/v0.0.7/docker-credential-acr-env \
