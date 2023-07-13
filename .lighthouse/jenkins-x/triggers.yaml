@@ -42,6 +42,10 @@ spec:
     always_run: true
     optional: false
     source: "/python310-torch-cuda/pr.yaml"
+  - name: nginx-pr
+    always_run: true
+    optional: false
+    source: "/nginx/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -95,6 +99,11 @@ spec:
       - ^master$
   - name: python310-torch-cuda-release
     source: "/python310-torch-cuda/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: nginx-release
+    source: "/nginx/release.yaml"
     branches:
       - ^main$
       - ^master$
