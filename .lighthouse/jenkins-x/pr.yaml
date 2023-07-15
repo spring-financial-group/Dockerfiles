@@ -1,14 +1,29 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: python310-torch-cuda-pr
+  name: dotnet6sdk-pr
 spec:
+  params:
+    - name: images
+      value:
+        - name: container-tools
+        - name: dotnet6sdk
   pipelineSpec:
+    params:
+      - name: images
+        type: array
     tasks:
     - name: from-build-pack
+      matrix:
+        params:
+          - name: image
+            value: $(params.images[*])
       resources: {}
       taskSpec:
         metadata: {}
+        params:
+          - name: image
+            default: ""
         stepTemplate:
           image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
           name: ""
@@ -16,9 +31,6 @@ spec:
             # override limits for all containers here
             limits: {}
           workingDir: /workspace/source
-          env:
-            - name: IMAGE_NAME
-              value: python310-torch-cuda
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
@@ -34,7 +46,7 @@ spec:
             source .jx/variables.sh
             cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson /kaniko/.docker/config.json
             
-            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
+            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$(params.image) --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.image):$VERSION --no-push --tarPath $(params.image).tar
         - image: ghcr.io/spring-financial-group/container-tools:latest
           name: push-containers
           resources: {}
@@ -44,9 +56,9 @@ spec:
             source .jx/variables.sh
             cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
             
-            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.image):$VERSION
+            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.image):$VERSION
+            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.image):$VERSION
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
