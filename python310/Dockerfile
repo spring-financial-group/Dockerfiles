@@ -1,5 +1,4 @@
-FROM ubuntu:22.10
-RUN echo "This doesn't do anything important, if you see this feel free to remove it"
+FROM ubuntu:22.04
 RUN apt-get update \
     && apt-get install gcc -y
 RUN apt update \
