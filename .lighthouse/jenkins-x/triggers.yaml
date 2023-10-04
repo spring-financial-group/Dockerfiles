@@ -6,10 +6,6 @@ spec:
     always_run: true
     optional: false
     source: "/container-tools/pr.yaml"
-  - name: dotnet6sdk-pr
-    always_run: true
-    optional: false
-    source: "/dotnet6sdk/pr.yaml"
   - name: openjdk14-pr
     always_run: true
     optional: false
@@ -18,18 +14,6 @@ spec:
     always_run: true
     optional: false
     source: "/openjre11/pr.yaml"
-  - name: python38-pr
-    always_run: true
-    optional: false
-    source: "/python38/pr.yaml"
-  - name: python38-torch-cpu-pr
-    always_run: true
-    optional: false
-    source: "/python38-torch-cpu/pr.yaml"
-  - name: python38-torch-cuda-pr
-    always_run: true
-    optional: false
-    source: "/python38-torch-cuda/pr.yaml"
   - name: python310-pr
     always_run: true
     optional: false
