@@ -1,5 +1,6 @@
-FROM alpine:3.16
+FROM bitnami/kubectl:1.27 as kubectl
 
+FROM alpine:3.16
 RUN apk add --no-cache ca-certificates curl wget bash
 
 RUN mkdir /source && cd /source \
@@ -9,5 +10,7 @@ RUN mkdir /source && cd /source \
     && tar -xzvf go-containerregistry_Linux_x86_64.tar.gz \
     && mv cosign-linux-amd64 cosign && mv cosign docker-credential-acr-env crane -t /bin \
     && chmod +x /bin/cosign /bin/docker-credential-acr-env /bin/crane
+
+COPY --from=kubectl /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/
 
 CMD ["bash"]
