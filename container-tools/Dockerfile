@@ -1,7 +1,7 @@
 FROM bitnami/kubectl:1.27 as kubectl
 
 FROM alpine:3.16
-RUN apk add --no-cache ca-certificates curl wget bash
+RUN apk add --no-cache ca-certificates curl wget bash git
 
 RUN mkdir /source && cd /source \
     && wget https://github.com/spring-financial-group/docker-credential-acr-env/releases/download/v0.0.7/docker-credential-acr-env \
