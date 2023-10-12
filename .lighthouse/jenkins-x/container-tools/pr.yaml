@@ -35,6 +35,38 @@ spec:
             cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson /kaniko/.docker/config.json
             
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
+        - image: ghcr.io/jenkins-x/trivydb:latest
+          name: copy-vulns-db
+          resources: {}
+          script: |
+            #!/bin/sh
+            mkdir -p ~/.cache/trivy/db
+            mv /trivydb/* ~/.cache/trivy/db/
+        - image: aquasec/trivy:0.45.1
+          name: vulnscan
+          resources: {}
+          script: |
+            trivy image --timeout 25m0s --security-checks vuln --input /workspace/source/$IMAGE_NAME.tar | tee /workspace/source/scanresults.txt
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+          name: analyze
+          resources: {}
+          script: |
+            #!/bin/bash
+            SLACK_WEBHOOK_URL=$(kubectl get secret slack -n jx -o jsonpath="{.data['sec-alerts-webhook']}" | base64 -d)
+            PIPELINE_NAME=$(context.pipeline.name)
+            PIPELINE_RUN_NAMESPACE=$(context.pipelineRun.namespace)
+            TEKTON_URL=https://tekton-dashboard.jx.mqube.build/#/namespaces/$PIPELINE_RUN_NAMESPACE/pipelineruns/$PIPELINE_NAME
+            PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
+            
+            source .jx/variables.sh
+            cat /workspace/source/scanresults.txt
+            if egrep 'HIGH|CRITICAL' /workspace/source/scanresults.txt | grep -v 'Total' | grep -v 'guests via high...' | grep -v "numpy" | grep -v "linux-libc-dev" | grep -v 'vulnerability leads to critical' | grep -v 'python'
+            then
+            echo "VULNERABILITIES found!" && curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"HIGH/CRITICAL VULNERABILITY FOUND in $APP_NAME:$VERSION\n• Build stopped at <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null
+            exit 1
+            else
+            echo "EVERYTHING IS OK"
+            fi
         - image: ghcr.io/spring-financial-group/container-tools:latest
           name: push-containers
           resources: {}
