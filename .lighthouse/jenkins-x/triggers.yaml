@@ -3,32 +3,26 @@ kind: TriggerConfig
 spec:
   presubmits:
   - name: container-tools-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/container-tools\/.*$
     source: "/container-tools/pr.yaml"
   - name: openjdk14-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/openjdk14\/.*$
     source: "/openjdk14/pr.yaml"
   - name: openjre11-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/openjre11\/.*$
     source: "/openjre11/pr.yaml"
   - name: python310-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/python310\/.*$
     source: "/python310/pr.yaml"
   - name: python310-torch-cpu-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/python310-torch-cpu\/.*$
     source: "/python310-torch-cpu/pr.yaml"
   - name: python310-torch-cuda-pr
-    always_run: true
     optional: false
     run_if_changed: ^.*\/python310-torch-cuda\/.*$
     source: "/python310-torch-cuda/pr.yaml"
