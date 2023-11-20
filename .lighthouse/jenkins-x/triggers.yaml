@@ -26,6 +26,10 @@ spec:
     optional: false
     run_if_changed: ^.*python310-torch-cuda\/.*$
     source: "/python310-torch-cuda/pr.yaml"
+  - name: terra-test-pr
+    optional: false
+    run_if_changed: ^.*terra-test\/.*$
+    source: "/terra-test/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -59,6 +63,11 @@ spec:
       - ^master$
   - name: python310-torch-cuda-release
     source: "/python310-torch-cuda/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: terra-test-release
+    source: "/terra-test/release.yaml"
     branches:
       - ^main$
       - ^master$
