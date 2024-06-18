@@ -24,7 +24,7 @@ RUN apt update \
        curl \
        ca-certificates \
     && apt clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN ln -s /usr/bin/pydoc3 /usr/local/bin/pydoc \
