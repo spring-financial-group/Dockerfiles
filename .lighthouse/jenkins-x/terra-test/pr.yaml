@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: dotnet6sdk-pr
+  name: terra-test-pr
 spec:
   pipelineSpec:
     tasks:
@@ -18,7 +18,7 @@ spec:
           workingDir: /workspace/source
           env:
             - name: IMAGE_NAME
-              value: dotnet6sdk
+              value: terra-test
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
