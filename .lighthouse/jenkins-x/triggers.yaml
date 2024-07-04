@@ -30,6 +30,10 @@ spec:
     optional: false
     run_if_changed: ^.*nginx\/.*$
     source: "/nginx/pr.yaml"
+  - name: node-pr
+    optional: false
+    run_if_changed: ^.*node\/.*$
+    source: "/node/pr.yaml"
   - name: terra-test-pr
     optional: false
     run_if_changed: ^.*terra-test\/.*$
@@ -72,6 +76,11 @@ spec:
       - ^master$
   - name: nginx-release
     source: "/nginx/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: node-release
+    source: "/node/release.yaml"
     branches:
       - ^main$
       - ^master$
