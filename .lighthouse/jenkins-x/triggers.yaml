@@ -26,6 +26,10 @@ spec:
     optional: false
     run_if_changed: ^.*python310-torch-cuda\/.*$
     source: "/python310-torch-cuda/pr.yaml"
+  - name: nginx-pr
+    optional: false
+    run_if_changed: ^.*nginx\/.*$
+    source: "/nginx/pr.yaml"
   - name: terra-test-pr
     optional: false
     run_if_changed: ^.*terra-test\/.*$
@@ -63,6 +67,11 @@ spec:
       - ^master$
   - name: python310-torch-cuda-release
     source: "/python310-torch-cuda/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: nginx-release
+    source: "/nginx/release.yaml"
     branches:
       - ^main$
       - ^master$
