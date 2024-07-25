@@ -1,4 +1,4 @@
-FROM bitnami/kubectl:1.28.2 as kubectl
+FROM bitnami/kubectl:1.29 AS kubectl
 
 FROM alpine:3.16
 RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
