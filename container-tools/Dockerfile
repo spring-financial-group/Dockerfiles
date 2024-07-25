@@ -1,7 +1,7 @@
-FROM bitnami/kubectl:1.28.2 as kubectl
+FROM bitnami/kubectl:1.30 AS kubectl
 
 FROM alpine:3.16
-RUN apk add --no-cache ca-certificates curl wget bash git make yq jq
+RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/download/v0.0.4/docker-credential-acr-env_0.0.4_linux_amd64.tar.gz \
@@ -9,7 +9,7 @@ RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/dow
     && mv docker-credential-acr-env /bin/docker-credential-acr-env \
     && chmod +x /bin/docker-credential-acr-env
 
-RUN wget -nv https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-linux-amd64 \
+RUN wget -nv https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-linux-amd64 \
     && mv cosign-linux-amd64 /bin/cosign \
     && chmod +x /bin/cosign
 
