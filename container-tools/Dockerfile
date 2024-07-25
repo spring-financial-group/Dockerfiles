@@ -9,7 +9,7 @@ RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/dow
     && mv docker-credential-acr-env /bin/docker-credential-acr-env \
     && chmod +x /bin/docker-credential-acr-env
 
-RUN wget -nv https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-linux-amd64 \
+RUN wget -nv https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-linux-amd64 \
     && mv cosign-linux-amd64 /bin/cosign \
     && chmod +x /bin/cosign
 
