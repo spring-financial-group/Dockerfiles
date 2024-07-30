@@ -2,6 +2,10 @@ FROM nginx:stable-alpine
 
 RUN apk update
 
+# CVE-2024-2398
+RUN apk add --upgrade curl
+RUN apk add --upgrade libcurl
+
 COPY conf/default.conf /etc/nginx/conf.d/
 COPY conf/default /etc/nginx/sites-available/
 
