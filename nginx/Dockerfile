@@ -2,8 +2,8 @@ FROM nginx:stable-alpine
 
 RUN apk update
 
-# CVE-2024-2398
-RUN apk add --upgrade curl libcurl
+# CVE-2024-2398 & CVE-2024-45490
+RUN apk add --upgrade curl libcurl libexpat
 
 COPY conf/default.conf /etc/nginx/conf.d/
 COPY conf/default /etc/nginx/sites-available/
