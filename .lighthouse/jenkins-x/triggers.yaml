@@ -6,6 +6,10 @@ spec:
     optional: false
     run_if_changed: ^.*container-tools\/.*$
     source: "/container-tools/pr.yaml"
+  - name: kde-neon-pr
+    optional: false
+    run_if_changed: ^.*kde-neon\/.*$
+    source: "/kde-neon/pr.yaml"
   - name: openjdk14-pr
     optional: false
     run_if_changed: ^.*openjdk14\/.*$
@@ -46,6 +50,11 @@ spec:
       - ^master$
   - name: container-tools-release
     source: "/container-tools/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: kde-neon-release
+    source: "/kde-neon/release.yaml"
     branches:
       - ^main$
       - ^master$
