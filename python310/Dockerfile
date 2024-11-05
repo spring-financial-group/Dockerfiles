@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 RUN apt-get update \
-    && apt-get install -y gcc libpmix2 software-properties-common curl wget
+    && apt-get install -y gcc libpmix2 software-properties-common curl wget make
 
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq &&\
     chmod +x /usr/bin/yq
