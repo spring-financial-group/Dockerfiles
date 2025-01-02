@@ -1,8 +1,7 @@
-FROM node:18.13
+FROM node:18.19
 
-RUN npm install -g @angular/cli@17.0.9
-RUN npm install -g @angular/compiler-cli@17.0.8
-RUN npm install -g @angular/language-service@17.0.8
-RUN npm install -g typescript@5.2.2
+RUN npm install -g @angular/cli@18.2.12
+RUN npm install -g @angular/compiler-cli@18.2.13
+RUN npm install -g typescript@5.5.4
 
 CMD ["bash"]
