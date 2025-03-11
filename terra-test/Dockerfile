@@ -1,4 +1,4 @@
-FROM golang:1.19.0
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.19.0
 
 RUN apt-get update \
     && apt-get install -y unzip jq \
