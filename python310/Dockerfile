@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM jx3mqubebuild.azurecr.io/docker-io/library/ubuntu:22.04
 RUN apt-get update \
     && apt-get install -y gcc libpmix2 wget make
 

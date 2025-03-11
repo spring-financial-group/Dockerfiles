@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM jx3mqubebuild.azurecr.io/docker-io/library/ubuntu:20.04
 
 WORKDIR /source
 COPY . .

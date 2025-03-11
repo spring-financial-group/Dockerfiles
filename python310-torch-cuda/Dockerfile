@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.7.1-base-ubuntu22.04
+FROM jx3mqubebuild.azurecr.io/docker-io/nvidia/cuda:11.7.1-base-ubuntu22.04
 RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y git libglib2.0-0 libsm6 libxrender1 libxext6 libexpat1-dev libpython3-dev python3-dev python3 python3-distutils wget curl ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
