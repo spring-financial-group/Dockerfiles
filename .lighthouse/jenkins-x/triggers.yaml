@@ -84,6 +84,11 @@ spec:
     branches:
       - ^main$
       - ^master$
+  - name: android-release
+    source: "/android/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
   - name: terra-test-release
     source: "/terra-test/release.yaml"
     branches:

@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:18.19
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:20.18
 
 RUN npm install -g @angular/cli@18.2.12
 RUN npm install -g @angular/compiler-cli@18.2.13

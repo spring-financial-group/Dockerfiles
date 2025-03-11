@@ -16,6 +16,6 @@ RUN ln -s /usr/bin/pydoc3 /usr/local/bin/pydoc \
     && python get-pip.py
 RUN pip install --upgrade pip \
     && pip install --upgrade setuptools \
-    && pip install pipenv
-RUN wget -qO- https://astral.sh/uv/install.sh | sh
+    && pip install pipenv \
+    && pip install uv
 CMD ["bash"]

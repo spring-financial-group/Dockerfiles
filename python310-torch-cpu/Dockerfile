@@ -8,5 +8,5 @@ RUN ln -s /usr/bin/pydoc3 /usr/local/bin/pydoc \
     && ln -s /usr/bin/python3-config /usr/local/bin/python-config \
     && python get-pip.py
 RUN apt-get update && apt-get -y install gcc make git gfortran libopenblas-dev liblapack-dev poppler-utils libgl1-mesa-dev
-RUN python3 -m pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cpu
+RUN python3 -m pip install uv torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cpu
 CMD ["bash"]
