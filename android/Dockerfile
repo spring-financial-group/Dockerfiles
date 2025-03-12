@@ -36,7 +36,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip -O /tmp
     && ln -s /opt/gradle-8.9/bin/gradle /usr/local/bin/gradle
 
 # Install Ruby required for Fastlane deployment
-RUN apt install -y ruby ruby-dev
+RUN apt update && apt install -y ruby ruby-dev
 RUN export LC_ALL=UTF-8
 RUN export LANG=UTF-8
 
@@ -48,4 +48,3 @@ RUN export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin/:$PATH"
 
 # Verify installations
 RUN node -v && npm -v && java -version && gradle -v && sdkmanager --list
-
