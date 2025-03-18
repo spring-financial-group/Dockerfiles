@@ -1,5 +1,4 @@
-# Use official Node.js as base image
-FROM node:20-bullseye
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:20.18
 
 # Install required dependencies
 RUN apt-get update && apt-get install -y \
