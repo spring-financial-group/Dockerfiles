@@ -38,6 +38,10 @@ spec:
     optional: false
     run_if_changed: ^.*terra-test\/.*$
     source: "/terra-test/pr.yaml"
+  - name: net8-integration-tests-pr
+    optional: false
+    run_if_changed: ^.*net8-integration-tests\/.*$
+    source: "/net8-integration-tests/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -91,6 +95,11 @@ spec:
       - ^master$
   - name: terra-test-release
     source: "/terra-test/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: net8-integration-tests-release
+    source: "/net8-integration-tests/release.yaml"
     branches:
       - ^main$
       - ^master$
