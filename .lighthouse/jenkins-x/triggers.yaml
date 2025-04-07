@@ -44,7 +44,7 @@ spec:
     source: "/net8-integration-tests/pr.yaml"
   - name: net8-sonar-pr
     optional: false
-    run_if_changed: ^.*net8-integration-tests\/.*$
+    run_if_changed: ^.*net8-sonar\/.*$
     source: "/net8-sonar/pr.yaml"
   postsubmits:
   - name: release
