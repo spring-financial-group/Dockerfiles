@@ -42,6 +42,10 @@ spec:
     optional: false
     run_if_changed: ^.*net8-integration-tests\/.*$
     source: "/net8-integration-tests/pr.yaml"
+  - name: net8-sonar-pr
+    optional: false
+    run_if_changed: ^.*net8-sonar\/.*$
+    source: "/net8-sonar/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -100,6 +104,11 @@ spec:
       - ^master$
   - name: net8-integration-tests-release
     source: "/net8-integration-tests/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: net8-sonar-release
+    source: "/net8-sonar/release.yaml"
     branches:
       - ^main$
       - ^master$
