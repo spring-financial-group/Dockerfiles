@@ -8,7 +8,7 @@ RUN apt-get update \
     && unzip $TERRAFORM_FILENAME && echo $TERRAFORM_FILENAME \
     && rm $TERRAFORM_FILENAME \
     && mv terraform /usr/local/go/bin/terraform \
-    && curl -L -o tfsec "https://github.com/aquasecurity/tfsec/releases/download/v1.28.14/tfsec-linux-arm64" \
+    && curl -L -o tfsec "https://github.com/aquasecurity/tfsec/releases/download/v1.28.14/tfsec-linux-amd64" \
     && chmod +x tfsec \
     && mv tfsec /usr/local/bin
 
