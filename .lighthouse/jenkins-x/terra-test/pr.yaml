@@ -5,9 +5,6 @@ metadata:
 spec:
   pipelineSpec:
     tasks:
-    volumeMounts:
-    - mountPath: /temp-docker-config
-      name: temp-docker-config
     - name: from-build-pack
       resources: {}
       taskSpec:
@@ -22,6 +19,9 @@ spec:
           env:
             - name: IMAGE_NAME
               value: terra-test
+        volumeMounts:
+        - mountPath: /temp-docker-config
+          name: temp-docker-config
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
