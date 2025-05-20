@@ -5,6 +5,9 @@ metadata:
 spec:
   pipelineSpec:
     tasks:
+    volumeMounts:
+    - mountPath: /temp-docker-config
+      name: temp-docker-config
     - name: from-build-pack
       resources: {}
       taskSpec:
