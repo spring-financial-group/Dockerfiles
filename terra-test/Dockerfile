@@ -8,6 +8,6 @@ RUN apt-get update \
     && unzip $TERRAFORM_FILENAME && echo $TERRAFORM_FILENAME \
     && rm $TERRAFORM_FILENAME \
     && mv terraform /usr/local/go/bin/terraform \
-    && curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
+    && pwd
 
 CMD ["bash"]
