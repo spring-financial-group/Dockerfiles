@@ -35,7 +35,7 @@ spec:
             #!/busybox/sh
             set -e
             source .jx/variables.sh
-            cp /temp-docker-config/config.json ~/.docker/config.json
+            cp /temp-docker-config/config.json /kaniko/.docker/config.json
             
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
         - image: ghcr.io/spring-financial-group/container-tools:latest
