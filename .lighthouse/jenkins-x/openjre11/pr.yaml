@@ -17,8 +17,8 @@ spec:
             limits: {}
           workingDir: /workspace/source
           env:
-            - name: IMAGE_NAME
-              value: openjre11
+          - name: IMAGE_NAME
+            value: openjre11
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
@@ -42,11 +42,18 @@ spec:
             #!/bin/bash
             set -e
             source .jx/variables.sh
-            cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
+            cp /temp-docker-config/config.json /kaniko/.docker/config.json
             
             crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
             cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
             cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+        volumes:
+        - name: temp-docker-config
+          secret:
+            secretName: tekton-temp-registry-auth
+            items:
+            - key: .dockerconfigjson
+              path: config.json
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s

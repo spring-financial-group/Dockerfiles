@@ -17,8 +17,8 @@ spec:
             limits: {}
           workingDir: /workspace/source
           env:
-            - name: IMAGE_NAME
-              value: container-tools
+          - name: IMAGE_NAME
+            value: container-tools
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
@@ -47,7 +47,7 @@ spec:
             #!/bin/bash
             set -e
             source .jx/variables.sh
-            cp /tekton/creds-secrets/tekton-container-registry-auth/.dockerconfigjson ~/.docker/config.json
+            cp /temp-docker-config/config.json /kaniko/.docker/config.json
             
             ## Push & sign versioned image
             crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
@@ -58,6 +58,13 @@ spec:
             crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
             cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
             cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
+        volumes:
+        - name: temp-docker-config
+          secret:
+            secretName: tekton-temp-registry-auth
+            items:
+            - key: .dockerconfigjson
+              path: config.json
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
