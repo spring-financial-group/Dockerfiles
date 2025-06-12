@@ -46,78 +46,78 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*net8-sonar\/.*$)
     source: "/net8-sonar/pr.yaml"
-  - name: golang124-chromium-pr
+  - name: golang-chromium-pr
     optional: false
-    run_if_changed: ^.*golang124-chromium\/.*$
-    source: "/golang124-chromium/pr.yaml"
+    run_if_changed: ^.*golang-chromium\/.*$
+    source: "/golang-chromium/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: container-tools-release
     source: "/container-tools/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: openjdk14-release
     source: "/openjdk14/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: openjre11-release
     source: "/openjre11/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: python310-release
     source: "/python310/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: python310-torch-cpu-release
     source: "/python310-torch-cpu/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: python310-torch-cuda-release
     source: "/python310-torch-cuda/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: nginx-release
     source: "/nginx/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: node-release
     source: "/node/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: android-release
     source: "/android/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: terra-test-release
     source: "/terra-test/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: net8-integration-tests-release
     source: "/net8-integration-tests/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
   - name: net8-sonar-release
     source: "/net8-sonar/release.yaml"
     branches:
-      - ^main$
-      - ^master$
-  - name: golang124-chromium-release
-    source: "/golang124-chromium/release.yaml"
+    - ^main$
+    - ^master$
+  - name: golang-chromium-release
+    source: "/golang-chromium/release.yaml"
     branches:
-      - ^main$
-      - ^master$
+    - ^main$
+    - ^master$
