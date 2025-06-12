@@ -16,6 +16,9 @@ spec:
             # override limits for all containers here
             limits: {}
           workingDir: /workspace/source
+          volumeMounts:
+          - mountPath: /temp-docker-config
+            name: temp-docker-config
           env:
           - name: IMAGE_NAME
             value: openjre11
