@@ -46,6 +46,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*net8-sonar\/.*$)
     source: "/net8-sonar/pr.yaml"
+  - name: golang124-chromium-pr
+    optional: false
+    run_if_changed: ^.*golang124-chromium\/.*$
+    source: "/golang124-chromium/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -109,6 +113,11 @@ spec:
       - ^master$
   - name: net8-sonar-release
     source: "/net8-sonar/release.yaml"
+    branches:
+      - ^main$
+      - ^master$
+  - name: golang124-chromium-release
+    source: "/golang124-chromium/release.yaml"
     branches:
       - ^main$
       - ^master$
