@@ -48,7 +48,7 @@ spec:
     source: "/net8-sonar/pr.yaml"
   - name: golang-chromium-pr
     optional: false
-    run_if_changed: ^.*golang-chromium\/.*$
+    run_if_changed: (README.md|^.*golang-chromium\/.*$)
     source: "/golang-chromium/pr.yaml"
   postsubmits:
   - name: release
