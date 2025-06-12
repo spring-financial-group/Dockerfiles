@@ -6,15 +6,15 @@ spec:
   pipelineSpec:
     tasks:
     - name: from-build-pack
-      resources: { }
+      resources: {}
       taskSpec:
-        metadata: { }
+        metadata: {}
         stepTemplate:
           image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/release.yaml@versionStream
           name: ""
           resources:
             # override limits for all containers here
-            limits: { }
+            limits: {}
           workingDir: /workspace/source
           volumeMounts:
           - mountPath: /temp-docker-config
@@ -25,17 +25,17 @@ spec:
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
-          resources: { }
+          resources: {}
         - name: next-version
-          resources: { }
+          resources: {}
           script: |
             #!/usr/bin/env sh
             jx-release-version > VERSION
         - name: jx-variables
-          resources: { }
+          resources: {}
         - image: gcr.io/kaniko-project/executor:v1.8.0-debug
           name: build-containers
-          resources: { }
+          resources: {}
           script: |
             #!/busybox/sh
             set -e
@@ -45,7 +45,7 @@ spec:
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
         - image: ghcr.io/spring-financial-group/container-tools:latest
           name: push-containers
-          resources: { }
+          resources: {}
           script: |
             #!/bin/bash
             set -e
@@ -68,7 +68,7 @@ spec:
             items:
             - key: .dockerconfigjson
               path: config.json
-  podTemplate: { }
+  podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
-status: { }
+status: {}
