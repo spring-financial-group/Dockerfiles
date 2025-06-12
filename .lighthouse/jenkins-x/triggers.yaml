@@ -4,47 +4,47 @@ spec:
   presubmits:
   - name: container-tools-pr
     optional: false
-    run_if_changed: ^.*container-tools\/.*$
+    run_if_changed: (README.md|^.*container-tools\/.*$)
     source: "/container-tools/pr.yaml"
   - name: openjdk14-pr
     optional: false
-    run_if_changed: ^.*openjdk14\/.*$
+    run_if_changed: (README.md|^.*openjdk14\/.*$)
     source: "/openjdk14/pr.yaml"
   - name: openjre11-pr
     optional: false
-    run_if_changed: ^.*openjre11\/.*$
+    run_if_changed: (README.md|^.*openjre11\/.*$)
     source: "/openjre11/pr.yaml"
   - name: python310-pr
     optional: false
-    run_if_changed: ^.*python310\/.*$
+    run_if_changed: (README.md|^.*python310\/.*$)
     source: "/python310/pr.yaml"
   - name: python310-torch-cpu-pr
     optional: false
-    run_if_changed: ^.*python310-torch-cpu\/.*$
+    run_if_changed: (README.md|^.*python310-torch-cpu\/.*$)
     source: "/python310-torch-cpu/pr.yaml"
   - name: python310-torch-cuda-pr
     optional: false
-    run_if_changed: ^.*python310-torch-cuda\/.*$
+    run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
     source: "/python310-torch-cuda/pr.yaml"
   - name: nginx-pr
     optional: false
-    run_if_changed: ^.*nginx\/.*$
+    run_if_changed: (README.md|^.*nginx\/.*$)
     source: "/nginx/pr.yaml"
   - name: node-pr
     optional: false
-    run_if_changed: ^.*node\/.*$
+    run_if_changed: (README.md|^.*node\/.*$)
     source: "/node/pr.yaml"
   - name: terra-test-pr
     optional: false
-    run_if_changed: ^.*terra-test\/.*$
+    run_if_changed: (README.md|^.*terra-test\/.*$)
     source: "/terra-test/pr.yaml"
   - name: net8-integration-tests-pr
     optional: false
-    run_if_changed: ^.*net8-integration-tests\/.*$
+    run_if_changed: (README.md|^.*net8-integration-tests\/.*$)
     source: "/net8-integration-tests/pr.yaml"
   - name: net8-sonar-pr
     optional: false
-    run_if_changed: ^.*net8-sonar\/.*$
+    run_if_changed: (README.md|^.*net8-sonar\/.*$)
     source: "/net8-sonar/pr.yaml"
   postsubmits:
   - name: release
