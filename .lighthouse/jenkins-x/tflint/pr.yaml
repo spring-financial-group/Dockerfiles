@@ -20,11 +20,8 @@ spec:
           - mountPath: /temp-docker-config
             name: temp-docker-config
           env:
-            - name: IMAGE_NAME
-              value: tflint
-          volumeMounts:
-          - mountPath: /temp-docker-config
-            name: temp-docker-config
+          - name: IMAGE_NAME
+            value: tflint
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
