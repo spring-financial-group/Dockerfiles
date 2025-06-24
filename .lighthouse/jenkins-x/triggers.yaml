@@ -38,6 +38,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*terra-test\/.*$)
     source: "/terra-test/pr.yaml"
+  - name: tflint-pr
+    optional: false
+    run_if_changed: (README.md|^.*tflint\/.*$)
+    source: "/tflint/pr.yaml"
   - name: net8-integration-tests-pr
     optional: false
     run_if_changed: (README.md|^.*net8-integration-tests\/.*$)
@@ -103,6 +107,11 @@ spec:
     - ^master$
   - name: terra-test-release
     source: "/terra-test/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: tflint-release
+    source: "/tflint/release.yaml"
     branches:
     - ^main$
     - ^master$
