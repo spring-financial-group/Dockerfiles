@@ -22,17 +22,17 @@ RUN mkdir -p $ANDROID_SDK_ROOT/cmdline-tools \
 # Accept Android SDK licenses
 RUN yes | sdkmanager --licenses
 
-# Install required Android SDK components (API 34, Extension Level 7)
+# Install required Android SDK components (API 35, Extension Level 7)
 RUN sdkmanager --install "platform-tools" \
-    "platforms;android-34" \
-    "build-tools;34.0.0" \
+    "platforms;android-35" \
+    "build-tools;35.0.0" \
     "cmdline-tools;latest"
 
-# Install Gradle 8.9
-RUN wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip -O /tmp/gradle.zip \
+# Install Gradle 8.13
+RUN wget -q https://services.gradle.org/distributions/gradle-8.13-bin.zip -O /tmp/gradle.zip \
     && unzip /tmp/gradle.zip -d /opt/ \
     && rm /tmp/gradle.zip \
-    && ln -s /opt/gradle-8.9/bin/gradle /usr/local/bin/gradle
+    && ln -s /opt/gradle-8.13/bin/gradle /usr/local/bin/gradle
 
 # Install Ruby required for Fastlane deployment
 RUN apt update && apt install -y ruby ruby-dev
