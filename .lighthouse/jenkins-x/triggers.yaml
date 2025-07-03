@@ -34,6 +34,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*node\/.*$)
     source: "/node/pr.yaml"
+  - name: android-pr
+    optional: false
+    run_if_changed: (README.md|^.*android\/.*$)
+    source: "/android/pr.yaml"
   - name: terra-test-pr
     optional: false
     run_if_changed: (README.md|^.*terra-test\/.*$)
