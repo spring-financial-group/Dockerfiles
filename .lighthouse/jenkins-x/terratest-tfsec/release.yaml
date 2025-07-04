@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: terra-test-pr
+  name: terratest-tfsec-release
 spec:
   pipelineSpec:
     tasks:
@@ -10,7 +10,7 @@ spec:
       taskSpec:
         metadata: {}
         stepTemplate:
-          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/release.yaml@versionStream
           name: ""
           resources:
             # override limits for all containers here
@@ -21,14 +21,16 @@ spec:
             name: temp-docker-config
           env:
             - name: IMAGE_NAME
-              value: terra-test
-          volumeMounts:
-          - mountPath: /temp-docker-config
-            name: temp-docker-config
+              value: terratest-tfsec
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
           resources: {}
+        - name: next-version
+          resources: {}
+          script: |
+            #!/usr/bin/env sh
+            jx-release-version > VERSION
         - name: jx-variables
           resources: {}
         - image: gcr.io/kaniko-project/executor:v1.8.0-debug
@@ -50,9 +52,15 @@ spec:
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
             
+            ## Push & sign versioned image
             crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
             cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
             cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            
+            ## Push & sign latest image
+            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
+            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
+            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
         volumes:
         - name: temp-docker-config
           secret:

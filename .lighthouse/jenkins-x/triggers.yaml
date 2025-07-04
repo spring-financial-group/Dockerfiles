@@ -38,10 +38,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*android\/.*$)
     source: "/android/pr.yaml"
-  - name: terra-test-pr
+  - name: terratest-tfsec-pr
     optional: false
-    run_if_changed: (README.md|^.*terra-test\/.*$)
-    source: "/terra-test/pr.yaml"
+    run_if_changed: (README.md|^.*terratest-tfsec\/.*$)
+    source: "/terratest-tfsec/pr.yaml"
   - name: tflint-pr
     optional: false
     run_if_changed: (README.md|^.*tflint\/.*$)
@@ -109,8 +109,8 @@ spec:
     branches:
     - ^main$
     - ^master$
-  - name: terra-test-release
-    source: "/terra-test/release.yaml"
+  - name: terratest-tfsec-release
+    source: "/terratest-tfsec/release.yaml"
     branches:
     - ^main$
     - ^master$
