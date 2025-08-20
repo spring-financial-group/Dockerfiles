@@ -34,6 +34,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*node\/.*$)
     source: "/node/pr.yaml"
+  - name: node-unit-test-pr
+    optional: false
+    run_if_changed: (README.md|^.*node-unit-test\/.*$)
+    source: "/node-unit-test/pr.yaml"
   - name: android-pr
     optional: false
     run_if_changed: (README.md|^.*android\/.*$)
@@ -101,6 +105,11 @@ spec:
     - ^master$
   - name: node-release
     source: "/node/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: node-unit-test-release
+    source: "/node-unit-test/release.yaml"
     branches:
     - ^main$
     - ^master$
