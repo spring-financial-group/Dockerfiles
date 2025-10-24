@@ -1,10 +1,10 @@
 FROM alpine:3.16 AS kubectl
-RUN apk add --no-cache curl
+RUN apk upgrade --no-cache && apk add --no-cache curl
 RUN curl -LO "https://dl.k8s.io/release/v1.34.1/bin/linux/amd64/kubectl" \
     && chmod +x kubectl
 
 FROM alpine:3.16
-RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
+RUN apk upgrade --no-cache && apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/download/v0.0.4/docker-credential-acr-env_0.0.4_linux_amd64.tar.gz \
