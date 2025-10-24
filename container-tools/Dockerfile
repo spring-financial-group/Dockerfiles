@@ -1,7 +1,10 @@
-FROM bitnami/kubectl:1.30 AS kubectl
+FROM alpine:3.16 AS kubectl
+RUN apk upgrade --no-cache && apk add --no-cache curl
+RUN curl -LO "https://dl.k8s.io/release/v1.34.1/bin/linux/amd64/kubectl" \
+    && chmod +x kubectl
 
 FROM alpine:3.16
-RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
+RUN apk upgrade --no-cache && apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/download/v0.0.4/docker-credential-acr-env_0.0.4_linux_amd64.tar.gz \
@@ -18,5 +21,5 @@ RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0
     && mv crane /bin/crane \
     && chmod +x /bin/crane
 
-COPY --from=kubectl /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/
+COPY --from=kubectl /kubectl /usr/local/bin/kubectl
 CMD ["bash"]
