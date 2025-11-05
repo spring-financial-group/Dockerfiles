@@ -8,7 +8,7 @@ RUN apk upgrade --no-cache && apk add --no-cache ca-certificates curl wget bash 
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/spring-financial-group/docker-credential-acr-env-jx/releases/download/0.1.0/docker-credential-acr-env_0.1.0_linux_amd64.tar.gz \
-    && tar -xzvf docker-credential-acr-env_0.0.4_linux_amd64.tar.gz \
+    && tar -xzvf docker-credential-acr-env_0.1.0_linux_amd64.tar.gz \
     && mv docker-credential-acr-env /bin/docker-credential-acr-env \
     && chmod +x /bin/docker-credential-acr-env
 
