@@ -21,5 +21,5 @@ RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0
     && mv crane /bin/crane \
     && chmod +x /bin/crane
 
-COPY --from=kubectl /kubectl /usr/local/bin/kubectl
+#COPY --from=kubectl /kubectl /usr/local/bin/kubectl
 CMD ["bash"]
