@@ -1,7 +1,7 @@
-FROM alpine:3.16 AS kubectl
-RUN apk upgrade --no-cache && apk add --no-cache curl
-RUN curl -LO "https://dl.k8s.io/release/v1.34.1/bin/linux/amd64/kubectl" \
-    && chmod +x kubectl
+FROM alpine/kubectl:1.34.1 AS kubectl
+#RUN apk upgrade --no-cache && apk add --no-cache curl
+#RUN curl -LO "https://dl.k8s.io/release/v1.34.1/bin/linux/amd64/kubectl" \
+#    && chmod +x kubectl
 
 FROM alpine:3.16
 RUN apk upgrade --no-cache && apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
