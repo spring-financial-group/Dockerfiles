@@ -4,7 +4,7 @@ set -eu
 STATE_DIR=${STATE_DIR:-/data}
 mkdir -p "$STATE_DIR"
 
-if [ -f /secrets/nodekey ]; then
+if [ -f /secrets/nodekey-hex ]; then
   # raw 32 bytes
   cp /secrets/nodekey "$STATE_DIR/nodekey"
 elif [ -f /secrets/nodekey-hex ]; then
