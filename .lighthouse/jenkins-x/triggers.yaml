@@ -26,6 +26,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
     source: "/python310-torch-cuda/pr.yaml"
+  - name: bootnode-pr
+    optional: false
+    run_if_changed: (README.md|^.*nginx\/.*$)
+    source: "/bootnode/pr.yaml"
   - name: nginx-pr
     optional: false
     run_if_changed: (README.md|^.*nginx\/.*$)
@@ -105,6 +109,11 @@ spec:
     - ^master$
   - name: node-release
     source: "/node/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: bootnode-release
+    source: "/bootnode/release.yaml"
     branches:
     - ^main$
     - ^master$
