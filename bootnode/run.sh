@@ -4,12 +4,13 @@ set -eu
 STATE_DIR=${STATE_DIR:-/data}
 mkdir -p "$STATE_DIR"
 
-if [ -f /secrets/nodekey-hex ]; then
+if [ -f /secrets/nodekey ]; then
   # raw 32 bytes
   cp /secrets/nodekey "$STATE_DIR/nodekey"
 elif [ -f /secrets/nodekey-hex ]; then
   # 64 hex chars -> raw
-  hex2raw "$(cat /secrets/nodekey-hex)" > "$STATE_DIR/nodekey"
+  HEX="$(tr -d '\n\r' </secrets/nodekey-hex)"
+  hex2raw "$HEX" > "$STATE_DIR/nodekey"
 elif [ -n "${NODEKEY_HEX:-}" ]; then
   # env hex fallback
   hex2raw "$NODEKEY_HEX" > "$STATE_DIR/nodekey"
