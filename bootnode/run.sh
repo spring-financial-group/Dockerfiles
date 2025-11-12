@@ -19,10 +19,10 @@ else
   exit 1
 fi
 
-PUB=$(bootnode -nodekey "$STATE_DIR/nodekey" -writeaddress)
+PUB=$(bootnode -nodekeyfile "$STATE_DIR/nodekey" -writeaddress)
 PORT="${BOOTNODE_PORT:-30301}"
 IP="${POD_IP:-0.0.0.0}"
 
 echo "BOOTNODE_ENODE=enode://${PUB}@${IP}:${PORT}"
-exec bootnode -nodekey "$STATE_DIR/nodekey" -addr ":${PORT}"
+exec bootnode -nodekeyfile "$STATE_DIR/nodekey" -addr ":${PORT}"
 
