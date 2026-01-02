@@ -22,7 +22,8 @@ RUN apk update && \
         ca-certificates \
         unzip \
         build-base \
-        go
+        go \
+        kubectl
 
 # Install Trivy (container/filesystem vulnerability scanner)
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
