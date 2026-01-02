@@ -20,6 +20,8 @@ RUN apk update && \
         nmap-scripts \
         openssl \
         ca-certificates \
+        unzip \
+        build-base \
         go
 
 # Install Trivy (container/filesystem vulnerability scanner)
@@ -34,9 +36,11 @@ RUN wget -q "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_
 # Install Semgrep (static analysis)
 RUN pip3 install --no-cache-dir semgrep --break-system-packages
 
-# Install Nuclei (vulnerability scanner)
-RUN go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest && \
-    mv /root/go/bin/nuclei /usr/local/bin/
+# Install Nuclei (vulnerability scanner) - using prebuilt binary
+ENV NUCLEI_VERSION=3.3.7
+RUN wget -q "https://github.com/projectdiscovery/nuclei/releases/download/v${NUCLEI_VERSION}/nuclei_${NUCLEI_VERSION}_linux_amd64.zip" -O /tmp/nuclei.zip && \
+    unzip -q /tmp/nuclei.zip -d /usr/local/bin && \
+    rm /tmp/nuclei.zip
 
 # Install npm security tools
 RUN npm install -g \
