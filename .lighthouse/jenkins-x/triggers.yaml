@@ -66,6 +66,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*golang-chromium\/.*$)
     source: "/golang-chromium/pr.yaml"
+  - name: black-arch-pr
+    optional: false
+    run_if_changed: (README.md|^.*black-arch\/.*$)
+    source: "/black-arch/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -149,6 +153,11 @@ spec:
     - ^master$
   - name: golang-chromium-release
     source: "/golang-chromium/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: black-arch-release
+    source: "/black-arch/release.yaml"
     branches:
     - ^main$
     - ^master$

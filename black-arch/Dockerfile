@@ -12,6 +12,7 @@ RUN apk update && \
         jq \
         git \
         python3 \
+        python3-dev \
         py3-pip \
         nodejs \
         npm \
@@ -19,23 +20,27 @@ RUN apk update && \
         nmap-scripts \
         openssl \
         ca-certificates \
+        unzip \
+        build-base \
         go
 
 # Install Trivy (container/filesystem vulnerability scanner)
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 
-# Install Gitleaks (secret detection)
-RUN GITLEAKS_VERSION=$(curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest | jq -r '.tag_name' | sed 's/v//') && \
-    wget -q "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" -O /tmp/gitleaks.tar.gz && \
+# Install Gitleaks (secret detection) - using fixed version to avoid GitHub API rate limits
+ENV GITLEAKS_VERSION=8.30.0
+RUN wget -q "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" -O /tmp/gitleaks.tar.gz && \
     tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks && \
     rm /tmp/gitleaks.tar.gz
 
 # Install Semgrep (static analysis)
 RUN pip3 install --no-cache-dir semgrep --break-system-packages
 
-# Install Nuclei (vulnerability scanner)
-RUN go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest && \
-    mv /root/go/bin/nuclei /usr/local/bin/
+# Install Nuclei (vulnerability scanner) - using prebuilt binary
+ENV NUCLEI_VERSION=3.3.7
+RUN wget -q "https://github.com/projectdiscovery/nuclei/releases/download/v${NUCLEI_VERSION}/nuclei_${NUCLEI_VERSION}_linux_amd64.zip" -O /tmp/nuclei.zip && \
+    unzip -q /tmp/nuclei.zip -d /usr/local/bin && \
+    rm /tmp/nuclei.zip
 
 # Install npm security tools
 RUN npm install -g \
