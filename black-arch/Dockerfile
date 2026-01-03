@@ -2,6 +2,10 @@
 # Contains common security tools for CI/CD pipeline scanning
 FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
 
+# Cache bust to force rebuild - change this value to invalidate cache
+ARG CACHE_BUST=2026010302
+RUN echo "Cache bust: $CACHE_BUST"
+
 # Install base packages
 RUN apk update && \
     apk upgrade && \
@@ -71,4 +75,4 @@ RUN rm -rf /var/cache/apk/* /root/go /tmp/*
 # Set working directory
 WORKDIR /workspace
 
-CMD ["bash"]# Trigger rebuild Sat Jan  3 09:44:18 GMT 2026
+CMD ["bash"]
