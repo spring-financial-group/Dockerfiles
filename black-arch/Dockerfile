@@ -71,4 +71,4 @@ RUN rm -rf /var/cache/apk/* /root/go /tmp/*
 # Set working directory
 WORKDIR /workspace
 
-CMD ["bash"]
+CMD ["bash"]# Trigger rebuild Sat Jan  3 09:44:18 GMT 2026
