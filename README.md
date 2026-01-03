@@ -1,6 +1,7 @@
 # Dockerfiles
 Top level container images used in MQube services. We should probably get rid of these and use image caching layers instead.
 
+
 ## Adding a new container image
 1. Create a folder containing the Dockerfile you wish to use in the root of the repository. The name of this folder
 will become the name of the generated image.
