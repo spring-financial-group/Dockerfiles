@@ -23,12 +23,9 @@ RUN apk update && \
         unzip \
         build-base \
         go \
-        perl
-
-# Install kubectl from official release
-RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
-    chmod +x kubectl && \
-    mv kubectl /usr/local/bin/
+        perl \
+        perl-net-ssleay \
+        perl-io-socket-ssl
 
 # Install kubectl from official release
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
