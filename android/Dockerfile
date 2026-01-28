@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:20.18
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.13
 
 # Install required dependencies
 RUN apt update && apt install -y \
