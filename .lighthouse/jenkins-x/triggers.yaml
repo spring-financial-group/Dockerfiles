@@ -70,6 +70,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*black-arch\/.*$)
     source: "/black-arch/pr.yaml"
+  - name: bun-pr
+    optional: false
+    run_if_changed: (README.md|^.*bun\/.*$)
+    source: "/bun/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -158,6 +162,11 @@ spec:
     - ^master$
   - name: black-arch-release
     source: "/black-arch/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: bun-release
+    source: "/bun/release.yaml"
     branches:
     - ^main$
     - ^master$
