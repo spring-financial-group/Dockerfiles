@@ -23,10 +23,10 @@ RUN mkdir -p $ANDROID_SDK_ROOT/cmdline-tools \
 # Accept Android SDK licenses
 RUN yes | sdkmanager --licenses
 
-# Install required Android SDK components (API 35, Extension Level 7)
+# Install required Android SDK components (API 36)
 RUN sdkmanager --install "platform-tools" \
-    "platforms;android-35" \
-    "build-tools;35.0.0" \
+    "platforms;android-36" \
+    "build-tools;36.0.0" \
     "cmdline-tools;latest"
 
 # Install Gradle 8.13
