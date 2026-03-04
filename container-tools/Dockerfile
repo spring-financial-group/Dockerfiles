@@ -12,11 +12,11 @@ RUN wget -nv https://github.com/spring-financial-group/docker-credential-acr-env
     && mv docker-credential-acr-env /bin/docker-credential-acr-env \
     && chmod +x /bin/docker-credential-acr-env
 
-RUN wget -nv https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-linux-amd64 \
+RUN wget -nv https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-linux-amd64 \
     && mv cosign-linux-amd64 /bin/cosign \
     && chmod +x /bin/cosign
 
-RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0.20.6/go-containerregistry_Linux_x86_64.tar.gz \
+RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0.21.2/go-containerregistry_Linux_x86_64.tar.gz \
     && tar -xzvf go-containerregistry_Linux_x86_64.tar.gz \
     && mv crane /bin/crane \
     && chmod +x /bin/crane
