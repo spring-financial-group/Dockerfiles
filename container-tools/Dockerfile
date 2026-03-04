@@ -3,7 +3,7 @@ FROM jx3mqubebuild.azurecr.io/docker-io/alpine/kubectl:1.34.2 AS kubectl
 #RUN curl -LO "https://dl.k8s.io/release/v1.34.1/bin/linux/amd64/kubectl" \
 #    && chmod +x kubectl
 
-FROM jx3mqubebuild.azurecr.io/docker-io/alpine:3.16
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.16
 RUN apk upgrade --no-cache && apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
 
 RUN mkdir /source && cd /source
