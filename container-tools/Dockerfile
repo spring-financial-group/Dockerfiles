@@ -1,7 +1,7 @@
-FROM bitnami/kubectl:1.30 AS kubectl
+FROM jx3mqubebuild.azurecr.io/docker-io/bitnamilegacy/kubectl:1.32 AS kubectl
 
-FROM alpine:3.16
-RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.16
+RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli zip
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/jenkins-x/docker-credential-acr-env/releases/download/v0.0.4/docker-credential-acr-env_0.0.4_linux_amd64.tar.gz \
