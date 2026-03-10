@@ -1,0 +1,23 @@
+vulnerabilities:
+  - id: CVE-2024-41110
+    expired_at: 2026-03-31
+  - id: CVE-2024-45337
+    expired_at: 2026-03-31
+  - id: CVE-2025-15558
+    expired_at: 2026-03-31
+  - id: CVE-2025-30204
+    expired_at: 2026-03-31
+  - id: CVE-2025-26519
+    expired_at: 2026-03-31
+  - id: CVE-2025-66506
+    expired_at: 2026-03-31
+  - id: CVE-2025-66564
+    expired_at: 2026-03-31
+  - id: CVE-2025-22868
+    expired_at: 2026-03-31
+  - id: CVE-2025-22869
+    expired_at: 2026-03-31
+  - id: CVE-2025-46569
+    expired_at: 2026-03-31
+  - id: CVE-2026-24051
+    expired_at: 2026-03-31

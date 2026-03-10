@@ -49,7 +49,7 @@ spec:
           name: vulnscan
           resources: {}
           script: |
-            trivy image --timeout 25m0s --security-checks vuln --input /workspace/source/$IMAGE_NAME.tar | tee /workspace/source/scanresults.txt
+            trivy image --timeout 25m0s --security-checks vuln --ignorefile /workspace/source/$IMAGE_NAME/.trivyignore.yaml --input /workspace/source/$IMAGE_NAME.tar | tee /workspace/source/scanresults.txt
         - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
           name: analyze
           resources: {}
