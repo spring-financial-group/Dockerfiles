@@ -2,3 +2,6 @@ vulnerabilities:
   # Docker CLI for Windows vulnerability
   - id: CVE-2025-15558
     expired_at: 2026-06-01
+  # OpenTelemetry Go SDK Vulnerable to Arbitrary Code Execution via PATH Hijacking
+  - id: CVE-2026-24051
+    expired_at: 2026-06-01
