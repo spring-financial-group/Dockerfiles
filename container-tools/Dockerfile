@@ -19,5 +19,4 @@ RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0
     && mv crane /bin/crane \
     && chmod +x /bin/crane
 
-#COPY --from=kubectl /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/
 CMD ["bash"]
