@@ -37,7 +37,9 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
     mv kubectl /usr/local/bin/
 
 # Install Trivy (container/filesystem vulnerability scanner)
-RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+# Removed due to trivy hack
+# https://arstechnica.com/security/2026/03/widely-used-trivy-scanner-compromised-in-ongoing-supply-chain-attack/
+#RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 
 # Install Gitleaks (secret detection) - using fixed version to avoid GitHub API rate limits
 ENV GITLEAKS_VERSION=8.30.0

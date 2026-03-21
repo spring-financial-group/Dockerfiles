@@ -45,7 +45,7 @@ spec:
             #!/bin/sh
             mkdir -p ~/.cache/trivy/db
             mv /trivydb/* ~/.cache/trivy/db/
-        - image: aquasec/trivy:0.45.1
+        - image: jx3mqubebuild.azurecr.io/docker-io/aquasec/trivy:0.53.0
           name: vulnscan
           resources: {}
           script: |
