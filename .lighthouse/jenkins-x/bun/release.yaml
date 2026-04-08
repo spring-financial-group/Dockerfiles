@@ -43,8 +43,8 @@ spec:
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
             
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
-        - image: ghcr.io/spring-financial-group/container-tools:latest
-          name: push-containers
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+          name: push-sign-verify-containers
           resources: {}
           script: |
             #!/bin/bash
@@ -52,15 +52,20 @@ spec:
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
             
-            ## Push & sign versioned image
-            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            # Push the image using crane and get the digest
+            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            crane push /workspace/source/$IMAGE_NAME.tar $IMAGE_REF
+            IMAGE_DIGEST=$(crane digest $IMAGE_REF)
+            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
             
-            ## Push & sign latest image
-            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
-            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
-            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:latest
+            # Sign the image with cosign and verify the signature
+            cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            cosign verify --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            
+            # Retag to latest (same digest, no re-sign needed)
+            crane tag $IMAGE_REF latest
+            
+            rm -f /workspace/source/$IMAGE_NAME.tar /workspace/source/scanresults.txt
         volumes:
         - name: temp-docker-config
           secret:
