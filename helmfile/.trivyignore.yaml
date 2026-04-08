@@ -1,0 +1,12 @@
+vulnerabilities:
+  # docker-credential-acr-env v0.0.4 CVEs - pending upgrade to spring-financial-group fork
+  - id: CVE-2024-45337
+    expired_at: 2026-07-01
+  - id: CVE-2023-24538
+    expired_at: 2026-07-01
+  - id: CVE-2025-30204
+    expired_at: 2026-07-01
+  - id: CVE-2025-22869
+    expired_at: 2026-07-01
+  - id: CVE-2022-41720
+    expired_at: 2026-07-01
