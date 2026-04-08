@@ -43,10 +43,11 @@ spec:
           resources: {}
           script: |
             #!/bin/bash
+            set -e
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
             IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION
-            crane push /workspace/source/image.tar $IMAGE_REF
+            crane push /workspace/source/$IMAGE_NAME.tar $IMAGE_REF
             IMAGE_DIGEST=$(crane digest $IMAGE_REF)
             IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME@$IMAGE_DIGEST
             cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
