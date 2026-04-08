@@ -43,7 +43,7 @@ spec:
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
-        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+        - image: ghcr.io/spring-financial-group/container-tools:latest
           name: push-containers
           resources: {}
           script: |
