@@ -43,7 +43,7 @@ spec:
           resources: {}
           script: |
             #!/bin/bash
-            set -ex
+            set -e
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
             IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
