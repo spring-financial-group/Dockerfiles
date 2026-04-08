@@ -38,18 +38,21 @@ spec:
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
-        - image: ghcr.io/spring-financial-group/container-tools:latest
-          name: push-containers
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+          name: push-sign-verify-containers
           resources: {}
           script: |
             #!/bin/bash
             set -e
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
-
-            crane push /workspace/source/$IMAGE_NAME.tar $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign sign --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
-            cosign verify --key k8s://jx-staging/cosign $PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            crane push /workspace/source/$IMAGE_NAME.tar $IMAGE_REF
+            IMAGE_DIGEST=$(crane digest $IMAGE_REF)
+            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
+            cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            cosign verify --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            rm -f /workspace/source/$IMAGE_NAME.tar /workspace/source/scanresults.txt
         volumes:
         - name: temp-docker-config
           secret:
