@@ -74,6 +74,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*bun\/.*$)
     source: "/bun/pr.yaml"
+  - name: helmfile-pr
+    optional: false
+    run_if_changed: (README.md|^.*helmfile\/.*$)
+    source: "/helmfile/pr.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -167,6 +171,11 @@ spec:
     - ^master$
   - name: bun-release
     source: "/bun/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: helmfile-release
+    source: "/helmfile/release.yaml"
     branches:
     - ^main$
     - ^master$
