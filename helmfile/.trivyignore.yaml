@@ -12,6 +12,8 @@ vulnerabilities:
     expired_at: 2026-07-01
   - id: CVE-2025-22869
     expired_at: 2026-07-01
+  - id: CVE-2022-41720
+    expired_at: 2026-07-01
   - id: CVE-2022-41722
     expired_at: 2026-07-01
   - id: CVE-2022-41723
@@ -19,6 +21,8 @@ vulnerabilities:
   - id: CVE-2022-41724
     expired_at: 2026-07-01
   - id: CVE-2022-41725
+    expired_at: 2026-07-01
+  - id: CVE-2023-24538
     expired_at: 2026-07-01
   - id: CVE-2023-24534
     expired_at: 2026-07-01
