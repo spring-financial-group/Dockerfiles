@@ -2,11 +2,55 @@ vulnerabilities:
   # docker-credential-acr-env v0.0.4 CVEs - pending upgrade to spring-financial-group fork
   - id: CVE-2024-45337
     expired_at: 2026-07-01
-  - id: CVE-2023-24538
+  - id: CVE-2023-24540
+    expired_at: 2026-07-01
+  - id: CVE-2024-24790
+    expired_at: 2026-07-01
+  - id: CVE-2025-68121
     expired_at: 2026-07-01
   - id: CVE-2025-30204
     expired_at: 2026-07-01
   - id: CVE-2025-22869
     expired_at: 2026-07-01
-  - id: CVE-2022-41720
+  - id: CVE-2022-41722
+    expired_at: 2026-07-01
+  - id: CVE-2022-41723
+    expired_at: 2026-07-01
+  - id: CVE-2022-41724
+    expired_at: 2026-07-01
+  - id: CVE-2022-41725
+    expired_at: 2026-07-01
+  - id: CVE-2023-24534
+    expired_at: 2026-07-01
+  - id: CVE-2023-24536
+    expired_at: 2026-07-01
+  - id: CVE-2023-24537
+    expired_at: 2026-07-01
+  - id: CVE-2023-24539
+    expired_at: 2026-07-01
+  - id: CVE-2023-29400
+    expired_at: 2026-07-01
+  - id: CVE-2023-29403
+    expired_at: 2026-07-01
+  - id: CVE-2023-39325
+    expired_at: 2026-07-01
+  - id: CVE-2023-45283
+    expired_at: 2026-07-01
+  - id: CVE-2023-45287
+    expired_at: 2026-07-01
+  - id: CVE-2023-45288
+    expired_at: 2026-07-01
+  - id: CVE-2024-34156
+    expired_at: 2026-07-01
+  - id: CVE-2025-47907
+    expired_at: 2026-07-01
+  - id: CVE-2025-58183
+    expired_at: 2026-07-01
+  - id: CVE-2025-61726
+    expired_at: 2026-07-01
+  - id: CVE-2025-61728
+    expired_at: 2026-07-01
+  - id: CVE-2025-61729
+    expired_at: 2026-07-01
+  - id: CVE-2026-25679
     expired_at: 2026-07-01
