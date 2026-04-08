@@ -13,10 +13,10 @@ RUN wget -nv https://get.helm.sh/helm-v4.1.3-linux-amd64.tar.gz \
     && rm -rf linux-amd64 helm-v4.1.3-linux-amd64.tar.gz \
     && chmod +x /usr/local/bin/helm
 
-RUN wget -nv https://github.com/helmfile/helmfile/releases/download/v1.4.3/helmfile_1.4.3_linux_amd64.tar.gz \
-    && tar -xzvf helmfile_1.4.3_linux_amd64.tar.gz \
+RUN wget -nv https://github.com/helmfile/helmfile/releases/download/v1.4.4/helmfile_1.4.4_linux_amd64.tar.gz \
+    && tar -xzvf helmfile_1.4.4_linux_amd64.tar.gz \
     && mv helmfile /usr/local/bin/helmfile \
-    && rm -f helmfile_1.4.3_linux_amd64.tar.gz \
+    && rm -f helmfile_1.4.4_linux_amd64.tar.gz \
     && chmod +x /usr/local/bin/helmfile
 
 CMD ["bash"]
