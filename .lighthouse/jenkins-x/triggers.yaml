@@ -78,6 +78,13 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*helmfile\/.*$)
     source: "/helmfile/pr.yaml"
+  - name: lint-pipelines
+    context: "lint-pipelines"
+    run_if_changed: '.lighthouse\/jenkins-x\/.*'
+    optional: false
+    trigger: (?m)^/test( all| lint-pipelines.*),?(s+|$)
+    rerun_command: /test lint-pipelines
+    source: "lint-pipelines.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
