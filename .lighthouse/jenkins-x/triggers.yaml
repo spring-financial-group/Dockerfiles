@@ -6,6 +6,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*container-tools\/.*$)
     source: "/container-tools/pr.yaml"
+  - name: all-sdks-pr
+    optional: false
+    run_if_changed: (README.md|^.*all-sdks\/.*$)
+    source: "/all-sdks/pr.yaml"
   - name: openjdk14-pr
     optional: false
     run_if_changed: (README.md|^.*openjdk14\/.*$)
@@ -93,6 +97,11 @@ spec:
     - ^master$
   - name: container-tools-release
     source: "/container-tools/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: all-sdks-release
+    source: "/all-sdks/release.yaml"
     branches:
     - ^main$
     - ^master$

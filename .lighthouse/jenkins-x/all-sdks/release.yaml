@@ -1,0 +1,79 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: all-sdks-release
+spec:
+  pipelineSpec:
+    tasks:
+    - name: from-build-pack
+      resources: {}
+      taskSpec:
+        metadata: {}
+        stepTemplate:
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/release.yaml@versionStream
+          name: ""
+          resources:
+            # override limits for all containers here
+            limits: {}
+          workingDir: /workspace/source
+          volumeMounts:
+          - mountPath: /temp-docker-config
+            name: temp-docker-config
+          env:
+          - name: IMAGE_NAME
+            value: all-sdks
+        steps:
+        - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+          name: ""
+          resources: {}
+        - name: next-version
+          resources: {}
+          script: |
+            #!/usr/bin/env sh
+            jx-release-version > VERSION
+        - name: jx-variables
+          resources: {}
+        - image: gcr.io/kaniko-project/executor:v1.8.0-debug
+          name: build-containers
+          resources: {}
+          script: |
+            #!/busybox/sh
+            set -e
+            source .jx/variables.sh
+            cp /temp-docker-config/config.json /kaniko/.docker/config.json
+            
+            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+          name: push-sign-verify-containers
+          resources: {}
+          script: |
+            #!/bin/bash
+            set -e
+            source .jx/variables.sh
+            cp /temp-docker-config/config.json ~/.docker/config.json
+            
+            # Push the image using crane and get the digest
+            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            crane push /workspace/source/$IMAGE_NAME.tar $IMAGE_REF
+            IMAGE_DIGEST=$(crane digest $IMAGE_REF)
+            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
+            
+            # Sign the image with cosign and verify the signature
+            cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            cosign verify --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            
+            # Retag to latest (same digest, no re-sign needed)
+            crane tag $IMAGE_REF latest
+            
+            rm -f /workspace/source/$IMAGE_NAME.tar /workspace/source/scanresults.txt
+        volumes:
+        - name: temp-docker-config
+          secret:
+            secretName: tekton-temp-registry-auth
+            items:
+            - key: .dockerconfigjson
+              path: config.json
+  podTemplate: {}
+  serviceAccountName: tekton-bot
+  timeout: 12h0m0s
+status: {}
