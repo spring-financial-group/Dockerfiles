@@ -1,3 +1,5 @@
+# We've added python/uv for completion
+# However, we recommend using Debian
 ARG GO_VERSION=1.23.4
 ARG JAVA_VERSION=17
 ARG DOTNET_VERSION=8.0
@@ -5,6 +7,7 @@ ARG NODE_VERSION=24
 ARG NPM_VERSION=10.9.0
 ARG GRADLE_VERSION=8.13
 
+# These should be pinned to an SHA and updated by renovatebot
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-alpine AS go-builder
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/eclipse-temurin:${JAVA_VERSION}-jdk-alpine AS java-builder
