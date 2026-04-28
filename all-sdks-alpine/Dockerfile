@@ -70,6 +70,4 @@ RUN npm install -g npm@${NPM_VERSION} \
     && unzip -d /opt/gradle /tmp/gradle-${GRADLE_VERSION}-bin.zip \
     && rm /tmp/gradle-${GRADLE_VERSION}-bin.zip
 
-WORKDIR /app
-
 CMD ["/bin/sh"]
