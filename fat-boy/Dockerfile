@@ -9,7 +9,6 @@ ENV GO_VERSION="1.24.4"
 ENV DOTNET_VERSION="8.0"
 ENV GRADLE_VERSION="8.13"
 ENV JAVA_VERSION="17"
-ENV YQ_VERSION="v4.53.2"
 
 # upgrade all packages
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
@@ -21,9 +20,6 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 RUN wget --https-only --max-redirect=0 -qO- "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" | tar -xJ -C /usr/local --strip-components=1 \
     # Go
     && wget --https-only --max-redirect=0 -qO- "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz" | tar -xz -C /usr/local \
-    # yq
-    && wget --https-only --max-redirect=2 -qO /usr/local/bin/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" \
-    && chmod +x /usr/local/bin/yq \
     # .NET
     && wget --https-only --max-redirect=0 -q https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh -O /tmp/dotnet-install.sh \
     && chmod +x /tmp/dotnet-install.sh \
