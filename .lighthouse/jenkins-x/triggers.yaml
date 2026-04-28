@@ -10,6 +10,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*all-sdks-alpine\/.*$)
     source: "/all-sdks-alpine/pr.yaml"
+  - name: all-sdks-debian-pr
+    optional: false
+    run_if_changed: (README.md|^.*all-sdks-debian\/.*$)
+    source: "/all-sdks-debian/pr.yaml"
   - name: openjdk14-pr
     optional: false
     run_if_changed: (README.md|^.*openjdk14\/.*$)
@@ -102,6 +106,11 @@ spec:
     - ^master$
   - name: all-sdks-alpine-release
     source: "/all-sdks-alpine/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: all-sdks-debian-release
+    source: "/all-sdks-debian/release.yaml"
     branches:
     - ^main$
     - ^master$
