@@ -66,7 +66,7 @@ ENV JAVA_HOME=/opt/java/openjdk \
 
 # 5. Pin NPM version and Install Gradle
 RUN npm install -g npm@${NPM_VERSION} \
-    && wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -P /tmp \
+    && wget --https-only --max-redirect=2 -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -P /tmp \
     && unzip -d /opt/gradle /tmp/gradle-${GRADLE_VERSION}-bin.zip \
     && rm /tmp/gradle-${GRADLE_VERSION}-bin.zip
 
