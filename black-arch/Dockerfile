@@ -1,6 +1,6 @@
 # BlackArch-inspired Security Scanning Image
 # Contains common security tools for CI/CD pipeline scanning
-FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.23
 
 # Cache bust to force rebuild - change this value to invalidate cache
 ARG CACHE_BUST=2026010302
