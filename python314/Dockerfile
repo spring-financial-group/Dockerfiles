@@ -1,11 +1,9 @@
-FROM ghcr.io/astral-sh/uv:debian-slim
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.11.19-debian-slim
 
-RUN apt update && apt install wget make -y
+RUN apt update && apt install -y --no-install-recommends wget make git
 
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
 RUN chmod +x /usr/bin/yq
-
-RUN apt install git -y
 
 RUN mkdir -p -m 755 /etc/apt/keyrings \
     && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
