@@ -1,6 +1,6 @@
 FROM ghcr.io/astral-sh/uv:debian-slim
 
-RUN apt update && apt install wget -y
+RUN apt update && apt install wget make -y
 
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
 RUN chmod +x /usr/bin/yq
