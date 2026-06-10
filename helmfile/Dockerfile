@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.23
 
 ENV ACR_ENV_VERSION=0.0.4 \
     HELM_VERSION=4.1.3 \

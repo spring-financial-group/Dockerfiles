@@ -1,6 +1,6 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/bitnamilegacy/kubectl:1.32 AS kubectl
+FROM jx3mqubebuild.azurecr.io/docker-io/bitnamilegacy/kubectl:1.33 AS kubectl
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.16
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.23
 RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli zip
 
 RUN mkdir /source && cd /source
