@@ -2,7 +2,10 @@ FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.11.19-debian-slim
 
 RUN apt update && apt install -y --no-install-recommends wget make git
 
-RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
+ARG YQ_VERSION=v4.44.3
+ARG YQ_BINARY=yq_linux_amd64
+
+RUN wget -q https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq
 RUN chmod +x /usr/bin/yq
 
 RUN mkdir -p -m 755 /etc/apt/keyrings \
