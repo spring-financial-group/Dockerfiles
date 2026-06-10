@@ -34,6 +34,9 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
     source: "/python310-torch-cuda/pr.yaml"
+  - name: python314-pr
+    optional: false
+    run_if_changed: (README.md|^.*python314\/.*$)
   - name: nginx-pr
     optional: false
     run_if_changed: (README.md|^.*nginx\/.*$)
@@ -136,6 +139,11 @@ spec:
     - ^master$
   - name: python310-torch-cuda-release
     source: "/python310-torch-cuda/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: python314-release
+    source: "/python314/release.yaml"
     branches:
     - ^main$
     - ^master$
