@@ -37,6 +37,7 @@ spec:
   - name: python314-pr
     optional: false
     run_if_changed: (README.md|^.*python314\/.*$)
+    source: "/python314/pr.yaml"
   - name: nginx-pr
     optional: false
     run_if_changed: (README.md|^.*nginx\/.*$)
