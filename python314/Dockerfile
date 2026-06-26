@@ -1,6 +1,6 @@
 FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.11.19-debian-slim
 
-RUN apt update && apt install -y --no-install-recommends wget make git ca-certificates
+RUN apt update && apt install -y --no-install-recommends wget make git ca-certificates gcc
 
 ARG YQ_VERSION=v4.53.3
 ARG YQ_BINARY=yq_linux_amd64
