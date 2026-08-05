@@ -38,7 +38,7 @@ RUN curl -fsSL \
 RUN curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz" \
          -o /tmp/docker.tgz \
     && echo "${DOCKER_SHA256}  /tmp/docker.tgz" | sha256sum -c - \
-    && tar xz -C /opt/tools --strip-components=1 docker/docker \
+    && tar -xzf /tmp/docker.tgz -C /opt/tools --strip-components=1 docker/docker \
     && rm /tmp/docker.tgz
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
