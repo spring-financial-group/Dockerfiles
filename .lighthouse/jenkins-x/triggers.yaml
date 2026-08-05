@@ -6,6 +6,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*container-tools\/.*$)
     source: "/container-tools/pr.yaml"
+  - name: docksec-pr
+    optional: false
+    run_if_changed: (README.md|^.*docksec\/.*$)
+    source: "/docksec/pr.yaml"
   - name: all-sdks-alpine-pr
     optional: false
     run_if_changed: (README.md|^.*all-sdks-alpine\/.*$)
@@ -105,6 +109,11 @@ spec:
     - ^master$
   - name: container-tools-release
     source: "/container-tools/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: docksec-release
+    source: "/docksec/release.yaml"
     branches:
     - ^main$
     - ^master$
