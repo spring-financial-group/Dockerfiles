@@ -3,6 +3,7 @@ FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie AS build
 ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
 ARG HADOLINT_VERSION=2.12.0
+ARG DOCKER_VERSION=27.5.1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -22,11 +23,16 @@ RUN mkdir -p /opt/tools \
          "https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz" \
          -o /tmp/trivy.tar.gz \
     && tar -xzf /tmp/trivy.tar.gz -C /opt/tools trivy \
-    && rm /tmp/trivy.tar.gz \
-    && curl -fsSL \
+    && rm /tmp/trivy.tar.gz
+
+RUN curl -fsSL \
          "https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64" \
          -o /opt/tools/hadolint \
     && chmod +x /opt/tools/hadolint
+
+RUN ARCH=$(uname -m) \
+    && curl -fsSL "https://download.docker.com/linux/static/stable/${ARCH}/docker-${DOCKER_VERSION}.tgz" \
+         | tar xz -C /opt/tools --strip-components=1 docker/docker
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
 
