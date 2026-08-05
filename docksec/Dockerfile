@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-bookworm AS builder
+FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie AS builder
 
 ARG DOCKSEC_VERSION=2026.7.5
 
@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir \
     "docksec[ai]==${DOCKSEC_VERSION}"
 
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-bookworm
+FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
 
 ARG TRIVY_VERSION=0.73.0
 ARG HADOLINT_VERSION=2.12.0
