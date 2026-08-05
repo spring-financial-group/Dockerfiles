@@ -6,8 +6,6 @@ ARG HADOLINT_VERSION=2.12.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        gcc \
-        make \
         ca-certificates \
         curl \
     && rm -rf /var/lib/apt/lists/*
@@ -31,8 +29,6 @@ RUN mkdir -p /opt/tools \
     && chmod +x /opt/tools/hadolint
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
-
-RUN apt-get update
 
 COPY --from=builder /opt/docksec-venv /opt/docksec-venv
 COPY --from=builder /opt/tools/ /usr/local/bin/
