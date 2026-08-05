@@ -30,21 +30,9 @@ RUN mkdir -p /opt/tools \
          -o /opt/tools/hadolint \
     && chmod +x /opt/tools/hadolint
 
-
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        git \
-        jq \
-        libxcb1 \
-        libx11-6 \
-        libxext6 \
-        libxrender1 \
-        libgl1 \
-        libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update
 
 COPY --from=builder /opt/docksec-venv /opt/docksec-venv
 COPY --from=builder /opt/tools/ /usr/local/bin/
