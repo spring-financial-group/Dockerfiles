@@ -30,6 +30,10 @@ RUN mkdir -p /opt/tools \
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
 
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY --from=builder /opt/docksec-venv /opt/docksec-venv
 COPY --from=builder /opt/tools/ /usr/local/bin/
 
