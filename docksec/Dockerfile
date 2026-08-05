@@ -3,7 +3,7 @@ FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie AS build
 ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
 ARG HADOLINT_VERSION=2.12.0
-ARG DOCKER_VERSION=27.5.1
+ARG DOCKER_VERSION=29.7.1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
