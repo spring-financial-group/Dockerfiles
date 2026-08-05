@@ -1,0 +1,4 @@
+vulnerabilities:
+  # CVE-2026-50163 (oras-go v2.6.1) - trivy has a dependencybot PR merging as I'm typing this
+  - id: CVE-2026-50163
+    expired_at: 2026-08-31
