@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.13
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.13-alpine
 
 # Setting npm version on it's own line to avoid issues with it updating itself
 RUN npm install -g npm@11.10.0
@@ -22,4 +22,4 @@ RUN npm install -g \
         libgbm1 \
         libasound2
 
-CMD ["bash"]
+CMD ["/bin/sh"]
