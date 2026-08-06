@@ -6,5 +6,3 @@ vulnerabilities:
 # brace-expansion
 - id: CVE-2026-14257
   expired_at: 2026-12-31
-
-
