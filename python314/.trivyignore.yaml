@@ -1,1 +1,6 @@
-vulnerabilities: []
+# All from the yq dependency (v4.53.3) running on an older go stdlib version
+vulnerabilities:
+- id: CVE-2026-56852
+  expired_at: 2026-12-31
+- id: CVE-2026-39822
+  expired_at: 2026-12-31
