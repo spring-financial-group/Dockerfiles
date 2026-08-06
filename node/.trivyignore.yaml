@@ -10,3 +10,6 @@ vulnerabilities:
 # brace-expansion and ip-address
 - id: CVE-2026-69152
   expired_at: 2026-12-31
+# ip-address
+- id: CVE-2026-69192
+  expired_at: 2026-12-31
