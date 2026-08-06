@@ -1,8 +1,12 @@
 # These vulnerabilities shouldn't be an issue with Angular22, but we are currently on 20
+# (Current angular version is incompatible with later typescript versions)
 vulnerabilities:
 # @hono/node-server
 - id: GHSA-frvp-7c67-39w9
   expired_at: 2026-12-31
 # brace-expansion
 - id: CVE-2026-14257
+  expired_at: 2026-12-31
+# brace-expansion and ip-address
+- id: CVE-2026-69152
   expired_at: 2026-12-31
