@@ -1,6 +1,20 @@
-FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.11.19-debian-slim
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.2-debian-slim
 
-RUN apt update && apt install -y --no-install-recommends wget make git ca-certificates gcc
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends \
+        wget \
+        make \
+        git \
+        ca-certificates \
+        gcc \
+        libxcb1 \
+        libx11-6 \
+        libxext6 \
+        libxrender1 \
+        libgl1 \
+        libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
 
 ARG YQ_VERSION=v4.53.3
 ARG YQ_BINARY=yq_linux_amd64
@@ -16,12 +30,3 @@ RUN mkdir -p -m 755 /etc/apt/keyrings \
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
     && apt update \
     && apt install gh -y
-
-RUN apt-get update && apt-get install -y \
-    libxcb1 \
-    libx11-6 \
-    libxext6 \
-    libxrender1 \
-    libgl1 \
-    libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
