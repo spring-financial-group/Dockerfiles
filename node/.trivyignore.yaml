@@ -1,5 +1,10 @@
+# These vulnerabilities shouldn't be an issue with Angular22, but we are currently on 20
 vulnerabilities:
-  # @hono/node-server - Fixed in later angular versions, but UI is still stuck on v20
-  - id: GHSA-frvp-7c67-39w9
-    expired_at: 2026-12-31
+# @hono/node-server
+- id: GHSA-frvp-7c67-39w9
+  expired_at: 2026-12-31
+# brace-expansion
+- id: CVE-2026-14257
+  expired_at: 2026-12-31
+
 
