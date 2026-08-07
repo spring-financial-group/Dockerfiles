@@ -8,4 +8,10 @@ RUN apt-get update \
     make \
  && rm -rf /var/lib/apt/lists/*
 
-ENV PATH="/usr/local/go/bin:${PATH}"
+# Match the official golang image defaults.
+ENV GOROOT=/usr/local/go
+ENV GOPATH=/go
+ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
+RUN mkdir -p "$GOPATH"/{src,pkg,bin}
+WORKDIR $GOPATH
