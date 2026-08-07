@@ -7,3 +7,8 @@ vulnerabilities:
     expired_at: 2026-09-30
   - id: CVE-2025-47273
     expired_at: 2026-09-30
+  # yq dependency (v4.53.3) is running on an older go stdlib version
+  - id: CVE-2026-56852
+    expired_at: 2026-12-31
+  - id: CVE-2026-39822
+    expired_at: 2026-12-31

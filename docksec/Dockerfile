@@ -4,6 +4,7 @@ ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
 ARG HADOLINT_VERSION=2.12.0
 ARG DOCKER_VERSION=29.7.1
+ARG YQ_VERSION=4.53.3
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -34,6 +35,10 @@ RUN curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/docker-${
          -o /tmp/docker.tgz \
     && tar -xzf /tmp/docker.tgz -C /opt/tools --strip-components=1 docker/docker \
     && rm /tmp/docker.tgz
+
+RUN curl -fsSL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" \
+         -o /opt/tools/yq \
+    && chmod +x /opt/tools/yq
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
 
