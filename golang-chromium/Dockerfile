@@ -1,5 +1,5 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.26
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.26 AS golang
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends chromium \
-    && apt-get clean
+FROM jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing:latest
+COPY --from=golang /usr/local/go /usr/local/go
+ENV PATH="/usr/local/go/bin:${PATH}"
