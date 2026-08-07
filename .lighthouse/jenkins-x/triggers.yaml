@@ -78,6 +78,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*net8-playwright\/.*$)
     source: "/net8-playwright/pr.yaml"
+  - name: chrome-for-testing-pr
+    optional: false
+    run_if_changed: (README.md|^.*chrome-for-testing\/.*$)
+    source: "/chrome-for-testing/pr.yaml"
   - name: golang-chromium-pr
     optional: false
     run_if_changed: (README.md|^.*golang-chromium\/.*$)
@@ -199,6 +203,11 @@ spec:
     - ^master$
   - name: net8-playwright-release
     source: "/net8-playwright/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: chrome-for-testing-release
+    source: "/chrome-for-testing/release.yaml"
     branches:
     - ^main$
     - ^master$
