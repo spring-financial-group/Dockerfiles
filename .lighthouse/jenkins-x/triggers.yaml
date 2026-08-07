@@ -82,10 +82,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*chrome-for-testing\/.*$)
     source: "/chrome-for-testing/pr.yaml"
-  - name: golang-chromium-pr
+  - name: chrome-for-testing-golang-pr
     optional: false
-    run_if_changed: (README.md|^.*golang-chromium\/.*$)
-    source: "/golang-chromium/pr.yaml"
+    run_if_changed: (README.md|^.*chrome-for-testing-golang\/.*$)
+    source: "/chrome-for-testing-golang/pr.yaml"
   - name: black-arch-pr
     optional: false
     run_if_changed: (README.md|^.*black-arch\/.*$)
@@ -211,8 +211,8 @@ spec:
     branches:
     - ^main$
     - ^master$
-  - name: golang-chromium-release
-    source: "/golang-chromium/release.yaml"
+  - name: chrome-for-testing-golang-release
+    source: "/chrome-for-testing-golang/release.yaml"
     branches:
     - ^main$
     - ^master$
