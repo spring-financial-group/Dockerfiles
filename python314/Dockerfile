@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/ghcr.io/astral-sh/uv:trixie-dhi
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:trixie-dhi
 
 RUN apt-get update \
     && apt-get upgrade -y \
