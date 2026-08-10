@@ -1,6 +1,8 @@
 vulnerabilities:
-  # CVE-2026-50163 (oras-go v2.6.1) - trivy has a dependencybot PR merging as I'm typing this
+  # trivy vulnerabilities - oras & go-git
   - id: CVE-2026-50163
+    expired_at: 2026-08-31
+  - id: CVE-2026-71556
     expired_at: 2026-08-31
   # due to Python (transitive deps pulled in by docksec[ai]): https://github.com/OWASP/DockSec/pull/93
   - id: GHSA-6v7p-g79w-8964
