@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie AS builder
+FROM dhi.io/python:3.14-debian AS builder
 
 ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
@@ -40,7 +40,7 @@ RUN curl -fsSL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}
          -o /opt/tools/yq \
     && chmod +x /opt/tools/yq
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
+FROM dhi.io/python:3.14-debian
 
 RUN apt-get update \
     && apt-get upgrade -y \
