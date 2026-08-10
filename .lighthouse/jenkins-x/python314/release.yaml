@@ -33,7 +33,7 @@ spec:
             jx-release-version > VERSION
         - name: jx-variables
           resources: {}
-        - image: gcr.io/kaniko-project/executor:v1.8.0-debug
+        - image: gcr.io/kaniko-project/executor:v1.24.0-debug
           name: build-containers
           resources: {}
           script: |
