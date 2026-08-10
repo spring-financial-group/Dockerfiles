@@ -5,8 +5,6 @@ vulnerabilities:
   # due to Python (transitive deps pulled in by docksec[ai]): https://github.com/OWASP/DockSec/pull/93
   - id: GHSA-6v7p-g79w-8964
     expired_at: 2026-09-30
-  - id: CVE-2025-47273
-    expired_at: 2026-09-30
   # yq dependency (v4.53.3) is running on an older go stdlib version
   - id: CVE-2026-56852
     expired_at: 2026-12-31

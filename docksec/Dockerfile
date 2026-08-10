@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie AS builder
+FROM dhi.io/python:3.14-debian-dev AS builder
 
 ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
@@ -10,6 +10,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
+        gzip \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python -m venv /opt/docksec-venv
@@ -40,11 +41,7 @@ RUN curl -fsSL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}
          -o /opt/tools/yq \
     && chmod +x /opt/tools/yq
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/python:3.14-slim-trixie
-
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && rm -rf /var/lib/apt/lists/*
+FROM dhi.io/python:3.14-debian-dev
 
 COPY --from=builder /opt/docksec-venv /opt/docksec-venv
 COPY --from=builder /opt/tools/ /usr/local/bin/
