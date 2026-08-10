@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.2-debian-slim
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.3-python3.14-dhi
 
 RUN apt-get update \
     && apt-get upgrade -y \
