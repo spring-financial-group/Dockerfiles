@@ -1,5 +1,5 @@
 vulnerabilities:
-  # trivy dependencies (oras, go-git)
+  # trivy vulnerabilities - oras & go-git
   - id: CVE-2026-50163
     expired_at: 2026-08-31
   - id: CVE-2026-71556
