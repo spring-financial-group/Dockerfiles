@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:trixie-dhi
+FROM dhi.io/uv:0.12.3-debian13-dev
 
 RUN apt-get update \
     && apt-get upgrade -y \
