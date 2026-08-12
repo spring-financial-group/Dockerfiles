@@ -1,4 +1,4 @@
-FROM dhi.io/python:3.14-debian-dev AS builder
+FROM jx3mqubebuild.azurecr.io/dhi-io/python:3.14-debian-dev AS builder
 
 ARG DOCKSEC_VERSION=2026.7.5
 ARG TRIVY_VERSION=0.73.0
@@ -38,7 +38,7 @@ RUN mkdir -p /opt/tools \
          -o /opt/tools/yq \
     && chmod +x /opt/tools/yq
 
-FROM dhi.io/python:3.14-debian-dev
+FROM jx3mqubebuild.azurecr.io/dhi-io/python:3.14-debian-dev
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl \
