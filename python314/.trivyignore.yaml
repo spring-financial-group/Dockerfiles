@@ -4,3 +4,7 @@ vulnerabilities:
   expired_at: 2026-12-31
 - id: CVE-2026-39822
   expired_at: 2026-12-31
+- id: CVE-2026-46600
+  expired_at: 2026-12-31
+- id: CVE-2026-42505
+  expired_at: 2026-12-31
