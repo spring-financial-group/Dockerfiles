@@ -1,4 +1,5 @@
 ignores:
+# cURL vulns
 - id: CVE-2026-12064
   reason: "libcurl3t64-gnutls - No fix reported"
   expires: 2026-12-31
@@ -10,3 +11,48 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-8927
   reason: "libcurl3t64-gnutls - No fix reported"
+# golangci-lint and gobuildcache vulns
+# gobuildcache binary
+- id: CVE-2025-22868
+  reason: "golang.org/x/oauth2 in gobuildcache - fix requires upstream release (fixed in 0.27.0)"
+  expires: 2026-12-31
+- id: CVE-2026-56852
+  reason: "golang.org/x/text in gobuildcache/golangci-lint - fix requires upstream release (fixed in 0.39.0)"
+  expires: 2026-12-31
+- id: CVE-2026-33186
+  reason: "google.golang.org/grpc in gobuildcache - fix requires upstream release (fixed in 1.79.3)"
+  expires: 2026-12-31
+- id: GHSA-hrxh-6v49-42gf
+  reason: "google.golang.org/grpc in gobuildcache - fix requires upstream release (fixed in 1.82.1)"
+  expires: 2026-12-31
+- id: CVE-2026-39821
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-46600
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+# golangci-lint binary
+- id: CVE-2026-27145
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.4)"
+  expires: 2026-12-31
+- id: CVE-2026-33811
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.3)"
+  expires: 2026-12-31
+- id: CVE-2026-33814
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.3)"
+  expires: 2026-12-31
+- id: CVE-2026-39820
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.3)"
+  expires: 2026-12-31
+- id: CVE-2026-39822
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.5)"
+  expires: 2026-12-31
+- id: CVE-2026-39836
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.3)"
+  expires: 2026-12-31
+- id: CVE-2026-42499
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.3)"
+  expires: 2026-12-31
+- id: CVE-2026-42504
+  reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.4)"
+  expires: 2026-12-31
