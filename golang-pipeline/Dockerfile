@@ -8,14 +8,12 @@ ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-alpine${ALPINE_VERSION}
 
-RUN apk update && apk upgrade --no-cache && apk add --no-cache curl make
 
-# Install golangci-lint v2.12.2 using the project's official install script.
-# Binary lands in $GOPATH/bin (/go/bin), which is already on PATH in the base image.
-RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh \
-    | sh -s -- -b "$(go env GOPATH)/bin" v2.12.2
-
-# Install gobuildcache v1.7.0 from the prebuilt release tarball.
-# Binary lands in $GOPATH/bin (/go/bin), which is already on PATH in the base image.
-RUN curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
-    | tar -xz -C "$(go env GOPATH)/bin" gobuildcache
+# update alpine, install curl & make, download golangci-lint & gobuildcache
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache curl make && \
+    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh \
+        | sh -s -- -b "$(go env GOPATH)/bin" v2.12.2 && \
+    curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
+        | tar -xz -C "$(go env GOPATH)/bin" gobuildcache
