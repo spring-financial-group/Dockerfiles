@@ -70,11 +70,11 @@ spec:
             until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
             
             docker load -i $IMAGE_NAME.tar
-            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION" "$APP_NAME:$VERSION"
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$$IMAGE_NAME:$VERSION"
             
             set +e
             docksec \
-              -i "$APP_NAME:$VERSION" \
+              -i "$IMAGE_NAME:$VERSION" \
               --image-only \
               --no-color \
               --offline \
@@ -83,7 +83,7 @@ spec:
             DOCKSEC_EXIT=$?
             set -e
             
-            safe_name=$(printf '%s' "$APP_NAME:$VERSION" | tr ':/.-' '_')
+            safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
             JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
             if [ -s "$JSON_REPORT" ]; then
               cp "$JSON_REPORT" /tmp/docksec.json
@@ -125,7 +125,7 @@ spec:
               PIPELINE_RUN_NAMESPACE=$(context.pipelineRun.namespace)
               TEKTON_URL=https://tekton-dashboard.jx.mqube.build/#/namespaces/$PIPELINE_RUN_NAMESPACE/pipelineruns/$PIPELINE_NAME
               PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
-              curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"VULNERABILITIES FOUND in $APP_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
+              curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"VULNERABILITIES FOUND in $IMAGE_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
             else
               echo "No medium-or-higher vulnerabilities found."
             fi
