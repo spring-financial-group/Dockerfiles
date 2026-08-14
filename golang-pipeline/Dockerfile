@@ -14,6 +14,8 @@ ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 # (git, curl & make are already present in the golang base image)
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
+    && apt-get purge -y --auto-remove subversion mercurial \
+    && apt-get clean \
     rm -rf /var/lib/apt/lists/* && \
     curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh \
         | sh -s -- -b "$(go env GOPATH)/bin" ${GOLANGCILINT_VERSION} && \
