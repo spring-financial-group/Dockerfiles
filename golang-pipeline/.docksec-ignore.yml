@@ -1,0 +1,12 @@
+ignores:
+- id: CVE-2026-12064
+  reason: "libcurl3t64-gnutls - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-8286
+  reason: "libcurl3t64-gnutls - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-8458
+  reason: "libcurl3t64-gnutls - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-8927
+  reason: "libcurl3t64-gnutls - No fix reported"

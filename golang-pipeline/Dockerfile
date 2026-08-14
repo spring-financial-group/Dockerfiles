@@ -8,11 +8,7 @@ ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-alpine${ALPINE_VERSION}
 
-
-ARG TARGETARCH=amd64
-ARG GOBUILDCACHE_VERSION=1.7.0
-ARG GOCACHEPROG=$GOPATH/bin/gobuildcache
-ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
+RUN apk update && apk add --no-cache curl make
 
 # Install golangci-lint v2.12.2 using the project's official install script.
 # Binary lands in $GOPATH/bin (/go/bin), which is already on PATH in the base image.
