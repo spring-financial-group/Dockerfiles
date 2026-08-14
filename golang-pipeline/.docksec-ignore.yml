@@ -12,7 +12,6 @@ ignores:
 - id: CVE-2026-8927
   reason: "libcurl3t64-gnutls - No fix reported"
 # golangci-lint and gobuildcache vulns
-# gobuildcache binary
 - id: CVE-2025-22868
   reason: "golang.org/x/oauth2 in gobuildcache - fix requires upstream release (fixed in 0.27.0)"
   expires: 2026-12-31
@@ -31,7 +30,6 @@ ignores:
 - id: CVE-2026-46600
   reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
   expires: 2026-12-31
-# golangci-lint binary
 - id: CVE-2026-27145
   reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.4)"
   expires: 2026-12-31
