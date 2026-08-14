@@ -69,7 +69,7 @@ spec:
             
             until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
             
-            docker load -i image.tar
+            docker load -i $IMAGE_NAME.tar
             docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION" "$APP_NAME:$VERSION"
             
             set +e
