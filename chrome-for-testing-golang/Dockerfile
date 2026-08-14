@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.26.5 AS golang
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.26.6 AS golang
 
 FROM jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing:latest
 
