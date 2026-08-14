@@ -90,6 +90,10 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*helmfile\/.*$)
     source: "/helmfile/pr.yaml"
+  - name: golang-pipeline-pr
+    optional: false
+    run_if_changed: (README.md|^.*golang-pipeline\/.*$)
+    source: "/golang-pipeline/pr.yaml"
   - name: lint-pipelines
     context: "lint-pipelines"
     run_if_changed: '.lighthouse\/jenkins-x\/.*'
@@ -210,6 +214,11 @@ spec:
     - ^master$
   - name: helmfile-release
     source: "/helmfile/release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+  - name: golang-pipeline-release
+    source: "/golang-pipeline/release.yaml"
     branches:
     - ^main$
     - ^master$
