@@ -1,12 +1,12 @@
 ARG GO_VERSION=1.26.6
 ARG ALPINE_VERSION=3.24
-ARG GOBUILDCACHE_VERSION=1.7.0
 
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-alpine${ALPINE_VERSION}
+
+ARG GOBUILDCACHE_VERSION=1.7.0
 ARG TARGETARCH=amd64
 ARG GOCACHEPROG=$GOPATH/bin/gobuildcache
 ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
-
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-alpine${ALPINE_VERSION}
 
 
 # update alpine, install curl & make, download golangci-lint & gobuildcache
