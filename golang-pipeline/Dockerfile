@@ -6,8 +6,8 @@ FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-trixie
 ARG GOBUILDCACHE_VERSION=1.7.0
 ARG GOLANGCILINT_VERSION=v2.12.2
 ARG TARGETARCH=amd64
-ARG GOCACHEPROG=$GOPATH/bin/gobuildcache
-ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
+ENV GOCACHEPROG=$GOPATH/bin/gobuildcache
+ENV GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 
 
 # update debian, download golangci-lint & gobuildcache
