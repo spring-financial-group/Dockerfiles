@@ -54,3 +54,212 @@ ignores:
 - id: CVE-2026-42504
   reason: "stdlib in golangci-lint - binary built with older Go toolchain (fixed in 1.26.4)"
   expires: 2026-12-31
+# Debian 13 (trixie) base OS vulns - no fix reported
+- id: CVE-2026-53615
+  reason: "util-linux packages (bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-24882
+  reason: "gnupg packages (dirmngr, gnupg, gnupg-l10n, gpg, gpg-agent, gpgconf, gpgsm) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-41992
+  reason: "gzip - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-54369
+  reason: "libacl1 - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-69720
+  reason: "ncurses packages (libncursesw6, libtinfo6, ncurses-base, ncurses-bin) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-58050
+  reason: "libssh2-1t64 - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-60002
+  reason: "openssh-client - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-59999
+  reason: "openssh-client - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-60000
+  reason: "openssh-client - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-58471
+  reason: "wget - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-58472
+  reason: "wget - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-13221
+  reason: "perl packages (libperl5.40, perl, perl-base, perl-modules-5.40) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-42496
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-57433
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-8376
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-42497
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-48962
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-57432
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-9538
+  reason: "perl packages - No fix reported"
+  expires: 2026-12-31
+# linux-libc-dev kernel headers - kernel CVEs not exploitable from a container (host kernel is what matters); no fix reported
+- id: CVE-2026-43185
+  reason: "linux-libc-dev (kernel headers only; container uses host kernel) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2013-7445
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2019-19449
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2019-19814
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2021-3847
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2021-3864
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-21803
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-58015
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-22104
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38137
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38187
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38204
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38206
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38421
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-38636
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-39859
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-39862
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-39958
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-23102
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-23208
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-23327
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-31493
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-31536
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-31568
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43198
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43263
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-46130
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-46181
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-46279
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-52991
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53000
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53010
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53089
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53091
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53109
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53118
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53277
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53330
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-63879
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-64017
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-64283
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68159
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68166
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68198
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68264
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68291
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68337
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68409
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68426
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-68480
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
