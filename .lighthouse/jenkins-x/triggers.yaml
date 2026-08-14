@@ -18,14 +18,6 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*all-sdks-debian\/.*$)
     source: "/all-sdks-debian/pr.yaml"
-  - name: openjdk14-pr
-    optional: false
-    run_if_changed: (README.md|^.*openjdk14\/.*$)
-    source: "/openjdk14/pr.yaml"
-  - name: openjre11-pr
-    optional: false
-    run_if_changed: (README.md|^.*openjre11\/.*$)
-    source: "/openjre11/pr.yaml"
   - name: python310-pr
     optional: false
     run_if_changed: (README.md|^.*python310\/.*$)
@@ -128,16 +120,6 @@ spec:
     - ^master$
   - name: all-sdks-debian-release
     source: "/all-sdks-debian/release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-  - name: openjdk14-release
-    source: "/openjdk14/release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-  - name: openjre11-release
-    source: "/openjre11/release.yaml"
     branches:
     - ^main$
     - ^master$
