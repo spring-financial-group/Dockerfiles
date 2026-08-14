@@ -90,7 +90,7 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*helmfile\/.*$)
     source: "/helmfile/pr.yaml"
-  - name: golang--pipeline-pr
+  - name: golang-pipeline-pr
     optional: false
     run_if_changed: (README.md|^.*golang-pipeline\/.*$)
     source: "/golang-pipeline/pr.yaml"
