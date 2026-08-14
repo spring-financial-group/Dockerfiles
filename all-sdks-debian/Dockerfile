@@ -38,6 +38,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
         unzip \
         xz-utils \
         zstd \
+        git \
         gcc \
         g++ \
         make \
