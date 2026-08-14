@@ -13,7 +13,7 @@ ARG GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 # update alpine, install curl & make, download golangci-lint & gobuildcache
 RUN apk update && \
     apk upgrade --no-cache && \
-    apk add --no-cache curl make && \
+    apk add --no-cache git curl make && \
     curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh \
         | sh -s -- -b "$(go env GOPATH)/bin" ${GOLANGCILINT_VERSION} && \
     curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
