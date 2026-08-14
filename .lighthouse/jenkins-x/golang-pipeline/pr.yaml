@@ -22,6 +22,19 @@ spec:
           env:
           - name: IMAGE_NAME
             value: golang-pipeline
+          - name: HOME
+            value: /tekton/home
+          - name: TRIVY_CACHE_DIR
+            value: /tekton/home/.cache/trivy
+          - name: SLACK_WEBHOOK_URL
+            valueFrom:
+              secretKeyRef:
+                name: security-alerts
+                key: slack-sec-alerts-webhook
+          envFrom:
+          - secretRef:
+              name: jx-boot-job-env-vars
+              optional: true
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
@@ -40,36 +53,90 @@ spec:
             /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$IMAGE_NAME --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath $IMAGE_NAME.tar
         - image: ghcr.io/jenkins-x/trivydb:latest
           name: copy-vulns-db
-          resources: {}
+          resources: { }
           script: |
             #!/bin/sh
-            mkdir -p ~/.cache/trivy/db
-            mv /trivydb/* ~/.cache/trivy/db/
+            mkdir -p "$TRIVY_CACHE_DIR"
+            mv /trivydb/* "$TRIVY_CACHE_DIR/"
         - image: jx3mqubebuild.azurecr.io/docker-io/aquasec/trivy:0.73.0
           name: vulnscan
           resources: {}
           script: |
             trivy image --timeout 25m0s --security-checks vuln --ignore-unfixed --ignorefile /workspace/source/$IMAGE_NAME/.trivyignore.yaml --input /workspace/source/$IMAGE_NAME.tar | tee /workspace/source/scanresults.txt
-        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
-          name: analyze
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest
+          name: docksec-scan
           resources: {}
           script: |
-            #!/bin/bash
-            SLACK_WEBHOOK_URL=$(kubectl get secret slack -n jx -o jsonpath="{.data['sec-alerts-webhook']}" | base64 -d)
-            PIPELINE_NAME=$(context.pipeline.name)
-            PIPELINE_RUN_NAMESPACE=$(context.pipelineRun.namespace)
-            TEKTON_URL=https://tekton-dashboard.jx.mqube.build/#/namespaces/$PIPELINE_RUN_NAMESPACE/pipelineruns/$PIPELINE_NAME
-            PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
-
-            source .jx/variables.sh
-            cat /workspace/source/scanresults.txt
-            if egrep 'HIGH|CRITICAL' /workspace/source/scanresults.txt | grep -v 'Total' | grep -v 'guests via high...' | grep -v "numpy" | grep -v "linux-libc-dev" | grep -v 'vulnerability leads to critical' | grep -v 'python'
-            then
-            echo "VULNERABILITIES found!" && curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"HIGH/CRITICAL VULNERABILITY FOUND in $APP_NAME:$VERSION\n• Build stopped at <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null
-            exit 1
+            #!/usr/bin/env sh
+            set -e
+            . .jx/variables.sh
+            export DOCKER_HOST=tcp://localhost:2375
+            
+            until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
+            
+            docker load -i image.tar
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION" "$APP_NAME:$VERSION"
+            
+            set +e
+            docksec \
+              -i "$APP_NAME:$VERSION" \
+              --image-only \
+              --no-color \
+              --offline \
+              --format json \
+              --fail-on high
+            DOCKSEC_EXIT=$?
+            set -e
+            
+            safe_name=$(printf '%s' "$APP_NAME:$VERSION" | tr ':/.-' '_')
+            JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
+            if [ -s "$JSON_REPORT" ]; then
+              cp "$JSON_REPORT" /tmp/docksec.json
             else
-            echo "EVERYTHING IS OK"
+              echo "docksec JSON report not found at $JSON_REPORT" >&2
+              echo '{}' > /tmp/docksec.json
             fi
+            
+            VULN_ROWS=$(yq -r '
+              .vulnerabilities[]?
+              | select(
+              (.Severity | downcase) == "critical"
+              or (.Severity | downcase) == "high"
+              )
+              | [
+              (.Severity | upcase),
+              (.VulnerabilityID // "Unknown vulnerability"),
+              (.PkgName // "Unknown package"),
+              (.Target // "Unknown target"),
+              ((.FixedVersion // "") | select(. != "") // "No fix reported"),
+              ((.PrimaryURL // "") | select(. != "") // "No URL")
+            ]
+              | @tsv
+              ' /tmp/docksec.json)
+            
+            if [ -n "$VULN_ROWS" ]; then
+              printf '%s\n' "$VULN_ROWS" | awk -F '\t' '
+                BEGIN {
+                  printf "%-10s | %-50s | %-30s | %-40s | %s\n", "Severity", "CVE", "Package", "Target", "Fixed"
+                  print "-----------+----------------------------------------------------+--------------------------------+------------------------------------------+---------------------"
+                }
+                {
+                  # use URL when available, otherwise fallback to CVE ID
+                  cve = ($6 ~ /^http/) ? $6 : $2
+                  printf "%-10s | %-50s | %-30s | %-40s | %s\n", $1, cve, $3, $4, $5
+                }'
+            
+              PIPELINE_NAME=$(context.pipeline.name)
+              PIPELINE_RUN_NAMESPACE=$(context.pipelineRun.namespace)
+              TEKTON_URL=https://tekton-dashboard.jx.mqube.build/#/namespaces/$PIPELINE_RUN_NAMESPACE/pipelineruns/$PIPELINE_NAME
+              PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
+              curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"VULNERABILITIES FOUND in $APP_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
+            else
+              echo "No medium-or-higher vulnerabilities found."
+            fi
+            echo
+            
+            exit $DOCKSEC_EXIT
         - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
           name: push-sign-verify-containers
           resources: {}
