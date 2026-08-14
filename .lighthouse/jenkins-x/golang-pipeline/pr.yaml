@@ -46,7 +46,7 @@ spec:
           resources: {}
           script: |
             #!/busybox/sh
-            set -e
+            set -ex
             source .jx/variables.sh
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
@@ -63,14 +63,14 @@ spec:
           resources: {}
           script: |
             #!/usr/bin/env sh
-            set -e
+            set -ex
             . .jx/variables.sh
             export DOCKER_HOST=tcp://localhost:2375
             
             until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
             
             docker load -i $IMAGE_NAME.tar
-            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$$IMAGE_NAME:$VERSION"
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$IMAGE_NAME:$VERSION"
             
             set +e
             docksec \
