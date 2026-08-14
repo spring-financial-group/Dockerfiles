@@ -1,13 +1,11 @@
 ARG GO_VERSION=1.26.6
 ARG DEB_DISTRO=trixie
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-trixie
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-${DEB_DISTRO}
 
 ARG GOBUILDCACHE_VERSION=1.7.0
 ARG GOLANGCILINT_VERSION=v2.12.2
 ARG TARGETARCH=amd64
-ENV GOCACHEPROG=$GOPATH/bin/gobuildcache
-ENV GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
 
 
 # update debian, download golangci-lint & gobuildcache
@@ -21,3 +19,6 @@ RUN apt-get update && \
         | sh -s -- -b "$(go env GOPATH)/bin" ${GOLANGCILINT_VERSION} && \
     curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
         | tar -xz -C "$(go env GOPATH)/bin" gobuildcache
+
+ENV GOCACHEPROG=$GOPATH/bin/gobuildcache
+ENV GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
