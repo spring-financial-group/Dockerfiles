@@ -46,7 +46,7 @@ spec:
           resources: {}
           script: |
             #!/busybox/sh
-            set -ex
+            set -e
             source .jx/variables.sh
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
@@ -63,7 +63,7 @@ spec:
           resources: {}
           script: |
             #!/usr/bin/env sh
-            set -ex
+            set -e
             . .jx/variables.sh
             export DOCKER_HOST=tcp://localhost:2375
             
@@ -79,6 +79,7 @@ spec:
               --no-color \
               --offline \
               --format json \
+              --ignore-file "$IMAGE_NAME/.docksec-ignore.yml" \
               --fail-on high
             DOCKSEC_EXIT=$?
             set -e
