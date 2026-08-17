@@ -9,7 +9,7 @@ ARG TARGETARCH=amd64
 
 
 # update debian, download golangci-lint & gobuildcache
-# (git, curl & make are already present in the golang base image)
+# purge subversion and mercurial as they are not needed
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get purge -y --auto-remove subversion mercurial && \
@@ -22,3 +22,4 @@ RUN apt-get update && \
 
 ENV GOCACHEPROG=$GOPATH/bin/gobuildcache
 ENV GOLANGCI_LINT_CACHEPROG=$GOPATH/bin/gobuildcache
+ENV GOPROXY="http://athens-proxy.infrastructure.svc.cluster.local,direct"
