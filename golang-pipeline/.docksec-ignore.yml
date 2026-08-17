@@ -263,3 +263,28 @@ ignores:
 - id: CVE-2026-68480
   reason: "linux-libc-dev (kernel headers only) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2025-68174
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-68735
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+# more stdlib vulns in gobuildcache/golangci-lint binaries
+- id: CVE-2026-33818
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-56853
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-56858
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-56859
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-56860
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
+- id: CVE-2026-56862
+  reason: "stdlib in gobuildcache/golangci-lint - binaries built with older Go toolchain (fixed in 1.26.6)"
+  expires: 2026-12-31
