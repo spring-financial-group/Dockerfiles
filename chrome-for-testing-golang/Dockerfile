@@ -1,6 +1,6 @@
 ARG GO_VERSION=1.26.6
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.26.6 AS golang
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION} AS golang
 
 FROM jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing:latest
 
@@ -10,7 +10,6 @@ ENV GOPATH=/go
 ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 ARG GOBUILDCACHE_VERSION=1.7.0
-ARG GOLANGCILINT_VERSION=v2.12.2
 ARG TARGETARCH=amd64
 
 
