@@ -1,6 +1,7 @@
 ARG GO_VERSION=1.26.6
+ARG DEB_DISTRO=trixie
 
-FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION} AS golang
+FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-${DEB_DISTRO}
 
 FROM jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing:latest
 
@@ -16,7 +17,6 @@ ARG TARGETARCH=amd64
 COPY --from=golang /usr/local/go /usr/local/go
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-    make \
  && rm -rf /var/lib/apt/lists/* \
  && curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
          | tar -xz -C "${}GOPATH}/bin" gobuildcache
