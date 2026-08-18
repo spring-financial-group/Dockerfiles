@@ -15,15 +15,16 @@ ARG TARGETARCH=amd64
 
 
 COPY --from=golang /usr/local/go /usr/local/go
-RUN apt-get update \
+RUN mkdir -p "$GOPATH"/{src,pkg,bin} \
+ && apt-get update \
  && apt-get install -y --no-install-recommends \
     make \
  && rm -rf /var/lib/apt/lists/* \
+ && mkdir -p "${GOPATH}/bin" \
  && curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
-         | tar -xz -C "${}GOPATH}/bin" gobuildcache
+         | tar -xz -C "${GOPATH}/bin" gobuildcache
 
 ENV GOCACHEPROG=$GOPATH/bin/gobuildcache
 ENV GOPROXY="http://athens-proxy.infrastructure.svc.cluster.local,direct"
 
-RUN mkdir -p "$GOPATH"/{src,pkg,bin}
 WORKDIR $GOPATH
