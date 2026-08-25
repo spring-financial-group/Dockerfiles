@@ -1,7 +1,7 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/debian:13-slim
 
 # Arguments
-ARG CHROME_FOR_TESTING_VERSION=151.0.7922.47
+ARG CHROME_FOR_TESTING_VERSION=152.0.7977.54
 ARG TZ=Europe/London
 
 # Download and install Chrome for Testing, making it available on PATH as `chrome`
