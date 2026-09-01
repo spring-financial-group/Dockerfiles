@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
+FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.24
 
 RUN apk update && \
     apk upgrade && \
