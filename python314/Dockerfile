@@ -8,6 +8,9 @@ RUN apt-get update \
         git \
         ca-certificates \
         gcc \
+        g++ \
+        libc-dev \
+        libffi-dev \
         libxcb1 \
         libx11-6 \
         libxext6 \
