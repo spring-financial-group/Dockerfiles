@@ -1,4 +1,8 @@
 ignores:
+- id: CVE-2025-3887
+  reason: "gstreamer1.0-plugins-bad, libgstreamer-plugins-bad1.0-0 - part of ubuntu 24.04 - no fix reported"
+  expires: 2026-10-03
+
 - id: CVE-2025-26646
   reason: "Microsoft.Build.Tasks.Core - ships with .NET 8 SDK 8.0.424 installed via our own dotnet-install.sh step, which is the latest published 8.0 SDK; fix not yet backported to the 8.0.4xx band"
   expires: 2026-10-03
