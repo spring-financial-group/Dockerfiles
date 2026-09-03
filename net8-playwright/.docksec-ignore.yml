@@ -1,0 +1,24 @@
+ignores:
+- id: CVE-2025-26646
+  reason: "Microsoft.Build.Tasks.Core - ships with .NET 8 SDK 8.0.424 installed via our own dotnet-install.sh step, which is the latest published 8.0 SDK; fix not yet backported to the 8.0.4xx band"
+  expires: 2026-10-03
+
+- id: CVE-2026-47302
+  reason: "System.Security.Cryptography.Xml - affects our own dotnet-install'd .NET 8 SDK 8.0.424 (dotnet-format) and the base image's bundled pwsh 7.6.2; both are the latest published releases, fix not yet backported"
+  expires: 2026-10-03
+- id: CVE-2026-47304
+  reason: "System.Security.Cryptography.Xml - affects our own dotnet-install'd .NET 8 SDK 8.0.424 (dotnet-format) and the base image's bundled pwsh 7.6.2; both are the latest published releases, fix not yet backported"
+  expires: 2026-10-03
+- id: CVE-2026-50525
+  reason: "System.Security.Cryptography.Xml - affects our own dotnet-install'd .NET 8 SDK 8.0.424 (dotnet-format) and the base image's bundled pwsh 7.6.2; both are the latest published releases, fix not yet backported"
+  expires: 2026-10-03
+- id: CVE-2026-50527
+  reason: "System.Security.Cryptography.Xml - affects our own dotnet-install'd .NET 8 SDK 8.0.424 (dotnet-format) and the base image's bundled pwsh 7.6.2; both are the latest published releases, fix not yet backported"
+  expires: 2026-10-03
+- id: CVE-2026-50648
+  reason: "System.Security.Cryptography.Xml - affects our own dotnet-install'd .NET 8 SDK 8.0.424 (dotnet-format) and the base image's bundled pwsh 7.6.2; both are the latest published releases, fix not yet backported"
+  expires: 2026-10-03
+
+- id: CVE-2026-62901
+  reason: "Microsoft.NETCore.App.Runtime.linux-x64 - bundled .NET 10 runtime (10.0.10) in mcr.microsoft.com/playwright/dotnet:v1.62.0-noble base image, which is the latest published tag; fix not yet published upstream"
+  expires: 2026-10-03
