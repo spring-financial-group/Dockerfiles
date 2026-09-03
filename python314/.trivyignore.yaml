@@ -1,6 +1,101 @@
-# All from the yq dependency (v4.53.3) running on an older go stdlib version
 vulnerabilities:
-- id: CVE-2026-56852
-  expired_at: 2026-12-31
-- id: CVE-2026-39822
-  expired_at: 2026-12-31
+  # yq running on an older go stdlib version
+  - id: CVE-2026-56852
+    expired_at: 2026-12-31
+  - id: CVE-2026-39822
+    expired_at: 2026-12-31
+
+  # gh (GitHub CLI) go module deps - no gh release with the fixes exists yet
+  # (latest v2.99.0 still ships x/mod v0.39.0 and x/crypto v0.55.0);
+  # re-check on expiry
+  - id: CVE-2026-56864
+    expired_at: 2026-12-31
+  - id: CVE-2026-56865
+    expired_at: 2026-12-31
+  - id: CVE-2026-56855
+    expired_at: 2026-12-31
+  - id: CVE-2026-78662
+    expired_at: 2026-12-31
+
+  # Debian 13 packages with no upstream fix published yet (trivy reports
+  # "No fix reported"); re-check on expiry in case fixes have landed.
+  # gzip
+  - id: CVE-2026-41992
+    expired_at: 2026-12-31
+  # libacl1
+  - id: CVE-2026-54369
+    expired_at: 2026-12-31
+  # libcurl3t64-gnutls
+  - id: CVE-2026-12064
+    expired_at: 2026-12-31
+  - id: CVE-2026-8286
+    expired_at: 2026-12-31
+  - id: CVE-2026-8458
+    expired_at: 2026-12-31
+  - id: CVE-2026-8927
+    expired_at: 2026-12-31
+  # libexpat1
+  - id: CVE-2026-66046
+    expired_at: 2026-12-31
+  # libglib2.0-0t64
+  - id: CVE-2026-58010
+    expired_at: 2026-12-31
+  - id: CVE-2026-58011
+    expired_at: 2026-12-31
+  - id: CVE-2026-58012
+    expired_at: 2026-12-31
+  - id: CVE-2026-58013
+    expired_at: 2026-12-31
+  - id: CVE-2026-58014
+    expired_at: 2026-12-31
+  - id: CVE-2026-58015
+    expired_at: 2026-12-31
+  - id: CVE-2026-58016
+    expired_at: 2026-12-31
+  # perl / libperl5.40 / perl-base / perl-modules-5.40
+  - id: CVE-2026-13221
+    expired_at: 2026-12-31
+  - id: CVE-2026-42496
+    expired_at: 2026-12-31
+  - id: CVE-2026-8376
+    expired_at: 2026-12-31
+  - id: CVE-2026-42497
+    expired_at: 2026-12-31
+  - id: CVE-2026-48962
+    expired_at: 2026-12-31
+  - id: CVE-2026-57432
+    expired_at: 2026-12-31
+  - id: CVE-2026-57433
+    expired_at: 2026-12-31
+  - id: CVE-2026-9538
+    expired_at: 2026-12-31
+  # libsqlite3-0
+  - id: CVE-2026-11822
+    expired_at: 2026-12-31
+  - id: CVE-2026-11824
+    expired_at: 2026-12-31
+  # libssh2-1t64
+  - id: CVE-2026-58050
+    expired_at: 2026-12-31
+  # libsystemd0 / libudev1
+  - id: CVE-2026-16742
+    expired_at: 2026-12-31
+  # ncurses-base / ncurses-bin / libtinfo6
+  - id: CVE-2025-69720
+    expired_at: 2026-12-31
+  # libxml2
+  - id: CVE-2026-6653
+    expired_at: 2026-12-31
+  # wget
+  - id: CVE-2026-58471
+    expired_at: 2026-12-31
+  - id: CVE-2026-58472
+    expired_at: 2026-12-31
+
+  # System Python packages bundled in the base image (not service venvs)
+  # msgpack 1.2.1
+  - id: GHSA-6v7p-g79w-8964
+    expired_at: 2026-12-31
+  # setuptools 78.1.1
+  - id: CVE-2025-47273
+    expired_at: 2026-12-31

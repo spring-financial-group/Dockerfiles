@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.2-debian-slim
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.9-debian-slim
 
 RUN apt-get update \
     && apt-get upgrade -y \
@@ -16,7 +16,7 @@ RUN apt-get update \
         libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-ARG YQ_VERSION=v4.53.3
+ARG YQ_VERSION=v4.53.6
 ARG YQ_BINARY=yq_linux_amd64
 
 RUN wget -q https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq
