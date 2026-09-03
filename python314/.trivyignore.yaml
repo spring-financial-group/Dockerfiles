@@ -5,6 +5,18 @@ vulnerabilities:
   - id: CVE-2026-39822
     expired_at: 2026-12-31
 
+  # gh (GitHub CLI) go module deps - no gh release with the fixes exists yet
+  # (latest v2.99.0 still ships x/mod v0.39.0 and x/crypto v0.55.0);
+  # re-check on expiry
+  - id: CVE-2026-56864
+    expired_at: 2026-12-31
+  - id: CVE-2026-56865
+    expired_at: 2026-12-31
+  - id: CVE-2026-56855
+    expired_at: 2026-12-31
+  - id: CVE-2026-78662
+    expired_at: 2026-12-31
+
   # Debian 13 packages with no upstream fix published yet (trivy reports
   # "No fix reported"); re-check on expiry in case fixes have landed.
   # gzip
