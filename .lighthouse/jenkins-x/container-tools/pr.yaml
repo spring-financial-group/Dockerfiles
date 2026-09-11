@@ -79,7 +79,7 @@ spec:
               --no-color \
               --offline \
               --format json \
-              --ignorefile "$IMAGE_NAME/.docksec-ignore.yml" \
+              --ignore-file "$IMAGE_NAME/.docksec-ignore.yml" \
               --fail-on high
             DOCKSEC_EXIT=$?
             set -e
