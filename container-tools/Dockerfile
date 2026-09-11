@@ -1,7 +1,19 @@
 FROM jx3mqubebuild.azurecr.io/registry-k8s-io/kubectl:v1.36.4 AS kubectl
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.24
-RUN apk add --no-cache ca-certificates curl wget bash git make yq jq github-cli zip
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+        ca-certificates \
+        curl \
+        wget \
+        bash \
+        git \
+        make \
+        yq \
+        jq \
+        github-cli \
+        zip
 
 RUN mkdir /source && cd /source
 RUN wget -nv https://github.com/spring-financial-group/docker-credential-acr-env/releases/download/v0.76.2/docker-credential-acr-env \
