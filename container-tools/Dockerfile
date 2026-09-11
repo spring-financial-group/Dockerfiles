@@ -24,7 +24,7 @@ RUN wget -nv https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-
     && mv cosign-linux-amd64 /bin/cosign \
     && chmod +x /bin/cosign
 
-RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0.16.1/go-containerregistry_Linux_x86_64.tar.gz \
+RUN wget -nv https://github.com/google/go-containerregistry/releases/download/v0.22.1/go-containerregistry_Linux_x86_64.tar.gz \
     && tar -xzvf go-containerregistry_Linux_x86_64.tar.gz \
     && mv crane /bin/crane \
     && chmod +x /bin/crane
