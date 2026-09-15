@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.9-debian-slim
+FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:0.12.14-debian-slim
 
 RUN apt-get update \
     && apt-get upgrade -y \
