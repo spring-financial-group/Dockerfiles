@@ -178,8 +178,8 @@ spec:
 
             COSIGN_KEY=k8s://jx-staging/cosign
             REPORTS_DIR=/workspace/source/docksec-reports
-            SCAN_TYPE=docksecresultsjson
-            BASELINE_TYPE=docksecbaselinejson
+            SCAN_TYPE=https://docksec.mqube.build/attestation/scan-results/v1
+            BASELINE_TYPE=https://docksec.mqube.build/attestation/baseline/v1
 
             safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
             IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
