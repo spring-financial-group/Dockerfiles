@@ -1,8 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0-bookworm-slim
 
-# libssl1.1 (not in bookworm) is required by the MongoDB 4.4 mongod binary bundled with Mongo2Go
-RUN curl -sSL http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb -o /tmp/libssl1.1.deb \
-    && dpkg -i /tmp/libssl1.1.deb \
-    && rm /tmp/libssl1.1.deb
-
+# Unlike the net8 image, no libssl1.1 install is needed: Mongo2Go 5+ bundles
+# MongoDB 8, which links libssl.so.3 (shipped with bookworm). Services on this
+# image must use Mongo2Go 5.0.0 or later.
 CMD ["bash"]
