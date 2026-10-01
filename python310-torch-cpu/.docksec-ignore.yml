@@ -645,3 +645,21 @@ ignores:
 - id: CVE-2026-64091
   reason: "linux-libc-dev (kernel headers only) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2022-3523
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-38457
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-40133
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-52452
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-52569
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-6610
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
