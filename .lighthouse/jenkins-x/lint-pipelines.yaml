@@ -24,6 +24,24 @@ spec:
               - image: uses:spring-financial-group/mqube-pipeline-catalog/tasks/tools/jx-pipeline-linter.yaml@main
                 name: ""
                 resources: {}
+              - image: alpine:3.24
+                name: "dockerfile-triggers"
+                resources: {}
+                script: |
+                    #!/bin/sh
+                    set -e
+                    echo "Checking triggers.yaml is configured for all dockerfile dirs in the repo"
+                    # Find all Dockerfiles in the repo
+                    find . -name 'Dockerfile' -not -path './.git/*' | while read dockerfile; do
+                        name=$(basename "$(dirname "$dockerfile")")
+                        # Check the presubmit entry named <name>-pr exists
+                        grep -q "^  - name: ${name}-pr$" .lighthouse/jenkins-x/triggers.yaml || { echo "No presubmit trigger found for $name in triggers.yaml"; exit 1; }
+                        # Check the postsubmit entry named <name>-release exists
+                        grep -q "^  - name: ${name}-release$" .lighthouse/jenkins-x/triggers.yaml || { echo "No release trigger found for $name in triggers.yaml"; exit 1; }
+                        # Check the IMAGE_NAME param value matches the directory name
+                        grep -q "^      value_template: ${name}$" .lighthouse/jenkins-x/triggers.yaml || { echo "IMAGE_NAME for $name missing or incorrect in triggers.yaml"; exit 1; }
+                    done
+                    echo "All dockerfile dirs have matching triggers"
     podTemplate: {}
     serviceAccountName: tekton-bot
     timeout: 1h0m0s
