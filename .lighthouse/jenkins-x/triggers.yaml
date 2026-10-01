@@ -5,99 +5,171 @@ spec:
   - name: container-tools-pr
     optional: false
     run_if_changed: (README.md|^.*container-tools\/.*$)
-    source: "/container-tools/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: container-tools
   - name: docksec-pr
     optional: false
     run_if_changed: (README.md|^.*docksec\/.*$)
-    source: "/docksec/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: docksec
   - name: all-sdks-alpine-pr
     optional: false
     run_if_changed: (README.md|^.*all-sdks-alpine\/.*$)
-    source: "/all-sdks-alpine/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: all-sdks-alpine
   - name: all-sdks-debian-pr
     optional: false
     run_if_changed: (README.md|^.*all-sdks-debian\/.*$)
-    source: "/all-sdks-debian/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: all-sdks-debian
   - name: python310-pr
     optional: false
     run_if_changed: (README.md|^.*python310\/.*$)
-    source: "/python310/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310
   - name: python310-torch-cpu-pr
     optional: false
     run_if_changed: (README.md|^.*python310-torch-cpu\/.*$)
-    source: "/python310-torch-cpu/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310-torch-cpu
   - name: python310-torch-cuda-pr
     optional: false
     run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
-    source: "/python310-torch-cuda/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310-torch-cuda
   - name: python314-pr
     optional: false
     run_if_changed: (README.md|^.*python314\/.*$)
-    source: "/python314/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python314
   - name: nginx-pr
     optional: false
     run_if_changed: (README.md|^.*nginx\/.*$)
-    source: "/nginx/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: nginx
   - name: node-pr
     optional: false
     run_if_changed: (README.md|^.*node\/.*$)
-    source: "/node/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: node
   - name: node-unit-test-pr
     optional: false
     run_if_changed: (README.md|^.*node-unit-test\/.*$)
-    source: "/node-unit-test/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: node-unit-test
   - name: android-pr
     optional: false
     run_if_changed: (README.md|^.*android\/.*$)
-    source: "/android/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: android
   - name: terratest-tfsec-pr
     optional: false
     run_if_changed: (README.md|^.*terratest-tfsec\/.*$)
-    source: "/terratest-tfsec/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: terratest-tfsec
   - name: tflint-pr
     optional: false
     run_if_changed: (README.md|^.*tflint\/.*$)
-    source: "/tflint/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: tflint
   - name: net8-integration-tests-pr
     optional: false
     run_if_changed: (README.md|^.*net8-integration-tests\/.*$)
-    source: "/net8-integration-tests/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-integration-tests
   - name: net8-sonar-pr
     optional: false
     run_if_changed: (README.md|^.*net8-sonar\/.*$)
-    source: "/net8-sonar/pr.yaml"
-  - name: net8-playwright
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-sonar
+  - name: net8-playwright-pr
     optional: false
     run_if_changed: (README.md|^.*net8-playwright\/.*$)
-    source: "/net8-playwright/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-playwright
   - name: net10-sonar-pr
     optional: false
     run_if_changed: (README.md|^.*net10-sonar\/.*$)
-    source: "/net10-sonar/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net10-sonar
   - name: chrome-for-testing-pr
     optional: false
     run_if_changed: (README.md|^.*chrome-for-testing\/.*$)
-    source: "/chrome-for-testing/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: chrome-for-testing
   - name: chrome-for-testing-golang-pr
     optional: false
     run_if_changed: (README.md|^.*chrome-for-testing-golang\/.*$)
-    source: "/chrome-for-testing-golang/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: chrome-for-testing-golang
   - name: black-arch-pr
     optional: false
     run_if_changed: (README.md|^.*black-arch\/.*$)
-    source: "/black-arch/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: black-arch
   - name: bun-pr
     optional: false
     run_if_changed: (README.md|^.*bun\/.*$)
-    source: "/bun/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: bun
   - name: helmfile-pr
     optional: false
     run_if_changed: (README.md|^.*helmfile\/.*$)
-    source: "/helmfile/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: helmfile
   - name: golang-pipeline-pr
     optional: false
     run_if_changed: (README.md|^.*golang-pipeline\/.*$)
-    source: "/golang-pipeline/pr.yaml"
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: golang-pipeline
   - name: lint-pipelines
     context: "lint-pipelines"
     run_if_changed: '.lighthouse\/jenkins-x\/.*'
@@ -112,122 +184,194 @@ spec:
     - ^main$
     - ^master$
   - name: container-tools-release
-    source: "/container-tools/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: container-tools
   - name: docksec-release
-    source: "/docksec/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: docksec
   - name: all-sdks-alpine-release
-    source: "/all-sdks-alpine/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: all-sdks-alpine
   - name: all-sdks-debian-release
-    source: "/all-sdks-debian/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: all-sdks-debian
   - name: python310-release
-    source: "/python310/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310
   - name: python310-torch-cpu-release
-    source: "/python310-torch-cpu/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310-torch-cpu
   - name: python310-torch-cuda-release
-    source: "/python310-torch-cuda/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python310-torch-cuda
   - name: python314-release
-    source: "/python314/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: python314
   - name: nginx-release
-    source: "/nginx/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: nginx
   - name: node-release
-    source: "/node/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: node
   - name: node-unit-test-release
-    source: "/node-unit-test/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: node-unit-test
   - name: android-release
-    source: "/android/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: android
   - name: terratest-tfsec-release
-    source: "/terratest-tfsec/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: terratest-tfsec
   - name: tflint-release
-    source: "/tflint/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: tflint
   - name: net8-integration-tests-release
-    source: "/net8-integration-tests/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-integration-tests
   - name: net8-sonar-release
-    source: "/net8-sonar/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-sonar
   - name: net8-playwright-release
-    source: "/net8-playwright/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net8-playwright
   - name: net10-sonar-release
-    source: "/net10-sonar/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: net10-sonar
   - name: chrome-for-testing-release
-    source: "/chrome-for-testing/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: chrome-for-testing
   - name: chrome-for-testing-golang-release
-    source: "/chrome-for-testing-golang/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: chrome-for-testing-golang
   - name: black-arch-release
-    source: "/black-arch/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: black-arch
   - name: bun-release
-    source: "/bun/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: bun
   - name: helmfile-release
-    source: "/helmfile/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: helmfile
   - name: golang-pipeline-release
-    source: "/golang-pipeline/release.yaml"
+    source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
+    pipeline_run_params:
+    - name: IMAGE_NAME
+      value_template: golang-pipeline

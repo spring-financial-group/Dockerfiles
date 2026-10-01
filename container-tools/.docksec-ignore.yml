@@ -1,0 +1,244 @@
+ignores:
+- id: CVE-2022-41720
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.18.9, 1.19.4"
+  expires: 2026-12-31
+- id: CVE-2022-41722
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.6, 1.20.1"
+  expires: 2026-12-31
+- id: CVE-2022-41723
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.6, 1.20.1"
+  expires: 2026-12-31
+- id: CVE-2022-41724
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.6, 1.20.1"
+  expires: 2026-12-31
+- id: CVE-2022-41725
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.6, 1.20.1"
+  expires: 2026-12-31
+- id: CVE-2023-24534
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.8, 1.20.3"
+  expires: 2026-12-31
+- id: CVE-2023-24536
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.8, 1.20.3"
+  expires: 2026-12-31
+- id: CVE-2023-24537
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.8, 1.20.3"
+  expires: 2026-12-31
+- id: CVE-2023-24538
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.8, 1.20.3"
+  expires: 2026-12-31
+- id: CVE-2023-24539
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.9, 1.20.4"
+  expires: 2026-12-31
+- id: CVE-2023-24540
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.9, 1.20.4"
+  expires: 2026-12-31
+- id: CVE-2023-29400
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.9, 1.20.4"
+  expires: 2026-12-31
+- id: CVE-2023-29403
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.19.10, 1.20.5"
+  expires: 2026-12-31
+- id: CVE-2023-39325
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.20.10, 1.21.3"
+  expires: 2026-12-31
+- id: CVE-2023-45283
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.20.11, 1.21.4, 1.20.12, 1.21.5"
+  expires: 2026-12-31
+- id: CVE-2023-45287
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.20.0"
+  expires: 2026-12-31
+- id: CVE-2023-45288
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.21.9, 1.22.2"
+  expires: 2026-12-31
+- id: CVE-2024-24790
+  reason: "stdlib in bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.21.11, 1.22.4"
+  expires: 2026-12-31
+- id: CVE-2024-34156
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane - fixed in 1.22.7, 1.23.1"
+  expires: 2026-12-31
+- id: CVE-2024-41110
+  reason: "github.com/docker/docker in bin/cosign, bin/crane, gcrane, krane - fixed in 23.0.15, 26.1.5, 27.1.1, 25.0.6"
+  expires: 2026-12-31
+- id: CVE-2024-45337
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.31.0"
+  expires: 2026-12-31
+- id: CVE-2024-45338
+  reason: "golang.org/x/net in bin/cosign, usr/local/bin/kubectl - fixed in 0.33.0"
+  expires: 2026-12-31
+- id: CVE-2025-15558
+  reason: "github.com/docker/cli in bin/cosign, bin/crane, gcrane, krane - fixed in 29.2.0"
+  expires: 2026-12-31
+- id: CVE-2025-22868
+  reason: "golang.org/x/oauth2 in bin/cosign, gcrane, krane, usr/local/bin/kubectl - fixed in 0.27.0"
+  expires: 2026-12-31
+- id: CVE-2025-22869
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.35.0"
+  expires: 2026-12-31
+- id: CVE-2025-26519
+  reason: "musl, musl-utils in jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest (alpine 3.16.9) - fixed in 1.2.3-r4"
+  expires: 2026-12-31
+- id: CVE-2025-30204
+  reason: "github.com/golang-jwt/jwt/v4, github.com/golang-jwt/jwt/v5 in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 4.5.2, 5.2.2"
+  expires: 2026-12-31
+- id: CVE-2025-46569
+  reason: "github.com/open-policy-agent/opa in bin/cosign - fixed in 1.4.0"
+  expires: 2026-12-31
+- id: CVE-2025-47913
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.43.0"
+  expires: 2026-12-31
+- id: CVE-2025-61726
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.24.12, 1.25.6"
+  expires: 2026-12-31
+- id: CVE-2025-61729
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.24.11, 1.25.5"
+  expires: 2026-12-31
+- id: CVE-2025-66506
+  reason: "github.com/sigstore/fulcio in bin/cosign - fixed in 1.8.3"
+  expires: 2026-12-31
+- id: CVE-2025-66564
+  reason: "github.com/sigstore/timestamp-authority in bin/cosign - fixed in 2.0.3"
+  expires: 2026-12-31
+- id: CVE-2025-68121
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-24051
+  reason: "go.opentelemetry.io/otel/sdk in bin/cosign - fixed in 1.40.0"
+  expires: 2026-12-31
+- id: CVE-2026-25679
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.8, 1.26.1"
+  expires: 2026-12-31
+- id: CVE-2026-25681
+  reason: "golang.org/x/net in bin/cosign, usr/local/bin/kubectl - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-27136
+  reason: "golang.org/x/net in bin/cosign, usr/local/bin/kubectl - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-27145
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-32280
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-32281
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-32283
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-33186
+  reason: "google.golang.org/grpc in bin/cosign - fixed in 1.79.3"
+  expires: 2026-12-31
+- id: CVE-2026-33811
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-33814
+  reason: "golang.org/x/net, stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 0.53.0, 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-33818
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-34986
+  reason: "github.com/go-jose/go-jose/v3, github.com/go-jose/go-jose/v4 in bin/cosign - fixed in 3.0.5, 4.1.4"
+  expires: 2026-12-31
+- id: CVE-2026-35469
+  reason: "github.com/moby/spdystream in usr/local/bin/kubectl - fixed in 0.5.1"
+  expires: 2026-12-31
+- id: CVE-2026-39820
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-39821
+  reason: "golang.org/x/net, stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 0.55.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-39822
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
+  expires: 2026-12-31
+- id: CVE-2026-39828
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39829
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39830
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39831
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39832
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39835
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39836
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-39883
+  reason: "go.opentelemetry.io/otel/sdk in bin/cosign - fixed in 1.43.0"
+  expires: 2026-12-31
+- id: CVE-2026-41567
+  reason: "github.com/docker/docker in bin/cosign, bin/crane, gcrane, krane - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-42306
+  reason: "github.com/docker/docker in bin/cosign, bin/crane, gcrane, krane - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-42499
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-42504
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-42508
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46595
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46597
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46600
+  reason: "golang.org/x/net in bin/cosign, usr/local/bin/kubectl - fixed in 0.56.0"
+  expires: 2026-12-31
+- id: CVE-2026-48702
+  reason: "github.com/sigstore/rekor in bin/cosign - fixed in 1.5.2"
+  expires: 2026-12-31
+- id: CVE-2026-49478
+  reason: "github.com/sigstore/fulcio in bin/cosign - fixed in 1.8.6"
+  expires: 2026-12-31
+- id: CVE-2026-56852
+  reason: "golang.org/x/text in bin/cosign, bin/docker-credential-acr-env, usr/local/bin/kubectl - fixed in 0.39.0"
+  expires: 2026-12-31
+- id: CVE-2026-56853
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56854
+  reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-56858
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56859
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56860
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56862
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56864
+  reason: "golang.org/x/mod in bin/cosign - fixed in 0.40.0"
+  expires: 2026-12-31
+- id: CVE-2026-56865
+  reason: "golang.org/x/mod in bin/cosign - fixed in 0.40.0"
+  expires: 2026-12-31
+- id: CVE-2026-84304
+  reason: "google.golang.org/grpc in bin/cosign - fixed in 1.83.1"
+  expires: 2026-12-31
+- id: CVE-2026-84445
+  reason: "google.golang.org/grpc in bin/cosign - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
+  expires: 2026-12-31
+- id: GHSA-hrxh-6v49-42gf
+  reason: "google.golang.org/grpc in bin/cosign - fixed in 1.82.1"
+  expires: 2026-12-31
