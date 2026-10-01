@@ -1,0 +1,121 @@
+ignores:
+- id: CVE-2025-22868
+  reason: "golang.org/x/oauth2 in usr/local/bin/jx - fixed in 0.27.0"
+  expires: 2026-12-31
+- id: CVE-2025-22869
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.35.0"
+  expires: 2026-12-31
+- id: CVE-2025-47913
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.43.0"
+  expires: 2026-12-31
+- id: CVE-2025-61726
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.24.12, 1.25.6"
+  expires: 2026-12-31
+- id: CVE-2025-61729
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.24.11, 1.25.5"
+  expires: 2026-12-31
+- id: CVE-2025-68121
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-25679
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.8, 1.26.1"
+  expires: 2026-12-31
+- id: CVE-2026-25681
+  reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-27136
+  reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-27145
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-32280
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-32281
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-32283
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.9, 1.26.2"
+  expires: 2026-12-31
+- id: CVE-2026-33811
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-33814
+  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.53.0, 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-33818
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-39820
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-39821
+  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.55.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-39822
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
+  expires: 2026-12-31
+- id: CVE-2026-39828
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39829
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39830
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39831
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39832
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39835
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-39836
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-42499
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
+  expires: 2026-12-31
+- id: CVE-2026-42504
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-42508
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46595
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46597
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
+  expires: 2026-12-31
+- id: CVE-2026-46600
+  reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.56.0"
+  expires: 2026-12-31
+- id: CVE-2026-56852
+  reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.39.0"
+  expires: 2026-12-31
+- id: CVE-2026-56853
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56854
+  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-56858
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56859
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56860
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56862
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-84782
+  reason: "libssl3t64, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/net10-sonar:latest (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.16"
+  expires: 2026-12-31
