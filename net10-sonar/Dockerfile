@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/sdk:10.0-noble
+FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/sdk:10.0
 
 RUN apt update && apt install -y openjdk-17-jre
 
