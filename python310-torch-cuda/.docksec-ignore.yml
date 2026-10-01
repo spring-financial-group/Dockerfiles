@@ -632,3 +632,22 @@ ignores:
 - id: GHSA-6v7p-g79w-8964
   reason: "msgpack in Python - fixed in 1.2.1"
   expires: 2026-12-31
+# ubuntu 22.04 base OS vulns (PR scan)
+- id: CVE-2025-68973
+  reason: "gnupg packages (dirmngr, gnupg, gnupg-l10n, gnupg-utils, gnupg2, gpg, gpg-agent, gpg-wks-client, gpg-wks-server, gpgconf, gpgsm, gpgv) in ubuntu 22.04 base - fixed in 2.2.27-3ubuntu2.5"
+  expires: 2026-12-31
+- id: CVE-2026-45447
+  reason: "libssl3, openssl in ubuntu 22.04 base - fixed in 3.0.2-0ubuntu1.25"
+  expires: 2026-12-31
+- id: CVE-2026-53398
+  reason: "linux-libc-dev (kernel headers only; container uses host kernel) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-10263
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-53186
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-64091
+  reason: "linux-libc-dev (kernel headers only) - No fix reported"
+  expires: 2026-12-31
