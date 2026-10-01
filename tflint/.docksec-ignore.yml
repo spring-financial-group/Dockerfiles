@@ -1,0 +1,61 @@
+ignores:
+- id: CVE-2026-27145
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-33818
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-39821
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-39822
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
+  expires: 2026-12-31
+- id: CVE-2026-42504
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
+  expires: 2026-12-31
+- id: CVE-2026-45447
+  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.7) - fixed in 3.3.7-r1"
+  expires: 2026-12-31
+- id: CVE-2026-46600
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56853
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56854
+  reason: "golang.org/x/crypto in usr/local/bin/tflint - fixed in 0.55.0"
+  expires: 2026-12-31
+- id: CVE-2026-56858
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56859
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56860
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56862
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56864
+  reason: "golang.org/x/mod in usr/local/bin/tflint - fixed in 0.40.0"
+  expires: 2026-12-31
+- id: CVE-2026-56865
+  reason: "golang.org/x/mod in usr/local/bin/tflint - fixed in 0.40.0"
+  expires: 2026-12-31
+- id: CVE-2026-75804
+  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.7) - fixed in 3.3.7-r2"
+  expires: 2026-12-31
+- id: CVE-2026-84304
+  reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.83.1"
+  expires: 2026-12-31
+- id: CVE-2026-84445
+  reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
+  expires: 2026-12-31
+- id: CVE-2026-84782
+  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.7) - fixed in 3.3.7-r2"
+  expires: 2026-12-31
+- id: GHSA-hrxh-6v49-42gf
+  reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.82.1"
+  expires: 2026-12-31
