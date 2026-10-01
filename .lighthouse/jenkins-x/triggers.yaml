@@ -70,10 +70,6 @@ spec:
     optional: false
     run_if_changed: (README.md|^.*net8-playwright\/.*$)
     source: "/net8-playwright/pr.yaml"
-  - name: net10-integration-tests-pr
-    optional: false
-    run_if_changed: (README.md|^.*net10-integration-tests\/.*$)
-    source: "/net10-integration-tests/pr.yaml"
   - name: net10-sonar-pr
     optional: false
     run_if_changed: (README.md|^.*net10-sonar\/.*$)
@@ -197,11 +193,6 @@ spec:
     - ^master$
   - name: net8-playwright-release
     source: "/net8-playwright/release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-  - name: net10-integration-tests-release
-    source: "/net10-integration-tests/release.yaml"
     branches:
     - ^main$
     - ^master$
