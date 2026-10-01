@@ -1,0 +1,23 @@
+{
+  "fingerprints": [
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-26646|usr/share/dotnet/sdk/8.0.425/dotnet.deps.json|Microsoft.Build.Tasks.Core",
+    "CVE-2025-3887|jx3mqubebuild.azurecr.io/spring-financial-group/net8-playwright:latest (ubuntu 24.04)|gstreamer1.0-plugins-bad",
+    "CVE-2025-3887|jx3mqubebuild.azurecr.io/spring-financial-group/net8-playwright:latest (ubuntu 24.04)|libgstreamer-plugins-bad1.0-0",
+    "CVE-2026-47302|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-47302|usr/share/powershell/.store/powershell.linux.x64/7.6.2/powershell.linux.x64/7.6.2/tools/net10.0/any/pwsh.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-47304|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-47304|usr/share/powershell/.store/powershell.linux.x64/7.6.2/powershell.linux.x64/7.6.2/tools/net10.0/any/pwsh.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50525|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50525|usr/share/powershell/.store/powershell.linux.x64/7.6.2/powershell.linux.x64/7.6.2/tools/net10.0/any/pwsh.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50527|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50527|usr/share/powershell/.store/powershell.linux.x64/7.6.2/powershell.linux.x64/7.6.2/tools/net10.0/any/pwsh.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50648|usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-50648|usr/share/powershell/.store/powershell.linux.x64/7.6.2/powershell.linux.x64/7.6.2/tools/net10.0/any/pwsh.deps.json|System.Security.Cryptography.Xml",
+    "CVE-2026-62901|usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.10/Microsoft.NETCore.App.deps.json|Microsoft.NETCore.App.Runtime.linux-x64"
+  ]
+}

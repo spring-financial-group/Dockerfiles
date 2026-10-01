@@ -72,6 +72,9 @@ spec:
             docker load -i $IMAGE_NAME.tar
             docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$IMAGE_NAME:$VERSION"
 
+            REPORTS_DIR=/workspace/source/docksec-reports
+            mkdir -p "$REPORTS_DIR"
+
             set +e
             docksec \
               -i "$IMAGE_NAME:$VERSION" \
@@ -79,13 +82,16 @@ spec:
               --no-color \
               --offline \
               --format json \
+              --sbom \
+              --output-dir "$REPORTS_DIR" \
+              --baseline "$IMAGE_NAME/.docksec-baseline.json" \
               --ignore-file "$IMAGE_NAME/.docksec-ignore.yml" \
               --fail-on high
             DOCKSEC_EXIT=$?
             set -e
 
             safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
-            JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
+            JSON_REPORT="$REPORTS_DIR/${safe_name}_scan_results.json"
             if [ -s "$JSON_REPORT" ]; then
               cp "$JSON_REPORT" /tmp/docksec.json
             else
@@ -148,6 +154,47 @@ spec:
             cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
             cosign verify --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
             rm -f /workspace/source/$IMAGE_NAME.tar /workspace/source/scanresults.txt
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
+          name: attest-security-artifacts
+          resources: {}
+          script: |
+            #!/bin/bash
+            set -e
+            source .jx/variables.sh
+            cp /temp-docker-config/config.json ~/.docker/config.json
+
+            COSIGN_KEY=k8s://jx-staging/cosign
+            REPORTS_DIR=/workspace/source/docksec-reports
+            SCAN_TYPE=https://docksec.mqube.build/attestation/scan-results/v1
+            BASELINE_TYPE=https://docksec.mqube.build/attestation/baseline/v1
+
+            safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
+            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            IMAGE_DIGEST=$(crane digest "$IMAGE_REF")
+            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
+
+            # Sign a docksec artifact onto the image digest as an in-toto attestation,
+            # then read it back to prove it is verifiable before the step succeeds.
+            attest() {
+              file=$1; type=$2; label=$3
+              if [ ! -s "$file" ]; then
+                echo "ERROR: $label predicate missing or empty at $file" >&2
+                return 1
+              fi
+              echo "Attesting $label ($type) from $file"
+              cosign attest --yes --key "$COSIGN_KEY" \
+                --type "$type" --predicate "$file" "$IMAGE_WITH_DIGEST"
+              cosign verify-attestation --key "$COSIGN_KEY" \
+                --type "$type" "$IMAGE_WITH_DIGEST" > /dev/null
+              echo "  verified"
+            }
+
+            attest "$REPORTS_DIR/${safe_name}_scan_results.cdx.json" cyclonedx "SBOM"
+            attest "$REPORTS_DIR/${safe_name}_scan_results.json" "$SCAN_TYPE" "docksec scan results"
+            attest "$IMAGE_NAME/.docksec-baseline.json" "$BASELINE_TYPE" "docksec baseline"
+
+            echo "Attestations published for $IMAGE_WITH_DIGEST"
+            rm -rf "$REPORTS_DIR"
         sidecars:
         - name: docker-daemon
           image: docker:27-dind
