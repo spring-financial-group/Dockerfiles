@@ -84,6 +84,7 @@ spec:
             docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.IMAGE_NAME):$VERSION" "$(params.IMAGE_NAME):$VERSION"
             
             set +e
+            REPORTS_DIR=/workspace/source/docksec-reports
             docksec \
               -i "$(params.IMAGE_NAME):$VERSION" \
               --image-only \
@@ -91,12 +92,13 @@ spec:
               --offline \
               --format json \
               --sbom \
+              --output-dir "$REPORTS_DIR" \
               --ignore-file "$(params.IMAGE_NAME)/.docksec-ignore.yml"
             DOCKSEC_EXIT=$?
             set -e
-            
+
             safe_name=$(printf '%s' "$(params.IMAGE_NAME):$VERSION" | tr ':/.-' '_')
-            JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
+            JSON_REPORT="$REPORTS_DIR/${safe_name}_scan_results.json"
             if [ -s "$JSON_REPORT" ]; then
               cp "$JSON_REPORT" /tmp/docksec.json
             else
