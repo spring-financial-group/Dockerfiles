@@ -91,7 +91,7 @@ spec:
               --offline \
               --format json \
               --sbom \
-              --ignore-file "$(params.IMAGE_NAME)/.docksec-ignore.yml" \
+              --ignore-file "$(params.IMAGE_NAME)/.docksec-ignore.yml"
             DOCKSEC_EXIT=$?
             set -e
             
