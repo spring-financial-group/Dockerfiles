@@ -32,14 +32,17 @@ spec:
                     set -e
                     echo "Checking triggers.yaml is configured for all dockerfile dirs in the repo"
                     # Find all Dockerfiles in the repo
-                    find . -name 'Dockerfile' -not -path './.git/*' | while read dockerfile; do
-                        name=$(basename "$(dirname "$dockerfile")")
+                    find dockerfiles -name 'Dockerfile' | while read dockerfile; do
+                        dir=$(dirname "$dockerfile")
+                        name=$(basename "$dir")
                         # Check the presubmit entry named <name>-pr exists
                         grep -q "^  - name: ${name}-pr$" .lighthouse/jenkins-x/triggers.yaml || { echo "No presubmit trigger found for $name in triggers.yaml"; exit 1; }
                         # Check the postsubmit entry named <name>-release exists
                         grep -q "^  - name: ${name}-release$" .lighthouse/jenkins-x/triggers.yaml || { echo "No release trigger found for $name in triggers.yaml"; exit 1; }
                         # Check the IMAGE_NAME param value matches the directory name
                         grep -q "^      value_template: ${name}$" .lighthouse/jenkins-x/triggers.yaml || { echo "IMAGE_NAME for $name missing or incorrect in triggers.yaml"; exit 1; }
+                        # Check the IMAGE_DIR param value matches the directory path
+                        grep -q "^      value_template: ${dir}$" .lighthouse/jenkins-x/triggers.yaml || { echo "IMAGE_DIR for $name missing or incorrect in triggers.yaml"; exit 1; }
                     done
                     echo "All dockerfile dirs have matching triggers"
     podTemplate: {}
