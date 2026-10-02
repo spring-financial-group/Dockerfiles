@@ -2,8 +2,8 @@
 # Generates <image-dir>/.docksec-ignore.yml covering every finding in the image's docksec JSON report.
 # Runs docksec first if the report doesn't exist yet. Skips writing the file if there are no findings.
 #
-# Usage: scripts/create-ignores.sh <image-dir> [image-ref]
-#        scripts/create-ignores.sh --all     # every directory containing a Dockerfile, in parallel
+# Usage: scripts/create-ignores.sh <image-dir> [image-ref]   # e.g. dockerfiles/frontend/node
+#        scripts/create-ignores.sh --all     # every dockerfiles/<group>/<image> directory, in parallel
 #   EXPIRES=YYYY-MM-DD to override the expiry date (default 2026-12-31)
 #   JOBS=N for the number of parallel scans with --all (default 4)
 set -euo pipefail
@@ -13,7 +13,7 @@ expires="${EXPIRES:-2026-12-31}"
 
 create_ignores() {
   local image_dir="${1%/}"
-  local image_ref="${2:-jx3mqubebuild.azurecr.io/spring-financial-group/${image_dir}:latest}"
+  local image_ref="${2:-jx3mqubebuild.azurecr.io/spring-financial-group/${image_dir##*/}:latest}"
   local safe_name report out count
 
   safe_name=$(printf '%s' "$image_ref" | tr ':/.-' '_')
@@ -57,7 +57,7 @@ if [ "${1:-}" = "--all" ]; then
 
   failed_file=$(mktemp)
   trap 'rm -f "$failed_file"' EXIT
-  printf '%s\n' */Dockerfile | sed 's|/Dockerfile$||' |
+  printf '%s\n' dockerfiles/*/*/Dockerfile | sed 's|/Dockerfile$||' |
     xargs -P "${JOBS:-4}" -I{} bash -c '
       create_ignores "$1" 2>&1 | sed "s|^|[$1] |"
       [ "${PIPESTATUS[0]}" -eq 0 ] || echo "$1" >> "$2"

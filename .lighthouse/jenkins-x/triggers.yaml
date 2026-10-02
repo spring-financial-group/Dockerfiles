@@ -4,172 +4,220 @@ spec:
   presubmits:
   - name: container-tools-pr
     optional: false
-    run_if_changed: (README.md|^.*container-tools\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/tools\/container-tools\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: container-tools
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/container-tools
   - name: docksec-pr
     optional: false
-    run_if_changed: (README.md|^.*docksec\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/security\/docksec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: docksec
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/docksec
   - name: all-sdks-alpine-pr
     optional: false
-    run_if_changed: (README.md|^.*all-sdks-alpine\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/all-sdks\/all-sdks-alpine\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-alpine
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-alpine
   - name: all-sdks-debian-pr
     optional: false
-    run_if_changed: (README.md|^.*all-sdks-debian\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/all-sdks\/all-sdks-debian\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-debian
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-debian
   - name: python310-pr
     optional: false
-    run_if_changed: (README.md|^.*python310\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/python\/python310\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310
   - name: python310-torch-cpu-pr
     optional: false
-    run_if_changed: (README.md|^.*python310-torch-cpu\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/python\/python310-torch-cpu\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cpu
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cpu
   - name: python310-torch-cuda-pr
     optional: false
-    run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/python\/python310-torch-cuda\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cuda
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cuda
   - name: python314-pr
     optional: false
-    run_if_changed: (README.md|^.*python314\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/python\/python314\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python314
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python314
   - name: nginx-pr
     optional: false
-    run_if_changed: (README.md|^.*nginx\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/frontend\/nginx\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: nginx
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/nginx
   - name: node-pr
     optional: false
-    run_if_changed: (README.md|^.*node\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/frontend\/node\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node
   - name: node-unit-test-pr
     optional: false
-    run_if_changed: (README.md|^.*node-unit-test\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/frontend\/node-unit-test\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node-unit-test
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node-unit-test
   - name: android-pr
     optional: false
-    run_if_changed: (README.md|^.*android\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/frontend\/android\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: android
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/android
   - name: terratest-tfsec-pr
     optional: false
-    run_if_changed: (README.md|^.*terratest-tfsec\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/terraform\/terratest-tfsec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: terratest-tfsec
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/terratest-tfsec
   - name: tflint-pr
     optional: false
-    run_if_changed: (README.md|^.*tflint\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/terraform\/tflint\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: tflint
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/tflint
   - name: net8-integration-tests-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-integration-tests\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-integration-tests
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-integration-tests
   - name: net8-sonar-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-sonar\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/csharp\/net8-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-sonar
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-sonar
   - name: net8-playwright-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-playwright\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/csharp\/net8-playwright\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-playwright
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-playwright
   - name: net10-sonar-pr
     optional: false
-    run_if_changed: (README.md|^.*net10-sonar\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/csharp\/net10-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net10-sonar
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net10-sonar
   - name: chrome-for-testing-pr
     optional: false
-    run_if_changed: (README.md|^.*chrome-for-testing\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing
   - name: chrome-for-testing-golang-pr
     optional: false
-    run_if_changed: (README.md|^.*chrome-for-testing-golang\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/chrome\/chrome-for-testing-golang\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing-golang
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing-golang
   - name: black-arch-pr
     optional: false
-    run_if_changed: (README.md|^.*black-arch\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/security\/black-arch\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: black-arch
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/black-arch
   - name: bun-pr
     optional: false
-    run_if_changed: (README.md|^.*bun\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/frontend\/bun\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: bun
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/bun
   - name: helmfile-pr
     optional: false
-    run_if_changed: (README.md|^.*helmfile\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/tools\/helmfile\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: helmfile
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/helmfile
   - name: golang-pipeline-pr
     optional: false
-    run_if_changed: (README.md|^.*golang-pipeline\/.*$)
+    run_if_changed: (README.md|^dockerfiles\/go\/golang-pipeline\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: golang-pipeline
+    - name: IMAGE_DIR
+      value_template: dockerfiles/go/golang-pipeline
   - name: lint-pipelines
     context: "lint-pipelines"
     run_if_changed: '.lighthouse\/jenkins-x\/.*'
@@ -191,6 +239,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: container-tools
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/container-tools
   - name: docksec-release
     source: "dockerfile-release.yaml"
     branches:
@@ -199,6 +249,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: docksec
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/docksec
   - name: all-sdks-alpine-release
     source: "dockerfile-release.yaml"
     branches:
@@ -207,6 +259,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-alpine
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-alpine
   - name: all-sdks-debian-release
     source: "dockerfile-release.yaml"
     branches:
@@ -215,6 +269,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-debian
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-debian
   - name: python310-release
     source: "dockerfile-release.yaml"
     branches:
@@ -223,6 +279,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310
   - name: python310-torch-cpu-release
     source: "dockerfile-release.yaml"
     branches:
@@ -231,6 +289,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cpu
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cpu
   - name: python310-torch-cuda-release
     source: "dockerfile-release.yaml"
     branches:
@@ -239,6 +299,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cuda
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cuda
   - name: python314-release
     source: "dockerfile-release.yaml"
     branches:
@@ -247,6 +309,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python314
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python314
   - name: nginx-release
     source: "dockerfile-release.yaml"
     branches:
@@ -255,6 +319,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: nginx
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/nginx
   - name: node-release
     source: "dockerfile-release.yaml"
     branches:
@@ -263,6 +329,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node
   - name: node-unit-test-release
     source: "dockerfile-release.yaml"
     branches:
@@ -271,6 +339,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node-unit-test
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node-unit-test
   - name: android-release
     source: "dockerfile-release.yaml"
     branches:
@@ -279,6 +349,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: android
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/android
   - name: terratest-tfsec-release
     source: "dockerfile-release.yaml"
     branches:
@@ -287,6 +359,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: terratest-tfsec
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/terratest-tfsec
   - name: tflint-release
     source: "dockerfile-release.yaml"
     branches:
@@ -295,6 +369,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: tflint
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/tflint
   - name: net8-integration-tests-release
     source: "dockerfile-release.yaml"
     branches:
@@ -303,6 +379,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-integration-tests
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-integration-tests
   - name: net8-sonar-release
     source: "dockerfile-release.yaml"
     branches:
@@ -311,6 +389,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-sonar
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-sonar
   - name: net8-playwright-release
     source: "dockerfile-release.yaml"
     branches:
@@ -319,6 +399,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-playwright
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-playwright
   - name: net10-sonar-release
     source: "dockerfile-release.yaml"
     branches:
@@ -327,6 +409,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net10-sonar
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net10-sonar
   - name: chrome-for-testing-release
     source: "dockerfile-release.yaml"
     branches:
@@ -335,6 +419,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing
   - name: chrome-for-testing-golang-release
     source: "dockerfile-release.yaml"
     branches:
@@ -343,6 +429,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing-golang
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing-golang
   - name: black-arch-release
     source: "dockerfile-release.yaml"
     branches:
@@ -351,6 +439,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: black-arch
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/black-arch
   - name: bun-release
     source: "dockerfile-release.yaml"
     branches:
@@ -359,6 +449,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: bun
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/bun
   - name: helmfile-release
     source: "dockerfile-release.yaml"
     branches:
@@ -367,6 +459,8 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: helmfile
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/helmfile
   - name: golang-pipeline-release
     source: "dockerfile-release.yaml"
     branches:
@@ -375,3 +469,5 @@ spec:
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: golang-pipeline
+    - name: IMAGE_DIR
+      value_template: dockerfiles/go/golang-pipeline
