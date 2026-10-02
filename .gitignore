@@ -1,6 +1,5 @@
 /.idea
 .DS_Store
 
-*/.docksec_cache.json
-*/.docksec_epss_cache.json
+.docksec_*cache.json
 *_results.json
