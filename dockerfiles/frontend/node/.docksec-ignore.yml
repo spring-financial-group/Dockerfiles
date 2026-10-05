@@ -23,3 +23,6 @@ ignores:
 - id: CVE-2026-73566
   reason: "tar in Node.js - fixed in 7.5.21"
   expires: 2026-12-31
+- id: CVE-2026-93748
+  reason: "http-cache-semantics in Node.js - No fix reported"
+  expires: 2026-12-31

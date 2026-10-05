@@ -203,9 +203,6 @@ ignores:
 - id: CVE-2026-74520
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-74611
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-74752
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31

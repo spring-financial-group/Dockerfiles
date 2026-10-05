@@ -117,7 +117,7 @@ ignores:
   reason: "libsqlite3-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-103111
-  reason: "libpcre2-8-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libpcre2-8-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 10.42-1+deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-11822
   reason: "libsqlite3-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
@@ -429,9 +429,6 @@ ignores:
   reason: "libssl1.1, libssl3, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86138
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-86139
   reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86140

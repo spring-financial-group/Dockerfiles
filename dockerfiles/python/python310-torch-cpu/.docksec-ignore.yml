@@ -2,6 +2,18 @@ ignores:
 - id: CVE-2022-1205
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2022-3523
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-38457
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-40133
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-48673
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2022-49359
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -23,6 +35,15 @@ ignores:
 - id: CVE-2022-50234
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2023-52452
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-52569
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-52676
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2023-52926
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -39,6 +60,24 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-54125
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-6610
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-26656
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-26853
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-26954
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-27032
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-27062
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cpu:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-31580
@@ -631,35 +670,4 @@ ignores:
   expires: 2026-12-31
 - id: GHSA-6v7p-g79w-8964
   reason: "msgpack in Python - fixed in 1.2.1"
-  expires: 2026-12-31
-# ubuntu 22.04 base OS vulns (PR scan)
-- id: CVE-2026-53398
-  reason: "linux-libc-dev (kernel headers only; container uses host kernel) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2025-10263
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-53186
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-64091
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2022-3523
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2022-38457
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2022-40133
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2023-52452
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2023-52569
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2023-6610
-  reason: "linux-libc-dev (kernel headers only) - No fix reported"
   expires: 2026-12-31
