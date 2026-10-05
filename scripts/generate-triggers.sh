@@ -27,7 +27,7 @@ EOF
     cat <<EOF
   - name: ${dir##*/}-pr
     optional: false
-    run_if_changed: (README.md|^${dir//\//\\/}\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^${dir//\//\\/}\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
