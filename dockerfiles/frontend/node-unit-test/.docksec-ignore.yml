@@ -2459,6 +2459,9 @@ ignores:
 - id: CVE-2026-86138
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-86139
+  reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-86140
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31

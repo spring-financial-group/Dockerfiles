@@ -430,6 +430,8 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-86138
   reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+- id: CVE-2026-86139
+  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86140
   reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
