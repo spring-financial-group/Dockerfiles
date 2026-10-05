@@ -93,6 +93,7 @@ spec:
               --no-color \
               --offline \
               --format json \
+              --baseline "$(params.IMAGE_DIR)/.docksec-baseline.json"
               --ignore-file "$(params.IMAGE_DIR)/.docksec-ignore.yml" \
               --fail-on high
             DOCKSEC_EXIT=$?
