@@ -4,168 +4,168 @@ spec:
   presubmits:
   - name: container-tools-pr
     optional: false
-    run_if_changed: (README.md|^.*container-tools\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*container-tools\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: container-tools
   - name: docksec-pr
     optional: false
-    run_if_changed: (README.md|^.*docksec\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*docksec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: docksec
   - name: all-sdks-alpine-pr
     optional: false
-    run_if_changed: (README.md|^.*all-sdks-alpine\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*all-sdks-alpine\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-alpine
   - name: all-sdks-debian-pr
     optional: false
-    run_if_changed: (README.md|^.*all-sdks-debian\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*all-sdks-debian\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: all-sdks-debian
   - name: python310-pr
     optional: false
-    run_if_changed: (README.md|^.*python310\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*python310\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310
   - name: python310-torch-cpu-pr
     optional: false
-    run_if_changed: (README.md|^.*python310-torch-cpu\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*python310-torch-cpu\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cpu
   - name: python310-torch-cuda-pr
     optional: false
-    run_if_changed: (README.md|^.*python310-torch-cuda\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*python310-torch-cuda\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python310-torch-cuda
   - name: python314-pr
     optional: false
-    run_if_changed: (README.md|^.*python314\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*python314\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: python314
   - name: nginx-pr
     optional: false
-    run_if_changed: (README.md|^.*nginx\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*nginx\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: nginx
   - name: node-pr
     optional: false
-    run_if_changed: (README.md|^.*node\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*node\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node
   - name: node-unit-test-pr
     optional: false
-    run_if_changed: (README.md|^.*node-unit-test\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*node-unit-test\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: node-unit-test
   - name: android-pr
     optional: false
-    run_if_changed: (README.md|^.*android\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*android\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: android
   - name: terratest-tfsec-pr
     optional: false
-    run_if_changed: (README.md|^.*terratest-tfsec\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*terratest-tfsec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: terratest-tfsec
   - name: tflint-pr
     optional: false
-    run_if_changed: (README.md|^.*tflint\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*tflint\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: tflint
   - name: net8-integration-tests-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-integration-tests\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*net8-integration-tests\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-integration-tests
   - name: net8-sonar-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-sonar\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*net8-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-sonar
   - name: net8-playwright-pr
     optional: false
-    run_if_changed: (README.md|^.*net8-playwright\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*net8-playwright\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net8-playwright
   - name: net10-sonar-pr
     optional: false
-    run_if_changed: (README.md|^.*net10-sonar\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*net10-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: net10-sonar
   - name: chrome-for-testing-pr
     optional: false
-    run_if_changed: (README.md|^.*chrome-for-testing\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*chrome-for-testing\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing
   - name: chrome-for-testing-golang-pr
     optional: false
-    run_if_changed: (README.md|^.*chrome-for-testing-golang\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*chrome-for-testing-golang\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: chrome-for-testing-golang
   - name: black-arch-pr
     optional: false
-    run_if_changed: (README.md|^.*black-arch\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*black-arch\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: black-arch
   - name: bun-pr
     optional: false
-    run_if_changed: (README.md|^.*bun\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*bun\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: bun
   - name: helmfile-pr
     optional: false
-    run_if_changed: (README.md|^.*helmfile\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*helmfile\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
       value_template: helmfile
   - name: golang-pipeline-pr
     optional: false
-    run_if_changed: (README.md|^.*golang-pipeline\/.*$)
+    run_if_changed: (LastAutoCommit|README.md|^.*golang-pipeline\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_NAME
