@@ -24,34 +24,15 @@ spec:
               - image: uses:spring-financial-group/mqube-pipeline-catalog/tasks/tools/jx-pipeline-linter.yaml@main
                 name: ""
                 resources: {}
-              - image: jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.24
+              - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
                 name: dockerfile-triggers
                 resources: {}
                 script: |
-                    #!/bin/sh
+                    #!/bin/bash
                     set -e
-                    echo "Checking dockerfile dir names are unique across categories"
-                    dups=$(find dockerfiles -name 'Dockerfile' -exec dirname {} \; | xargs -n1 basename | sort | uniq -d)
-                    if [ -n "$dups" ]; then
-                        echo "Duplicate image names found (image name is the dir basename):"
-                        echo "$dups"
-                        exit 1
-                    fi
-                    echo "Checking triggers.yaml is configured for all dockerfile dirs in the repo"
-                    # Find all Dockerfiles in the repo
-                    find dockerfiles -name 'Dockerfile' | while read dockerfile; do
-                        dir=$(dirname "$dockerfile")
-                        name=$(basename "$dir")
-                        # Check the presubmit entry named <name>-pr exists
-                        grep -q "^  - name: ${name}-pr$" .lighthouse/jenkins-x/triggers.yaml || { echo "No presubmit trigger found for $name in triggers.yaml"; exit 1; }
-                        # Check the postsubmit entry named <name>-release exists
-                        grep -q "^  - name: ${name}-release$" .lighthouse/jenkins-x/triggers.yaml || { echo "No release trigger found for $name in triggers.yaml"; exit 1; }
-                        # Check the IMAGE_NAME param value matches the directory name
-                        grep -q "^      value_template: ${name}$" .lighthouse/jenkins-x/triggers.yaml || { echo "IMAGE_NAME for $name missing or incorrect in triggers.yaml"; exit 1; }
-                        # Check the IMAGE_DIR param value matches the directory path
-                        grep -q "^      value_template: ${dir}$" .lighthouse/jenkins-x/triggers.yaml || { echo "IMAGE_DIR for $name missing or incorrect in triggers.yaml"; exit 1; }
-                    done
-                    echo "All dockerfile dirs have matching triggers"
+                    git config --global --add safe.directory "$PWD"
+                    scripts/generate-triggers.sh
+                    git diff --exit-code -- .lighthouse/jenkins-x/triggers.yaml || { echo "triggers.yaml is out of date, run scripts/generate-triggers.sh and commit the result"; exit 1; }
     podTemplate: {}
     serviceAccountName: tekton-bot
     timeout: 1h0m0s
