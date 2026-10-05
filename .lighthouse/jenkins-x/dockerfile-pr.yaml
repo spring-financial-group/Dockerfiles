@@ -62,7 +62,7 @@ spec:
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
             IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
-            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/"$(params.IMAGE_DIR)" --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_OR/"$IMAGE_NAME":$VERSION --no-push --tarPath "$IMAGE_NAME".tar
+            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/"$(params.IMAGE_DIR)" --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/"$IMAGE_NAME":$VERSION --no-push --tarPath "$IMAGE_NAME".tar
         - image: jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/trivydb:latest
           name: copy-vulns-db
           resources: { }
