@@ -5,168 +5,168 @@ spec:
   presubmits:
   - name: all-sdks-alpine-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/all-sdks\/all-sdks-alpine\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/all-sdks\/all-sdks-alpine\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-alpine
   - name: all-sdks-debian-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/all-sdks\/all-sdks-debian\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/all-sdks\/all-sdks-debian\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-debian
   - name: chrome-for-testing-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing
   - name: chrome-for-testing-golang-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/chrome\/chrome-for-testing-golang\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing-golang\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing-golang
   - name: net10-sonar-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/csharp\/net10-sonar\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net10-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net10-sonar
   - name: net8-integration-tests-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-integration-tests
   - name: net8-playwright-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/csharp\/net8-playwright\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-playwright\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-playwright
   - name: net8-sonar-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/csharp\/net8-sonar\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-sonar\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-sonar
   - name: android-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/frontend\/android\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/android\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/android
   - name: bun-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/frontend\/bun\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/bun\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/bun
   - name: nginx-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/frontend\/nginx\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/nginx\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/nginx
   - name: node-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/frontend\/node\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node
   - name: node-unit-test-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/frontend\/node-unit-test\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-unit-test\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node-unit-test
   - name: golang-pipeline-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/go\/golang-pipeline\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/go\/golang-pipeline\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/go/golang-pipeline
   - name: python310-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/python\/python310\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310
   - name: python310-torch-cpu-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/python\/python310-torch-cpu\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310-torch-cpu\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310-torch-cpu
   - name: python310-torch-cuda-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/python\/python310-torch-cuda\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310-torch-cuda\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310-torch-cuda
   - name: python314-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/python\/python314\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python314\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python314
   - name: black-arch-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/security\/black-arch\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/security\/black-arch\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/security/black-arch
   - name: docksec-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/security\/docksec\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/security\/docksec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/security/docksec
   - name: terratest-tfsec-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/terraform\/terratest-tfsec\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/terraform\/terratest-tfsec\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/terratest-tfsec
   - name: tflint-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/terraform\/tflint\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/terraform\/tflint\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/tflint
   - name: container-tools-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/tools\/container-tools\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/container-tools\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/tools/container-tools
   - name: helmfile-pr
     optional: false
-    run_if_changed: (LastAutoCommit|README.md|^dockerfiles\/tools\/helmfile\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/helmfile\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
