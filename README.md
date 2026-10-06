@@ -10,12 +10,8 @@ will become the name of the generated image. Our `net-10` image would be created
 ./scripts/generate-triggers.sh
 ```
 The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edit it by hand.
-3. (Optional) install `docksec` and `trivy` on your local machine, then run this script to add a `.docksec-ignore.yml` file to the new image folder:
-```bash
-./scripts/create-ignores.sh dockerfiles/csharp/net-10
-```
-This saves needing to get the results from the pipeline
-4. Create a PR. The pipeline should run and build the new image
+3. Create a PR. The pipeline should run and build the new image
+4. If the PR fails on existing findings in the base image, comment `/update-baseline net-10` on the PR to accept them (see [Accepting findings](#accepting-findings)).
 
 ## Image Publication Diagrams
 
@@ -26,7 +22,7 @@ This is an overview of how the components work together to manage security findi
 
 **TL;DR**
 1. A daily cronjob opens a PR so every image is re-scanned against the latest Trivy DB.
-2. The PR pipeline fails on any new High/Critical finding. The infra team fixes what it can and accepts the rest in `.docksec-ignore.yml`.
+2. The PR pipeline fails on any High/Critical finding that isn't in the image's baseline or ignore file. The infra team fixes what it can and accepts the rest with `/update-baseline <image>`.
 3. Merging releases the images to ACR, each signed and carrying its SBOM and full CVE report as attestations.
 4. Services built on these images compare their own findings against the base image's attestation, so they're only blocked by findings they introduced or that nobody has accepted.
 
@@ -37,7 +33,7 @@ flowchart LR
     subgraph REPO["This repo"]
         direction LR
         CRON["<b>Run daily cronjob</b><br/><small>MDO opens a PR</small>"] --> PR["<b>Gate findings</b><br/><small>PR pipeline<br/>docksec ... --fail-on high</small>"]
-        PR --> TRIAGE["<b>Fix or accept</b><br/><small>Dockerfile change or<br/>.docksec-ignore.yml</small>"]
+        PR --> TRIAGE["<b>Fix or accept</b><br/><small>Dockerfile change or<br/>/update-baseline</small>"]
         TRIAGE --> REL["<b>Publish image</b><br/><small>release pipeline<br/>sign + attest SBOM and CVE report</small>"]
     end
 
@@ -63,21 +59,38 @@ flowchart LR
     V1["<b>Run daily cronjob</b><br/><small>MDO</small>"] --> V2["<b>Open PR</b><br/><small>runs every PR pipeline with<br/>trivydb:latest</small>"]
     V2 --> V3["<b>Analyse findings</b><br/><small>infra team</small>"]
     V3 --> V4["<b>Fix what we can</b><br/><small>update Dockerfiles</small>"]
-    V3 --> V5["<b>Accept the rest</b><br/><small>add to .docksec-ignore.yml</small>"]
+    V3 --> V5["<b>Accept the rest</b><br/><small>/update-baseline &lt;image&gt;</small>"]
     V4 --> V6["<b>Merge PR</b><br/><small>release pipelines publish<br/>updated build images</small>"]
     V5 --> V6
 ```
 
+### Accepting findings
+Each image folder can hold two files, both read by the PR pipeline:
+
+| File | What it holds | Maintained by |
+|------|---------------|---------------|
+| `.docksec-baseline.json` | Every accepted finding (CVE + target + package) at the time it was last regenerated. Findings that disappear (fixed, withdrawn) drop out on the next regeneration. | `/update-baseline <image>` on a PR, or `scripts/update-baseline.sh` |
+| `.docksec-ignore.yml` | Hand-triaged waivers with a reason and expiry. Ignored findings are left out of the baseline, so an expired entry fails the PR. | By hand, or `scripts/create-ignores.sh` |
+
+Commenting `/update-baseline <image>` (or `/update-baseline all`) on a PR rebuilds the image, regenerates its baseline with the same Trivy DB as the PR pipeline, and commits the result to the PR branch for review. This doesn't work on PRs from forks; run the script locally instead:
+```bash
+./scripts/update-baseline.sh dockerfiles/csharp/net-10   # or --all
+./scripts/create-ignores.sh --prune dockerfiles/csharp/net-10   # drop ignore entries for findings that are gone
+```
+Scans always use the fixed image ref `docksec/<image>:scan`, because Trivy includes the scanned ref in OS findings and the baseline matches on it.
+
+Known gaps: the release pipeline doesn't read the baseline, so CVEs disclosed after the last regeneration show up in the attestation with nothing marking them as unaccepted. A fixed CVE stays in the baseline until the next regeneration, so it would pass silently if it came back.
+
 ### PR pipeline (`dockerfile-pr.yaml`)
-Gates the build: any High/Critical finding not listed in the image's `.docksec-ignore.yml` fails the PR.
+Gates the build: any High/Critical finding that isn't in the image's `.docksec-baseline.json` or `.docksec-ignore.yml` fails the PR.
 
 ```mermaid
 flowchart LR
-    P1["<b>Build image</b><br/><small>kaniko ... --no-push</small>"] --> P2["<b>Scan image</b><br/><small>docksec ... --ignore-file ... --fail-on high</small>"]
-    P2 -->|High/Critical found| P3["<b>Alert security</b><br/><small>Slack #35;alerts-security</small>"]
-    P2 --> P4{"<b>Unignored<br/>High/Critical?</b>"}
+    P1["<b>Build image</b><br/><small>kaniko ... --no-push</small>"] --> P2["<b>Scan image</b><br/><small>docksec ... --ignore-file ... --baseline ... --fail-on high</small>"]
+    P2 -->|New High/Critical found| P3["<b>Alert security</b><br/><small>Slack #35;alerts-security</small>"]
+    P2 --> P4{"<b>High/Critical not in<br/>baseline or ignores?</b>"}
     P4 -->|Yes| P5["<b>Fail pipeline</b>"]
-    P5 --> P6["<b>Fix or accept the vuln</b><br/><small>update .docksec-ignore.yml</small>"]
+    P5 --> P6["<b>Fix or accept the vuln</b><br/><small>/update-baseline &lt;image&gt;</small>"]
     P6 -.->|Re-run| P1
     P4 -->|No| P7["<b>Push and sign image</b><br/><small>crane push ... / cosign sign ...</small>"]
 ```

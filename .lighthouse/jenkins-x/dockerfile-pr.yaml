@@ -84,21 +84,29 @@ spec:
             until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
 
             docker load -i "$IMAGE_NAME".tar
-            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$IMAGE_NAME:$VERSION"
+            # Scan a fixed ref: Trivy puts it in the Target of OS findings, which is part of the baseline fingerprint.
+            SCAN_REF="docksec/$IMAGE_NAME:scan"
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$SCAN_REF"
+
+            # Accepted findings, maintained by scripts/update-baseline.sh or /update-baseline. A missing file means an empty baseline.
+            BASELINE="$(params.IMAGE_DIR)/.docksec-baseline.json"
 
             set +e
             docksec \
-              -i "$IMAGE_NAME:$VERSION" \
+              -i "$SCAN_REF" \
               --image-only \
               --no-color \
+              --no-cache \
               --offline \
               --format json \
+              --severity CRITICAL,HIGH \
               --ignore-file "$(params.IMAGE_DIR)/.docksec-ignore.yml" \
+              --baseline "$BASELINE" \
               --fail-on high
             DOCKSEC_EXIT=$?
             set -e
 
-            safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
+            safe_name=$(printf '%s' "$SCAN_REF" | tr ':/.-' '_')
             JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
             if [ -s "$JSON_REPORT" ]; then
               cp "$JSON_REPORT" /tmp/docksec.json
@@ -106,12 +114,24 @@ spec:
               echo "docksec JSON report not found at $JSON_REPORT" >&2
               echo '{}' > /tmp/docksec.json
             fi
-            
+
+            # Only report findings that are not already accepted in the baseline.
+            if [ -s "$BASELINE" ]; then
+              yq -p json -o json '.fingerprints // []' "$BASELINE" > /tmp/baseline-fingerprints.json
+            else
+              echo '[]' > /tmp/baseline-fingerprints.json
+            fi
+
             VULN_ROWS=$(yq -r '
-              .vulnerabilities[]?
+              load("/tmp/baseline-fingerprints.json") as $baseline
+              | .vulnerabilities[]?
               | select(
               (.Severity | downcase) == "critical"
               or (.Severity | downcase) == "high"
+              )
+              | select(
+                ((.VulnerabilityID // "UNKNOWN") + "|" + (.Target // "") + "|" + (.PkgName // "")) as $fp
+                | ($baseline | any_c(. == $fp)) | not
               )
               | [
               (.Severity | upcase),
@@ -140,9 +160,9 @@ spec:
               PIPELINE_RUN_NAMESPACE=$(context.pipelineRun.namespace)
               TEKTON_URL=https://tekton-dashboard.jx.mqube.build/#/namespaces/$PIPELINE_RUN_NAMESPACE/pipelineruns/$PIPELINE_NAME
               PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
-              curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"VULNERABILITIES FOUND in $IMAGE_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
+              curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"NEW VULNERABILITIES (not in baseline) FOUND in $IMAGE_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
             else
-              echo "No medium-or-higher vulnerabilities found."
+              echo "No high-or-critical vulnerabilities found outside the baseline."
             fi
             echo
             

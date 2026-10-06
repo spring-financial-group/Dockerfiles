@@ -171,6 +171,222 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/tools/helmfile
+  - name: all-sdks-alpine-update-baseline
+    context: "all-sdks-alpine-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| all-sdks-alpine)\s*$
+    rerun_command: /update-baseline all-sdks-alpine
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-alpine
+  - name: all-sdks-debian-update-baseline
+    context: "all-sdks-debian-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| all-sdks-debian)\s*$
+    rerun_command: /update-baseline all-sdks-debian
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/all-sdks/all-sdks-debian
+  - name: chrome-for-testing-update-baseline
+    context: "chrome-for-testing-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| chrome-for-testing)\s*$
+    rerun_command: /update-baseline chrome-for-testing
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing
+  - name: chrome-for-testing-golang-update-baseline
+    context: "chrome-for-testing-golang-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| chrome-for-testing-golang)\s*$
+    rerun_command: /update-baseline chrome-for-testing-golang
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/chrome/chrome-for-testing-golang
+  - name: net10-sonar-update-baseline
+    context: "net10-sonar-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| net10-sonar)\s*$
+    rerun_command: /update-baseline net10-sonar
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net10-sonar
+  - name: net8-integration-tests-update-baseline
+    context: "net8-integration-tests-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| net8-integration-tests)\s*$
+    rerun_command: /update-baseline net8-integration-tests
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-integration-tests
+  - name: net8-playwright-update-baseline
+    context: "net8-playwright-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| net8-playwright)\s*$
+    rerun_command: /update-baseline net8-playwright
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-playwright
+  - name: net8-sonar-update-baseline
+    context: "net8-sonar-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| net8-sonar)\s*$
+    rerun_command: /update-baseline net8-sonar
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/net8-sonar
+  - name: android-update-baseline
+    context: "android-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| android)\s*$
+    rerun_command: /update-baseline android
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/android
+  - name: bun-update-baseline
+    context: "bun-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| bun)\s*$
+    rerun_command: /update-baseline bun
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/bun
+  - name: nginx-update-baseline
+    context: "nginx-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| nginx)\s*$
+    rerun_command: /update-baseline nginx
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/nginx
+  - name: node-update-baseline
+    context: "node-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| node)\s*$
+    rerun_command: /update-baseline node
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node
+  - name: node-unit-test-update-baseline
+    context: "node-unit-test-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| node-unit-test)\s*$
+    rerun_command: /update-baseline node-unit-test
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node-unit-test
+  - name: golang-pipeline-update-baseline
+    context: "golang-pipeline-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| golang-pipeline)\s*$
+    rerun_command: /update-baseline golang-pipeline
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/go/golang-pipeline
+  - name: python310-update-baseline
+    context: "python310-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| python310)\s*$
+    rerun_command: /update-baseline python310
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310
+  - name: python310-torch-cpu-update-baseline
+    context: "python310-torch-cpu-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| python310-torch-cpu)\s*$
+    rerun_command: /update-baseline python310-torch-cpu
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cpu
+  - name: python310-torch-cuda-update-baseline
+    context: "python310-torch-cuda-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| python310-torch-cuda)\s*$
+    rerun_command: /update-baseline python310-torch-cuda
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python310-torch-cuda
+  - name: python314-update-baseline
+    context: "python314-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| python314)\s*$
+    rerun_command: /update-baseline python314
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/python/python314
+  - name: black-arch-update-baseline
+    context: "black-arch-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| black-arch)\s*$
+    rerun_command: /update-baseline black-arch
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/black-arch
+  - name: docksec-update-baseline
+    context: "docksec-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| docksec)\s*$
+    rerun_command: /update-baseline docksec
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/security/docksec
+  - name: terratest-tfsec-update-baseline
+    context: "terratest-tfsec-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| terratest-tfsec)\s*$
+    rerun_command: /update-baseline terratest-tfsec
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/terratest-tfsec
+  - name: tflint-update-baseline
+    context: "tflint-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| tflint)\s*$
+    rerun_command: /update-baseline tflint
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/terraform/tflint
+  - name: container-tools-update-baseline
+    context: "container-tools-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| container-tools)\s*$
+    rerun_command: /update-baseline container-tools
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/container-tools
+  - name: helmfile-update-baseline
+    context: "helmfile-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| helmfile)\s*$
+    rerun_command: /update-baseline helmfile
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/helmfile
   - name: lint-pipelines
     context: "lint-pipelines"
     run_if_changed: '(\.lighthouse\/jenkins-x\/.*|^scripts\/generate-triggers\.sh$|^dockerfiles\/.*\/Dockerfile$)'

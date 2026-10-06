@@ -34,6 +34,20 @@ EOF
       value_template: ${dir}
 EOF
   done
+  # Comment-only jobs: a per-image command, as comment triggers ignore run_if_changed.
+  for dir in $dirs; do
+    cat <<EOF
+  - name: ${dir##*/}-update-baseline
+    context: "${dir##*/}-update-baseline"
+    optional: true
+    trigger: (?m)^/update-baseline( all| ${dir##*/})\s*$
+    rerun_command: /update-baseline ${dir##*/}
+    source: "dockerfile-update-baseline.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: ${dir}
+EOF
+  done
   cat <<'EOF'
   - name: lint-pipelines
     context: "lint-pipelines"
