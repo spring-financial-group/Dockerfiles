@@ -19,6 +19,55 @@ This saves needing to get the results from the pipeline
 
 ## Image Publication Diagrams
 
+Note: The following is a work-in-progress, and may not reflect the current state of the pipelines.
+
+### Overview of Vulnerability Management
+This is an overview of how the components work together to manage security findings from this repo to the end-service.
+
+**TL;DR**
+1. A daily cronjob opens a PR so every image is re-scanned against the latest Trivy DB.
+2. The PR pipeline fails on any new High/Critical finding. The infra team fixes what it can and accepts the rest in `.docksec-ignore.yml`.
+3. Merging releases the images to ACR, each signed and carrying its SBOM and full CVE report as attestations.
+4. Services built on these images compare their own findings against the base image's attestation, so they're only blocked by findings they introduced or that nobody has accepted.
+
+```mermaid
+flowchart LR
+    DB[("<b>Trivy DB</b><br/><small>trivydb:latest, updated daily</small>")] -.-> PR
+
+    subgraph REPO["This repo"]
+        direction LR
+        CRON["<b>Run daily cronjob</b><br/><small>MDO opens a PR</small>"] --> PR["<b>Gate findings</b><br/><small>PR pipeline<br/>docksec ... --fail-on high</small>"]
+        PR --> TRIAGE["<b>Fix or accept</b><br/><small>Dockerfile change or<br/>.docksec-ignore.yml</small>"]
+        TRIAGE --> REL["<b>Publish image</b><br/><small>release pipeline<br/>sign + attest SBOM and CVE report</small>"]
+    end
+
+    REL --> ACR[("<b>ACR</b><br/><small>base image + signature<br/>+ attestations</small>")]
+
+    subgraph SVC["Downstream service"]
+        direction LR
+        BUILD["<b>Build and scan</b><br/><small>FROM base image<br/>docksec ... --sbom</small>"] --> MQSEC["<b>Compare with base</b><br/><small>mqsec report ... --fail</small>"]
+        MQSEC --> SHIP["<b>Push and sign</b><br/><small>only if no new or<br/>untriaged findings</small>"]
+    end
+
+    ACR -.->|Base image| BUILD
+    ACR -.->|Accepted findings| MQSEC
+```
+
+### Updating CVE Findings
+Trivy is used under-the-hood to scan images for vulnerabilities.
+The trivy db is fetched from `ghcr.io/jenkins-x/trivydb:latest`, which is updated daily (starts at 6am UTC but takes ~6 hours to complete).
+A cronjob runs daily to open a PR in this repo, which triggers all PR pipelines and updates the findings. 
+
+```mermaid
+flowchart LR
+    V1["<b>Run daily cronjob</b><br/><small>MDO</small>"] --> V2["<b>Open PR</b><br/><small>runs every PR pipeline with<br/>trivydb:latest</small>"]
+    V2 --> V3["<b>Analyse findings</b><br/><small>infra team</small>"]
+    V3 --> V4["<b>Fix what we can</b><br/><small>update Dockerfiles</small>"]
+    V3 --> V5["<b>Accept the rest</b><br/><small>add to .docksec-ignore.yml</small>"]
+    V4 --> V6["<b>Merge PR</b><br/><small>release pipelines publish<br/>updated build images</small>"]
+    V5 --> V6
+```
+
 ### PR pipeline (`dockerfile-pr.yaml`)
 Gates the build: any High/Critical finding not listed in the image's `.docksec-ignore.yml` fails the PR.
 
@@ -34,7 +83,7 @@ flowchart LR
 ```
 
 ### Release pipeline (`dockerfile-release.yaml`)
-Runs on merge to `main`. Scans without the ignore file and attaches the full CVE report and SBOM to the image as signed attestations.
+Runs on merge to `main`. Scans without the ignore file and attaches the full CVE report and SBOM to the image as a signed attestations.
 
 ```mermaid
 flowchart LR
