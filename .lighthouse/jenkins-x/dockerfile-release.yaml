@@ -100,8 +100,7 @@ spec:
               --offline \
               --format json \
               --sbom \
-              --output-dir "$REPORTS_DIR" \
-              --ignore-file "$(params.IMAGE_DIR)/.docksec-ignore.yml" \
+              --output-dir "$REPORTS_DIR"
             DOCKSEC_EXIT=$?
             set -e
 
