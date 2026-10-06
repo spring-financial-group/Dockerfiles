@@ -105,7 +105,7 @@ ignores:
   reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-13221
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libsystemd0, libudev1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
@@ -132,10 +132,10 @@ ignores:
   reason: "gzip in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-42496
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-42497
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-45186
   reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 2.5.0-1+deb12u4"
@@ -150,7 +150,7 @@ ignores:
   reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-48962
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-50525
   reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
@@ -168,10 +168,10 @@ ignores:
   reason: "libacl1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-57432
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-57433
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-58471
   reason: "wget in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
@@ -201,7 +201,7 @@ ignores:
   reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8376
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-integration-tests:latest (debian 12.15) - No fix reported"

@@ -284,6 +284,9 @@ ignores:
 - id: CVE-2026-89675
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-89972
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-93990
   reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31

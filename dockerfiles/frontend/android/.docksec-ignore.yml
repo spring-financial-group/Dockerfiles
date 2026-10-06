@@ -531,7 +531,7 @@ ignores:
   reason: "libtiff-dev, libtiff6, libtiffxx6 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-13221
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-13506
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
@@ -1185,10 +1185,10 @@ ignores:
   reason: "libruby3.1, ruby3.1, ruby3.1-dev, ruby3.1-doc in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-42496
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-42497
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-43011
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.170-1"
@@ -1548,7 +1548,7 @@ ignores:
   reason: "sigstore in Node.js - fixed in 4.1.1"
   expires: 2026-12-31
 - id: CVE-2026-48962
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-49218
   reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 8:6.9.11.60+dfsg-1.6+deb12u11"
@@ -1800,10 +1800,10 @@ ignores:
   reason: "org.jline:jline-remote-telnet in Java - fixed in 4.2.1, 4.0.16, 3.30.14"
   expires: 2026-12-31
 - id: CVE-2026-57432
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-57433
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-5773
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 7.88.1-10+deb12u15"
@@ -2471,6 +2471,9 @@ ignores:
 - id: CVE-2026-74860
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-75140
+  reason: "org.jsoup:jsoup in Java - fixed in 1.23.2"
+  expires: 2026-12-31
 - id: CVE-2026-7598
   reason: "libssh2-1 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 1.10.0-3+deb12u1"
   expires: 2026-12-31
@@ -2516,6 +2519,9 @@ ignores:
 - id: CVE-2026-80844
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
+- id: CVE-2026-80921
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
 - id: CVE-2026-80951
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
@@ -2529,7 +2535,7 @@ ignores:
   reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8376
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
 - id: CVE-2026-84450
   reason: "libheif1 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -2545,9 +2551,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-86138
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-86139
-  reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86140
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -2669,7 +2672,13 @@ ignores:
 - id: CVE-2026-89846
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-89972
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89980
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90227
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-91776
@@ -2677,6 +2686,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-91777
   reason: "com.fasterxml.jackson.core:jackson-databind in Java - fixed in 2.21.7, 2.18.11, 2.22.3"
+  expires: 2026-12-31
+- id: CVE-2026-93288
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93748
   reason: "http-cache-semantics in Node.js - No fix reported"

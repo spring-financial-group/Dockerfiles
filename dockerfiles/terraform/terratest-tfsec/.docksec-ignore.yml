@@ -2264,6 +2264,9 @@ ignores:
 - id: CVE-2026-80844
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-80921
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
+  expires: 2026-12-31
 - id: CVE-2026-80951
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
   expires: 2026-12-31
@@ -2393,7 +2396,16 @@ ignores:
 - id: CVE-2026-89943
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-89972
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89980
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-90227
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-93288
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 6.12.111-1"
   expires: 2026-12-31
 - id: CVE-2026-93817
