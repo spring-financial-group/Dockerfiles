@@ -5,21 +5,21 @@ metadata:
 spec:
   pipelineSpec:
     params:
-    - name: IMAGE_NAME
-      description: The name of the image to build
+    - name: IMAGE_DIR
+      description: The repo-relative directory containing the image's Dockerfile
       type: string
       default: none
     tasks:
     - name: from-build-pack
       params:
-      - name: IMAGE_NAME
-        value: $(params.IMAGE_NAME)
+      - name: IMAGE_DIR
+        value: $(params.IMAGE_DIR)
       resources: {}
       taskSpec:
         metadata: {}
         params:
-        - name: IMAGE_NAME
-          description: The name of the image to build
+        - name: IMAGE_DIR
+          description: The repo-relative directory containing the image's Dockerfile
           type: string
           default: none
         stepTemplate:
@@ -52,7 +52,8 @@ spec:
             source .jx/variables.sh
             cp /temp-docker-config/config.json /kaniko/.docker/config.json
 
-            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$(params.IMAGE_NAME) --dockerfile=/workspace/source/$(params.IMAGE_NAME)/Dockerfile --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.IMAGE_NAME):$VERSION --no-push --tarPath $(params.IMAGE_NAME).tar
+            IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
+            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/$(params.IMAGE_DIR) --dockerfile=/workspace/source/$(params.IMAGE_DIR)/Dockerfile --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION --no-push --tarPath "$IMAGE_NAME".tar
         - image: jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest
           name: push-sign-verify-containers
           resources: {}
@@ -62,11 +63,12 @@ spec:
             source .jx/variables.sh
             cp /temp-docker-config/config.json ~/.docker/config.json
 
+            IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
             # Push the image using crane and get the digest
-            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.IMAGE_NAME):$VERSION
-            crane push /workspace/source/$(params.IMAGE_NAME).tar $IMAGE_REF
+            IMAGE_REF=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION
+            crane push /workspace/source/$IMAGE_NAME.tar $IMAGE_REF
             IMAGE_DIGEST=$(crane digest $IMAGE_REF)
-            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$(params.IMAGE_NAME)@$IMAGE_DIGEST
+            IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
 
             # Sign the image with cosign and verify the signature
             cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
@@ -75,7 +77,7 @@ spec:
             # Retag to latest (same digest, no re-sign needed)
             crane tag $IMAGE_REF latest
 
-            rm -f /workspace/source/$(params.IMAGE_NAME).tar /workspace/source/scanresults.txt
+            rm -f /workspace/source/$IMAGE_NAME.tar /workspace/source/scanresults.txt
         volumes:
         - name: temp-docker-config
           secret:
