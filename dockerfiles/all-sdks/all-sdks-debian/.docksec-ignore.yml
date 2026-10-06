@@ -287,6 +287,9 @@ ignores:
 - id: CVE-2026-74860
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-75140
+  reason: "org.jsoup:jsoup in Java - fixed in 1.23.2"
+  expires: 2026-12-31
 - id: CVE-2026-75804
   reason: "libssl-dev, libssl3t64, openssl, openssl-provider-legacy in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 3.5.7-1~deb13u3"
   expires: 2026-12-31
@@ -312,6 +315,9 @@ ignores:
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
 - id: CVE-2026-80844
+  reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-80921
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
 - id: CVE-2026-80951
@@ -443,7 +449,13 @@ ignores:
 - id: CVE-2026-89943
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-89972
+  reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89980
+  reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-90227
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
 - id: CVE-2026-91776
@@ -451,6 +463,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-91777
   reason: "com.fasterxml.jackson.core:jackson-databind in Java - fixed in 2.21.7, 2.18.11, 2.22.3"
+  expires: 2026-12-31
+- id: CVE-2026-93288
+  reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
 - id: CVE-2026-93748
   reason: "http-cache-semantics in Node.js - No fix reported"

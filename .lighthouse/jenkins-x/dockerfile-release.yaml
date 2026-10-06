@@ -170,8 +170,8 @@ spec:
             IMAGE_WITH_DIGEST=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME@$IMAGE_DIGEST
 
             # Sign the image with cosign and verify the signature
-            cosign sign --yes --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
-            cosign verify --key k8s://jx-staging/cosign $IMAGE_WITH_DIGEST
+            cosign sign --yes --key k8s://infrastructure/cosign $IMAGE_WITH_DIGEST
+            cosign verify --key k8s://infrastructure/cosign $IMAGE_WITH_DIGEST
 
             # Retag to latest (same digest, no re-sign needed)
             crane tag $IMAGE_REF latest
@@ -188,7 +188,7 @@ spec:
             
             COSIGN_KEY=k8s://infrastructure/cosign
             REPORTS_DIR=/workspace/source/docksec-reports
-            SCAN_TYPE=https://docksec.mqube.build/attestation/scan-results/v1
+            SCAN_TYPE=https://docksec.mqube.build/attestation/baseline/v1
             
             IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
             safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
