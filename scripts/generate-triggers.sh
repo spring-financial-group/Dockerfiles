@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Regenerates .lighthouse/jenkins-x/triggers.yaml with a PR and release job for every dockerfiles/<category>/<image>/Dockerfile.
 # The image name is the dir basename, so it must be unique across categories.
+# Release jobs share the PR jobs' run_if_changed so an image is only published when its PR job vetted it.
+# The plain `release` job (tag + changelog) stays unconditional.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -52,6 +54,7 @@ EOF
   for dir in $dirs; do
     cat <<EOF
   - name: ${dir##*/}-release
+    run_if_changed: (LastAutoCommit|^${dir//\//\\/}\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
