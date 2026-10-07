@@ -17,13 +17,13 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-debian
-  - name: alpine-3.24-pr
+  - name: alpine3-24-pr
     optional: false
-    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/alpine-3.24\/.*$)
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/alpine3-24\/.*$)
     source: "dockerfile-pr.yaml"
     pipeline_run_params:
     - name: IMAGE_DIR
-      value_template: dockerfiles/base/alpine-3.24
+      value_template: dockerfiles/base/alpine3-24
   - name: chrome-for-testing-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
@@ -223,15 +223,15 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-debian
-  - name: alpine-3.24-release
-    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/alpine-3.24\/.*$)
+  - name: alpine3-24-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/alpine3-24\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
     - ^master$
     pipeline_run_params:
     - name: IMAGE_DIR
-      value_template: dockerfiles/base/alpine-3.24
+      value_template: dockerfiles/base/alpine3-24
   - name: chrome-for-testing-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-release.yaml"
