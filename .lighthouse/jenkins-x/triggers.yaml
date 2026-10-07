@@ -24,6 +24,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/base/alpine3-24
+  - name: debian13-slim-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/debian13-slim\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/debian13-slim
+  - name: nginx-stable-alpine-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/nginx-stable-alpine\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/nginx-stable-alpine
   - name: chrome-for-testing-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
@@ -232,6 +246,24 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/base/alpine3-24
+  - name: debian13-slim-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/debian13-slim\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/debian13-slim
+  - name: nginx-stable-alpine-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/nginx-stable-alpine\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/nginx-stable-alpine
   - name: chrome-for-testing-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-release.yaml"
