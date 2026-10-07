@@ -1,0 +1,25 @@
+ignores:
+- id: CVE-2025-69720
+  reason: "libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-16742
+  reason: "libsystemd0, libudev1 in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-54369
+  reason: "libacl1 in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-76642
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78408
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78409
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78410
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-9538
+  reason: "perl-base in jx3mqubebuild.azurecr.io/spring-financial-group/debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
