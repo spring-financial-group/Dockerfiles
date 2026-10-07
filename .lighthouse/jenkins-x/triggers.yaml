@@ -31,6 +31,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing-golang
+  - name: dotnet-aspnet-10-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-aspnet-10\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-aspnet-10
+  - name: dotnet-sdk-10-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-sdk-10
   - name: net10-sonar-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net10-sonar\/.*$)
@@ -216,6 +230,22 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing-golang
+  - name: dotnet-aspnet-10-release
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-aspnet-10
+  - name: dotnet-sdk-10-release
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-sdk-10
   - name: net10-sonar-release
     source: "dockerfile-release.yaml"
     branches:

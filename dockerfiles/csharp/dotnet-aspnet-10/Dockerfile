@@ -1,0 +1,1 @@
+FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/aspnet:10.0-alpine
