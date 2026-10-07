@@ -199,6 +199,7 @@ spec:
     - ^main$
     - ^master$
   - name: all-sdks-alpine-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/all-sdks\/all-sdks-alpine\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -207,6 +208,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-alpine
   - name: all-sdks-debian-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/all-sdks\/all-sdks-debian\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -215,6 +217,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/all-sdks/all-sdks-debian
   - name: chrome-for-testing-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -223,6 +226,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing
   - name: chrome-for-testing-golang-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing-golang\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -231,6 +235,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/chrome/chrome-for-testing-golang
   - name: dotnet-aspnet-10-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-aspnet-10\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -239,6 +244,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-aspnet-10
   - name: dotnet-sdk-10-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -247,6 +253,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-sdk-10
   - name: net10-sonar-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net10-sonar\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -255,6 +262,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net10-sonar
   - name: net8-integration-tests-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -263,6 +271,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-integration-tests
   - name: net8-playwright-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-playwright\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -271,6 +280,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-playwright
   - name: net8-sonar-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-sonar\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -279,6 +289,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-sonar
   - name: android-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/android\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -287,6 +298,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/android
   - name: bun-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/bun\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -295,6 +307,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/bun
   - name: nginx-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/nginx\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -303,6 +316,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/nginx
   - name: node-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -311,6 +325,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node
   - name: node-unit-test-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-unit-test\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -319,6 +334,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node-unit-test
   - name: golang-pipeline-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/go\/golang-pipeline\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -327,6 +343,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/go/golang-pipeline
   - name: python310-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -335,6 +352,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310
   - name: python310-torch-cpu-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310-torch-cpu\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -343,6 +361,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310-torch-cpu
   - name: python310-torch-cuda-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310-torch-cuda\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -351,6 +370,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python310-torch-cuda
   - name: python314-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python314\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -359,6 +379,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/python/python314
   - name: black-arch-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/security\/black-arch\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -367,6 +388,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/security/black-arch
   - name: docksec-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/security\/docksec\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -375,6 +397,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/security/docksec
   - name: terratest-tfsec-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/terraform\/terratest-tfsec\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -383,6 +406,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/terratest-tfsec
   - name: tflint-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/terraform\/tflint\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -391,6 +415,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/tflint
   - name: container-tools-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/container-tools\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
@@ -399,6 +424,7 @@ spec:
     - name: IMAGE_DIR
       value_template: dockerfiles/tools/container-tools
   - name: helmfile-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/helmfile\/.*$)
     source: "dockerfile-release.yaml"
     branches:
     - ^main$
