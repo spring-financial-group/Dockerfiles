@@ -1,0 +1,7 @@
+ignores:
+- id: CVE-2026-93990
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/dotnet-sdk-10:latest (alpine) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-103111
+  reason: "libpcre2-8-0 in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing:latest (alpine) - No fix reported"
+  expires: 2026-12-31
