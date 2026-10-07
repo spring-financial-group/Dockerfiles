@@ -1,4 +1,0 @@
-ignores:
-- id: CVE-2026-103111
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/nginx:latest (alpine 3.24.2) - fixed in 10.49-r0"
-  expires: 2026-12-31

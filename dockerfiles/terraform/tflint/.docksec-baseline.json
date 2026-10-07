@@ -1,0 +1,27 @@
+{
+  "fingerprints": [
+    "CVE-2026-27145|usr/local/bin/tflint|stdlib",
+    "CVE-2026-33818|usr/local/bin/tflint|stdlib",
+    "CVE-2026-39821|usr/local/bin/tflint|stdlib",
+    "CVE-2026-39822|usr/local/bin/tflint|stdlib",
+    "CVE-2026-42504|usr/local/bin/tflint|stdlib",
+    "CVE-2026-45447|docksec/tflint:scan (alpine 3.21.7)|libcrypto3",
+    "CVE-2026-45447|docksec/tflint:scan (alpine 3.21.7)|libssl3",
+    "CVE-2026-46600|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56853|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56854|usr/local/bin/tflint|golang.org/x/crypto",
+    "CVE-2026-56858|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56859|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56860|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56862|usr/local/bin/tflint|stdlib",
+    "CVE-2026-56864|usr/local/bin/tflint|golang.org/x/mod",
+    "CVE-2026-56865|usr/local/bin/tflint|golang.org/x/mod",
+    "CVE-2026-75804|docksec/tflint:scan (alpine 3.21.7)|libcrypto3",
+    "CVE-2026-75804|docksec/tflint:scan (alpine 3.21.7)|libssl3",
+    "CVE-2026-84304|usr/local/bin/tflint|google.golang.org/grpc",
+    "CVE-2026-84445|usr/local/bin/tflint|google.golang.org/grpc",
+    "CVE-2026-84782|docksec/tflint:scan (alpine 3.21.7)|libcrypto3",
+    "CVE-2026-84782|docksec/tflint:scan (alpine 3.21.7)|libssl3",
+    "GHSA-hrxh-6v49-42gf|usr/local/bin/tflint|google.golang.org/grpc"
+  ]
+}

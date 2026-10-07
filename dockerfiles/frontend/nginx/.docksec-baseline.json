@@ -1,0 +1,5 @@
+{
+  "fingerprints": [
+    "CVE-2026-103111|docksec/nginx:scan (alpine 3.24.2)|pcre2"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "fingerprints": [
+    "CVE-2026-102276|Node.js|brace-expansion",
+    "CVE-2026-102278|Node.js|brace-expansion",
+    "CVE-2026-104850|Node.js|@modelcontextprotocol/sdk",
+    "CVE-2026-14257|Node.js|brace-expansion",
+    "CVE-2026-14456|docksec/node:scan (alpine 3.24.1)|libcrypto3",
+    "CVE-2026-14456|docksec/node:scan (alpine 3.24.1)|libssl3",
+    "CVE-2026-19534|Node.js|undici",
+    "CVE-2026-69152|Node.js|brace-expansion",
+    "CVE-2026-69192|Node.js|ip-address",
+    "CVE-2026-73566|Node.js|tar",
+    "CVE-2026-93748|Node.js|http-cache-semantics"
+  ]
+}
