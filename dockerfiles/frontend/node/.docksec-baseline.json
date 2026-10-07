@@ -2,10 +2,9 @@
   "fingerprints": [
     "CVE-2026-102276|Node.js|brace-expansion",
     "CVE-2026-102278|Node.js|brace-expansion",
-    "CVE-2026-104850|Node.js|@modelcontextprotocol/sdk",
     "CVE-2026-14257|Node.js|brace-expansion",
-    "CVE-2026-14456|docksec/node:scan (alpine 3.24.1)|libcrypto3",
-    "CVE-2026-14456|docksec/node:scan (alpine 3.24.1)|libssl3",
+    "CVE-2026-14456|jx3mqubebuild.azurecr.io/spring-financial-group/node:latest (alpine 3.24.1)|libcrypto3",
+    "CVE-2026-14456|jx3mqubebuild.azurecr.io/spring-financial-group/node:latest (alpine 3.24.1)|libssl3",
     "CVE-2026-19534|Node.js|undici",
     "CVE-2026-69152|Node.js|brace-expansion",
     "CVE-2026-69192|Node.js|ip-address",

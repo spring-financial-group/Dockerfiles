@@ -41,7 +41,7 @@
     "CVE-2026-56859|usr/local/bin/jx|stdlib",
     "CVE-2026-56860|usr/local/bin/jx|stdlib",
     "CVE-2026-56862|usr/local/bin/jx|stdlib",
-    "CVE-2026-84782|docksec/net10-sonar:scan (ubuntu 24.04)|libssl3t64",
-    "CVE-2026-84782|docksec/net10-sonar:scan (ubuntu 24.04)|openssl"
+    "CVE-2026-84782|jx3mqubebuild.azurecr.io/spring-financial-group/net10-sonar:latest (ubuntu 24.04)|libssl3t64",
+    "CVE-2026-84782|jx3mqubebuild.azurecr.io/spring-financial-group/net10-sonar:latest (ubuntu 24.04)|openssl"
   ]
 }

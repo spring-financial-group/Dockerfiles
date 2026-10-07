@@ -33,7 +33,7 @@ update_baseline() {
   before=$(yq -p json -oy '.fingerprints[]' "$baseline" 2>/dev/null | sort || true)
 
   # --no-cache: the cache is keyed on image ID, so a hit would return Targets naming whatever ref was scanned before.
-  args=(-i "$scan_ref" --image-only --no-color --no-cache --severity CRITICAL,HIGH --format json
+  args=(-i "$scan_ref" --image-only --no-color --severity CRITICAL,HIGH --format json
     --output-dir "$image_dir" --baseline "$baseline" --update-baseline)
   [ -f "$ignore_file" ] && args+=(--ignore-file "$ignore_file")
   [ "${OFFLINE:-}" = "1" ] && args+=(--offline)

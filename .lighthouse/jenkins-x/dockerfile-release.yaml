@@ -188,7 +188,8 @@ spec:
             
             COSIGN_KEY=k8s://infrastructure/cosign
             REPORTS_DIR=/workspace/source/docksec-reports
-            SCAN_TYPE=https://docksec.mqube.build/attestation/baseline/v1
+            SCAN_TYPE=https://docksec.mqube.build/attestation/scan-report/v1
+            BASELINE_TYPE=https://docksec.mqube.build/attestation/baseline/v1
             
             IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
             safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
@@ -210,6 +211,7 @@ spec:
             
             attest "$REPORTS_DIR/${safe_name}_scan_results.cdx.json" cyclonedx "SBOM"
             attest "$REPORTS_DIR/${safe_name}_scan_results.json" "$SCAN_TYPE" "docksec scan results"
+            attest "$REPORTS_DIR/.docksec-baseline.json" "$SCAN_TYPE" "docksec scan results"
             
             echo "Attestations published for $IMAGE_WITH_DIGEST"
             rm -rf "$REPORTS_DIR"

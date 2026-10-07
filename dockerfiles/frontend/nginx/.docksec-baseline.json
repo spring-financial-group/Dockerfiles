@@ -1,5 +1,5 @@
 {
   "fingerprints": [
-    "CVE-2026-103111|docksec/nginx:scan (alpine 3.24.2)|pcre2"
+    "CVE-2026-103111|jx3mqubebuild.azurecr.io/spring-financial-group/nginx:latest (alpine 3.24.2)|pcre2"
   ]
 }
