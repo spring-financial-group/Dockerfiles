@@ -1,0 +1,64 @@
+ignores:
+- id: CVE-2018-25032
+  reason: "zlib in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.2.12-r0"
+  expires: 2026-12-31
+- id: CVE-2021-36159
+  reason: "apk-tools in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 2.12.6-r0"
+  expires: 2026-12-31
+- id: CVE-2021-3711
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1l-r0"
+  expires: 2026-12-31
+- id: CVE-2021-3712
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1l-r0"
+  expires: 2026-12-31
+- id: CVE-2021-42378
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42379
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42380
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42381
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42382
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42383
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42384
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42385
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-42386
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r6"
+  expires: 2026-12-31
+- id: CVE-2021-46848
+  reason: "libtasn1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 4.17.0-r1"
+  expires: 2026-12-31
+- id: CVE-2022-0778
+  reason: "libcrypto1.1, libretls, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1n-r0, 3.3.3p1-r3"
+  expires: 2026-12-31
+- id: CVE-2022-28391
+  reason: "busybox, ssl_client in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.33.1-r7"
+  expires: 2026-12-31
+- id: CVE-2022-37434
+  reason: "zlib in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.2.12-r2"
+  expires: 2026-12-31
+- id: CVE-2022-4450
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1t-r0"
+  expires: 2026-12-31
+- id: CVE-2023-0215
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1t-r0"
+  expires: 2026-12-31
+- id: CVE-2023-0286
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1t-r0"
+  expires: 2026-12-31
+- id: CVE-2023-0464
+  reason: "libcrypto1.1, libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/openjdk17-alpine:latest (alpine 3.14.0) - fixed in 1.1.1t-r1"
+  expires: 2026-12-31

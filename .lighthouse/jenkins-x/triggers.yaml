@@ -164,6 +164,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/go/golang-pipeline
+  - name: gradle9-jdk17-alpine-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/java\/gradle9-jdk17-alpine\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/java/gradle9-jdk17-alpine
+  - name: openjdk17-alpine-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/java\/openjdk17-alpine\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/java/openjdk17-alpine
   - name: python310-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310\/.*$)
@@ -454,6 +468,24 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/go/golang-pipeline
+  - name: gradle9-jdk17-alpine-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/java\/gradle9-jdk17-alpine\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/java/gradle9-jdk17-alpine
+  - name: openjdk17-alpine-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/java\/openjdk17-alpine\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/java/openjdk17-alpine
   - name: python310-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/python\/python310\/.*$)
     source: "dockerfile-release.yaml"

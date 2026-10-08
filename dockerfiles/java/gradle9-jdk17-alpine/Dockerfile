@@ -1,0 +1,1 @@
+FROM jx3mqubebuild.azurecr.io/docker-io/library/gradle:9.0.0-jdk17-alpine
