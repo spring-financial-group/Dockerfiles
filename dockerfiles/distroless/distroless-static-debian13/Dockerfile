@@ -1,0 +1,1 @@
+FROM jx3mqubebuild.azurecr.io/gcr-io/distroless/static-debian13

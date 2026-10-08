@@ -59,6 +59,13 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-aspnet-10
+  - name: dotnet-aspnet-10-ubuntu-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-aspnet-10-ubuntu\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-aspnet-10-ubuntu
   - name: dotnet-sdk-10-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
@@ -66,6 +73,13 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-sdk-10
+  - name: dotnet-sdk-10-ubuntu-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10-ubuntu\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-sdk-10-ubuntu
   - name: net10-sonar-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net10-sonar\/.*$)
@@ -94,6 +108,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-sonar
+  - name: distroless-static-debian13-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-debian13\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/distroless/distroless-static-debian13
+  - name: distroless-static-nonroot-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-nonroot\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/distroless/distroless-static-nonroot
   - name: android-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/android\/.*$)
@@ -291,6 +319,15 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-aspnet-10
+  - name: dotnet-aspnet-10-ubuntu-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-aspnet-10-ubuntu\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-aspnet-10-ubuntu
   - name: dotnet-sdk-10-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
     source: "dockerfile-release.yaml"
@@ -300,6 +337,15 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-sdk-10
+  - name: dotnet-sdk-10-ubuntu-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10-ubuntu\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-sdk-10-ubuntu
   - name: net10-sonar-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net10-sonar\/.*$)
     source: "dockerfile-release.yaml"
@@ -336,6 +382,24 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net8-sonar
+  - name: distroless-static-debian13-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-debian13\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/distroless/distroless-static-debian13
+  - name: distroless-static-nonroot-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-nonroot\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/distroless/distroless-static-nonroot
   - name: android-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/android\/.*$)
     source: "dockerfile-release.yaml"
