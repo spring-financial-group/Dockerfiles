@@ -1,0 +1,1 @@
+FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/sdk:10.0-resolute
