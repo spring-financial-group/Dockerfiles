@@ -248,6 +248,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -256,6 +259,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78667
+  reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - requires upstream gobuildcache, golangci-lint to bump go build version"
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3t64-gnutls, libcurl4t64 in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
@@ -284,7 +290,16 @@ ignores:
 - id: CVE-2026-89675
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-89811
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89972
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90111
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90315
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93990
@@ -292,6 +307,15 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.40, perl, perl-base, perl-modules-5.40 in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - requires upstream gobuildcache, golangci-lint to bump go build version"
+  expires: 2026-12-31
+- id: CVE-2026-97528
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98364
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-hrxh-6v49-42gf
   reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.82.1"
