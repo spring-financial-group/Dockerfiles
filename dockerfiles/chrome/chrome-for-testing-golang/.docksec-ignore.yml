@@ -77,6 +77,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -85,6 +88,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78667
+  reason: "stdlib in go/bin/gobuildcache - requires upstream gobuildcache to bump go build version"
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl4t64 in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
@@ -133,6 +139,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "perl-base in jx3mqubebuild.azurecr.io/spring-financial-group/chrome-for-testing-golang:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in go/bin/gobuildcache - requires upstream gobuildcache to bump go build version"
   expires: 2026-12-31
 - id: GHSA-hrxh-6v49-42gf
   reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.82.1"

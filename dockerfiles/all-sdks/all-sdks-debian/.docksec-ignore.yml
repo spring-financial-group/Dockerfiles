@@ -302,6 +302,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -443,6 +446,9 @@ ignores:
 - id: CVE-2026-89713
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-89811
+  reason: "linux-headers-6.12.111+deb13-amd64, linux-headers-6.12.111+deb13-common, linux-kbuild-6.12.111+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89846
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
@@ -455,8 +461,14 @@ ignores:
 - id: CVE-2026-89980
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-90111
+  reason: "linux-headers-6.12.111+deb13-amd64, linux-headers-6.12.111+deb13-common, linux-kbuild-6.12.111+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-90227
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-90315
+  reason: "linux-headers-6.12.111+deb13-amd64, linux-headers-6.12.111+deb13-common, linux-kbuild-6.12.111+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-91776
   reason: "com.fasterxml.jackson.core:jackson-databind in Java - fixed in 2.18.11, 2.21.7, 2.22.3"
@@ -485,6 +497,9 @@ ignores:
 - id: CVE-2026-97417
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
+- id: CVE-2026-97528
+  reason: "linux-headers-6.12.111+deb13-amd64, linux-headers-6.12.111+deb13-common, linux-kbuild-6.12.111+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-97991
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
   expires: 2026-12-31
@@ -493,6 +508,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-98116
   reason: "linux-headers-6.12.107+deb13-amd64, linux-headers-6.12.107+deb13-common, linux-kbuild-6.12.107+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - fixed in 6.12.111-1"
+  expires: 2026-12-31
+- id: CVE-2026-98364
+  reason: "linux-headers-6.12.111+deb13-amd64, linux-headers-6.12.111+deb13-common, linux-kbuild-6.12.111+deb13, linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-debian:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-4w2j-m93h-cj5j
   reason: "quinn-proto in usr/local/bin/uv, usr/local/bin/uvx - fixed in 0.11.15"
