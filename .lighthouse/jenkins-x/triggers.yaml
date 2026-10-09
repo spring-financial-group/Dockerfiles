@@ -38,6 +38,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/base/nginx-stable-alpine
+  - name: squid-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/squid\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/squid
+  - name: ubuntu26-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/ubuntu26\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/ubuntu26
   - name: chrome-for-testing-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
@@ -150,6 +164,13 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node
+  - name: node-debian13-slim-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-debian13-slim\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node-debian13-slim
   - name: node-unit-test-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-unit-test\/.*$)
@@ -306,6 +327,24 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/base/nginx-stable-alpine
+  - name: squid-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/squid\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/squid
+  - name: ubuntu26-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/base\/ubuntu26\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/base/ubuntu26
   - name: chrome-for-testing-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/chrome\/chrome-for-testing\/.*$)
     source: "dockerfile-release.yaml"
@@ -450,6 +489,15 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/frontend/node
+  - name: node-debian13-slim-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-debian13-slim\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/frontend/node-debian13-slim
   - name: node-unit-test-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/frontend\/node-unit-test\/.*$)
     source: "dockerfile-release.yaml"

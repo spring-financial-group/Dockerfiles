@@ -1,0 +1,10 @@
+ignores:
+- id: CVE-2025-68973
+  reason: "gpgv in jx3mqubebuild.azurecr.io/spring-financial-group/squid:latest (ubuntu 24.04) - fixed in 2.4.4-2ubuntu17.4"
+  expires: 2026-12-31
+- id: CVE-2026-45447
+  reason: "libssl3t64, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/squid:latest (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.11"
+  expires: 2026-12-31
+- id: CVE-2026-84782
+  reason: "libssl3t64, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/squid:latest (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.16"
+  expires: 2026-12-31

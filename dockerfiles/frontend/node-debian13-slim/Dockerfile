@@ -1,0 +1,1 @@
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24-trixie-slim

@@ -1,0 +1,4 @@
+ignores:
+- id: CVE-2026-84782
+  reason: "libssl3t64, openssl-provider-legacy in jx3mqubebuild.azurecr.io/spring-financial-group/ubuntu26:latest (ubuntu 26.04) - fixed in 3.5.5-1ubuntu3.6"
+  expires: 2026-12-31

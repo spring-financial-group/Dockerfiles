@@ -1,0 +1,49 @@
+ignores:
+- id: CVE-2025-69720
+  reason: "libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-102276
+  reason: "brace-expansion in Node.js - fixed in 5.0.10, 3.0.7, 2.1.5, 1.1.19"
+  expires: 2026-12-31
+- id: CVE-2026-102278
+  reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
+  expires: 2026-12-31
+- id: CVE-2026-14257
+  reason: "brace-expansion in Node.js - fixed in 5.0.8, 3.0.3, 2.1.3, 1.1.17"
+  expires: 2026-12-31
+- id: CVE-2026-16742
+  reason: "libsystemd0, libudev1 in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-19534
+  reason: "undici in Node.js - fixed in 6.28.1, 7.29.1, 8.10.2"
+  expires: 2026-12-31
+- id: CVE-2026-54369
+  reason: "libacl1 in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-69152
+  reason: "brace-expansion in Node.js - fixed in 1.1.18, 2.1.4, 3.0.6, 5.0.9"
+  expires: 2026-12-31
+- id: CVE-2026-69192
+  reason: "ip-address in Node.js - fixed in 10.3.1"
+  expires: 2026-12-31
+- id: CVE-2026-73566
+  reason: "tar in Node.js - fixed in 7.5.21"
+  expires: 2026-12-31
+- id: CVE-2026-76642
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78408
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78409
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78410
+  reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93748
+  reason: "http-cache-semantics in Node.js - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-9538
+  reason: "perl-base in jx3mqubebuild.azurecr.io/spring-financial-group/node-debian13-slim:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
