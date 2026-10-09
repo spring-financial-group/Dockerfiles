@@ -17,6 +17,9 @@ RUN apk add --upgrade libuuid
 # CVE-2026-103111
 RUN apk add --upgrade pcre2
 
+# CVE-2026-4775
+RUN apk add --upgrade tiff
+
 COPY conf/default.conf /etc/nginx/conf.d/
 COPY conf/default /etc/nginx/sites-available/
 
