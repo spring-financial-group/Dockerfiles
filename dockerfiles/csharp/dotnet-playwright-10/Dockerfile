@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/sdk:10.0-resolute
+FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/playwright/dotnet:v1.63.0-resolute
 
 # Upgrade openssl ahead of the upstream image (CVE-2026-84782)
 RUN apt-get update \
