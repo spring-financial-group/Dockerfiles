@@ -80,6 +80,20 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-aspnet-10-ubuntu
+  - name: dotnet-integration-tests-10-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-integration-tests-10\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-integration-tests-10
+  - name: dotnet-playwright-10-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-playwright-10\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-playwright-10
   - name: dotnet-sdk-10-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
@@ -381,6 +395,24 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/dotnet-aspnet-10-ubuntu
+  - name: dotnet-integration-tests-10-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-integration-tests-10\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-integration-tests-10
+  - name: dotnet-playwright-10-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-playwright-10\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/csharp/dotnet-playwright-10
   - name: dotnet-sdk-10-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/dotnet-sdk-10\/.*$)
     source: "dockerfile-release.yaml"
