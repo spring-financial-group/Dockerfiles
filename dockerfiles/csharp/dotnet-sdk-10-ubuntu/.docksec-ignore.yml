@@ -1,0 +1,10 @@
+ignores:
+- id: CVE-2026-78667
+  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31

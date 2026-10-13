@@ -1,0 +1,89 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["customManagers:dockerfileVersions"],
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 5,
+  "prHourlyLimit": 4,
+  "minimumReleaseAge": "3 days",
+  "registryAliases": {
+    "jx3mqubebuild.azurecr.io/docker-io": "docker.io",
+    "jx3mqubebuild.azurecr.io/mcr-microsoft-com": "mcr.microsoft.com",
+    "jx3mqubebuild.azurecr.io/ghcr-io": "ghcr.io",
+    "jx3mqubebuild.azurecr.io/dhi-io": "dhi.io",
+    "jx3mqubebuild.azurecr.io/gcr-io": "gcr.io"
+  },
+  "customDatasources": {
+    "chrome-for-testing": {
+      "defaultRegistryUrlTemplate": "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json",
+      "transformTemplates": ["{\"releases\": [{\"version\": channels.Stable.version}]}"]
+    }
+  },
+  "packageRules": [
+    {
+      "description": "Re-enable external dependencies in this repo (the global config disables everything non-MQube)",
+      "matchFileNames": ["dockerfiles/**"],
+      "enabled": true,
+      "labels": ["dependencies", "renovate"]
+    },
+    {
+      "description": "Tools/packages: minor and patch updates grouped into one PR; majors fall through to one PR each",
+      "matchFileNames": ["dockerfiles/**"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "tools-minor"
+    },
+    {
+      "description": "Language versions (Go, Node/npm, .NET, Java, Python, Bun) are disabled for now: downstream dependencies need to be considered as part of those updates",
+      "matchPackageNames": [
+        "/(^|\\/)golang$/",
+        "/(^|\\/)node$/",
+        "npm",
+        "/dotnet\\/(sdk|aspnet|runtime)$/",
+        "/(^|\\/)(eclipse-temurin|openjdk)$/",
+        "/(^|\\/)python$/",
+        "/oven\\/bun$/"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "OS base images follow the internal major/minor cadence",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["/(^|\\/)(alpine|debian|ubuntu)$/"],
+      "groupName": "internal-mqube-packages-major-minor",
+      "labels": ["mqube-packages", "dependencies", "renovate", "updatebot"]
+    },
+    {
+      "description": "Passthrough images with the version in the directory name: a new version means a new directory",
+      "matchFileNames": [
+        "dockerfiles/base/{alpine3-24,debian13-slim,ubuntu26}/**",
+        "dockerfiles/csharp/dotnet-{aspnet,sdk}-10*/**",
+        "dockerfiles/java/openjdk17-alpine/**"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "net8-* images stay on .NET 8",
+      "matchFileNames": ["dockerfiles/csharp/net8-*/**"],
+      "matchPackageNames": ["/dotnet\\/sdk$/"],
+      "allowedVersions": "<9",
+      "enabled": false
+    },
+    {
+      "description": "net10-* images stay on .NET 10",
+      "matchFileNames": ["dockerfiles/csharp/net10-*/**"],
+      "matchPackageNames": ["/dotnet\\/sdk$/"],
+      "allowedVersions": "<11"
+    },
+    {
+      "description": "gradle9-* images stay on Gradle 9",
+      "matchFileNames": ["dockerfiles/java/gradle9-*/**"],
+      "matchPackageNames": ["/(^|\\/)gradle$/"],
+      "allowedVersions": "<10"
+    },
+    {
+      "description": "python310 images are tied to Ubuntu 22.04 (Python 3.10), CUDA 11.7 and torch 1.13",
+      "matchFileNames": ["dockerfiles/python/python310*/**"],
+      "matchPackageNames": ["/(^|\\/)ubuntu$/", "/nvidia\\/cuda$/"],
+      "enabled": false
+    }
+  ]
+}

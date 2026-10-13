@@ -438,7 +438,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.162-1"
   expires: 2026-12-31
 - id: CVE-2025-69534
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncurses-dev, libncurses5-dev, libncurses6, libncursesw5-dev, libncursesw6, libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -515,6 +515,15 @@ ignores:
 - id: CVE-2026-103111
   reason: "libpcre2-16-0, libpcre2-32-0, libpcre2-8-0, libpcre2-dev, libpcre2-posix3 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 10.42-1+deb12u2"
   expires: 2026-12-31
+- id: CVE-2026-107815
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-107818
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-107823
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-11822
   reason: "libsqlite3-0, libsqlite3-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
@@ -564,7 +573,7 @@ ignores:
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
   expires: 2026-12-31
 - id: CVE-2026-15308
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-15741
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
@@ -584,8 +593,11 @@ ignores:
 - id: CVE-2026-19385
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
   expires: 2026-12-31
+- id: CVE-2026-19445
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
+  expires: 2026-12-31
 - id: CVE-2026-19553
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-2004
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 15.16-0+deb12u1"
@@ -1119,7 +1131,7 @@ ignores:
   reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 1:9.2p1-2+deb12u10"
   expires: 2026-12-31
 - id: CVE-2026-3644
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u8"
   expires: 2026-12-31
 - id: CVE-2026-36849
   reason: "libtiff-dev, libtiff6, libtiffxx6 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -1575,6 +1587,9 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-52924
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.176-1"
+  expires: 2026-12-31
+- id: CVE-2026-52929
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-52933
@@ -2483,6 +2498,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 2.5.0-1+deb12u3"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-77422
   reason: "org.jline:jline-builtins in Java - fixed in 4.3.1, 3.30.15"
   expires: 2026-12-31
@@ -2516,7 +2534,28 @@ ignores:
 - id: CVE-2026-80792
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
+- id: CVE-2026-80824
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80837
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-80840
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80841
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-80842
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
 - id: CVE-2026-80844
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80848
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80852
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-80921
@@ -2528,11 +2567,14 @@ ignores:
 - id: CVE-2026-81000
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-81003
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8328
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-8376
   reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
@@ -2575,6 +2617,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-8763
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
+  expires: 2026-12-31
+- id: CVE-2026-88647
+  reason: "libgnutls30 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-88648
+  reason: "libgnutls30 in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-88806
   reason: "libx11-6, libx11-data, libx11-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -2669,7 +2717,22 @@ ignores:
 - id: CVE-2026-89713
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-89777
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89811
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89846
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89894
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89932
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89970
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89972
@@ -2678,7 +2741,19 @@ ignores:
 - id: CVE-2026-89980
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-90036
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90049
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90111
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-90227
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90315
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-91776
@@ -2692,6 +2767,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-93748
   reason: "http-cache-semantics in Node.js - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93787
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93817
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
@@ -2711,9 +2789,21 @@ ignores:
 - id: CVE-2026-97417
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-97991
+- id: CVE-2026-98116
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-98116
+- id: CVE-2026-98222
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98320
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98323
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98364
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98378
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/android:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31

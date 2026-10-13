@@ -42,7 +42,8 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 
 # Install Gitleaks (secret detection) - using fixed version to avoid GitHub API rate limits
-ENV GITLEAKS_VERSION=8.30.0
+# renovate: datasource=github-releases depName=gitleaks/gitleaks extractVersion=^v(?<version>.*)$
+ARG GITLEAKS_VERSION=8.30.0
 RUN wget -q "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" -O /tmp/gitleaks.tar.gz && \
     tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks && \
     rm /tmp/gitleaks.tar.gz
@@ -51,7 +52,8 @@ RUN wget -q "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_
 RUN pip3 install --no-cache-dir semgrep --break-system-packages
 
 # Install Nuclei (vulnerability scanner) - using prebuilt binary
-ENV NUCLEI_VERSION=3.3.7
+# renovate: datasource=github-releases depName=projectdiscovery/nuclei extractVersion=^v(?<version>.*)$
+ARG NUCLEI_VERSION=3.3.7
 RUN wget -q "https://github.com/projectdiscovery/nuclei/releases/download/v${NUCLEI_VERSION}/nuclei_${NUCLEI_VERSION}_linux_amd64.zip" -O /tmp/nuclei.zip && \
     unzip -q /tmp/nuclei.zip -d /usr/local/bin && \
     rm /tmp/nuclei.zip

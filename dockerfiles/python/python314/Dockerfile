@@ -16,10 +16,11 @@ RUN apt-get update \
         libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-ARG YQ_VERSION=v4.53.6
+# renovate: datasource=github-releases depName=mikefarah/yq extractVersion=^v(?<version>.*)$
+ARG YQ_VERSION=4.53.6
 ARG YQ_BINARY=yq_linux_amd64
 
-RUN wget -q https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq
+RUN wget -q https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq
 RUN chmod +x /usr/bin/yq
 
 RUN mkdir -p -m 755 /etc/apt/keyrings \

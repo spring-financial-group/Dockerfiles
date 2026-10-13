@@ -116,6 +116,12 @@ ignores:
 - id: CVE-2026-56862
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-84782
-  reason: "libssl3t64, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/net10-sonar:latest (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.16"
+- id: CVE-2026-78667
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.60.0, 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31

@@ -215,6 +215,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -223,6 +226,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78410
   reason: "libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-78667
+  reason: "stdlib in usr/local/bin/docker, usr/local/bin/trivy, usr/local/bin/yq - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in usr/local/bin/docker, usr/local/bin/trivy, usr/local/bin/yq - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl4t64 in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
@@ -239,6 +248,12 @@ ignores:
 - id: CVE-2026-85731
   reason: "oras.land/oras-go/v2 in usr/local/bin/trivy - fixed in 2.6.2"
   expires: 2026-12-31
+- id: CVE-2026-88647
+  reason: "libgnutls30t64 in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-88648
+  reason: "libgnutls30t64 in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-8927
   reason: "curl, libcurl4t64 in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -254,7 +269,16 @@ ignores:
 - id: CVE-2026-89675
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-89811
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89972
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90111
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90315
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93990
@@ -263,11 +287,32 @@ ignores:
 - id: CVE-2026-9538
   reason: "perl-base in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in usr/local/bin/docker, usr/local/bin/trivy, usr/local/bin/yq - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-97528
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-97687
   reason: "urllib3 in Python - fixed in 2.8.0"
   expires: 2026-12-31
 - id: CVE-2026-97689
   reason: "urllib3 in Python - fixed in 2.8.0"
+  expires: 2026-12-31
+- id: CVE-2026-98222
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98320
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98323
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98364
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98378
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-6v7p-g79w-8964
   reason: "msgpack in Python - fixed in 1.2.1"

@@ -1,5 +1,8 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.24
 
+# renovate: datasource=github-releases depName=aquasecurity/tfsec extractVersion=^v(?<version>.*)$
+ARG TFSEC_VERSION=1.28.14
+
 RUN apt-get update \
     && apt-get install -y unzip jq \
     && TERRAFORM_VERSION=$(curl -sL https://releases.hashicorp.com/terraform/index.json \
@@ -14,7 +17,7 @@ RUN apt-get update \
     && unzip "$TERRAFORM_FILENAME" && echo "$TERRAFORM_FILENAME" \
     && rm "$TERRAFORM_FILENAME" \
     && mv terraform /usr/local/go/bin/terraform \
-    && curl -L -o tfsec "https://github.com/aquasecurity/tfsec/releases/download/v1.28.14/tfsec-linux-amd64" \
+    && curl -L -o tfsec "https://github.com/aquasecurity/tfsec/releases/download/v${TFSEC_VERSION}/tfsec-linux-amd64" \
     && chmod +x tfsec \
     && mv tfsec /usr/local/bin
 

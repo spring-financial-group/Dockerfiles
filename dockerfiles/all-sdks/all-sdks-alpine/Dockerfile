@@ -1,10 +1,16 @@
 # We've added python/uv for completion
 # However, we recommend using Debian
+# renovate: datasource=docker depName=golang
 ARG GO_VERSION=1.27.2
+# renovate: datasource=docker depName=eclipse-temurin
 ARG JAVA_VERSION=17
+# renovate: datasource=docker depName=mcr.microsoft.com/dotnet/sdk
 ARG DOTNET_VERSION=8.0
+# Not managed by Renovate: apk constraint, tied to the alpine release of the uv base image
 ARG NODE_VERSION=24
+# renovate: datasource=npm depName=npm
 ARG NPM_VERSION=10.9.0
+# renovate: datasource=gradle-version depName=gradle
 ARG GRADLE_VERSION=8.13
 
 # These should be pinned to an SHA and updated by renovatebot

@@ -1,10 +1,13 @@
+# renovate: datasource=docker depName=golang
 ARG GO_VERSION=1.27.2
 ARG DEB_DISTRO=trixie
 
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-${DEB_DISTRO}
 
+# renovate: datasource=github-releases depName=richardartoul/gobuildcache extractVersion=^v(?<version>.*)$
 ARG GOBUILDCACHE_VERSION=1.7.0
-ARG GOLANGCILINT_VERSION=v2.14.0
+# renovate: datasource=github-releases depName=golangci/golangci-lint extractVersion=^v(?<version>.*)$
+ARG GOLANGCILINT_VERSION=2.14.0
 ARG TARGETARCH=amd64
 
 
@@ -16,7 +19,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh \
-        | sh -s -- -b "$(go env GOPATH)/bin" ${GOLANGCILINT_VERSION} && \
+        | sh -s -- -b "$(go env GOPATH)/bin" "v${GOLANGCILINT_VERSION}" && \
     curl -sSfL "https://github.com/richardartoul/gobuildcache/releases/download/v${GOBUILDCACHE_VERSION}/gobuildcache_${GOBUILDCACHE_VERSION}_linux_${TARGETARCH}.tar.gz" \
         | tar -xz -C "$(go env GOPATH)/bin" gobuildcache
 
