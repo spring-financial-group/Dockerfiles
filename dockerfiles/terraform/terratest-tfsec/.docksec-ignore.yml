@@ -2540,3 +2540,6 @@ ignores:
 - id: GHSA-hrxh-6v49-42gf
   reason: "google.golang.org/grpc in usr/local/bin/tfsec - fixed in 1.82.1"
   expires: 2026-12-31
+- id: CVE-2026-75804
+  reason: "libssl3t64, openssl, openssl-provider-legacy in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 3.5.7-1~deb13u3"
+  expires: 2026-12-31
