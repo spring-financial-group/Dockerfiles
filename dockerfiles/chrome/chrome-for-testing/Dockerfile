@@ -1,6 +1,7 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/debian:13-slim
 
 # Arguments
+# renovate: datasource=custom.chrome-for-testing depName=chrome-for-testing versioning=loose
 ARG CHROME_FOR_TESTING_VERSION=152.0.7977.54
 ARG TZ=Europe/London
 

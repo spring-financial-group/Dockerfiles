@@ -1,8 +1,14 @@
+# renovate: datasource=docker depName=golang
 ARG GO_VERSION=1.27.2
+# renovate: datasource=docker depName=eclipse-temurin
 ARG JAVA_VERSION=17
+# renovate: datasource=docker depName=mcr.microsoft.com/dotnet/sdk
 ARG DOTNET_VERSION=8.0
+# renovate: datasource=node-version depName=node
 ARG NODE_VERSION=24.13.0
+# renovate: datasource=npm depName=npm
 ARG NPM_VERSION=11.10.0
+# renovate: datasource=gradle-version depName=gradle
 ARG GRADLE_VERSION=8.13
 
 # These should be pinned to an SHA and updated by renovatebot

@@ -1,8 +1,11 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
 
-ENV ACR_ENV_VERSION=0.0.4 \
-    HELM_VERSION=4.1.3 \
-    HELMFILE_VERSION=1.4.4
+# renovate: datasource=github-releases depName=jenkins-x/docker-credential-acr-env extractVersion=^v(?<version>.*)$
+ARG ACR_ENV_VERSION=0.0.4
+# renovate: datasource=github-releases depName=helm/helm extractVersion=^v(?<version>.*)$
+ARG HELM_VERSION=4.1.3
+# renovate: datasource=github-releases depName=helmfile/helmfile extractVersion=^v(?<version>.*)$
+ARG HELMFILE_VERSION=1.4.4
 
 RUN apk add --no-cache ca-certificates git bash
 

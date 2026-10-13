@@ -1,3 +1,4 @@
+# renovate: datasource=docker depName=golang
 ARG GO_VERSION=1.27.2
 ARG DEB_DISTRO=trixie
 
@@ -10,6 +11,7 @@ ENV GOROOT=/usr/local/go
 ENV GOPATH=/go
 ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
+# renovate: datasource=github-releases depName=richardartoul/gobuildcache extractVersion=^v(?<version>.*)$
 ARG GOBUILDCACHE_VERSION=1.7.0
 ARG TARGETARCH=amd64
 

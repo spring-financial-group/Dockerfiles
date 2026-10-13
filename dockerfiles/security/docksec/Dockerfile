@@ -1,9 +1,14 @@
 FROM jx3mqubebuild.azurecr.io/dhi-io/python:3.14-debian-dev AS builder
 
+# renovate: datasource=pypi depName=docksec
 ARG DOCKSEC_VERSION=2026.7.5
+# renovate: datasource=github-releases depName=aquasecurity/trivy extractVersion=^v(?<version>.*)$
 ARG TRIVY_VERSION=0.73.0
+# renovate: datasource=github-releases depName=hadolint/hadolint extractVersion=^v(?<version>.*)$
 ARG HADOLINT_VERSION=2.12.0
+# renovate: datasource=github-tags depName=docker/cli extractVersion=^v(?<version>\d+\.\d+\.\d+)$
 ARG DOCKER_VERSION=29.7.1
+# renovate: datasource=github-releases depName=mikefarah/yq extractVersion=^v(?<version>.*)$
 ARG YQ_VERSION=4.53.3
 
 RUN apt-get update \

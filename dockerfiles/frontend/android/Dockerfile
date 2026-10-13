@@ -29,11 +29,13 @@ RUN sdkmanager --install "platform-tools" \
     "build-tools;36.0.0" \
     "cmdline-tools;latest"
 
-# Install Gradle 8.13
-RUN wget -q https://services.gradle.org/distributions/gradle-8.13-bin.zip -O /tmp/gradle.zip \
+# Install Gradle
+# renovate: datasource=gradle-version depName=gradle
+ARG GRADLE_VERSION=8.13
+RUN wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -O /tmp/gradle.zip \
     && unzip /tmp/gradle.zip -d /opt/ \
     && rm /tmp/gradle.zip \
-    && ln -s /opt/gradle-8.13/bin/gradle /usr/local/bin/gradle
+    && ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/local/bin/gradle
 
 # Install Ruby required for Fastlane deployment
 RUN apt update && apt install -y ruby ruby-dev
