@@ -32,29 +32,17 @@
       "groupName": "tools-minor"
     },
     {
-      "description": "Language: Go",
-      "matchPackageNames": ["/(^|\\/)golang$/"],
-      "groupName": "go"
-    },
-    {
-      "description": "Language: Node (node + npm)",
-      "matchPackageNames": ["/(^|\\/)node$/", "npm"],
-      "groupName": "node"
-    },
-    {
-      "description": "Language: .NET",
-      "matchPackageNames": ["/dotnet\\/(sdk|aspnet|runtime)$/"],
-      "groupName": "dotnet"
-    },
-    {
-      "description": "Language: Java",
-      "matchPackageNames": ["/(^|\\/)(eclipse-temurin|openjdk)$/"],
-      "groupName": "java"
-    },
-    {
-      "description": "Language: Bun",
-      "matchPackageNames": ["/oven\\/bun$/"],
-      "groupName": "bun"
+      "description": "Language versions (Go, Node/npm, .NET, Java, Python, Bun) are disabled for now: downstream dependencies need to be considered as part of those updates",
+      "matchPackageNames": [
+        "/(^|\\/)golang$/",
+        "/(^|\\/)node$/",
+        "npm",
+        "/dotnet\\/(sdk|aspnet|runtime)$/",
+        "/(^|\\/)(eclipse-temurin|openjdk)$/",
+        "/(^|\\/)python$/",
+        "/oven\\/bun$/"
+      ],
+      "enabled": false
     },
     {
       "description": "OS base images follow the internal major/minor cadence",
@@ -76,7 +64,8 @@
       "description": "net8-* images stay on .NET 8",
       "matchFileNames": ["dockerfiles/csharp/net8-*/**"],
       "matchPackageNames": ["/dotnet\\/sdk$/"],
-      "allowedVersions": "<9"
+      "allowedVersions": "<9",
+      "enabled": false
     },
     {
       "description": "net10-* images stay on .NET 10",
