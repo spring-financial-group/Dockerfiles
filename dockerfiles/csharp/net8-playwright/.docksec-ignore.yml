@@ -23,6 +23,3 @@ ignores:
 - id: CVE-2026-62901
   reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.10/Microsoft.NETCore.App.deps.json - fixed in 10.0.11, 9.0.19, 8.0.30"
   expires: 2026-12-31
-- id: CVE-2026-84782
-  reason: "libssl3t64, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/net8-playwright:latest (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.16"
-  expires: 2026-12-31

@@ -20,9 +20,6 @@ ignores:
 - id: CVE-2026-102278
   reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
   expires: 2026-12-31
-- id: CVE-2026-103111
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-alpine:latest (alpine 3.23.6) - fixed in 10.49-r0"
-  expires: 2026-12-31
 - id: CVE-2026-13149
   reason: "brace-expansion in Node.js - fixed in 5.0.7, 1.1.16, 2.1.2"
   expires: 2026-12-31
@@ -31,9 +28,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-14257
   reason: "brace-expansion in Node.js - fixed in 5.0.8, 3.0.3, 2.1.3, 1.1.17"
-  expires: 2026-12-31
-- id: CVE-2026-19553
-  reason: "pyc, python3, python3-dev, python3-pyc, python3-pycache-pyc0 in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-alpine:latest (alpine 3.23.6) - fixed in 3.12.15-r0"
   expires: 2026-12-31
 - id: CVE-2026-23745
   reason: "tar in Node.js - fixed in 7.5.3"
@@ -118,9 +112,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-75140
   reason: "org.jsoup:jsoup in Java - fixed in 1.23.2"
-  expires: 2026-12-31
-- id: CVE-2026-82049
-  reason: "pyc, python3, python3-dev, python3-pyc, python3-pycache-pyc0 in jx3mqubebuild.azurecr.io/spring-financial-group/all-sdks-alpine:latest (alpine 3.23.6) - fixed in 3.12.15-r0"
   expires: 2026-12-31
 - id: CVE-2026-8763
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
