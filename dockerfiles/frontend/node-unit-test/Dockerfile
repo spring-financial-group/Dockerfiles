@@ -8,6 +8,7 @@ RUN npm install -g \
     @angular/compiler-cli@20.3 \
     typescript@5.8 && \
     apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y \
         libnss3 \
         libnspr4 \
