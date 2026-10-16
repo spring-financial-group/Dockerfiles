@@ -1,5 +1,5 @@
 # Playwright on Alpine is still experimental, so we will use a Debian-based image for now. See https://playwright.dev/docs/intro#running-on-alpine-linux for more information.
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.13
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.19-bookworm
 
 # Setting npm version on it's own line to avoid issues with it updating itself
 RUN npm install -g npm@11.10.0
@@ -8,6 +8,7 @@ RUN npm install -g \
     @angular/compiler-cli@20.3 \
     typescript@5.8 && \
     apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y \
         libnss3 \
         libnspr4 \
