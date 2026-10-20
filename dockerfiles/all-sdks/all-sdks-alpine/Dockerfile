@@ -1,6 +1,6 @@
 # We've added python/uv for completion
 # However, we recommend using Debian
-ARG GO_VERSION=1.27.2
+ARG GO_VERSION=1.27.3
 ARG JAVA_VERSION=17
 ARG DOTNET_VERSION=10.0
 ARG NODE_VERSION=24.22.0
