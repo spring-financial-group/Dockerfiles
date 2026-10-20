@@ -3,7 +3,7 @@
 ARG GO_VERSION=1.27.2
 ARG JAVA_VERSION=17
 ARG DOTNET_VERSION=10.0
-ARG NODE_VERSION=24.19.0
+ARG NODE_VERSION=24.22.0
 ARG NPM_VERSION=11.10.0
 ARG GRADLE_VERSION=8.13
 
@@ -16,17 +16,12 @@ FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/dotnet/sdk:${DOTNET_VERSION}-alp
 
 FROM jx3mqubebuild.azurecr.io/ghcr-io/astral-sh/uv:python3.10-alpine
 
-# Re-declare NODE_VERSION ARG so we can use it in the apk step
-ARG NODE_VERSION
-
 # Copy the compiled toolchains from the builder stages FIRST
 COPY --from=go-builder /usr/local/go /usr/local/go
 COPY --from=java-builder /opt/java/openjdk /opt/java/openjdk
 COPY --from=dotnet-builder /usr/share/dotnet /usr/share/dotnet
 
 RUN apk update && apk add --no-cache \
-    "nodejs~=${NODE_VERSION}" \
-    npm \
     libstdc++ \
     libgcc \
     zlib \
@@ -49,6 +44,7 @@ RUN apk update && apk add --no-cache \
     unzip
 
 # Re-declare remaining ARGs before using them in ENVs
+ARG NODE_VERSION
 ARG NPM_VERSION
 ARG GRADLE_VERSION
 
@@ -59,7 +55,10 @@ ENV JAVA_HOME=/opt/java/openjdk \
     GRADLE_VERSION=${GRADLE_VERSION} \
     PATH="/opt/java/openjdk/bin:/usr/share/dotnet:/usr/local/go/bin:/opt/gradle/gradle-${GRADLE_VERSION}/bin:${PATH}"
 
-RUN npm install -g npm@${NPM_VERSION} \
+RUN wget --https-only --max-redirect=0 -qO /tmp/node.tar.xz "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64-musl.tar.xz" \
+    && tar -xJf /tmp/node.tar.xz -C /usr/local --strip-components=1 \
+    && rm /tmp/node.tar.xz \
+    && npm install -g "npm@${NPM_VERSION}" \
     && wget --https-only --max-redirect=2 -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -P /tmp \
     && unzip -d /opt/gradle /tmp/gradle-${GRADLE_VERSION}-bin.zip \
     && rm /tmp/gradle-${GRADLE_VERSION}-bin.zip
