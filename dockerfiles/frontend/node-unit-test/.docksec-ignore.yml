@@ -81,7 +81,7 @@ ignores:
   reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 2.5.0-1+deb12u4"
   expires: 2026-12-31
 - id: CVE-2024-35887
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2024-38570
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -126,7 +126,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-50029
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2024-50217
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -204,7 +204,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.162-1"
   expires: 2026-12-31
 - id: CVE-2025-22039
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2025-22083
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.162-1"
@@ -350,8 +350,14 @@ ignores:
 - id: CVE-2025-40082
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.164-1"
   expires: 2026-12-31
+- id: CVE-2025-40137
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2025-40149
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.162-1"
+  expires: 2026-12-31
+- id: CVE-2025-40333
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-40347
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
@@ -399,7 +405,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.162-1"
   expires: 2026-12-31
 - id: CVE-2025-69534
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncurses-dev, libncurses5-dev, libncurses6, libncursesw5-dev, libncursesw6, libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -476,6 +482,24 @@ ignores:
 - id: CVE-2026-103111
   reason: "libpcre2-16-0, libpcre2-32-0, libpcre2-8-0, libpcre2-dev, libpcre2-posix3 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 10.42-1+deb12u2"
   expires: 2026-12-31
+- id: CVE-2026-106553
+  reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-106555
+  reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-106583
+  reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-107815
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-107818
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-107823
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-11822
   reason: "libsqlite3-0, libsqlite3-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
@@ -522,7 +546,7 @@ ignores:
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
   expires: 2026-12-31
 - id: CVE-2026-15308
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-15741
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
@@ -542,8 +566,11 @@ ignores:
 - id: CVE-2026-19385
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
   expires: 2026-12-31
+- id: CVE-2026-19445
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
+  expires: 2026-12-31
 - id: CVE-2026-19553
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-2004
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 15.16-0+deb12u1"
@@ -624,7 +651,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.164-1"
   expires: 2026-12-31
 - id: CVE-2026-23191
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-23193
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.164-1"
@@ -695,9 +722,6 @@ ignores:
 - id: CVE-2026-23361
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-23372
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
 - id: CVE-2026-23378
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
@@ -726,10 +750,10 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-23447
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-23448
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-23454
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
@@ -845,9 +869,6 @@ ignores:
 - id: CVE-2026-31402
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
-- id: CVE-2026-31405
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
 - id: CVE-2026-31419
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
@@ -867,9 +888,6 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31476
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
-- id: CVE-2026-31478
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31485
@@ -892,9 +910,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-31532
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-31536
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-31566
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
@@ -923,20 +938,11 @@ ignores:
 - id: CVE-2026-31627
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-31657
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
-- id: CVE-2026-31659
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
 - id: CVE-2026-31678
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31686
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-31695
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31696
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
@@ -944,22 +950,10 @@ ignores:
 - id: CVE-2026-31702
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-31705
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-31706
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-31709
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-31712
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-31715
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-31716
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-31720
@@ -978,9 +972,6 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31778
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
-- id: CVE-2026-31780
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-31787
@@ -1068,7 +1059,7 @@ ignores:
   reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 1:9.2p1-2+deb12u10"
   expires: 2026-12-31
 - id: CVE-2026-3644
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u8"
   expires: 2026-12-31
 - id: CVE-2026-36849
   reason: "libtiff-dev, libtiff6, libtiffxx6 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -1127,9 +1118,6 @@ ignores:
 - id: CVE-2026-42497
   reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
   expires: 2026-12-31
-- id: CVE-2026-43011
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
 - id: CVE-2026-43015
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
@@ -1155,12 +1143,6 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-43052
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-43075
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-43076
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-43112
@@ -1194,15 +1176,12 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-43198
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-43205
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-43206
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
-- id: CVE-2026-43236
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
   expires: 2026-12-31
 - id: CVE-2026-43241
@@ -1249,9 +1228,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-43458
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.170-1"
-  expires: 2026-12-31
-- id: CVE-2026-43490
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-43494
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
@@ -1350,6 +1326,9 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-46004
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
+  expires: 2026-12-31
+- id: CVE-2026-46006
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-46022
@@ -1502,13 +1481,13 @@ ignores:
 - id: CVE-2026-52912
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-52914
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-52923
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-52924
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
+  expires: 2026-12-31
+- id: CVE-2026-52929
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-52933
@@ -1547,19 +1526,7 @@ ignores:
 - id: CVE-2026-53006
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-53040
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-53043
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-53046
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-53059
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-53068
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-53089
@@ -1616,16 +1583,10 @@ ignores:
 - id: CVE-2026-53179
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-53186
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-53195
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-53198
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-53215
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
 - id: CVE-2026-53255
@@ -1691,8 +1652,14 @@ ignores:
 - id: CVE-2026-53613
   reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-53615
+  reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-54369
   reason: "libacl1 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-55453
+  reason: "libcups2 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-56208
   reason: "libaom3 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.6.0-1+deb12u3"
@@ -1838,9 +1805,6 @@ ignores:
 - id: CVE-2026-63797
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
-- id: CVE-2026-63815
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
 - id: CVE-2026-63824
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.177-1"
   expires: 2026-12-31
@@ -1886,9 +1850,6 @@ ignores:
 - id: CVE-2026-63924
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-63954
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-63956
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
@@ -1913,6 +1874,9 @@ ignores:
 - id: CVE-2026-64009
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
+- id: CVE-2026-64014
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
+  expires: 2026-12-31
 - id: CVE-2026-64017
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
@@ -1928,12 +1892,6 @@ ignores:
 - id: CVE-2026-64085
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-64091
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
-- id: CVE-2026-64093
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
-  expires: 2026-12-31
 - id: CVE-2026-64103
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
@@ -1946,8 +1904,8 @@ ignores:
 - id: CVE-2026-64137
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.176-1"
   expires: 2026-12-31
-- id: CVE-2026-64188
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.177-1"
+- id: CVE-2026-64138
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-64191
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.177-1"
@@ -1977,9 +1935,6 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.177-1"
   expires: 2026-12-31
 - id: CVE-2026-64268
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
-- id: CVE-2026-64269
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
 - id: CVE-2026-64270
@@ -2036,9 +1991,6 @@ ignores:
 - id: CVE-2026-64352
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
-- id: CVE-2026-64361
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
 - id: CVE-2026-64362
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
@@ -2051,38 +2003,41 @@ ignores:
 - id: CVE-2026-64365
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
-- id: CVE-2026-64378
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
 - id: CVE-2026-64381
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
-- id: CVE-2026-64390
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+- id: CVE-2026-64389
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-64392
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-64393
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+  expires: 2026-12-31
+- id: CVE-2026-64394
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+  expires: 2026-12-31
+- id: CVE-2026-64395
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
 - id: CVE-2026-64396
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
+- id: CVE-2026-64398
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+  expires: 2026-12-31
+- id: CVE-2026-64399
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+  expires: 2026-12-31
+- id: CVE-2026-64400
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-64424
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-64432
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
 - id: CVE-2026-64434
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
-  expires: 2026-12-31
-- id: CVE-2026-64440
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
-- id: CVE-2026-64441
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
-- id: CVE-2026-64442
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
 - id: CVE-2026-64446
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
@@ -2115,6 +2070,9 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-64565
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-64580
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-64582
@@ -2193,7 +2151,7 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-68236
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-68294
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
@@ -2234,9 +2192,6 @@ ignores:
 - id: CVE-2026-72042
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-72049
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
-  expires: 2026-12-31
 - id: CVE-2026-72052
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
@@ -2262,6 +2217,9 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72243
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
+  expires: 2026-12-31
+- id: CVE-2026-72251
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.180-1"
   expires: 2026-12-31
 - id: CVE-2026-72255
@@ -2396,6 +2354,9 @@ ignores:
 - id: CVE-2026-76957
   reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 2.5.0-1+deb12u3"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
@@ -2406,7 +2367,7 @@ ignores:
   reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-80521
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-80586
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
@@ -2420,29 +2381,59 @@ ignores:
 - id: CVE-2026-80725
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
-- id: CVE-2026-80726
+- id: CVE-2026-80792
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
-- id: CVE-2026-80792
+- id: CVE-2026-80824
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80837
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-80840
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80841
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-80842
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-80844
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
+- id: CVE-2026-80848
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80852
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80883
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-80891
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
+  expires: 2026-12-31
+- id: CVE-2026-80905
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-80921
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.187-1"
   expires: 2026-12-31
 - id: CVE-2026-80951
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-81000
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-81003
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8328
-  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 3.11.2-6+deb12u9"
   expires: 2026-12-31
 - id: CVE-2026-8376
   reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 5.36.0-7+deb12u4"
@@ -2458,6 +2449,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-84782
   reason: "libssl-dev, libssl3, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-86047
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86138
   reason: "libxml2, libxml2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -2498,17 +2492,26 @@ ignores:
 - id: CVE-2026-8927
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-89479
+- id: CVE-2026-89465
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89479
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89481
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89487
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89488
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89508
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89524
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89526
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -2520,19 +2523,19 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89563
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89564
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89569
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89603
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89607
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89617
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89631
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -2547,19 +2550,22 @@ ignores:
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89653
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89656
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89659
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89663
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89669
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89674
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89675
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -2573,23 +2579,158 @@ ignores:
 - id: CVE-2026-89713
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-89846
+- id: CVE-2026-89725
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89736
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89761
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89777
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89788
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89803
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89810
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89811
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89846
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89894
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89913
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89922
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89932
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-89970
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-89972
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89980
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-90003
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-90011
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-90036
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90037
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90048
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90049
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-90057
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-90111
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90167
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90169
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90206
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-90227
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-93288
+- id: CVE-2026-90315
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90375
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90392
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90398
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-90417
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-92499
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-92507
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-92509
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-92510
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-92511
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-92512
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-93105
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93154
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93175
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93176
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93210
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-93221
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93288
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-93589
+  reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93590
+  reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93748
   reason: "http-cache-semantics in Node.js - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93787
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-93792
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93817
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
@@ -2609,57 +2750,60 @@ ignores:
 - id: CVE-2026-96889
   reason: "gir1.2-rsvg-2.0, librsvg2-2, librsvg2-common, librsvg2-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-97417
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+- id: CVE-2026-97380
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-97991
+- id: CVE-2026-97417
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98085
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98116
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98171
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98222
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-77214
-  reason: "libexpat1, libexpat1-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+- id: CVE-2026-98260
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
-- id: CVE-2026-80837
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+- id: CVE-2026-98320
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
-- id: CVE-2026-80841
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-81003
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89777
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89811
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89894
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89932
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-89970
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-90036
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-90049
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-90111
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-90315
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-93787
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+- id: CVE-2026-98323
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31
 - id: CVE-2026-98364
-  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98378
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98417
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98466
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98524
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98532
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98548
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98550
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-98573
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
+  expires: 2026-12-31
+- id: CVE-2026-99999
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 6.1.190-1"
   expires: 2026-12-31

@@ -206,6 +206,9 @@ ignores:
 - id: CVE-2026-49478
   reason: "github.com/sigstore/fulcio in bin/cosign - fixed in 1.8.6"
   expires: 2026-12-31
+- id: CVE-2026-56851
+  reason: "golang.org/x/text in bin/cosign, bin/docker-credential-acr-env, usr/local/bin/kubectl - fixed in 0.41.0"
+  expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in bin/cosign, bin/docker-credential-acr-env, usr/local/bin/kubectl - fixed in 0.39.0"
   expires: 2026-12-31
@@ -233,11 +236,23 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in bin/cosign - fixed in 0.40.0"
   expires: 2026-12-31
+- id: CVE-2026-63209
+  reason: "github.com/klauspost/compress in bin/cosign, bin/crane, gcrane, krane - fixed in 1.18.7"
+  expires: 2026-12-31
+- id: CVE-2026-78667
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 0.60.0, 1.26.9, 1.27.2"
+  expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in bin/cosign - fixed in 1.83.1"
   expires: 2026-12-31
 - id: CVE-2026-84445
   reason: "google.golang.org/grpc in bin/cosign - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: GHSA-hrxh-6v49-42gf
   reason: "google.golang.org/grpc in bin/cosign - fixed in 1.82.1"
