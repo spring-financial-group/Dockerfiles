@@ -68,6 +68,9 @@ ignores:
 - id: CVE-2026-31802
   reason: "tar in Node.js - fixed in 7.5.11"
   expires: 2026-12-31
+- id: CVE-2026-33671
+  reason: "picomatch in Node.js - requires npm 12 upgrade across all F/E repos"
+  expires: 2026-12-31
 - id: CVE-2026-3505
   reason: "org.bouncycastle:bcpg-jdk18on in Java - fixed in 1.84"
   expires: 2026-12-31
