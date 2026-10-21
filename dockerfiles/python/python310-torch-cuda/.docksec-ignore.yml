@@ -20,7 +20,19 @@ ignores:
 - id: CVE-2022-48887
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2022-48998
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-49203
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-49317
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2022-49359
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2022-49531
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2022-49910
@@ -53,7 +65,13 @@ ignores:
 - id: CVE-2023-52857
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2023-52920
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2023-52926
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2023-52981
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-53382
@@ -125,10 +143,61 @@ ignores:
 - id: CVE-2024-43832
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-46833
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-47736
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-49568
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-49861
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-49988
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-49991
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50164
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50187
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50211
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50246
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50285
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-50286
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-52560
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-53079
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2024-53147
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-53179
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-53234
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-56591
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-56604
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-56692
@@ -137,7 +206,19 @@ ignores:
 - id: CVE-2024-57857
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-57893
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2024-58053
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-21738
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2025-21759
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-21792
   reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/python310-torch-cuda:latest (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-21812
