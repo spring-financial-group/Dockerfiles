@@ -18,7 +18,7 @@ ignores:
   reason: "wget in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-66046
-  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 2.9.0-1~deb13u1"
   expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
@@ -30,10 +30,13 @@ ignores:
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-76956
-  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 2.9.0-1~deb13u1"
   expires: 2026-12-31
 - id: CVE-2026-76957
-  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 2.9.0-1~deb13u1"
+  expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 2.9.0-1~deb13u1"
   expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
@@ -44,8 +47,14 @@ ignores:
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-78667
+  reason: "stdlib in usr/bin/gh, usr/bin/yq - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in usr/bin/gh, usr/bin/yq - fixed in 0.60.0, 1.26.9, 1.27.2"
+  expires: 2026-12-31
 - id: CVE-2026-8286
-  reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 8.14.1-2+deb13u7"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
@@ -75,11 +84,17 @@ ignores:
   reason: "libxrender1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8927
-  reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 8.14.1-2+deb13u7"
+  expires: 2026-12-31
+- id: CVE-2026-92392
+  reason: "libcurl3t64-gnutls in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 8.14.1-2+deb13u7"
   expires: 2026-12-31
 - id: CVE-2026-93990
-  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - fixed in 2.9.0-1~deb13u1"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.40, perl, perl-base, perl-modules-5.40 in jx3mqubebuild.azurecr.io/spring-financial-group/python314:latest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-97031
+  reason: "stdlib in usr/bin/gh, usr/bin/yq - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31

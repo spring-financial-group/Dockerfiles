@@ -1,6 +1,7 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:1.24
 
 RUN apt-get update \
+    && apt-get upgrade -y --no-install-recommends \
     && apt-get install -y unzip jq \
     && TERRAFORM_VERSION=$(curl -sL https://releases.hashicorp.com/terraform/index.json \
         | jq -r '.versions | to_entries[] | select(.key | test("^(?!.*(alpha|beta|rc)).*")) | .key' \

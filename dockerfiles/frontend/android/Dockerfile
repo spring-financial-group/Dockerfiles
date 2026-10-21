@@ -1,4 +1,4 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.13
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.22
 
 # Install required dependencies
 RUN apt update && apt install -y \
@@ -6,7 +6,7 @@ RUN apt update && apt install -y \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb && dpkg -i jdk-21_linux-x64_bin.deb
+RUN wget https://download.oracle.com/java/21/archive/jdk-21.0.12.1_linux-x64_bin.deb && dpkg -i jdk-21.0.12.1_linux-x64_bin.deb
 
 # Set environment variables for Android SDK
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
