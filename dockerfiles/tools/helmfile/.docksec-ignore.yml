@@ -77,6 +77,9 @@ ignores:
 - id: CVE-2025-68121
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
+- id: CVE-2026-75804
+  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 3.3.7-r2"
+  expires: 2026-12-31
 - id: CVE-2026-103111
   reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 10.43-r1"
   expires: 2026-12-31

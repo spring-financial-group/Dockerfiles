@@ -227,6 +227,12 @@ ignores:
 - id: CVE-2025-8959
   reason: "github.com/hashicorp/go-getter in usr/local/bin/tfsec - fixed in 1.7.9"
   expires: 2026-12-31
+- id: CVE-2026-31536
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsecatest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43263
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsecatest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-103111
   reason: "libpcre2-8-0 in jx3mqubebuild.azurecr.io/spring-financial-group/terratest-tfsec:latest (debian 13.3) - fixed in 10.46-1~deb13u3"
   expires: 2026-12-31

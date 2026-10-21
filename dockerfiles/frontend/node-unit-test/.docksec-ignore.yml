@@ -479,6 +479,18 @@ ignores:
 - id: CVE-2025-8714
   reason: "libpq-dev, libpq5 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 15.19-0+deb12u1"
   expires: 2026-12-31
+- id: CVE-2026-31536
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-31706
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43490
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89603
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-103111
   reason: "libpcre2-16-0, libpcre2-32-0, libpcre2-8-0, libpcre2-dev, libpcre2-posix3 in jx3mqubebuild.azurecr.io/spring-financial-group/node-unit-test:latest (debian 12.13) - fixed in 10.42-1+deb12u2"
   expires: 2026-12-31

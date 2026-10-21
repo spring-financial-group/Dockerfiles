@@ -59,6 +59,12 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-31536
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipelineatest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43263
+  reason: "linux-libc-dev in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipelineatest (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-106553
   reason: "openssh-client in jx3mqubebuild.azurecr.io/spring-financial-group/golang-pipeline:latest (debian 13.7) - No fix reported"
   expires: 2026-12-31
