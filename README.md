@@ -14,7 +14,10 @@ The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edi
 ```bash
 ./scripts/create-ignores.sh dockerfiles/csharp/net-10
 ```
-This saves needing to get the results from the pipeline
+This saves needing to get the results from the pipeline. By default it scans the published `:latest` image; add `--build` to build the image from your local Dockerfile and scan that instead (needs Docker, and builds for `linux/amd64` unless you set `PLATFORM`):
+```bash
+./scripts/create-ignores.sh --build dockerfiles/csharp/net-10
+```
 4. Create a PR. The pipeline should run and build the new image
 
 ## Image Publication Diagrams
