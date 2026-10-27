@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2026-111943
+  reason: "stdlib in usr/bin/pebble - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
 - id: CVE-2026-58280
   reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json - fixed in 9.0.21, 8.0.32, 10.0.13, 11.0.0-rc.2"
   expires: 2026-12-31
@@ -33,7 +36,7 @@ ignores:
   reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-92392
-  reason: "curl, libcurl3t64-gnutls, libcurl4t64 in jx3mqubebuild.azurecr.io/spring-financial-group/dotnet-playwright-10:latest (ubuntu 26.04) - fixed in 8.18.0-1ubuntu2.8"
+  reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - fixed in 8.18.0-1ubuntu2.8"
   expires: 2026-12-31
 - id: CVE-2026-96225
   reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"

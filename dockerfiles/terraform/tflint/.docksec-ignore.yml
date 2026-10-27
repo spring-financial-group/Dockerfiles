@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2026-111943
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
 - id: CVE-2026-27145
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
@@ -44,12 +47,6 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in usr/local/bin/tflint - fixed in 0.40.0"
   expires: 2026-12-31
-- id: CVE-2026-5773
-  reason: "curl, libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
-- id: CVE-2026-6276
-  reason: "curl, libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/tflint - fixed in 1.18.7"
   expires: 2026-12-31
@@ -59,20 +56,11 @@ ignores:
 - id: CVE-2026-78669
   reason: "golang.org/x/net, stdlib in usr/local/bin/tflint - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-8286
-  reason: "curl, libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.83.1"
   expires: 2026-12-31
 - id: CVE-2026-84445
   reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
-  expires: 2026-12-31
-- id: CVE-2026-8927
-  reason: "curl, libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
-- id: CVE-2026-92392
-  reason: "curl, libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/tflint:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.9, 1.27.2"

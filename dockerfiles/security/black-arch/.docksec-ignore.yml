@@ -77,8 +77,8 @@ ignores:
 - id: CVE-2026-100354
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.149.0"
   expires: 2026-12-31
-- id: CVE-2026-102941
-  reason: "github.com/gomarkdown/markdown in usr/local/lib/node_modules/snyk/wrapper_dist/snyk-alpine - fixed in 0.0.0-20260724235538-61af6e1e6971"
+- id: CVE-2026-111943
+  reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.8, 1.26.1"
@@ -200,9 +200,6 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in usr/local/bin/nuclei - fixed in 0.40.0"
   expires: 2026-12-31
-- id: CVE-2026-58050
-  reason: "libssh2 in jx3mqubebuild.azurecr.io/spring-financial-group/black-arch:latest (alpine 3.24.2) - fixed in 1.11.1-r4"
-  expires: 2026-12-31
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.18.7"
   expires: 2026-12-31
@@ -212,20 +209,17 @@ ignores:
 - id: CVE-2026-76905
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.141.0"
   expires: 2026-12-31
-- id: CVE-2026-77214
-  reason: "libexpat in jx3mqubebuild.azurecr.io/spring-financial-group/black-arch:latest (alpine 3.24.2) - fixed in 2.9.0-r0"
-  expires: 2026-12-31
 - id: CVE-2026-77354
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.142.0"
   expires: 2026-12-31
 - id: CVE-2026-78667
-  reason: "go, stdlib in jx3mqubebuild.azurecr.io/spring-financial-group/black-arch:latest (alpine 3.24.2), usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei, usr/local/lib/node_modules/snyk/wrapper_dist/snyk-alpine - fixed in 1.26.9, 1.27.2, 1.26.9-r0"
+  reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-78669
-  reason: "go, golang.org/x/net, stdlib in jx3mqubebuild.azurecr.io/spring-financial-group/black-arch:latest (alpine 3.24.2), usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei, usr/local/lib/node_modules/snyk/wrapper_dist/snyk-alpine - fixed in 0.60.0, 1.26.9, 1.27.2, 1.26.9-r0"
+  reason: "golang.org/x/net, stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-97031
-  reason: "go, stdlib in jx3mqubebuild.azurecr.io/spring-financial-group/black-arch:latest (alpine 3.24.2), usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei, usr/local/lib/node_modules/snyk/wrapper_dist/snyk-alpine - fixed in 1.26.9, 1.27.2, 1.26.9-r0"
+  reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: GHSA-r277-6w6q-xmqw
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.144.0"

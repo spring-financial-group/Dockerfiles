@@ -1,84 +1,84 @@
 ignores:
 - id: CVE-2020-1967
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1g-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1g-1"
   expires: 2026-12-31
 - id: CVE-2021-23840
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1j-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1j-1"
   expires: 2026-12-31
 - id: CVE-2021-3450
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1k-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1k-1"
   expires: 2026-12-31
 - id: CVE-2021-3711
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1l-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1l-1"
   expires: 2026-12-31
 - id: CVE-2021-3712
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1l-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1l-1"
   expires: 2026-12-31
 - id: CVE-2022-0778
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1n-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1n-1"
   expires: 2026-12-31
 - id: CVE-2022-1292
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 1.1.1o-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.1.1o-1"
   expires: 2026-12-31
 - id: CVE-2022-2068
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.4-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.4-1"
   expires: 2026-12-31
 - id: CVE-2022-2274
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.4-2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.4-2"
   expires: 2026-12-31
 - id: CVE-2022-3358
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.7-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.7-1"
   expires: 2026-12-31
 - id: CVE-2022-3602
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.7-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.7-1"
   expires: 2026-12-31
 - id: CVE-2022-3786
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.7-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.7-1"
   expires: 2026-12-31
 - id: CVE-2022-3996
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.7-2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.7-2"
   expires: 2026-12-31
 - id: CVE-2022-4450
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0215
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0216
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0217
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0286
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0401
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.8-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.8-1"
   expires: 2026-12-31
 - id: CVE-2023-0464
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.9-1"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.9-1"
   expires: 2026-12-31
 - id: CVE-2023-25193
-  reason: "libharfbuzz0b in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libharfbuzz0b in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-2953
-  reason: "libldap-2.5-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libldap-2.5-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-45853
-  reason: "zlib1g in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "zlib1g in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-52355
-  reason: "libtiff6 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libtiff6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-5363
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.11-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.11-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2024-6119
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.14-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.14-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2025-15467
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.18-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.18-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2025-22868
   reason: "golang.org/x/oauth2 in usr/local/bin/jx - fixed in 0.27.0"
@@ -87,10 +87,13 @@ ignores:
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.35.0"
   expires: 2026-12-31
 - id: CVE-2025-26646
-  reason: "Microsoft.Build.Tasks.Core in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json - fixed in 15.9.30, 16.11.6, 17.8.29, 17.10.29, 17.12.36, 17.13.26, 17.14.8"
+  reason: "Microsoft.Build.Tasks.Core in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.426/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.426/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.426/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.426/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.426/dotnet.deps.json - fixed in 15.9.30, 16.11.6, 17.8.29, 17.10.29, 17.12.36, 17.13.26, 17.14.8"
   expires: 2026-12-31
 - id: CVE-2025-47913
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.43.0"
+  expires: 2026-12-31
+- id: CVE-2025-59375
+  reason: "libexpat1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 2.5.0-1+deb12u5"
   expires: 2026-12-31
 - id: CVE-2025-61726
   reason: "stdlib in usr/local/bin/jx - fixed in 1.24.12, 1.25.6"
@@ -102,28 +105,34 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2025-69421
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.18-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.18-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2025-69720
-  reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-7458
-  reason: "libsqlite3-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libsqlite3-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-111497
+  reason: "libbrotli1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.0.9-2+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-111943
+  reason: "stdlib in usr/local/bin/jx - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-11822
-  reason: "libsqlite3-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libsqlite3-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-11824
-  reason: "libsqlite3-0 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libsqlite3-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-12064
-  reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-12912
-  reason: "libtiff6 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libtiff6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-16742
-  reason: "libnss-systemd, libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv, systemd-timesyncd in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libnss-systemd, libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv, systemd-timesyncd in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.8, 1.26.1"
@@ -138,19 +147,19 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
 - id: CVE-2026-28387
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.19-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.19-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-28388
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.19-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.19-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-28389
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.19-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.19-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-28390
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.19-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.19-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-31789
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.19-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.19-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-32280
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.9, 1.26.2"
@@ -171,10 +180,10 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-34980
-  reason: "libcups2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libcups2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-36849
-  reason: "libtiff6 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libtiff6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-39820
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
@@ -207,7 +216,7 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-41992
-  reason: "gzip in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "gzip in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-42499
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
@@ -219,7 +228,7 @@ ignores:
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-45447
-  reason: "libssl1.1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - fixed in 3.0.20-1~deb12u2"
+  reason: "libssl1.1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.20-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-46595
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
@@ -231,64 +240,64 @@ ignores:
   reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.56.0"
   expires: 2026-12-31
 - id: CVE-2026-47302
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-47304
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-50525
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-50527
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-50648
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.10, 9.0.18, 8.0.4"
   expires: 2026-12-31
 - id: CVE-2026-52490
-  reason: "libtiff6 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libtiff6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53613
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53615
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53783
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53784
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53785
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53789
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53790
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53791
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53793
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53795
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53802
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53803
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-54369
-  reason: "libacl1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libacl1 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-55453
-  reason: "libcups2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libcups2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-56851
   reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.41.0"
@@ -315,103 +324,82 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-58010
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58011
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58012
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58013
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58014
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58015
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58016
-  reason: "libglib2.0-0, libglib2.0-data in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-58280
-  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/8.0.31/Microsoft.NETCore.App.deps.json - fixed in 9.0.21, 8.0.32, 10.0.13, 11.0.0-rc.2"
+  reason: "libglib2.0-0, libglib2.0-data in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58471
-  reason: "wget in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "wget in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-58472
-  reason: "wget in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "wget in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-6276
-  reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-6653
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-69651
-  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/8.0.31/Microsoft.NETCore.App.deps.json - fixed in 9.0.21, 11.0.0-rc.2, 10.0.13, 8.0.32"
-  expires: 2026-12-31
-- id: CVE-2026-70175
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 9.0.21, 10.0.13, 8.0.32"
-  expires: 2026-12-31
-- id: CVE-2026-70181
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 9.0.21, 10.0.13, 8.0.32"
-  expires: 2026-12-31
-- id: CVE-2026-70183
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 10.0.13, 9.0.21, 11.0.0-rc.2"
-  expires: 2026-12-31
-- id: CVE-2026-70186
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 10.0.13, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-70188
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 11.0.0-rc.2, 8.0.32, 10.0.13, 9.0.21"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70452
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70455
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70456
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70457
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70458
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70460
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70461
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70463
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-70464
-  reason: "rsync in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-74860
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-76642
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-77214
-  reason: "libexpat1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libexpat1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 2.5.0-1+deb12u5"
   expires: 2026-12-31
 - id: CVE-2026-78408
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78409
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78410
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
@@ -420,76 +408,67 @@ ignores:
   reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-8286
-  reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84008
-  reason: "System.Security.Cryptography.Pkcs in usr/share/dotnet/sdk/8.0.425/Containers/containerize/containerize.deps.json, usr/share/dotnet/sdk/8.0.425/Containers/tasks/net8.0/Microsoft.NET.Build.Containers.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-watch/8.0.425-servicing.26421.11/tools/net8.0/any/dotnet-watch.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json, usr/share/powershell/.store/powershell.linux.x64/7.4.20/powershell.linux.x64/7.4.20/tools/net8.0/any/pwsh.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.2, 9.0.21"
+  reason: "System.Security.Cryptography.Pkcs in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.2, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-8458
-  reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84782
-  reason: "libssl1.1, libssl3, openssl in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libssl1.1, libssl3, openssl in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.22-1~deb12u2"
   expires: 2026-12-31
 - id: CVE-2026-86138
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86140
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86142
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86143
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86144
-  reason: "libxml2 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-88092
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"
+  reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-88806
-  reason: "libx11-6, libx11-data, libx11-xcb1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libx11-6, libx11-data, libx11-xcb1 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-88807
-  reason: "libxrender1 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxrender1 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8927
-  reason: "curl, libcurl3-gnutls, libcurl4 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-91403
+  reason: "openjdk-17-jre, openjdk-17-jre-headless in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-91415
+  reason: "openjdk-17-jre, openjdk-17-jre-headless in create-ignores/net8-sonar:local (debian 12.15) - fixed in 17.0.21+9-1~deb12u1"
   expires: 2026-12-31
 - id: CVE-2026-94286
-  reason: "libxtst6 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libxtst6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
-  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-96222
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-watch/8.0.425-servicing.26421.11/tools/net8.0/any/dotnet-watch.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json, usr/share/powershell/.store/powershell.linux.x64/7.4.20/powershell.linux.x64/7.4.20/tools/net8.0/any/pwsh.deps.json - fixed in 8.0.5"
-  expires: 2026-12-31
-- id: CVE-2026-96225
-  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/8.0.31/Microsoft.NETCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-96231
-  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/8.0.31/Microsoft.NETCore.App.deps.json - fixed in 8.0.32, 10.0.13, 9.0.21, 11.0.0-rc.2"
-  expires: 2026-12-31
-- id: CVE-2026-96233
-  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/8.0.31/Microsoft.NETCore.App.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 9.0.21, 8.0.32"
-  expires: 2026-12-31
-- id: CVE-2026-96236
-  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/8.0.31/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 11.0.0-rc.2, 10.0.13, 9.0.21"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 8.0.5"
   expires: 2026-12-31
 - id: CVE-2026-96889
-  reason: "librsvg2-2, librsvg2-common in jx3mqubebuild.azurecr.io/spring-financial-group/net8-sonar:latest (debian 12.15) - No fix reported"
+  reason: "librsvg2-2, librsvg2-common in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-96958
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-watch/8.0.425-servicing.26421.11/tools/net8.0/any/dotnet-watch.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json, usr/share/powershell/.store/powershell.linux.x64/7.4.20/powershell.linux.x64/7.4.20/tools/net8.0/any/pwsh.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-96959
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-watch/8.0.425-servicing.26421.11/tools/net8.0/any/dotnet-watch.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json, usr/share/powershell/.store/powershell.linux.x64/7.4.20/powershell.linux.x64/7.4.20/tools/net8.0/any/pwsh.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-96960
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-format/dotnet-format.deps.json, usr/share/dotnet/sdk/8.0.425/DotnetTools/dotnet-watch/8.0.425-servicing.26421.11/tools/net8.0/any/dotnet-watch.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsc.deps.json, usr/share/dotnet/sdk/8.0.425/FSharp/fsi.deps.json, usr/share/dotnet/sdk/8.0.425/MSBuild.deps.json, usr/share/dotnet/sdk/8.0.425/NuGet.CommandLine.XPlat.deps.json, usr/share/dotnet/sdk/8.0.425/dotnet.deps.json, usr/share/powershell/.store/powershell.linux.x64/7.4.20/powershell.linux.x64/7.4.20/tools/net8.0/any/pwsh.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
+  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"

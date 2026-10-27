@@ -5,6 +5,12 @@ ignores:
 - id: CVE-2026-102278
   reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
   expires: 2026-12-31
+- id: CVE-2026-109869
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
+  expires: 2026-12-31
+- id: CVE-2026-111181
+  reason: "body-parser in Node.js - fixed in 2.4.0, 1.20.9"
+  expires: 2026-12-31
 - id: CVE-2026-111767
   reason: "@modelcontextprotocol/sdk in Node.js - fixed in 1.32.0"
   expires: 2026-12-31

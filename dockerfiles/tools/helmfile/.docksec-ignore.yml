@@ -77,11 +77,8 @@ ignores:
 - id: CVE-2025-68121
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-75804
-  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 3.3.7-r2"
-  expires: 2026-12-31
-- id: CVE-2026-103111
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 10.43-r1"
+- id: CVE-2026-111943
+  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.8, 1.26.1"
@@ -206,17 +203,8 @@ ignores:
 - id: CVE-2026-56862
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-5773
-  reason: "libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
-- id: CVE-2026-6276
-  reason: "libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/helmfile - fixed in 1.18.7"
-  expires: 2026-12-31
-- id: CVE-2026-77214
-  reason: "libexpat in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 2.9.0-r0"
   expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"
@@ -224,38 +212,14 @@ ignores:
 - id: CVE-2026-78669
   reason: "golang.org/x/net, stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-8286
-  reason: "libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.83.1"
   expires: 2026-12-31
 - id: CVE-2026-84445
   reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
   expires: 2026-12-31
-- id: CVE-2026-84782
-  reason: "libcrypto3, libssl3 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 3.3.7-r2"
-  expires: 2026-12-31
 - id: CVE-2026-85731
   reason: "oras.land/oras-go/v2 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 2.6.2"
-  expires: 2026-12-31
-- id: CVE-2026-86145
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 10.43-r1"
-  expires: 2026-12-31
-- id: CVE-2026-89157
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 10.43-r1"
-  expires: 2026-12-31
-- id: CVE-2026-89161
-  reason: "pcre2 in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 10.43-r1"
-  expires: 2026-12-31
-- id: CVE-2026-8927
-  reason: "libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
-- id: CVE-2026-92392
-  reason: "libcurl in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 8.14.1-r3"
-  expires: 2026-12-31
-- id: CVE-2026-93990
-  reason: "libexpat in jx3mqubebuild.azurecr.io/spring-financial-group/helmfile:latest (alpine 3.21.8) - fixed in 2.8.5-r0"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"

@@ -2,6 +2,12 @@ ignores:
 - id: CVE-2025-69720
   reason: "libtinfo6, ncurses-base, ncurses-bin in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-111497
+  reason: "libbrotli1 in create-ignores/python314:local (debian 13.7) - fixed in 1.1.0-2+deb13u1"
+  expires: 2026-12-31
+- id: CVE-2026-111943
+  reason: "stdlib in usr/bin/yq - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "libcurl3t64-gnutls in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -17,9 +23,6 @@ ignores:
 - id: CVE-2026-58472
   reason: "wget in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-66046
-  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2 in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -28,15 +31,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-76642
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-76956
-  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-76957
-  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-77214
-  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/python314:local (debian 13.7) - No fix reported"
@@ -50,8 +44,8 @@ ignores:
 - id: CVE-2026-78667
   reason: "stdlib in usr/bin/yq - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-8286
-  reason: "libcurl3t64-gnutls in create-ignores/python314:local (debian 13.7) - No fix reported"
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in usr/bin/yq - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "libcurl3t64-gnutls in create-ignores/python314:local (debian 13.7) - No fix reported"
@@ -79,12 +73,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-88807
   reason: "libxrender1 in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-8927
-  reason: "libcurl3t64-gnutls in create-ignores/python314:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-93990
-  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.40, perl, perl-base, perl-modules-5.40 in create-ignores/python314:local (debian 13.7) - No fix reported"
