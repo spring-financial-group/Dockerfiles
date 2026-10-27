@@ -29,6 +29,9 @@ ignores:
 - id: CVE-2025-38187
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2025-38204
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2025-38421
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -56,21 +59,6 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-100072
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-106553
-  reason: "openssh-client in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-106555
-  reason: "openssh-client in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-106583
-  reason: "openssh-client in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 1.26.10, 1.27.3"
-  expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -92,6 +80,9 @@ ignores:
 - id: CVE-2026-31493
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-31536
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-31568
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -105,6 +96,9 @@ ignores:
   reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-43185
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-43263
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-46130
@@ -139,9 +133,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-54369
   reason: "libacl1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in go/bin/gobuildcache - fixed in 0.41.0"
   expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in go/bin/gobuildcache - fixed in 0.39.0"
@@ -185,11 +176,8 @@ ignores:
 - id: CVE-2026-64283
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-64389
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-64400
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+- id: CVE-2026-66046
+  reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-68409
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
@@ -206,6 +194,9 @@ ignores:
 - id: CVE-2026-72098
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-72463
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-74269
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -217,6 +208,15 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-76642
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-76956
+  reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-76957
+  reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
@@ -230,8 +230,8 @@ ignores:
 - id: CVE-2026-78667
   reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 0.60.0, 1.26.9, 1.27.2"
+- id: CVE-2026-8286
+  reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.83.1"
@@ -242,29 +242,35 @@ ignores:
 - id: CVE-2026-8458
   reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-8927
+  reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-89631
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89633
+  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-89638
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89675
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-89788
+- id: CVE-2026-89811
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-89811
+- id: CVE-2026-89972
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-90111
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-90206
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-90315
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-93221
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+- id: CVE-2026-93990
+  reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.40, perl, perl-base, perl-modules-5.40 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
@@ -272,22 +278,10 @@ ignores:
 - id: CVE-2026-97031
   reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-98084
+- id: CVE-2026-97528
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98364
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98466
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98715
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98853
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-99083
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-hrxh-6v49-42gf

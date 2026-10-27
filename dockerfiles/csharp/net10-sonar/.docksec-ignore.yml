@@ -17,9 +17,6 @@ ignores:
 - id: CVE-2025-68121
   reason: "stdlib in usr/local/bin/jx - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in usr/local/bin/jx - fixed in 1.26.10, 1.27.3"
-  expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.8, 1.26.1"
   expires: 2026-12-31
@@ -98,9 +95,6 @@ ignores:
 - id: CVE-2026-46600
   reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.56.0"
   expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.41.0"
-  expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.39.0"
   expires: 2026-12-31
@@ -124,9 +118,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"

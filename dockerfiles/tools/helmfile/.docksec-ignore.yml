@@ -77,9 +77,6 @@ ignores:
 - id: CVE-2025-68121
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.10, 1.27.3"
-  expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.8, 1.26.1"
   expires: 2026-12-31
@@ -179,9 +176,6 @@ ignores:
 - id: CVE-2026-53488
   reason: "github.com/containerd/containerd in usr/local/bin/helmfile - fixed in 1.7.33"
   expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.41.0"
-  expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.39.0"
   expires: 2026-12-31
@@ -203,14 +197,8 @@ ignores:
 - id: CVE-2026-56862
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
-- id: CVE-2026-63209
-  reason: "github.com/klauspost/compress in usr/local/bin/helmfile - fixed in 1.18.7"
-  expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.83.1"

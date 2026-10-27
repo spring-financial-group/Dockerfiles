@@ -92,9 +92,6 @@ ignores:
 - id: CVE-2025-47913
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.43.0"
   expires: 2026-12-31
-- id: CVE-2025-59375
-  reason: "libexpat1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 2.5.0-1+deb12u5"
-  expires: 2026-12-31
 - id: CVE-2025-61726
   reason: "stdlib in usr/local/bin/jx - fixed in 1.24.12, 1.25.6"
   expires: 2026-12-31
@@ -112,12 +109,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2025-7458
   reason: "libsqlite3-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-111497
-  reason: "libbrotli1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 1.0.9-2+deb12u1"
-  expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in usr/local/bin/jx - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-11822
   reason: "libsqlite3-0 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
@@ -260,9 +251,6 @@ ignores:
 - id: CVE-2026-53613
   reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-53615
-  reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-53783
   reason: "rsync in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -295,12 +283,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-54369
   reason: "libacl1 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-55453
-  reason: "libcups2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.41.0"
   expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in usr/local/bin/jx - fixed in 0.39.0"
@@ -390,7 +372,7 @@ ignores:
   reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-77214
-  reason: "libexpat1 in create-ignores/net8-sonar:local (debian 12.15) - fixed in 2.5.0-1+deb12u5"
+  reason: "libexpat1 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, libfdisk1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
@@ -404,20 +386,14 @@ ignores:
 - id: CVE-2026-78667
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.60.0, 1.26.9, 1.27.2"
-  expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-84008
-  reason: "System.Security.Cryptography.Pkcs in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.2, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84782
-  reason: "libssl1.1, libssl3, openssl in create-ignores/net8-sonar:local (debian 12.15) - fixed in 3.0.22-1~deb12u2"
+  reason: "libssl1.1, libssl3, openssl in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-86138
   reason: "libxml2 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
@@ -443,32 +419,14 @@ ignores:
 - id: CVE-2026-8927
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-91403
-  reason: "openjdk-17-jre, openjdk-17-jre-headless in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-91415
-  reason: "openjdk-17-jre, openjdk-17-jre-headless in create-ignores/net8-sonar:local (debian 12.15) - fixed in 17.0.21+9-1~deb12u1"
-  expires: 2026-12-31
 - id: CVE-2026-94286
   reason: "libxtst6 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-96222
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 8.0.5"
-  expires: 2026-12-31
 - id: CVE-2026-96889
   reason: "librsvg2-2, librsvg2-common in create-ignores/net8-sonar:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-96958
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-96959
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-96960
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.426/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"

@@ -137,9 +137,6 @@ ignores:
 - id: CVE-2026-53613
   reason: "bsdutils, libblkid1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-53615
-  reason: "bsdutils, libblkid1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-54369
   reason: "libacl1 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -155,6 +152,9 @@ ignores:
 - id: CVE-2026-76642
   reason: "bsdutils, libblkid1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-77214
+  reason: "libexpat1 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -167,30 +167,15 @@ ignores:
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-84008
-  reason: "System.Security.Cryptography.Pkcs in usr/share/dotnet/sdk/8.0.427/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.2, 9.0.21"
-  expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84782
-  reason: "libssl1.1, libssl3, openssl in create-ignores/net8-integration-tests:local (debian 12.15) - fixed in 3.0.22-1~deb12u2"
+  reason: "libssl1.1, libssl3, openssl in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8927
   reason: "curl, libcurl3-gnutls, libcurl4 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "libperl5.36, perl, perl-base, perl-modules-5.36 in create-ignores/net8-integration-tests:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-96222
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.427/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 8.0.5"
-  expires: 2026-12-31
-- id: CVE-2026-96958
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.427/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-96959
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.427/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-96960
-  reason: "System.Security.Cryptography.Xml in usr/share/dotnet/sdk/8.0.427/DotnetTools/dotnet-format/dotnet-format.deps.json - fixed in 10.0.13, 11.0.0-rc.2, 8.0.5, 9.0.21"
   expires: 2026-12-31
