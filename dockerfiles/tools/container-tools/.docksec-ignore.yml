@@ -75,7 +75,7 @@ ignores:
   reason: "golang.org/x/crypto in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 0.35.0"
   expires: 2026-12-31
 - id: CVE-2025-26519
-  reason: "musl, musl-utils in jx3mqubebuild.azurecr.io/spring-financial-group/container-tools:latest (alpine 3.16.9) - fixed in 1.2.3-r4"
+  reason: "musl, musl-utils in create-ignores/container-tools:local (alpine 3.16.9) - fixed in 1.2.3-r4"
   expires: 2026-12-31
 - id: CVE-2025-30204
   reason: "github.com/golang-jwt/jwt/v4, github.com/golang-jwt/jwt/v5 in bin/cosign, bin/docker-credential-acr-env, krane - fixed in 4.5.2, 5.2.2"
@@ -206,9 +206,6 @@ ignores:
 - id: CVE-2026-49478
   reason: "github.com/sigstore/fulcio in bin/cosign - fixed in 1.8.6"
   expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in bin/cosign, bin/docker-credential-acr-env, usr/local/bin/kubectl - fixed in 0.41.0"
-  expires: 2026-12-31
 - id: CVE-2026-56852
   reason: "golang.org/x/text in bin/cosign, bin/docker-credential-acr-env, usr/local/bin/kubectl - fixed in 0.39.0"
   expires: 2026-12-31
@@ -236,14 +233,8 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in bin/cosign - fixed in 0.40.0"
   expires: 2026-12-31
-- id: CVE-2026-63209
-  reason: "github.com/klauspost/compress in bin/cosign, bin/crane, gcrane, krane - fixed in 1.18.7"
-  expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in bin/cosign, bin/crane, bin/docker-credential-acr-env, gcrane, krane, usr/local/bin/kubectl - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in bin/cosign - fixed in 1.83.1"
