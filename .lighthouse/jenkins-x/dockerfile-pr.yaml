@@ -80,25 +80,29 @@ spec:
             export DOCKER_HOST=tcp://localhost:2375
 
             IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
+            # Scan under the same fixed ref as scripts/create-ignores.sh: Trivy puts the scanned ref into OS-package
+            # targets, which are part of docksec's baseline fingerprints.
+            SCAN_REF="$IMAGE_NAME:baseline"
 
             until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
 
             docker load -i "$IMAGE_NAME".tar
-            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$IMAGE_NAME:$VERSION"
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$SCAN_REF"
 
             set +e
             docksec \
-              -i "$IMAGE_NAME:$VERSION" \
+              -i "$SCAN_REF" \
               --image-only \
               --no-color \
               --offline \
               --format json \
               --ignore-file "$(params.IMAGE_DIR)/.docksec-ignore.yml" \
+              --baseline "$(params.IMAGE_DIR)/.docksec-baseline.json" \
               --fail-on high
             DOCKSEC_EXIT=$?
             set -e
 
-            safe_name=$(printf '%s' "$IMAGE_NAME:$VERSION" | tr ':/.-' '_')
+            safe_name=$(printf '%s' "$SCAN_REF" | tr ':/.-' '_')
             JSON_REPORT="$HOME/.docksec/results/${safe_name}_scan_results.json"
             if [ -s "$JSON_REPORT" ]; then
               cp "$JSON_REPORT" /tmp/docksec.json
@@ -106,12 +110,24 @@ spec:
               echo "docksec JSON report not found at $JSON_REPORT" >&2
               echo '{}' > /tmp/docksec.json
             fi
+
+            # Only report findings not already accepted in the baseline (same fingerprint as docksec's ratchet mode).
+            BASELINE="$(params.IMAGE_DIR)/.docksec-baseline.json"
+            if [ ! -s "$BASELINE" ]; then
+              BASELINE=/tmp/empty-baseline.json
+              echo '{"fingerprints": []}' > "$BASELINE"
+            fi
             
-            VULN_ROWS=$(yq -r '
-              .vulnerabilities[]?
+            VULN_ROWS=$(BASELINE="$BASELINE" yq -r '
+              (load(strenv(BASELINE)).fingerprints // []) as $baseline
+              | .vulnerabilities[]?
               | select(
               (.Severity | downcase) == "critical"
               or (.Severity | downcase) == "high"
+              )
+              | select(
+              ((.VulnerabilityID // "UNKNOWN") + "|" + (.Target // "") + "|" + (.PkgName // "")) as $fp
+              | ($baseline | any_c(. == $fp)) | not
               )
               | [
               (.Severity | upcase),
@@ -142,7 +158,7 @@ spec:
               PR_URL=${REPO_URL%.git}/pull/$PULL_NUMBER
               curl -s -X POST --data-urlencode "payload={\"channel\": \"#alerts-security\", \"username\": \"secalerts\", \"text\": \"VULNERABILITIES FOUND in $IMAGE_NAME:$VERSION\n• PR: <$PR_URL|PR#$PULL_NUMBER>\n• Logs available <$TEKTON_URL|here>\", \"icon_emoji\": \":shield:\"}" "$SLACK_WEBHOOK_URL" > /dev/null || true
             else
-              echo "No medium-or-higher vulnerabilities found."
+              echo "No new high/critical vulnerabilities since baseline."
             fi
             echo
             

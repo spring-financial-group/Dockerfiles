@@ -1,0 +1,9 @@
+{
+  "fingerprints": [
+    "CVE-2025-68973|squid:baseline (ubuntu 24.04)|gpgv",
+    "CVE-2026-45447|squid:baseline (ubuntu 24.04)|libssl3t64",
+    "CVE-2026-45447|squid:baseline (ubuntu 24.04)|openssl",
+    "CVE-2026-84782|squid:baseline (ubuntu 24.04)|libssl3t64",
+    "CVE-2026-84782|squid:baseline (ubuntu 24.04)|openssl"
+  ]
+}
