@@ -12,7 +12,7 @@ will become the name of the generated image. Our `net-10` image would be created
 The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edit it by hand.
 3. (Optional) install `docksec` and `trivy` on your local machine, then run this script to add a `.docksec-ignore.yml` file to the new image folder:
 ```bash
-./scripts/create-ignores.sh dockerfiles/csharp/net-10
+./scripts/create-baselines.sh dockerfiles/csharp/net-10
 ```
 This saves needing to get the results from the pipeline
 4. Create a PR. The pipeline should run and build the new image

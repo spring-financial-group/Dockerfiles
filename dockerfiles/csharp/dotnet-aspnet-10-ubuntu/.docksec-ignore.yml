@@ -1,4 +1,1 @@
-ignores:
-- id: CVE-2026-109518
-  reason: "apt, libapt-pkg7.0 in create-ignores/dotnet-aspnet-10-ubuntu:local (ubuntu 26.04) - No fix reported"
-  expires: 2026-12-31
+ignores: []
