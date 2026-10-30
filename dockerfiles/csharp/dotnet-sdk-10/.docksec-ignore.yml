@@ -1,4 +1,1 @@
-ignores:
-- id: CVE-2026-92392
-  reason: "curl, libcurl in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 8.23.0-r0"
-  expires: 2026-12-31
+ignores: []

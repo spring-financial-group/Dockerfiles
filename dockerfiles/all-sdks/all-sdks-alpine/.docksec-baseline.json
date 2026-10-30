@@ -1,0 +1,33 @@
+{
+  "fingerprints": [
+    "CVE-2025-14813|Java|org.bouncycastle:bcprov-jdk18on",
+    "CVE-2025-67030|Java|org.codehaus.plexus:plexus-utils",
+    "CVE-2026-13506|Java|org.bouncycastle:bcprov-jdk18on",
+    "CVE-2026-23949|Python|jaraco.context",
+    "CVE-2026-24049|Python|wheel",
+    "CVE-2026-26960|Node.js|tar",
+    "CVE-2026-26996|Node.js|minimatch",
+    "CVE-2026-27903|Node.js|minimatch",
+    "CVE-2026-27904|Node.js|minimatch",
+    "CVE-2026-29786|Node.js|tar",
+    "CVE-2026-31802|Node.js|tar",
+    "CVE-2026-33671|Node.js|picomatch",
+    "CVE-2026-3505|Java|org.bouncycastle:bcpg-jdk18on",
+    "CVE-2026-48815|Node.js|sigstore",
+    "CVE-2026-54512|Java|com.fasterxml.jackson.core:jackson-databind",
+    "CVE-2026-54513|Java|com.fasterxml.jackson.core:jackson-databind",
+    "CVE-2026-59873|Node.js|tar",
+    "CVE-2026-59874|Node.js|tar",
+    "CVE-2026-68494|Java|com.fasterxml.jackson.core:jackson-core",
+    "CVE-2026-68497|Java|com.fasterxml.jackson.core:jackson-databind",
+    "CVE-2026-69192|Node.js|ip-address",
+    "CVE-2026-73566|Node.js|tar",
+    "CVE-2026-75140|Java|org.jsoup:jsoup",
+    "CVE-2026-8763|Java|org.bouncycastle:bcprov-jdk18on",
+    "CVE-2026-89425|Java|com.fasterxml.jackson.core:jackson-core",
+    "CVE-2026-91776|Java|com.fasterxml.jackson.core:jackson-databind",
+    "CVE-2026-91777|Java|com.fasterxml.jackson.core:jackson-databind",
+    "CVE-2026-93748|Node.js|http-cache-semantics",
+    "CVE-2026-9496|Node.js|pacote"
+  ]
+}

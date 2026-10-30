@@ -1,13 +1,1 @@
-ignores:
-- id: CVE-2026-78667
-  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-84782
-  reason: "libssl3t64, openssl-provider-legacy in jx3mqubebuild.azurecr.io/spring-financial-group/ubuntu26:latest (ubuntu 26.04) - fixed in 3.5.5-1ubuntu3.6"
-  expires: 2026-12-31
-- id: CVE-2026-97031
-  reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
+ignores: []

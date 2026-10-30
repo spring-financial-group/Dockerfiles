@@ -1,0 +1,6 @@
+{
+  "fingerprints": [
+    "CVE-2026-78667|usr/bin/pebble|stdlib",
+    "CVE-2026-97031|usr/bin/pebble|stdlib"
+  ]
+}

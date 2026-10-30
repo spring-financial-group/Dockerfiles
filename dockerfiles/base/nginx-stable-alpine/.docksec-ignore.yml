@@ -1,7 +1,1 @@
-ignores:
-- id: CVE-2026-111497
-  reason: "brotli-libs in create-ignores/nginx-stable-alpine:local (alpine 3.24.3) - fixed in 1.2.1-r0"
-  expires: 2026-12-31
-- id: CVE-2026-92392
-  reason: "curl, libcurl in create-ignores/nginx-stable-alpine:local (alpine 3.24.3) - fixed in 8.23.0-r0"
-  expires: 2026-12-31
+ignores: []
