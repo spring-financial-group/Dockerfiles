@@ -8,6 +8,12 @@ ignores:
 - id: CVE-2026-102278
   reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
   expires: 2026-12-31
+- id: CVE-2026-109383
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
+  expires: 2026-12-31
+- id: CVE-2026-109869
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
+  expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libsystemd0, libudev1 in create-ignores/node-debian13-slim:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -29,8 +35,8 @@ ignores:
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/node-debian13-slim:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-93748
-  reason: "http-cache-semantics in Node.js - No fix reported"
+- id: CVE-2026-87018
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "perl-base in create-ignores/node-debian13-slim:local (debian 13.7) - No fix reported"

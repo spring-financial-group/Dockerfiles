@@ -5,6 +5,12 @@ ignores:
 - id: CVE-2026-102278
   reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
   expires: 2026-12-31
+- id: CVE-2026-109383
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
+  expires: 2026-12-31
+- id: CVE-2026-109869
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
+  expires: 2026-12-31
 - id: CVE-2026-14257
   reason: "brace-expansion in Node.js - fixed in 5.0.8, 3.0.3, 2.1.3, 1.1.17"
   expires: 2026-12-31
@@ -20,6 +26,6 @@ ignores:
 - id: CVE-2026-73566
   reason: "tar in Node.js - fixed in 7.5.21"
   expires: 2026-12-31
-- id: CVE-2026-93748
-  reason: "http-cache-semantics in Node.js - No fix reported"
+- id: CVE-2026-87018
+  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
