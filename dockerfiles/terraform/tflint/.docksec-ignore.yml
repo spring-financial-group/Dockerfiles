@@ -1,4 +1,10 @@
 ignores:
+- id: CVE-2026-111943
+  reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
+- id: CVE-2026-116587
+  reason: "github.com/go-jose/go-jose/v4 in usr/local/bin/tflint - fixed in 4.1.6"
+  expires: 2026-12-31
 - id: CVE-2026-27145
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
@@ -16,6 +22,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-46600
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.6, 1.27.0-rc.3"
+  expires: 2026-12-31
+- id: CVE-2026-56851
+  reason: "golang.org/x/text in usr/local/bin/tflint - fixed in 0.41.0"
   expires: 2026-12-31
 - id: CVE-2026-56853
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
@@ -41,8 +50,14 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in usr/local/bin/tflint - fixed in 0.40.0"
   expires: 2026-12-31
+- id: CVE-2026-63209
+  reason: "github.com/klauspost/compress in usr/local/bin/tflint - fixed in 1.18.7"
+  expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-78669
+  reason: "golang.org/x/net, stdlib in usr/local/bin/tflint - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-84304
   reason: "google.golang.org/grpc in usr/local/bin/tflint - fixed in 1.83.1"

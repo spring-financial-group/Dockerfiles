@@ -20,8 +20,8 @@ ignores:
 - id: CVE-2026-54369
   reason: "libacl1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-66046
-  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+- id: CVE-2026-55453
+  reason: "libcups2t64 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
@@ -32,15 +32,6 @@ ignores:
 - id: CVE-2026-76642
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-76956
-  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-76957
-  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-77214
-  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-78408
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -49,9 +40,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-8286
-  reason: "curl, libcurl4t64 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl4t64 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
@@ -79,12 +67,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-88807
   reason: "libxrender1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-8927
-  reason: "curl, libcurl4t64 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-93990
-  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "perl-base in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
