@@ -108,27 +108,6 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net10-sonar
-  - name: net8-integration-tests-pr
-    optional: false
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
-    source: "dockerfile-pr.yaml"
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-integration-tests
-  - name: net8-playwright-pr
-    optional: false
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-playwright\/.*$)
-    source: "dockerfile-pr.yaml"
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-playwright
-  - name: net8-sonar-pr
-    optional: false
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-sonar\/.*$)
-    source: "dockerfile-pr.yaml"
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-sonar
   - name: distroless-static-debian13-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-debian13\/.*$)
@@ -424,33 +403,6 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/csharp/net10-sonar
-  - name: net8-integration-tests-release
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-integration-tests\/.*$)
-    source: "dockerfile-release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-integration-tests
-  - name: net8-playwright-release
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-playwright\/.*$)
-    source: "dockerfile-release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-playwright
-  - name: net8-sonar-release
-    run_if_changed: (LastAutoCommit|^dockerfiles\/csharp\/net8-sonar\/.*$)
-    source: "dockerfile-release.yaml"
-    branches:
-    - ^main$
-    - ^master$
-    pipeline_run_params:
-    - name: IMAGE_DIR
-      value_template: dockerfiles/csharp/net8-sonar
   - name: distroless-static-debian13-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/distroless\/distroless-static-debian13\/.*$)
     source: "dockerfile-release.yaml"
