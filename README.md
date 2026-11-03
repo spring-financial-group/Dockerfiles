@@ -10,12 +10,45 @@ will become the name of the generated image. Our `net-10` image would be created
 ./scripts/generate-triggers.sh
 ```
 The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edit it by hand.
-3. (Optional) install `docksec` and `trivy` on your local machine, then run this script to add a `.docksec-ignore.yml` file to the new image folder:
+3. (Optional) generate a `.docksec-ignore.yml` for the new image folder (see [Generating ignore files locally](#generating-ignore-files-locally)):
 ```bash
-./scripts/create-ignores.sh dockerfiles/csharp/net-10
+./scripts/create-ignores.sh --build --trivydb dockerfiles/csharp/net-10
 ```
-This saves needing to get the results from the pipeline
+`--build` is required here, as there's no published `:latest` to scan yet. This saves needing to get the results from the pipeline.
 4. Create a PR. The pipeline should run and build the new image
+
+## Updating a container image
+Each image's PR and release jobs only run when files in its own folder change (or `LastAutoCommit` changes - see below).
+
+1. Make your change in `dockerfiles/<category>/<image>/`, e.g. bump a version in the `Dockerfile`.
+2. Regenerate the image's `.docksec-ignore.yml` against a local build of your change:
+```bash
+./scripts/create-ignores.sh --build --trivydb dockerfiles/frontend/node
+```
+3. Review the diff of `.docksec-ignore.yml`. The script rewrites the whole file, so restore any hand-written `reason`s for findings that are still present.
+4. Create a PR. Only that image's PR job runs, and merging publishes it.
+
+### Full run (bumping `LastAutoCommit`)
+Every PR and release job also triggers on changes to `LastAutoCommit`, so bumping it rebuilds, re-scans and republishes every image. Do this when a change affects all images (e.g. a shared base image or tooling change), or to pick up upstream fixes across the board.
+
+1. Increment the number in `LastAutoCommit`:
+```bash
+echo $(( $(cat LastAutoCommit) + 1 )) > LastAutoCommit
+```
+2. Regenerate the ignore files for every image, so the PR doesn't fail on findings that have appeared since the last run:
+```bash
+./scripts/create-ignores.sh --build --trivydb --all
+```
+This builds every image locally for `linux/amd64`, so expect it to take a while (and longer on Apple Silicon, under emulation). Use `JOBS=N` to change the number of parallel builds/scans (default 4). Failed images are listed at the end; re-run them individually.
+3. Review the diff as above. If an image now has no findings, the script leaves its existing `.docksec-ignore.yml` alone, so delete it if it's stale.
+4. Create a PR. Every image's PR job runs, and merging republishes them all.
+
+### Generating ignore files locally
+`scripts/create-ignores.sh` scans an image with `docksec` and writes a `.docksec-ignore.yml` covering every finding, each expiring on `2026-12-31` (override with `EXPIRES=YYYY-MM-DD`).
+
+You'll need `docker`, `docksec`, `trivy` and `jq` installed, and to be logged in to `jx3mqubebuild.azurecr.io`. The two flags make local results match the pipeline:
+- `--build` builds the image from the local `Dockerfile` (as `linux/amd64`, override with `PLATFORM`) and scans that. Without it, the published `:latest` image is scanned, which won't include your change.
+- `--trivydb` scans offline against the vulnerability DB from the pipeline's `trivydb` image, rather than whatever Trivy downloads, so you see the same findings the pipeline will.
 
 ## Image Publication Diagrams
 
