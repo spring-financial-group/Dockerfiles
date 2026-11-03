@@ -2,6 +2,9 @@ ignores:
 - id: CVE-2025-69720
   reason: "libtinfo6, ncurses-base, ncurses-bin in create-ignores/debian13-slim:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-119373
+  reason: "libsqlite3-0 in create-ignores/debian13-slim:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libsystemd0, libudev1 in create-ignores/debian13-slim:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
