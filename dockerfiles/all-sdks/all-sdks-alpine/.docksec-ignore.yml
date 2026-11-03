@@ -8,6 +8,12 @@ ignores:
 - id: CVE-2026-102554
   reason: "com.google.guava:guava in Java - fixed in 33.7.2"
   expires: 2026-12-31
+- id: CVE-2026-117610
+  reason: "libexpat in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 2.10.0-r0"
+  expires: 2026-12-31
+- id: CVE-2026-118370
+  reason: "libexpat in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 2.10.0-r0"
+  expires: 2026-12-31
 - id: CVE-2026-13506
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
   expires: 2026-12-31

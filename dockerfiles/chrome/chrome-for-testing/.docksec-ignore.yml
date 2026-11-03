@@ -2,6 +2,18 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-109089
+  reason: "libxi6 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-109090
+  reason: "libxi6 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-117610
+  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118370
+  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

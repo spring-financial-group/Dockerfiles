@@ -27,25 +27,28 @@ ignores:
   reason: "stdlib in usr/local/bin/tfsec - fixed in 1.24.4"
   expires: 2026-12-31
 - id: CVE-2025-38137
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-38187
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-38421
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-38636
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
+  expires: 2026-12-31
+- id: CVE-2025-38656
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-39859
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-39862
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-39958
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-40025
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -66,10 +69,10 @@ ignores:
   reason: "stdlib in usr/local/bin/tfsec - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2025-68174
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-68735
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -78,7 +81,7 @@ ignores:
   reason: "github.com/hashicorp/go-getter in usr/local/bin/tfsec - fixed in 1.7.9"
   expires: 2026-12-31
 - id: CVE-2026-100072
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-106553
   reason: "openssh-client in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -97,6 +100,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-116587
   reason: "github.com/go-jose/go-jose/v4 in usr/local/go/bin/terraform - fixed in 4.1.6"
+  expires: 2026-12-31
+- id: CVE-2026-117610
+  reason: "libexpat1 in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118370
+  reason: "libexpat1 in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -120,10 +129,10 @@ ignores:
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-23208
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-23327
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-24051
   reason: "go.opentelemetry.io/otel/sdk in usr/local/bin/tfsec - fixed in 1.40.0"
@@ -144,7 +153,7 @@ ignores:
   reason: "stdlib in usr/local/bin/tfsec, usr/local/go/bin/go, usr/local/go/bin/gofmt, usr/local/go/pkg/tool/linux_amd64/addr2line, usr/local/go/pkg/tool/linux_amd64/asm, usr/local/go/pkg/tool/linux_amd64/buildid, usr/local/go/pkg/tool/linux_amd64/cgo, usr/local/go/pkg/tool/linux_amd64/compile, usr/local/go/pkg/tool/linux_amd64/covdata, usr/local/go/pkg/tool/linux_amd64/cover, usr/local/go/pkg/tool/linux_amd64/doc, usr/local/go/pkg/tool/linux_amd64/fix, usr/local/go/pkg/tool/linux_amd64/link, usr/local/go/pkg/tool/linux_amd64/nm, usr/local/go/pkg/tool/linux_amd64/objdump, usr/local/go/pkg/tool/linux_amd64/pack, usr/local/go/pkg/tool/linux_amd64/pprof, usr/local/go/pkg/tool/linux_amd64/preprofile, usr/local/go/pkg/tool/linux_amd64/test2json, usr/local/go/pkg/tool/linux_amd64/trace, usr/local/go/pkg/tool/linux_amd64/vet - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
 - id: CVE-2026-31493
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-31568
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -213,7 +222,7 @@ ignores:
   reason: "golang.org/x/crypto in usr/local/bin/tfsec - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-43185
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-44973
   reason: "github.com/go-git/go-billy/v5 in usr/local/bin/tfsec - fixed in 5.9.0"
@@ -222,10 +231,10 @@ ignores:
   reason: "github.com/go-git/go-git/v5 in usr/local/bin/tfsec - fixed in 5.19.0"
   expires: 2026-12-31
 - id: CVE-2026-46130
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-46181
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-46279
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -243,25 +252,25 @@ ignores:
   reason: "golang.org/x/net in usr/local/bin/tfsec - fixed in 0.56.0"
   expires: 2026-12-31
 - id: CVE-2026-52991
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53000
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53091
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53109
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53118
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53277
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-53330
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-54369
   reason: "libacl1 in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -309,25 +318,25 @@ ignores:
   reason: "github.com/klauspost/compress in usr/local/bin/tfsec - fixed in 1.18.7"
   expires: 2026-12-31
 - id: CVE-2026-63879
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-64283
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-64389
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-64400
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-68409
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-68426
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-68470
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-71556
   reason: "github.com/go-git/go-git/v5 in usr/local/bin/tfsec - fixed in 5.19.2"
@@ -336,19 +345,19 @@ ignores:
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72098
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-7210
   reason: "libpython3.13-minimal, libpython3.13-stdlib, python3.13, python3.13-minimal in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-74269
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-74520
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-74752
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-76642
   reason: "bsdutils, libblkid1, liblastlog2-2, libmount1, libsmartcols1, libuuid1, login, mount, util-linux in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -381,22 +390,22 @@ ignores:
   reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89631
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-89675
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89788
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-89811
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-90111
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-90206
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-90315
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -408,7 +417,7 @@ ignores:
   reason: "stdlib in usr/local/bin/tfsec, usr/local/go/bin/go, usr/local/go/bin/gofmt, usr/local/go/pkg/tool/linux_amd64/addr2line, usr/local/go/pkg/tool/linux_amd64/asm, usr/local/go/pkg/tool/linux_amd64/buildid, usr/local/go/pkg/tool/linux_amd64/cgo, usr/local/go/pkg/tool/linux_amd64/compile, usr/local/go/pkg/tool/linux_amd64/covdata, usr/local/go/pkg/tool/linux_amd64/cover, usr/local/go/pkg/tool/linux_amd64/doc, usr/local/go/pkg/tool/linux_amd64/fix, usr/local/go/pkg/tool/linux_amd64/link, usr/local/go/pkg/tool/linux_amd64/nm, usr/local/go/pkg/tool/linux_amd64/objdump, usr/local/go/pkg/tool/linux_amd64/pack, usr/local/go/pkg/tool/linux_amd64/pprof, usr/local/go/pkg/tool/linux_amd64/preprofile, usr/local/go/pkg/tool/linux_amd64/test2json, usr/local/go/pkg/tool/linux_amd64/trace, usr/local/go/pkg/tool/linux_amd64/vet - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-98084
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-98118
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
@@ -426,22 +435,22 @@ ignores:
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98974
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-98999
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99083
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-99109
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99110
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: CVE-2026-99167
-  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
   expires: 2026-12-31
 - id: GHSA-hrxh-6v49-42gf
   reason: "google.golang.org/grpc in usr/local/bin/tfsec - fixed in 1.82.1"

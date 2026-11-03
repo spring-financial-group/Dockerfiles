@@ -5,6 +5,12 @@ ignores:
 - id: CVE-2026-111943
   reason: "stdlib in usr/bin/yq - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
+- id: CVE-2026-117610
+  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118370
+  reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
