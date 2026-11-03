@@ -77,6 +77,9 @@ ignores:
 - id: CVE-2026-115909
   reason: "zip in usr/local/bin/uv, usr/local/bin/uvx - fixed in 9.0.0"
   expires: 2026-12-31
+- id: CVE-2026-119373
+  reason: "libsqlite3-0 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "libcurl3t64-gnutls in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

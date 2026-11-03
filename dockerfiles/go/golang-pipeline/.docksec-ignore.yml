@@ -71,6 +71,9 @@ ignores:
 - id: CVE-2026-111943
   reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
+- id: CVE-2026-119373
+  reason: "libsqlite3-0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

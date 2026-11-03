@@ -14,6 +14,9 @@ ignores:
 - id: CVE-2026-109869
   reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
+- id: CVE-2026-119373
+  reason: "libsqlite3-0 in create-ignores/node-debian13-slim:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libsystemd0, libudev1 in create-ignores/node-debian13-slim:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

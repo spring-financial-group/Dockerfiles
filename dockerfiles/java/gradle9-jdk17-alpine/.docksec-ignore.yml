@@ -47,9 +47,6 @@ ignores:
 - id: CVE-2026-103111
   reason: "pcre2 in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 10.46-r1"
   expires: 2026-12-31
-- id: CVE-2026-115557
-  reason: "pyc, python3, python3-pyc, python3-pycache-pyc0 in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 3.12.16-r0"
-  expires: 2026-12-31
 - id: CVE-2026-11940
   reason: "pyc, python3, python3-pyc, python3-pycache-pyc0 in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 3.12.14-r0"
   expires: 2026-12-31
