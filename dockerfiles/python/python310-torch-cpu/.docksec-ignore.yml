@@ -554,9 +554,6 @@ ignores:
 - id: CVE-2026-112902
   reason: "pillow in Python - fixed in 13.0.0"
   expires: 2026-12-31
-- id: CVE-2026-114613
-  reason: "msgpack in Python - fixed in 1.2.3"
-  expires: 2026-12-31
 - id: CVE-2026-23004
   reason: "linux-libc-dev in create-ignores/python310-torch-cpu:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -1445,12 +1442,6 @@ ignores:
 - id: CVE-2026-97615
   reason: "linux-libc-dev in create-ignores/python310-torch-cpu:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-97687
-  reason: "urllib3 in Python - fixed in 2.8.0"
-  expires: 2026-12-31
-- id: CVE-2026-97689
-  reason: "urllib3 in Python - fixed in 2.8.0"
-  expires: 2026-12-31
 - id: CVE-2026-97906
   reason: "linux-libc-dev in create-ignores/python310-torch-cpu:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -1699,9 +1690,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-98863
   reason: "linux-libc-dev in create-ignores/python310-torch-cpu:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: GHSA-6v7p-g79w-8964
-  reason: "msgpack in Python - fixed in 1.2.1"
   expires: 2026-12-31
 - id: GHSA-78g4-xqwv-q3g8
   reason: "pillow in Python - fixed in 13.0.0"

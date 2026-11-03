@@ -1,7 +1,1 @@
-ignores:
-- id: CVE-2026-77214
-  reason: "libexpat in jx3mqubebuild.azurecr.io/spring-financial-group/nginx:latest (alpine 3.24.2) - fixed in 2.9.0-r0"
-  expires: 2026-12-31
-- id: CVE-2026-88806
-  reason: "libx11 in jx3mqubebuild.azurecr.io/spring-financial-group/nginx:latest (alpine 3.24.2) - fixed in 1.8.14-r0"
-  expires: 2026-12-31
+ignores: []

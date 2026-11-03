@@ -353,11 +353,20 @@ ignores:
 - id: CVE-2026-116149
   reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in create-ignores/android:local (debian 12.15) - fixed in 8:6.9.11.60+dfsg-1.6+deb12u15"
   expires: 2026-12-31
+- id: CVE-2026-117610
+  reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-11822
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-11824
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118370
+  reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119123
+  reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
