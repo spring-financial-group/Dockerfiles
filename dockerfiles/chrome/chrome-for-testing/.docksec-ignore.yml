@@ -8,6 +8,9 @@ ignores:
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-113351
+  reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat1 in create-ignores/chrome-for-testing:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
