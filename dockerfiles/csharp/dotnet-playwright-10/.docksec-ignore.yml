@@ -65,3 +65,6 @@ ignores:
 - id: CVE-2026-97031
   reason: "stdlib in usr/bin/pebble - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
+- id: GHSA-p3jp-9v83-76w9
+  reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json - fixed in 8.0.33, 9.0.22, 10.0.14, 11.0.0-rc.3.26522.148"
+  expires: 2026-12-31

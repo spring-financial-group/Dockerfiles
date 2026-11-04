@@ -8,12 +8,6 @@ ignores:
 - id: CVE-2026-102554
   reason: "com.google.guava:guava in Java - fixed in 33.7.2"
   expires: 2026-12-31
-- id: CVE-2026-117610
-  reason: "libexpat in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 2.10.0-r0"
-  expires: 2026-12-31
-- id: CVE-2026-118370
-  reason: "libexpat in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 2.10.0-r0"
-  expires: 2026-12-31
 - id: CVE-2026-13506
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
   expires: 2026-12-31
@@ -55,6 +49,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-54513
   reason: "com.fasterxml.jackson.core:jackson-databind in Java - fixed in 2.18.8, 2.21.4, 3.1.4"
+  expires: 2026-12-31
+- id: CVE-2026-5598
+  reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.84, 1.80.2"
   expires: 2026-12-31
 - id: CVE-2026-59873
   reason: "tar in Node.js - fixed in 7.5.19"

@@ -299,6 +299,9 @@ ignores:
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-113351
+  reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -319,6 +322,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-11940
   reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-120208
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -482,6 +488,9 @@ ignores:
 - id: CVE-2026-48815
   reason: "sigstore in Node.js - fixed in 4.1.1"
   expires: 2026-12-31
+- id: CVE-2026-50142
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-52490
   reason: "libtiff-dev, libtiff6, libtiffxx6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -599,6 +608,12 @@ ignores:
 - id: CVE-2026-60002
   reason: "openssh-client in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-62289
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-62292
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-6276
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -697,6 +712,18 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-84384
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-84444
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-84446
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-84447
+  reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-84450
   reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -884,6 +911,21 @@ ignores:
 - id: CVE-2026-99109
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-99152
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99153
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-99167
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99233
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99235
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99239
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31

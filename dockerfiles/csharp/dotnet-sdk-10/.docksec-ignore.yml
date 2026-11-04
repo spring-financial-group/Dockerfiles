@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2026-113351
+  reason: "libexpat in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 2.10.0-r0"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 2.10.0-r0"
   expires: 2026-12-31

@@ -80,6 +80,9 @@ ignores:
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
+- id: CVE-2026-113351
+  reason: "libexpat in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 2.10.0-r0"
+  expires: 2026-12-31
 - id: CVE-2026-116587
   reason: "github.com/go-jose/go-jose/v4 in usr/local/lib/node_modules/snyk/wrapper_dist/snyk-alpine - fixed in 4.1.6"
   expires: 2026-12-31
@@ -155,6 +158,12 @@ ignores:
 - id: CVE-2026-39836
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
+- id: CVE-2026-42496
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-42497
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
+  expires: 2026-12-31
 - id: CVE-2026-42499
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
@@ -178,6 +187,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-46600
   reason: "golang.org/x/net in usr/local/bin/nuclei - fixed in 0.56.0"
+  expires: 2026-12-31
+- id: CVE-2026-48962
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
   expires: 2026-12-31
 - id: CVE-2026-56851
   reason: "golang.org/x/text in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 0.41.0"
@@ -209,6 +221,12 @@ ignores:
 - id: CVE-2026-56865
   reason: "golang.org/x/mod in usr/local/bin/nuclei - fixed in 0.40.0"
   expires: 2026-12-31
+- id: CVE-2026-57432
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-57433
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
+  expires: 2026-12-31
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.18.7"
   expires: 2026-12-31
@@ -226,6 +244,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78669
   reason: "golang.org/x/net, stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 0.60.0, 1.26.9, 1.27.2"
+  expires: 2026-12-31
+- id: CVE-2026-8376
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-9538
+  reason: "perl in create-ignores/black-arch:local (alpine 3.24.3) - fixed in 5.42.3-r0"
   expires: 2026-12-31
 - id: CVE-2026-97031
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/kubectl, usr/local/bin/nuclei - fixed in 1.26.9, 1.27.2"
