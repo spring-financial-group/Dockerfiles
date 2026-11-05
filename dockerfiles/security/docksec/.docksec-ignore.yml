@@ -56,6 +56,9 @@ ignores:
 - id: CVE-2026-23102
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-24882
+  reason: "gpgv in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-31568
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
