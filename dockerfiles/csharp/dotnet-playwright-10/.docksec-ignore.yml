@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2026-109518
+  reason: "apt, libapt-pkg7.0 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-111497
   reason: "libbrotli1 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - fixed in 1.2.0-3ubuntu0.1"
   expires: 2026-12-31

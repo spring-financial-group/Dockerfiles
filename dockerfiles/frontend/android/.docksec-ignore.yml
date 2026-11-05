@@ -356,6 +356,9 @@ ignores:
 - id: CVE-2026-109383
   reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
+- id: CVE-2026-109518
+  reason: "apt, libapt-pkg6.0 in create-ignores/android:local (debian 12.15) - fixed in 2.6.2"
+  expires: 2026-12-31
 - id: CVE-2026-109869
   reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
@@ -1024,4 +1027,7 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-99239
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: GHSA-8474-xrp6-wh69
+  reason: "activesupport in Ruby - fixed in ~> 8.0.5, >= 8.0.5.2, >= 8.1.4.1"
   expires: 2026-12-31

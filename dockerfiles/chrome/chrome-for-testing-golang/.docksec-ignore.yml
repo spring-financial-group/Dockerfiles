@@ -11,6 +11,9 @@ ignores:
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-109518
+  reason: "apt, libapt-pkg7.0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 3.0.4"
+  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in go/bin/gobuildcache - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31

@@ -2,6 +2,9 @@ ignores:
 - id: CVE-2025-68973
   reason: "gpgv in create-ignores/squid:local (ubuntu 24.04) - fixed in 2.4.4-2ubuntu17.4"
   expires: 2026-12-31
+- id: CVE-2026-109518
+  reason: "apt, libapt-pkg6.0t64 in create-ignores/squid:local (ubuntu 24.04) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-45447
   reason: "libssl3t64, openssl in create-ignores/squid:local (ubuntu 24.04) - fixed in 3.0.13-0ubuntu3.11"
   expires: 2026-12-31

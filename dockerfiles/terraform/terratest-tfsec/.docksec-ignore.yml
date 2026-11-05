@@ -92,6 +92,9 @@ ignores:
 - id: CVE-2026-106583
   reason: "openssh-client in create-ignores/terratest-tfsec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-109518
+  reason: "apt, libapt-pkg7.0 in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 3.0.4"
+  expires: 2026-12-31
 - id: CVE-2026-111497
   reason: "libbrotli1 in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 1.1.0-2+deb13u1"
   expires: 2026-12-31
@@ -460,6 +463,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-99167
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-2"
+  expires: 2026-12-31
+- id: CVE-2026-99227
+  reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-1"
   expires: 2026-12-31
 - id: CVE-2026-99231
   reason: "linux-libc-dev in create-ignores/terratest-tfsec:local (debian 13.7) - fixed in 6.12.115-1"
