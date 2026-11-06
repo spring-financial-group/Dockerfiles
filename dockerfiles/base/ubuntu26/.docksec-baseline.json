@@ -1,0 +1,6 @@
+{
+  "fingerprints": [
+    "CVE-2026-109518|ubuntu26:baseline (ubuntu 26.04)|apt",
+    "CVE-2026-109518|ubuntu26:baseline (ubuntu 26.04)|libapt-pkg7.0"
+  ]
+}

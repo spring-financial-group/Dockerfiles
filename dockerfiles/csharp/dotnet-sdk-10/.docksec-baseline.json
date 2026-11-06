@@ -1,0 +1,9 @@
+{
+  "fingerprints": [
+    "CVE-2026-113351|dotnet-sdk-10:baseline (alpine 3.24.3)|libexpat",
+    "CVE-2026-117610|dotnet-sdk-10:baseline (alpine 3.24.3)|libexpat",
+    "CVE-2026-118370|dotnet-sdk-10:baseline (alpine 3.24.3)|libexpat",
+    "CVE-2026-92392|dotnet-sdk-10:baseline (alpine 3.24.3)|curl",
+    "CVE-2026-92392|dotnet-sdk-10:baseline (alpine 3.24.3)|libcurl"
+  ]
+}
