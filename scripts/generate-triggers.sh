@@ -44,6 +44,12 @@ EOF
     trigger: (?m)^/test( all| lint-pipelines.*),?(s+|$)
     rerun_command: /test lint-pipelines
     source: "lint-pipelines.yaml"
+  - name: update-baselines
+    context: "update-baselines"
+    optional: true
+    trigger: (?m)^/update-baselines\s*$
+    rerun_command: /update-baselines
+    source: "update-baselines.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"

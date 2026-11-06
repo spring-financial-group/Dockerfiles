@@ -1,10 +1,3 @@
 {
-  "fingerprints": [
-    "CVE-2026-111497|nginx-stable-alpine:baseline (alpine 3.24.3)|brotli-libs",
-    "CVE-2026-113351|nginx-stable-alpine:baseline (alpine 3.24.3)|libexpat",
-    "CVE-2026-117610|nginx-stable-alpine:baseline (alpine 3.24.3)|libexpat",
-    "CVE-2026-118370|nginx-stable-alpine:baseline (alpine 3.24.3)|libexpat",
-    "CVE-2026-92392|nginx-stable-alpine:baseline (alpine 3.24.3)|curl",
-    "CVE-2026-92392|nginx-stable-alpine:baseline (alpine 3.24.3)|libcurl"
-  ]
+  "fingerprints": []
 }
