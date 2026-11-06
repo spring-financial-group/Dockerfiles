@@ -18,10 +18,7 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-109518
-  reason: "apt, libapt-pkg6.0t64 in create-ignores/net10-sonar:local (ubuntu 24.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-111497
-  reason: "libbrotli1 in create-ignores/net10-sonar:local (ubuntu 24.04) - fixed in 1.1.0-2ubuntu0.1"
+  reason: "apt, libapt-pkg6.0t64 in create-ignores/net10-sonar:local (ubuntu 24.04) - fixed in 2.8.4ubuntu0.1"
   expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.10, 1.27.3"

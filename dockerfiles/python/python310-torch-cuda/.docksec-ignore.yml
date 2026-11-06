@@ -501,7 +501,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-109518
-  reason: "apt, libapt-pkg6.0 in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "apt, libapt-pkg6.0 in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 2.4.15ubuntu0.1"
   expires: 2026-12-31
 - id: CVE-2026-111497
   reason: "libbrotli1 in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 1.0.9-2ubuntu0.1"

@@ -1,4 +1,4 @@
 ignores:
 - id: CVE-2026-109518
-  reason: "apt, libapt-pkg7.0 in create-ignores/ubuntu26:local (ubuntu 26.04) - No fix reported"
+  reason: "apt, libapt-pkg7.0 in create-ignores/ubuntu26:local (ubuntu 26.04) - fixed in 3.2.1ubuntu0.1"
   expires: 2026-12-31
