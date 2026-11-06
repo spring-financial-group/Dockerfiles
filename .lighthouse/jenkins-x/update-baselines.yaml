@@ -1,0 +1,290 @@
+# Triggered by the "/update-baselines" PR comment. Builds and scans every image in parallel with docksec --update-baseline
+# (no gate, no push/sign), then commits only the changed .docksec-baseline.json files back to the PR branch in one commit.
+# That push re-triggers the per-image dockerfile-pr.yaml jobs, which then gate against the refreshed baselines.
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: update-baselines
+spec:
+  pipelineSpec:
+    tasks:
+    - name: git-clone
+      workspaces:
+      - name: source
+        workspace: source
+      taskSpec:
+        metadata: {}
+        workspaces:
+        - name: source
+          mountPath: /workspace/source
+        stepTemplate:
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
+          name: ""
+          resources: {}
+          workingDir: /workspace/source
+        steps:
+        - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+          name: ""
+          resources: {}
+        - name: jx-variables
+          resources: {}
+    - name: list-images
+      runAfter:
+      - git-clone
+      workspaces:
+      - name: source
+        workspace: source
+      taskSpec:
+        metadata: {}
+        workspaces:
+        - name: source
+          mountPath: /workspace/source
+        results:
+        - name: dirs
+          type: array
+          description: Repo-relative directory of every image's Dockerfile, as a JSON array
+        steps:
+        - image: jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/jx-boot:3.16.71
+          name: list-images
+          workingDir: /workspace/source
+          resources: {}
+          script: |
+            #!/usr/bin/env sh
+            set -e
+            # Paths are only [a-z0-9/-], so no JSON escaping is needed. Termination-message results cap at 4KB (~80 images).
+            find dockerfiles -name Dockerfile -exec dirname {} \; | LC_ALL=C sort |
+              awk 'BEGIN { printf "[" } NR > 1 { printf "," } { printf "\"%s\"", $0 } END { printf "]" }' \
+              | tee "$(results.dirs.path)"
+    - name: scan
+      runAfter:
+      - list-images
+      matrix:
+        params:
+        - name: IMAGE_DIR
+          value: $(tasks.list-images.results.dirs[*])
+      workspaces:
+      - name: source
+        workspace: source
+      taskSpec:
+        metadata: {}
+        params:
+        - name: IMAGE_DIR
+          description: The repo-relative directory containing the image's Dockerfile
+          type: string
+        workspaces:
+        - name: source
+          mountPath: /workspace/source
+        stepTemplate:
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
+          name: ""
+          resources: {}
+          workingDir: /workspace/source
+          volumeMounts:
+          - mountPath: /temp-docker-config
+            name: temp-docker-config
+          env:
+          - name: HOME
+            value: /tekton/home
+          - name: TRIVY_CACHE_DIR
+            value: /tekton/home/.cache/trivy
+          envFrom:
+          - secretRef:
+              name: jx-boot-job-env-vars
+              optional: true
+        steps:
+        - image: jx3mqubebuild.azurecr.io/gcr-io/kaniko-project/executor:v1.24.0-debug
+          name: build-containers
+          # Every scan TaskRun shares the PVC workspace, so `coschedule: workspaces` pins them all to one node.
+          # Requests make the excess pods wait for capacity there instead of overcommitting it.
+          resources:
+            requests:
+              cpu: "1"
+              memory: 2Gi
+          script: |
+            #!/busybox/sh
+            set -ex
+            source .jx/variables.sh
+            cp /temp-docker-config/config.json /kaniko/.docker/config.json
+
+            IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
+            # Same build as dockerfile-pr.yaml, but the tarball goes to the pod-local $HOME rather than the shared PVC.
+            /kaniko/executor $KANIKO_FLAGS --cleanup --context=/workspace/source/"$(params.IMAGE_DIR)" --dockerfile="Dockerfile" --destination=$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/"$IMAGE_NAME":$VERSION --no-push --tarPath "$HOME/$IMAGE_NAME".tar
+        - image: jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/trivydb:latest
+          name: copy-vulns-db
+          resources: {}
+          script: |
+            #!/bin/sh
+            mkdir -p "$TRIVY_CACHE_DIR"
+            mv /trivydb/* "$TRIVY_CACHE_DIR/"
+        - image: jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest
+          name: docksec-update-baseline
+          resources: {}
+          script: |
+            #!/usr/bin/env sh
+            set -e
+            . .jx/variables.sh
+            export DOCKER_HOST=tcp://localhost:2375
+
+            IMAGE_DIR="$(params.IMAGE_DIR)"
+            IMAGE_NAME=$(basename "$IMAGE_DIR")
+            BASELINE="$IMAGE_DIR/.docksec-baseline.json"
+            # Same fixed ref as dockerfile-pr.yaml and scripts/create-baselines.sh: Trivy puts the scanned ref into
+            # OS-package targets, which are part of docksec's baseline fingerprints.
+            SCAN_REF="$IMAGE_NAME:baseline"
+
+            until docker info >/dev/null 2>&1; do echo "waiting for docker daemon…"; sleep 3; done
+
+            docker load -i "$HOME/$IMAGE_NAME.tar"
+            rm -f "$HOME/$IMAGE_NAME.tar"
+            docker tag "$PUSH_CONTAINER_REGISTRY/$DOCKER_REGISTRY_ORG/$IMAGE_NAME:$VERSION" "$SCAN_REF"
+
+            # Same flags as create_ignores() in scripts/create-baselines.sh: rewrite the baseline, no --fail-on gate.
+            docksec \
+              -i "$SCAN_REF" \
+              --image-only \
+              --no-color \
+              --offline \
+              --format json \
+              --output-dir /tmp/docksec \
+              --no-cache \
+              --ignore-file "$IMAGE_DIR/.docksec-ignore.yml" \
+              --baseline "$BASELINE" \
+              --update-baseline
+
+            echo "Wrote $(yq '.fingerprints | length' "$BASELINE") fingerprints to $BASELINE"
+
+            # Success marker for the commit-baselines task. It lives under .git so it can never be committed.
+            mkdir -p .git/baseline-status
+            touch ".git/baseline-status/$IMAGE_NAME"
+        sidecars:
+        - name: docker-daemon
+          image: docker:27-dind
+          securityContext:
+            privileged: true
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+          env:
+          - name: DOCKER_TLS_CERTDIR
+            value: ""
+          volumeMounts:
+          - mountPath: /var/lib/docker
+            name: docker-lib
+        volumes:
+        - name: temp-docker-config
+          secret:
+            secretName: tekton-temp-registry-auth
+            items:
+            - key: .dockerconfigjson
+              path: config.json
+        - name: docker-lib
+          emptyDir: {}
+    finally:
+    # finally, so images that did scan still get committed when others failed.
+    - name: commit-baselines
+      workspaces:
+      - name: source
+        workspace: source
+      taskSpec:
+        metadata: {}
+        workspaces:
+        - name: source
+          mountPath: /workspace/source
+        stepTemplate:
+          image: uses:jenkins-x/jx3-pipeline-catalog/tasks/docker/pullrequest.yaml@versionStream
+          name: ""
+          resources: {}
+          workingDir: /workspace/source
+          env:
+          - name: HOME
+            value: /tekton/home
+          envFrom:
+          - secretRef:
+              name: jx-boot-job-env-vars
+              optional: true
+        steps:
+        - image: jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/jx-boot:3.16.71
+          name: commit-baselines
+          resources: {}
+          script: |
+            #!/usr/bin/env bash
+            set -euo pipefail
+            git config --global --add safe.directory "$PWD"
+
+            TEKTON_URL="https://tekton-dashboard.jx.mqube.build/#/namespaces/$(context.pipelineRun.namespace)/pipelineruns/$(context.pipelineRun.name)"
+            status_dir=.git/baseline-status
+            saved=/tmp/baselines
+
+            # Classify every image: no success marker means its scan TaskRun failed (or never ran).
+            failed=() succeeded=()
+            while IFS= read -r dir; do
+              if [ -f "$status_dir/${dir##*/}" ]; then
+                succeeded+=("$dir")
+                mkdir -p "$saved/$dir"
+                cp "$dir/.docksec-baseline.json" "$saved/$dir/"
+              else
+                failed+=("$dir")
+              fi
+            done < <(find dockerfiles -name Dockerfile -exec dirname {} \; | LC_ALL=C sort)
+
+            # The clone is the PR merged into its base; commit on the PR head itself so no merge commit lands in the PR.
+            # Baselines are regenerated whole, so copying them over the PR head's versions is safe.
+            jx gitops git setup
+            git checkout -f -B update-baselines "$PULL_PULL_SHA"
+            if [ ${#succeeded[@]} -gt 0 ]; then
+              cp -R "$saved/dockerfiles/." dockerfiles/
+            fi
+            # Only baseline JSON is ever staged.
+            git add -- 'dockerfiles/*/*/.docksec-baseline.json'
+            mapfile -t updated < <(git diff --cached --name-only | sed 's|/\.docksec-baseline\.json$||')
+
+            push_note=""
+            if [ ${#updated[@]} -gt 0 ]; then
+              git commit -m "chore: update docksec baselines" -m "$(printf -- '- %s\n' "${updated[@]}")"
+              # No --force: if the PR head moved during the run, refuse rather than clobber someone's push.
+              if jx gitops pr push --ignore-no-pr; then
+                push_note="Pushed $(git rev-parse --short HEAD); the per-image PR pipelines will re-run against the new baselines."
+              else
+                push_note="**Push failed** (has the PR branch moved since this run started?). Re-run \`/update-baselines\`."
+                push_failed=true
+              fi
+            else
+              push_note="No baseline changes to commit."
+            fi
+
+            {
+              echo "### \`/update-baselines\`"
+              echo
+              echo "$push_note"
+              echo
+              echo "**Updated (${#updated[@]}):** ${updated[*]:-none}"
+              echo
+              echo "**Unchanged:** $(( ${#succeeded[@]} - ${#updated[@]} ))"
+              if [ ${#failed[@]} -gt 0 ]; then
+                echo
+                echo "**Failed to scan (${#failed[@]}), baselines not updated:** ${failed[*]}"
+              fi
+              echo
+              echo "[Pipeline logs]($TEKTON_URL)"
+            } > /tmp/summary.md
+            cat /tmp/summary.md
+            jx gitops pr comment -f /tmp/summary.md || echo "could not comment on the PR" >&2
+
+            if [ ${#failed[@]} -gt 0 ] || [ "${push_failed:-false}" = true ]; then
+              exit 1
+            fi
+  workspaces:
+  - name: source
+    volumeClaimTemplate:
+      spec:
+        storageClassName: azurefile-csi-premium
+        accessModes:
+        - ReadWriteMany
+        resources:
+          requests:
+            storage: 5Gi
+  podTemplate: {}
+  serviceAccountName: tekton-bot
+  timeout: 2h0m0s
+status: {}

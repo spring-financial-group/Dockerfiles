@@ -12,7 +12,7 @@ will become the name of the generated image. Our `net-10` image would be created
 The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edit it by hand.
 3. (Optional) install `docksec` and `trivy` on your local machine, then run this script to add a `.docksec-ignore.yml` file to the new image folder:
 ```bash
-./scripts/create-ignores.sh dockerfiles/csharp/net-10
+./scripts/create-baselines.sh dockerfiles/csharp/net-10
 ```
 This saves needing to get the results from the pipeline
 4. Create a PR. The pipeline should run and build the new image
@@ -80,6 +80,23 @@ flowchart LR
     P5 --> P6["<b>Fix or accept the vuln</b><br/><small>update .docksec-ignore.yml</small>"]
     P6 -.->|Re-run| P1
     P4 -->|No| P7["<b>Push and sign image</b><br/><small>crane push ... / cosign sign ...</small>"]
+```
+
+### Baseline refresh (`update-baselines.yaml`)
+When the daily PR fails on new findings, comment `/update-baselines` on it. This optional pipeline clones once, then builds and
+scans every image in parallel with `docksec ... --update-baseline` (no gate, no push/sign). It commits only the changed
+`.docksec-baseline.json` files to the PR branch in a single commit and comments a summary on the PR. That push re-triggers the
+per-image PR pipelines, which then gate against the refreshed baselines.
+
+If an image fails to build or scan, its baseline is left alone, it's listed in the PR comment and the `update-baselines`
+check goes red. The other images are still committed. `scripts/create-baselines.sh` remains the local fallback.
+
+```mermaid
+flowchart LR
+    U0["<b>/update-baselines</b><br/><small>PR comment</small>"] --> U1["<b>Clone once</b><br/><small>shared workspace</small>"]
+    U1 --> U2["<b>Build + scan every image</b><br/><small>matrix, in parallel<br/>docksec ... --update-baseline</small>"]
+    U2 --> U3["<b>Commit baselines</b><br/><small>one commit, baseline JSON only<br/>jx gitops pr push</small>"]
+    U3 -.->|Re-triggers| P["<b>Per-image PR pipelines</b>"]
 ```
 
 ### Release pipeline (`dockerfile-release.yaml`)
