@@ -47,7 +47,13 @@ ignores:
 - id: CVE-2026-103111
   reason: "pcre2 in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 10.46-r1"
   expires: 2026-12-31
+- id: CVE-2026-107891
+  reason: "musl, musl-utils in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 1.2.5-r13"
+  expires: 2026-12-31
 - id: CVE-2026-113351
+  reason: "libexpat in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 2.10.0-r0"
+  expires: 2026-12-31
+- id: CVE-2026-115506
   reason: "libexpat in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 2.10.0-r0"
   expires: 2026-12-31
 - id: CVE-2026-117610
@@ -226,6 +232,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 8.14.1-r4"
+  expires: 2026-12-31
+- id: CVE-2026-85091
+  reason: "zlib in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 1.3.2-r1"
   expires: 2026-12-31
 - id: CVE-2026-86145
   reason: "pcre2 in create-ignores/gradle9-jdk17-alpine:local (alpine 3.22.1) - fixed in 10.46-r1"

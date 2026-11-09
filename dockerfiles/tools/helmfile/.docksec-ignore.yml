@@ -209,6 +209,9 @@ ignores:
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/helmfile - fixed in 1.18.7"
   expires: 2026-12-31
+- id: CVE-2026-78661
+  reason: "golang.org/x/net in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.62.0"
+  expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31

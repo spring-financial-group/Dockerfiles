@@ -236,9 +236,6 @@ ignores:
 - id: CVE-2025-39952
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2025-40025
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2025-40137
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -275,6 +272,9 @@ ignores:
 - id: CVE-2026-100072
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-102523
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-106553
   reason: "openssh-client in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -302,6 +302,9 @@ ignores:
 - id: CVE-2026-113351
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-115506
+  reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -318,6 +321,12 @@ ignores:
   reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
+  reason: "libsqlite3-0, libsqlite3-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119374
+  reason: "libsqlite3-0, libsqlite3-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119379
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-11940
@@ -737,6 +746,9 @@ ignores:
 - id: CVE-2026-8458
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-85091
+  reason: "zlib1g, zlib1g-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-85746
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -836,9 +848,6 @@ ignores:
 - id: CVE-2026-92262
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-93792
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-93817
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -933,5 +942,11 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99246
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99272
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99281
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31

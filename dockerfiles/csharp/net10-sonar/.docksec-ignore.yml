@@ -125,6 +125,9 @@ ignores:
 - id: CVE-2026-56862
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
+- id: CVE-2026-78661
+  reason: "golang.org/x/net in usr/local/bin/jx - fixed in 0.62.0"
+  expires: 2026-12-31
 - id: CVE-2026-78667
   reason: "stdlib in usr/local/bin/jx - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31

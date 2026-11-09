@@ -269,9 +269,6 @@ ignores:
 - id: CVE-2025-39952
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2025-40025
-  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2025-40137
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -320,6 +317,9 @@ ignores:
 - id: CVE-2026-102278
   reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
   expires: 2026-12-31
+- id: CVE-2026-102523
+  reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-102554
   reason: "com.google.guava:guava in Java - fixed in 33.7.2"
   expires: 2026-12-31
@@ -353,6 +353,9 @@ ignores:
 - id: CVE-2026-113351
   reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-115506
+  reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -369,6 +372,12 @@ ignores:
   reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
+  reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119374
+  reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119379
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-11940
@@ -770,6 +779,9 @@ ignores:
 - id: CVE-2026-78410
   reason: "bsdutils, libblkid-dev, libblkid1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-80212
+  reason: "libruby3.1, ruby3.1, ruby3.1-dev, ruby3.1-doc in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-80837
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -799,6 +811,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-85091
+  reason: "zlib1g, zlib1g-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-85746
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/android:local (debian 12.15) - No fix reported"
@@ -920,9 +935,6 @@ ignores:
 - id: CVE-2026-93577
   reason: "libruby3.1, ruby3.1, ruby3.1-dev, ruby3.1-doc in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-93792
-  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-93817
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -1014,6 +1026,12 @@ ignores:
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99246
+  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99272
+  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99281
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-8474-xrp6-wh69
