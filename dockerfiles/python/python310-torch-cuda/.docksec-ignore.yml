@@ -728,6 +728,9 @@ ignores:
 - id: CVE-2026-46012
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-46113
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
+  expires: 2026-12-31
 - id: CVE-2026-46181
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
