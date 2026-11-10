@@ -950,3 +950,6 @@ ignores:
 - id: CVE-2026-99281
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-99284
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31

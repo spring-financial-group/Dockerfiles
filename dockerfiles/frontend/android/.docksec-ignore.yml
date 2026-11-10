@@ -1034,6 +1034,9 @@ ignores:
 - id: CVE-2026-99281
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-99284
+  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: GHSA-8474-xrp6-wh69
   reason: "activesupport in Ruby - fixed in ~> 8.0.5, >= 8.0.5.2, >= 8.1.4.1"
   expires: 2026-12-31
