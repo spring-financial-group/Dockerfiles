@@ -26,8 +26,38 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-107364
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/docker, usr/local/bin/trivy, usr/local/bin/yq - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
+- id: CVE-2026-112315
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112316
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112317
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112318
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112319
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112320
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112321
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112322
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112323
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1, libexpat1-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
@@ -43,6 +73,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-118370
   reason: "libexpat1, libexpat1-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118380
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119079
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
@@ -122,6 +158,12 @@ ignores:
 - id: CVE-2026-63209
   reason: "github.com/klauspost/compress in usr/local/bin/trivy - fixed in 1.18.7"
   expires: 2026-12-31
+- id: CVE-2026-71199
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-71200
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-71556
   reason: "github.com/go-git/go-git/v5 in usr/local/bin/trivy - fixed in 5.19.2"
   expires: 2026-12-31
@@ -189,9 +231,6 @@ ignores:
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98853
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98999
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99109

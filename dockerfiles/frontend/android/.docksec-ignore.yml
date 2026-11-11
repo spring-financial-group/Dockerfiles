@@ -332,6 +332,9 @@ ignores:
 - id: CVE-2026-106583
   reason: "openssh-client in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-107364
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-107815
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -350,6 +353,33 @@ ignores:
 - id: CVE-2026-110264
   reason: "libruby3.1, ruby3.1, ruby3.1-dev, ruby3.1-doc in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-112315
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112316
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112317
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112318
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112319
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112320
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112321
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112322
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112323
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -367,6 +397,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-118370
   reason: "libexpat1, libexpat1-dev in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118380
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119079
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119123
   reason: "imagemagick, imagemagick-6-common, imagemagick-6.q16, libmagickcore-6-arch-config, libmagickcore-6-headers, libmagickcore-6.q16-6, libmagickcore-6.q16-6-extra, libmagickcore-6.q16-dev, libmagickcore-dev, libmagickwand-6-headers, libmagickwand-6.q16-6, libmagickwand-6.q16-dev, libmagickwand-dev in create-ignores/android:local (debian 12.15) - No fix reported"
@@ -743,6 +779,12 @@ ignores:
 - id: CVE-2026-68515
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-71199
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-71200
+  reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/android:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-72042
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -1010,9 +1052,6 @@ ignores:
 - id: CVE-2026-99153
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-99167
-  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-99233
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -1020,9 +1059,6 @@ ignores:
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99236
-  reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-99239
   reason: "linux-libc-dev in create-ignores/android:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99246

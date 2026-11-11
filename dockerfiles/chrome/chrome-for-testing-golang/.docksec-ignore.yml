@@ -5,6 +5,9 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-107364
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-109089
   reason: "libxi6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -13,6 +16,33 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in go/bin/gobuildcache - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
+- id: CVE-2026-112315
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112316
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112317
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112318
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112319
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112320
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112321
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112322
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112323
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -25,6 +55,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-118370
   reason: "libexpat1 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118380
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119079
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -91,6 +127,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-71199
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-71200
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-74860
   reason: "libxml2 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
