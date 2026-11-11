@@ -35,8 +35,38 @@ ignores:
 - id: CVE-2026-106583
   reason: "openssh-client in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-107364
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in go/bin/gobuildcache, go/bin/golangci-lint - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
+- id: CVE-2026-112315
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112316
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112317
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112318
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112319
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112320
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112321
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112322
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-112323
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
@@ -49,6 +79,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-118370
   reason: "libexpat1 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-118380
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-119079
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
@@ -128,6 +164,12 @@ ignores:
 - id: CVE-2026-60002
   reason: "openssh-client in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-71199
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-71200
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-72042
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -192,9 +234,6 @@ ignores:
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98853
-  reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98999
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99109
