@@ -2,8 +2,14 @@ ignores:
 - id: CVE-2025-69720
   reason: "libtinfo6, ncurses-base, ncurses-bin in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-105437
+  reason: "git, git-man in create-ignores/python314:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-107364
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/python314:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-111760
+  reason: "git, git-man in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/bin/yq - fixed in 1.26.10, 1.27.3"
@@ -37,6 +43,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-114466
+  reason: "git, git-man in create-ignores/python314:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-115506
   reason: "libexpat1 in create-ignores/python314:local (debian 13.7) - No fix reported"

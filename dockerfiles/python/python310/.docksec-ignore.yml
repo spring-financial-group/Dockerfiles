@@ -467,12 +467,6 @@ ignores:
 - id: CVE-2025-71315
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-109518
-  reason: "apt, libapt-pkg6.0 in create-ignores/python310:local (ubuntu 22.04) - fixed in 2.4.15ubuntu0.1"
-  expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in usr/bin/yq - fixed in 1.26.10, 1.27.3"
-  expires: 2026-12-31
 - id: CVE-2026-112940
   reason: "filelock in Python - fixed in 4.2.1"
   expires: 2026-12-31
@@ -675,9 +669,6 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-63825
-  reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-63940
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-63958
@@ -905,9 +896,6 @@ ignores:
 - id: CVE-2026-74347
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-74350
-  reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-74386
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -958,15 +946,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-74752
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-78661
-  reason: "golang.org/x/net in usr/bin/yq - fixed in 0.62.0"
-  expires: 2026-12-31
-- id: CVE-2026-78667
-  reason: "stdlib in usr/bin/yq - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in usr/bin/yq - fixed in 0.60.0, 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-80551
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
@@ -1280,9 +1259,6 @@ ignores:
 - id: CVE-2026-93828
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-97031
-  reason: "stdlib in usr/bin/yq - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
 - id: CVE-2026-97415
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -1401,9 +1377,6 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98420
-  reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98432
   reason: "linux-libc-dev in create-ignores/python310:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98439

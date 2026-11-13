@@ -17,6 +17,9 @@ ignores:
 - id: CVE-2024-21803
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-21963
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2024-58015
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -29,11 +32,20 @@ ignores:
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-0004
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-102554
   reason: "com.google.guava:guava in Java - fixed in 33.7.2"
   expires: 2026-12-31
+- id: CVE-2026-105437
+  reason: "git, git-man in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-107364
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-111760
+  reason: "git, git-man in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-112315
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
@@ -64,6 +76,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-114466
+  reason: "git, git-man in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-115506
   reason: "libexpat1 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
@@ -300,6 +315,9 @@ ignores:
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99281
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99288
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: GHSA-4w2j-m93h-cj5j

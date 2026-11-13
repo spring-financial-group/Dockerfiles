@@ -1,13 +1,10 @@
 ignores:
-- id: CVE-2026-113351
-  reason: "libexpat in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 2.10.0-r0"
+- id: CVE-2026-105437
+  reason: "git, git-init-template in create-ignores/dotnet-sdk-10:local (alpine 3.24.4) - fixed in 2.54.1-r0"
   expires: 2026-12-31
-- id: CVE-2026-117610
-  reason: "libexpat in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 2.10.0-r0"
+- id: CVE-2026-111760
+  reason: "git, git-init-template in create-ignores/dotnet-sdk-10:local (alpine 3.24.4) - fixed in 2.54.1-r0"
   expires: 2026-12-31
-- id: CVE-2026-118370
-  reason: "libexpat in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 2.10.0-r0"
-  expires: 2026-12-31
-- id: CVE-2026-92392
-  reason: "curl, libcurl in create-ignores/dotnet-sdk-10:local (alpine 3.24.3) - fixed in 8.23.0-r0"
+- id: CVE-2026-114466
+  reason: "git, git-init-template in create-ignores/dotnet-sdk-10:local (alpine 3.24.4) - fixed in 2.54.1-r0"
   expires: 2026-12-31

@@ -17,6 +17,9 @@ ignores:
 - id: CVE-2024-21803
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-21963
+  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2024-58015
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -25,6 +28,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-0004
+  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-107364
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/docksec:local (debian 13.7) - No fix reported"
@@ -240,5 +246,8 @@ ignores:
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99281
+  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99288
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

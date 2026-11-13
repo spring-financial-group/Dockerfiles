@@ -74,8 +74,38 @@ ignores:
 - id: CVE-2026-100354
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.149.0"
   expires: 2026-12-31
+- id: CVE-2026-105437
+  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
+  expires: 2026-12-31
+- id: CVE-2026-111760
+  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
+  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.26.10, 1.27.3"
+  expires: 2026-12-31
+- id: CVE-2026-114466
+  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123863
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123864
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123865
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123866
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123872
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-123874
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-126051
+  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.8, 1.26.1"
