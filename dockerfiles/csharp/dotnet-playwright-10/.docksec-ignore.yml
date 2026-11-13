@@ -8,6 +8,15 @@ ignores:
 - id: CVE-2026-111943
   reason: "stdlib in usr/bin/pebble - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
+- id: CVE-2026-114146
+  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.34, 9.0.23, 10.0.15, 11.0.0"
+  expires: 2026-12-31
+- id: CVE-2026-114147
+  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.34, 9.0.23, 10.0.15, 11.0.0"
+  expires: 2026-12-31
+- id: CVE-2026-114149
+  reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.34, 9.0.23, 10.0.15, 11.0.0"
+  expires: 2026-12-31
 - id: CVE-2026-58280
   reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json - fixed in 9.0.21, 8.0.32, 10.0.13, 11.0.0-rc.2"
   expires: 2026-12-31

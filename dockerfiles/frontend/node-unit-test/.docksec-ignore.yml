@@ -53,6 +53,9 @@ ignores:
 - id: CVE-2024-21803
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-21963
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2024-26669
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -269,11 +272,17 @@ ignores:
 - id: CVE-2025-7458
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-0004
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-100072
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-102523
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-105437
+  reason: "git, git-man in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-106553
   reason: "openssh-client in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -301,6 +310,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-111760
+  reason: "git, git-man in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-112315
   reason: "krb5-multidev, libgssapi-krb5-2, libgssrpc4, libk5crypto3, libkadm5clnt-mit12, libkadm5srv-mit12, libkdb5-10, libkrb5-3, libkrb5-dev, libkrb5support0 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -331,6 +343,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-114466
+  reason: "git, git-man in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-115506
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -662,6 +677,9 @@ ignores:
 - id: CVE-2026-6276
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-63826
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-64001
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -908,6 +926,9 @@ ignores:
 - id: CVE-2026-97380
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-98107
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-98111
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -971,9 +992,6 @@ ignores:
 - id: CVE-2026-99233
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-99235
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-99236
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -987,5 +1005,8 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99284
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99288
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31

@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2026-125350
+  reason: "libxslt in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 1.1.43-r4"
+  expires: 2026-12-31
 - id: CVE-2026-87636
   reason: "libxslt in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 1.1.43-r4"
   expires: 2026-12-31

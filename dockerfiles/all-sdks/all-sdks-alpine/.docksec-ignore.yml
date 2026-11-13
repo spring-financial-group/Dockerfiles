@@ -8,8 +8,44 @@ ignores:
 - id: CVE-2026-102554
   reason: "com.google.guava:guava in Java - fixed in 33.7.2"
   expires: 2026-12-31
+- id: CVE-2026-107364
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
 - id: CVE-2026-107891
   reason: "musl-utils in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.2.5-r24"
+  expires: 2026-12-31
+- id: CVE-2026-112315
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112316
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112317
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112318
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112319
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112320
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112321
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112322
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-112323
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-118380
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-119079
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
 - id: CVE-2026-13506
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
@@ -44,6 +80,12 @@ ignores:
 - id: CVE-2026-3505
   reason: "org.bouncycastle:bcpg-jdk18on in Java - fixed in 1.84"
   expires: 2026-12-31
+- id: CVE-2026-40355
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-40356
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
 - id: CVE-2026-48815
   reason: "sigstore in Node.js - fixed in 4.1.1"
   expires: 2026-12-31
@@ -70,6 +112,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-69192
   reason: "ip-address in Node.js - fixed in 10.3.1"
+  expires: 2026-12-31
+- id: CVE-2026-71199
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
+  expires: 2026-12-31
+- id: CVE-2026-71200
+  reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
 - id: CVE-2026-73566
   reason: "tar in Node.js - fixed in 7.5.21"
