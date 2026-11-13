@@ -80,7 +80,7 @@ spec:
             export DOCKER_HOST=tcp://localhost:2375
 
             IMAGE_NAME=$(basename "$(params.IMAGE_DIR)")
-            # Scan under the same fixed ref as scripts/create-ignores.sh: Trivy puts the scanned ref into OS-package
+            # Scan under the same fixed ref as scripts/create-baselines.sh: Trivy puts the scanned ref into OS-package
             # targets, which are part of docksec's baseline fingerprints.
             SCAN_REF="$IMAGE_NAME:baseline"
 

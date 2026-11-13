@@ -26,6 +26,15 @@ spec:
           resources: {}
         - name: promote-changelog
           resources: {}
+        # Packages charts/* (the dockerfiles-baseline-updater CronJob) at $VERSION and pushes to the chart repo.
+        - image: ghcr.io/jenkins-x/jx-boot:3.2.197
+          name: promote-helm-release
+          resources: {}
+          script: |
+            #!/usr/bin/env sh
+            set -e
+            source .jx/variables.sh
+            jx gitops helm release
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s

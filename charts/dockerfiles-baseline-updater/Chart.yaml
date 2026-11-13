@@ -1,0 +1,6 @@
+apiVersion: v2
+name: dockerfiles-baseline-updater
+description: Daily CronJob that rescans the Dockerfiles images with docksec and opens a PR when their .docksec-baseline.json files change
+type: application
+# Stamped with the release version by .lighthouse/jenkins-x/release.yaml
+version: 0.1.0-SNAPSHOT

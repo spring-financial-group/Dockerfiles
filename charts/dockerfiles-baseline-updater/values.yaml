@@ -1,0 +1,73 @@
+# Image with docksec, trivy, the docker CLI, git and jq (dockerfiles/tools/baseline-updater)
+image:
+  repository: jx3mqubebuild.azurecr.io/spring-financial-group/baseline-updater
+  tag: latest
+  pullPolicy: Always
+
+dind:
+  image: docker:27-dind
+  pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: "2"
+      memory: 4Gi
+
+schedule: "0 6 * * *"
+timeZone: Europe/London
+suspend: false
+# Give up on a missed run after an hour rather than starting it late.
+startingDeadlineSeconds: 3600
+# A scan of all images that's still running after this is killed.
+activeDeadlineSeconds: 10800
+ttlSecondsAfterFinished: 86400
+successfulJobsHistoryLimit: 3
+failedJobsHistoryLimit: 3
+
+# What the job scans and where it opens the PR.
+git:
+  repo: spring-financial-group/Dockerfiles
+  baseBranch: main
+  prBranch: chore/update-docksec-baselines
+  authorName: mqube-bot
+  authorEmail: mqube-bot@mqube.com
+  # Secret holding the GitHub token used to clone, push and open the PR.
+  tokenSecret: github-config
+  tokenKey: github-token
+
+# Parallel image scans. Each one holds a pulled image in dind and runs trivy, so memory, CPU and dind
+# storage all scale with this.
+jobs: 2
+
+# dockerconfigjson secret: pulls the job image, and is the docker CLI config for pulling the images to scan
+# and the trivydb image.
+registryAuthSecret: tekton-container-registry-auth
+
+resources:
+  requests:
+    cpu: "1"
+    memory: 2Gi
+  limits:
+    cpu: "2"
+    memory: 4Gi
+
+# dind's /var/lib/docker. Images are removed after each scan, so this needs to fit ~jobs x the largest image
+# (the CUDA and android images are several GB each).
+dockerStorage:
+  sizeLimit: 80Gi
+
+# Scratch space for the clone, trivy DB and scan output.
+workStorage:
+  sizeLimit: 10Gi
+
+serviceAccount:
+  create: true
+  name: ""
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+podAnnotations: {}
+podLabels: {}

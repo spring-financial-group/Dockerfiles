@@ -1,0 +1,144 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "baseline-updater.name" . }}
+  labels:
+    {{- include "baseline-updater.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.schedule | quote }}
+  {{- with .Values.timeZone }}
+  timeZone: {{ . | quote }}
+  {{- end }}
+  suspend: {{ .Values.suspend }}
+  # A full rescan takes a while, and two at once would race on the PR branch.
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: {{ .Values.startingDeadlineSeconds }}
+  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.failedJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      # A retry would rescan every image again; just wait for the next run.
+      backoffLimit: 0
+      activeDeadlineSeconds: {{ .Values.activeDeadlineSeconds }}
+      ttlSecondsAfterFinished: {{ .Values.ttlSecondsAfterFinished }}
+      template:
+        metadata:
+          labels:
+            {{- include "baseline-updater.labels" . | nindent 12 }}
+            {{- with .Values.podLabels }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          {{- with .Values.podAnnotations }}
+          annotations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+        spec:
+          restartPolicy: Never
+          serviceAccountName: {{ include "baseline-updater.serviceAccountName" . }}
+          automountServiceAccountToken: false
+          {{- with .Values.registryAuthSecret }}
+          imagePullSecrets:
+          - name: {{ . }}
+          {{- end }}
+          initContainers:
+          # Native sidecar (restartPolicy: Always): docksec and trivy need a Docker daemon to inspect and read the
+          # images. It starts before the main container and is stopped once that exits, so the Job can complete.
+          - name: dind
+            image: {{ .Values.dind.image }}
+            imagePullPolicy: {{ .Values.dind.pullPolicy }}
+            restartPolicy: Always
+            securityContext:
+              privileged: true
+            args:
+            - --host=tcp://127.0.0.1:2375
+            - --host=unix:///var/run/docker.sock
+            env:
+            - name: DOCKER_TLS_CERTDIR
+              value: ""
+            startupProbe:
+              exec:
+                command: ["docker", "info"]
+              periodSeconds: 2
+              failureThreshold: 90
+            resources:
+              {{- toYaml .Values.dind.resources | nindent 14 }}
+            volumeMounts:
+            - name: docker-storage
+              mountPath: /var/lib/docker
+          containers:
+          - name: baseline-updater
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            command: ["/bin/bash", "-c"]
+            args:
+            - |
+              set -euo pipefail
+              mkdir -p /work/tmp
+              # Clone with the token from the environment, so it never lands in the remote URL or the logs.
+              git -c credential.helper='!f() { echo username=x-access-token; echo "password=${GIT_TOKEN}"; }; f' \
+                clone --depth 50 --branch "$BASE_BRANCH" "https://github.com/${REPO}.git" /work/repo
+              cd /work/repo
+              exec scripts/update-baselines-pr.sh
+            env:
+            - name: DOCKER_HOST
+              value: tcp://127.0.0.1:2375
+            {{- if .Values.registryAuthSecret }}
+            - name: DOCKER_CONFIG
+              value: /docker-config
+            {{- end }}
+            - name: TMPDIR
+              value: /work/tmp
+            - name: GIT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.git.tokenSecret }}
+                  key: {{ .Values.git.tokenKey }}
+            - name: REPO
+              value: {{ .Values.git.repo | quote }}
+            - name: BASE_BRANCH
+              value: {{ .Values.git.baseBranch | quote }}
+            - name: PR_BRANCH
+              value: {{ .Values.git.prBranch | quote }}
+            - name: GIT_AUTHOR_NAME
+              value: {{ .Values.git.authorName | quote }}
+            - name: GIT_AUTHOR_EMAIL
+              value: {{ .Values.git.authorEmail | quote }}
+            - name: JOBS
+              value: {{ .Values.jobs | quote }}
+            resources:
+              {{- toYaml .Values.resources | nindent 14 }}
+            volumeMounts:
+            - name: work
+              mountPath: /work
+            {{- if .Values.registryAuthSecret }}
+            - name: docker-config
+              mountPath: /docker-config
+              readOnly: true
+            {{- end }}
+          volumes:
+          - name: docker-storage
+            emptyDir:
+              sizeLimit: {{ .Values.dockerStorage.sizeLimit }}
+          - name: work
+            emptyDir:
+              sizeLimit: {{ .Values.workStorage.sizeLimit }}
+          {{- with .Values.registryAuthSecret }}
+          - name: docker-config
+            secret:
+              secretName: {{ . }}
+              items:
+              - key: .dockerconfigjson
+                path: config.json
+          {{- end }}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}

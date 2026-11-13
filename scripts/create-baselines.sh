@@ -14,6 +14,8 @@
 #   JOBS=N for the number of parallel scans with --all (default 4)
 #   PLATFORM=os/arch to build or pull (default linux/amd64, matching the pipeline)
 #   TRIVYDB_IMAGE=ref for the --trivydb image (default jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/trivydb:latest)
+#   PRUNE=true removes each image after its scan, so disk use stays at ~JOBS images (used by the baseline-updater CronJob)
+#   FAILED_FILE=path appends the dirs of failed images to this file with --all (default: a temp file)
 set -euox pipefail
 
 usage="usage: $0 [--build] [--trivydb] <image-dir> [image-ref] | [--build] [--trivydb] --all"
@@ -54,6 +56,17 @@ create_ignores() {
   scan_ref="${image_dir##*/}:baseline"
   out="${image_dir}/.docksec-baseline.json"
 
+  local rc=0
+  scan_image "$image_dir" "$image_ref" "$scan_ref" "$out" || rc=1
+  if [ "${PRUNE:-false}" = true ]; then
+    docker rmi --force "$scan_ref" "$image_ref" >/dev/null 2>&1 || true
+  fi
+  return "$rc"
+}
+
+scan_image() {
+  local image_dir="$1" image_ref="$2" scan_ref="$3" out="$4"
+
   if [ "$build" = true ]; then
     docker build --platform "$platform" -t "$image_ref" "$image_dir" || return 1
   else
@@ -72,11 +85,17 @@ if [ "${1:-}" = "--all" ]; then
   # Update the Trivy DB once up front (--trivydb already supplied it), then stop the parallel scans racing on the shared cache.
   [ "$trivydb" = true ] || trivy image --download-db-only --quiet
   export TRIVY_SKIP_DB_UPDATE=true TRIVY_CACHE_BACKEND=memory
-  export -f create_ignores
+  export -f create_ignores scan_image
   export build platform docksec_flags
 
-  failed_file=$(mktemp)
-  trap 'rm -rf "$failed_file" ${TRIVY_CACHE_DIR:+"$TRIVY_CACHE_DIR"}' EXIT
+  if [ -n "${FAILED_FILE:-}" ]; then
+    failed_file="$FAILED_FILE"
+    : > "$failed_file"
+    trap 'rm -rf ${TRIVY_CACHE_DIR:+"$TRIVY_CACHE_DIR"}' EXIT
+  else
+    failed_file=$(mktemp)
+    trap 'rm -rf "$failed_file" ${TRIVY_CACHE_DIR:+"$TRIVY_CACHE_DIR"}' EXIT
+  fi
   printf '%s\n' dockerfiles/*/*/Dockerfile | sed 's|/Dockerfile$||' |
     xargs -P "${JOBS:-4}" -I{} bash -c '
       create_ignores "$1" 2>&1 | sed "s|^|[$1] |"

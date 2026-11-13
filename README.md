@@ -10,11 +10,12 @@ will become the name of the generated image. Our `net-10` image would be created
 ./scripts/generate-triggers.sh
 ```
 The `lint-pipelines` check fails if `triggers.yaml` is out of date, so don't edit it by hand.
-3. (Optional) install `docksec` and `trivy` on your local machine, then run this script to add a `.docksec-ignore.yml` file to the new image folder:
+3. Add an empty `.docksec-ignore.yml` (`ignores: []`) and generate the image's `.docksec-baseline.json`. Install `docksec`,
+`trivy` and Docker locally, then build and scan the new image:
 ```bash
-./scripts/create-baselines.sh dockerfiles/csharp/net-10
+./scripts/create-baselines.sh --build --trivydb dockerfiles/csharp/net-10
 ```
-This saves needing to get the results from the pipeline
+Without a baseline, the PR gate fails on every existing High/Critical finding in the image.
 4. Create a PR. The pipeline should run and build the new image
 
 ## Image Publication Diagrams
@@ -82,21 +83,35 @@ flowchart LR
     P4 -->|No| P7["<b>Push and sign image</b><br/><small>crane push ... / cosign sign ...</small>"]
 ```
 
-### Baseline refresh (`update-baselines.yaml`)
-When the daily PR fails on new findings, comment `/update-baselines` on it. This optional pipeline clones once, then builds and
-scans every image in parallel with `docksec ... --update-baseline` (no gate, no push/sign). It commits only the changed
-`.docksec-baseline.json` files to the PR branch in a single commit and comments a summary on the PR. That push re-triggers the
-per-image PR pipelines, which then gate against the refreshed baselines.
+### Baseline refresh (`dockerfiles-baseline-updater` CronJob)
+A CronJob in the `jx` namespace runs daily at 06:00 (Europe/London). It clones this repo and runs
+`scripts/update-baselines-pr.sh`, which rescans every published `:latest` image against `trivydb:latest` with
+`scripts/create-baselines.sh --trivydb --all` (`docksec ... --update-baseline`, no gate, no build, no push).
+If any `.docksec-baseline.json` changed, it force-pushes only those files to the `chore/update-docksec-baselines`
+branch and opens or updates a PR. The PR body lists the fingerprints added and removed for each image. The PR isn't
+auto-merged: merging accepts the added findings, so review them first. The baseline changes trigger the per-image PR
+pipelines, which gate against the new baselines. If nothing changed, any open baseline PR is closed as stale.
 
-If an image fails to build or scan, its baseline is left alone, it's listed in the PR comment and the `update-baselines`
-check goes red. The other images are still committed. `scripts/create-baselines.sh` remains the local fallback.
+If an image fails to pull or scan, its baseline is left alone, it's listed in the PR body and the Job is marked failed.
+The other images are still updated.
+
+- **Chart:** `charts/dockerfiles-baseline-updater`, released to the OCI chart repo by `release.yaml` on merge to `main`.
+- **Image:** `dockerfiles/tools/baseline-updater` (the docksec image plus git and jq).
+- **Docker:** docksec needs a Docker daemon, which a privileged `docker:dind` native sidecar provides. Images are
+  removed after each scan (`PRUNE=true`), so dind storage stays around `jobs` × the largest image.
+- **Tuning:** set `jobs`, `resources`, `dind.resources` and `dockerStorage.sizeLimit` in the chart values.
+- **Run it now:** `kubectl -n jx create job --from=cronjob/dockerfiles-baseline-updater baselines-manual-$(date +%s)`
+- **Run it locally:** `DRY_RUN=true scripts/update-baselines-pr.sh` scans and prints the PR body without pushing.
+  `scripts/create-baselines.sh` also refreshes a single image.
 
 ```mermaid
 flowchart LR
-    U0["<b>/update-baselines</b><br/><small>PR comment</small>"] --> U1["<b>Clone once</b><br/><small>shared workspace</small>"]
-    U1 --> U2["<b>Build + scan every image</b><br/><small>matrix, in parallel<br/>docksec ... --update-baseline</small>"]
-    U2 --> U3["<b>Commit baselines</b><br/><small>one commit, baseline JSON only<br/>jx gitops pr push</small>"]
-    U3 -.->|Re-triggers| P["<b>Per-image PR pipelines</b>"]
+    U0["<b>CronJob</b><br/><small>daily 06:00</small>"] --> U1["<b>Clone repo</b><br/><small>main</small>"]
+    U1 --> U2["<b>Pull + scan every image</b><br/><small>:latest, dind sidecar<br/>docksec ... --update-baseline</small>"]
+    U2 -->|Baselines changed| U3["<b>Open/update PR</b><br/><small>baseline JSON only<br/>chore/update-docksec-baselines</small>"]
+    U2 -->|No change| U5["<b>Close stale PR</b>"]
+    U3 -.->|Triggers| P["<b>Per-image PR pipelines</b>"]
+    U3 --> U4["<b>Review + merge</b><br/><small>infra team</small>"]
 ```
 
 ### Release pipeline (`dockerfile-release.yaml`)

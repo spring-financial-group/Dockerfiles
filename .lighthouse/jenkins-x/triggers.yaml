@@ -241,6 +241,13 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/tflint
+  - name: baseline-updater-pr
+    optional: false
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/baseline-updater\/.*$)
+    source: "dockerfile-pr.yaml"
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/baseline-updater
   - name: container-tools-pr
     optional: false
     run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/container-tools\/.*$)
@@ -262,12 +269,6 @@ spec:
     trigger: (?m)^/test( all| lint-pipelines.*),?(s+|$)
     rerun_command: /test lint-pipelines
     source: "lint-pipelines.yaml"
-  - name: update-baselines
-    context: "update-baselines"
-    optional: true
-    trigger: (?m)^/update-baselines\s*$
-    rerun_command: /update-baselines
-    source: "update-baselines.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"
@@ -580,6 +581,15 @@ spec:
     pipeline_run_params:
     - name: IMAGE_DIR
       value_template: dockerfiles/terraform/tflint
+  - name: baseline-updater-release
+    run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/baseline-updater\/.*$)
+    source: "dockerfile-release.yaml"
+    branches:
+    - ^main$
+    - ^master$
+    pipeline_run_params:
+    - name: IMAGE_DIR
+      value_template: dockerfiles/tools/baseline-updater
   - name: container-tools-release
     run_if_changed: (LastAutoCommit|^dockerfiles\/tools\/container-tools\/.*$)
     source: "dockerfile-release.yaml"
