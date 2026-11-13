@@ -18,7 +18,10 @@ RUN apt-get update \
 
 # Preinstalled so downstream `uv sync` reuses it instead of downloading Python into the app's own layer
 ENV UV_PYTHON_INSTALL_DIR=/opt/uv/python
-RUN uv python install 3.14
+# The bundled pip is unused by uv and vendors vulnerable msgpack/urllib3/setuptools
+RUN uv python install 3.14 \
+    && rm -rf ${UV_PYTHON_INSTALL_DIR}/cpython-3.14.*/lib/python3.14/site-packages/pip \
+              ${UV_PYTHON_INSTALL_DIR}/cpython-3.14.*/lib/python3.14/site-packages/pip-*.dist-info
 
 ARG YQ_VERSION=v4.53.6
 ARG YQ_BINARY=yq_linux_amd64
