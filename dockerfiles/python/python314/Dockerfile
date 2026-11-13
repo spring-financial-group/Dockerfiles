@@ -16,6 +16,10 @@ RUN apt-get update \
         libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
+# Preinstalled so downstream `uv sync` reuses it instead of downloading Python into the app's own layer
+ENV UV_PYTHON_INSTALL_DIR=/opt/uv/python
+RUN uv python install 3.14
+
 ARG YQ_VERSION=v4.53.6
 ARG YQ_BINARY=yq_linux_amd64
 
