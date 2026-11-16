@@ -230,24 +230,6 @@ ignores:
 - id: CVE-2026-98364
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-98466
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98715
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-98853
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-99109
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-99272
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-99281
-  reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-99288
   reason: "linux-libc-dev in create-ignores/docksec:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

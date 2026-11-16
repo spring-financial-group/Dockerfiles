@@ -300,25 +300,25 @@ ignores:
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98466
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: CVE-2026-98715
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: CVE-2026-98853
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: CVE-2026-99109
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: CVE-2026-99272
   reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99281
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: CVE-2026-99288
-  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
+  reason: "linux-headers-6.12.116+deb13-amd64, linux-headers-6.12.116+deb13-common, linux-kbuild-6.12.116+deb13, linux-libc-dev in create-ignores/all-sdks-debian:local (debian 13.7) - fixed in 6.12.117-1"
   expires: 2026-12-31
 - id: GHSA-4w2j-m93h-cj5j
   reason: "quinn-proto in usr/local/bin/uv, usr/local/bin/uvx - fixed in 0.11.15"
