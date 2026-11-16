@@ -30,16 +30,16 @@ ignores:
   reason: "libtiff-dev, libtiff6, libtiffxx6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-52452
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2023-52586
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2023-52624
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2023-52751
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2023-53218
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -57,7 +57,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-26669
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-26836
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -71,17 +71,20 @@ ignores:
 - id: CVE-2024-26944
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2024-27022
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
+  expires: 2026-12-31
 - id: CVE-2024-38570
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-38630
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-41045
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-41935
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-42118
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -90,22 +93,22 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-44941
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-44942
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-44951
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-46729
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-46811
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-46813
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-47691
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -114,28 +117,28 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-50226
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-50282
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-53068
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-53147
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-53168
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-53179
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-53218
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-56538
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2024-56775
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -144,7 +147,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2024-57982
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-12495
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -156,13 +159,13 @@ ignores:
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-21927
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-21967
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-21969
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-21985
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -171,7 +174,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-37750
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-37776
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -180,73 +183,76 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-37861
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-37952
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-37957
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38069
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38081
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38182
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38204
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38248
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38369
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-38582
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38585
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-38595
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38636
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38722
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-38734
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-39744
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-39797
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-39810
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-39859
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-39952
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-40137
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-40333
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-40354
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2025-6020
+  reason: "libpam-modules, libpam-modules-bin, libpam-runtime, libpam0g in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-64181
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -255,19 +261,19 @@ ignores:
   reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-68809
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncurses-dev, libncurses5-dev, libncurses6, libncursesw5-dev, libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-71068
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-71073
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-71152
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2025-7458
   reason: "libsqlite3-0, libsqlite3-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -350,6 +356,63 @@ ignores:
 - id: CVE-2026-115506
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-116304
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116306
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116307
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116309
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116314
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116315
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116316
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116317
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116319
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116320
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116323
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116325
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-116326
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116328
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116330
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116331
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116332
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116335
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-116336
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
 - id: CVE-2026-117610
   reason: "libexpat1, libexpat1-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -383,6 +446,39 @@ ignores:
 - id: CVE-2026-11940
   reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-120139
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120141
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120142
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-120143
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120145
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120147
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120148
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120149
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120150
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120151
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-120153
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
 - id: CVE-2026-120208
   reason: "libheif1 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -392,23 +488,29 @@ ignores:
 - id: CVE-2026-12912
   reason: "libtiff-dev, libtiff6, libtiffxx6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-14661
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libnss-systemd, libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv, systemd-timesyncd in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-18447
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
 - id: CVE-2026-23171
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-23208
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-23226
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-23327
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-23361
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-26960
   reason: "tar in Node.js - fixed in 7.5.8"
@@ -429,7 +531,7 @@ ignores:
   reason: "tar in Node.js - fixed in 7.5.10"
   expires: 2026-12-31
 - id: CVE-2026-31432
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-31493
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -501,25 +603,25 @@ ignores:
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-43049
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-43125
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-43185
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-43250
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-45893
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-45943
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-45957
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-46054
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -531,13 +633,13 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-46181
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-46219
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-46241
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-46293
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -555,10 +657,10 @@ ignores:
   reason: "libtiff-dev, libtiff6, libtiffxx6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-52991
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53000
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53091
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -576,7 +678,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53129
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53143
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -588,13 +690,13 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-53262
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53272
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53330
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-53613
   reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -678,55 +780,61 @@ ignores:
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-63826
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64001
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-64017
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64026
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-64138
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64305
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64320
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64341
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64348
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64389
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64392
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64400
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64424
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-64556
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
+  expires: 2026-12-31
+- id: CVE-2026-6460
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
+  expires: 2026-12-31
+- id: CVE-2026-6467
+  reason: "libpq-dev, libpq5 in create-ignores/node-unit-test:local (debian 12.15) - fixed in 15.20-0+deb12u1"
   expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2, libxml2-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-68409
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-68426
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-68470
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -747,22 +855,22 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72098
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-7210
   reason: "libpython3.11-minimal, libpython3.11-stdlib, python3.11, python3.11-minimal in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72130
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-73566
   reason: "tar in Node.js - fixed in 7.5.21"
   expires: 2026-12-31
 - id: CVE-2026-74269
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-74345
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-74752
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -777,10 +885,10 @@ ignores:
   reason: "bsdutils, libblkid-dev, libblkid1, libfdisk1, libmount-dev, libmount1, libsmartcols1, libuuid1, mount, util-linux, util-linux-extra, uuid-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-80837
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-80841
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-8286
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -840,64 +948,64 @@ ignores:
   reason: "curl, libcurl3-gnutls, libcurl4, libcurl4-openssl-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89465
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89526
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89530
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89545
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89564
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89631
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89633
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89638
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89652
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89659
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89675
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89676
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89708
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-89713
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89761
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89811
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-89972
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-90036
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-90111
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-90206
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-90227
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -909,7 +1017,7 @@ ignores:
   reason: "libmariadb-dev, libmariadb-dev-compat, libmariadb3, mariadb-common in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93817
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-94286
   reason: "libxtst6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -942,61 +1050,61 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98490
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98549
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98715
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98716
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98725
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98741
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98742
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98769
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98805
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-98853
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-98857
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99056
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99083
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99109
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99152
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99153
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99233
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99236
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99246
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
 - id: CVE-2026-99272
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -1008,5 +1116,5 @@ ignores:
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-99288
-  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
