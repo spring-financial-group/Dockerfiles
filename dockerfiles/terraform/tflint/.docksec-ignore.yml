@@ -1,4 +1,7 @@
 ignores:
+- id: CVE-2025-48060
+  reason: "jq in create-ignores/tflint:local (alpine 3.21.10) - fixed in 1.8.2-r0"
+  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
@@ -8,6 +11,9 @@ ignores:
 - id: CVE-2026-27145
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
+- id: CVE-2026-32316
+  reason: "jq in create-ignores/tflint:local (alpine 3.21.10) - fixed in 1.8.2-r0"
+  expires: 2026-12-31
 - id: CVE-2026-33818
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
@@ -16,6 +22,9 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-39822
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
+  expires: 2026-12-31
+- id: CVE-2026-40164
+  reason: "jq in create-ignores/tflint:local (alpine 3.21.10) - fixed in 1.8.2-r0"
   expires: 2026-12-31
 - id: CVE-2026-42504
   reason: "stdlib in usr/local/bin/tflint - fixed in 1.25.11, 1.26.4"
