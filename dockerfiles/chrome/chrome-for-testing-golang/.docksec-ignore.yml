@@ -1,7 +1,4 @@
 ignores:
-- id: CVE-2025-22868
-  reason: "golang.org/x/oauth2 in go/bin/gobuildcache - fixed in 0.27.0"
-  expires: 2026-12-31
 - id: CVE-2025-69720
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
@@ -13,9 +10,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-111943
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-112315
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -77,20 +71,11 @@ ignores:
 - id: CVE-2026-16742
   reason: "libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-33186
-  reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.79.3"
-  expires: 2026-12-31
-- id: CVE-2026-33818
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
 - id: CVE-2026-34980
   reason: "libcups2t64 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-36849
   reason: "libtiff6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-39821
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-52490
   reason: "libtiff6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -100,30 +85,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-55453
   reason: "libcups2t64 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-56851
-  reason: "golang.org/x/text in go/bin/gobuildcache - fixed in 0.41.0"
-  expires: 2026-12-31
-- id: CVE-2026-56852
-  reason: "golang.org/x/text in go/bin/gobuildcache - fixed in 0.39.0"
-  expires: 2026-12-31
-- id: CVE-2026-56853
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-56854
-  reason: "golang.org/x/crypto in go/bin/gobuildcache - fixed in 0.55.0"
-  expires: 2026-12-31
-- id: CVE-2026-56858
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-56859
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-56860
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-56862
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-6653
   reason: "libxml2 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -151,18 +112,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-78661
   reason: "golang.org/x/net in go/bin/gobuildcache - fixed in 0.62.0"
-  expires: 2026-12-31
-- id: CVE-2026-78667
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in go/bin/gobuildcache - fixed in 0.60.0, 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-84304
-  reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.83.1"
-  expires: 2026-12-31
-- id: CVE-2026-84445
-  reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
   expires: 2026-12-31
 - id: CVE-2026-8458
   reason: "curl, libcurl4t64 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -196,10 +145,4 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "perl-base in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-97031
-  reason: "stdlib in go/bin/gobuildcache - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: GHSA-hrxh-6v49-42gf
-  reason: "google.golang.org/grpc in go/bin/gobuildcache - fixed in 1.82.1"
   expires: 2026-12-31
