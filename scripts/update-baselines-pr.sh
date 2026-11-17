@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
-# Entrypoint for the dockerfiles-baseline-updater CronJob (charts/dockerfiles-baseline-updater).
-# Rescans every published :latest image against the pipeline's trivydb (scripts/create-baselines.sh --trivydb --all)
-# and, if any .docksec-baseline.json changed, force-pushes them to a single rolling branch and opens or updates a PR
-# for review. If nothing changed, any open PR from an earlier run is closed as stale.
-# Run from the root of a clone of the repo, with a Docker daemon reachable (DOCKER_HOST).
+# Final step of the update-baselines pipeline (.lighthouse/jenkins-x/update-baselines.yaml). Run after the
+# .docksec-baseline.json files have been rescanned (scripts/create-baselines.sh): if any changed, commits them to a
+# single rolling branch and opens or updates a PR for review. If nothing changed, any open PR from an earlier run is
+# closed as stale. Run from the root of a clone of the repo, with the rescanned baselines in the working tree.
 #
 # Env:
 #   GIT_TOKEN            GitHub token for pushing and the PR API (required unless DRY_RUN=true)
+#   FAILED_FILE          file listing image dirs that failed to scan, one per line (optional)
 #   REPO                 owner/name (default spring-financial-group/Dockerfiles)
 #   BASE_BRANCH          branch to compare against and open the PR into (default main)
 #   PR_BRANCH            rolling PR branch (default chore/update-docksec-baselines)
-#   JOBS                 parallel scans (default 2)
-#   DOCKER_WAIT_SECONDS  how long to wait for the Docker daemon (default 180)
-#   DRY_RUN=true         scan and print the PR body, but don't push or call the GitHub API
+#   DRY_RUN=true         print the PR body, but don't push or call the GitHub API
 set -euo pipefail
 
 repo="${REPO:-spring-financial-group/Dockerfiles}"
@@ -42,31 +40,17 @@ open_pr_number() {
   gh_api GET "/pulls?state=open&base=${base_branch}&head=${repo%%/*}:${pr_branch}" | jq -r '.[0].number // empty'
 }
 
-# 1. Wait for the dind sidecar.
-deadline=$(( $(date +%s) + ${DOCKER_WAIT_SECONDS:-180} ))
-until docker info >/dev/null 2>&1; do
-  if [ "$(date +%s)" -ge "$deadline" ]; then
-    log "Docker daemon not reachable at ${DOCKER_HOST:-default socket}"
-    exit 1
-  fi
-  sleep 2
-done
-
-# 2. Rescan everything. Failed images keep their old baseline and are reported, but don't stop the others.
-failed_file=$(mktemp)
-body_file=$(mktemp)
-trap 'rm -f "$failed_file" "$body_file"' EXIT
-scan_rc=0
-PRUNE=true JOBS="${JOBS:-2}" FAILED_FILE="$failed_file" scripts/create-baselines.sh --trivydb --all || scan_rc=$?
-failed=$(sort -u "$failed_file" | sed '/^$/d')
-[ -z "$failed" ] || log "Failed images: $(echo "$failed" | tr '\n' ' ')"
-# Treat a non-zero exit with no recorded image failures (e.g. the trivydb pull failed) as fatal.
-if [ "$scan_rc" -ne 0 ] && [ -z "$failed" ]; then
-  log "create-baselines.sh failed before scanning (exit $scan_rc)"
-  exit "$scan_rc"
+# 1. Images that failed to scan kept their old baseline. They're reported, but don't stop the others being published.
+failed=""
+if [ -n "${FAILED_FILE:-}" ] && [ -s "$FAILED_FILE" ]; then
+  failed=$(sort -u "$FAILED_FILE" | sed '/^$/d')
 fi
+[ -z "$failed" ] || log "Failed images: $(echo "$failed" | tr '\n' ' ')"
 
-# 3. Work out what changed against the base branch.
+body_file=$(mktemp)
+trap 'rm -f "$body_file"' EXIT
+
+# 2. Work out what changed against the base branch.
 # Newline-separated list of changed or new baseline files. The glob is a git pathspec, so it's quoted to stop the
 # shell expanding it. (No mapfile/arrays, so this also runs on macOS's bash 3.2 for DRY_RUN.)
 changed=$( { git diff --name-only -- "$baseline_glob"; git ls-files --others --exclude-standard -- "$baseline_glob"; } \
@@ -84,9 +68,9 @@ if [ -z "$changed" ]; then
   exit 0
 fi
 
-# 4. PR body: per-image added/removed fingerprint counts, with the added ones listed.
+# 3. PR body: per-image added/removed fingerprint counts, with the added ones listed.
 {
-  echo "Automated refresh of \`.docksec-baseline.json\` from the \`dockerfiles-baseline-updater\` CronJob."
+  echo "Automated refresh of \`.docksec-baseline.json\` from the \`update-baselines\` pipeline."
   echo
   echo "Each published \`:latest\` image was rescanned against \`trivydb:latest\`. Merging accepts the **added**"
   echo "fingerprints into the baseline, so the PR gate stops failing on them. Review them before approving."
@@ -117,7 +101,7 @@ echo "$details" >> "$body_file"
 if [ -n "$failed" ]; then
   {
     echo "### Failed to scan"
-    echo "These images kept their existing baseline. Check the CronJob logs."
+    echo "These images kept their existing baseline. Check the pipeline logs."
     echo
     # shellcheck disable=SC2016 # literal markdown backticks
     echo "$failed" | sed 's|^|- `|; s|$|`|'
@@ -131,7 +115,7 @@ if [ "$dry_run" = true ]; then
   exit 0
 fi
 
-# 5. Commit onto a fresh branch from the base, and push only if the content differs from what's already there.
+# 4. Commit onto a fresh branch from the base, and push only if the content differs from what's already there.
 git config --local user.name "${GIT_AUTHOR_NAME:-mqube-bot}"
 git config --local user.email "${GIT_AUTHOR_EMAIL:-mqube-bot@mqube.com}"
 # Read the token from the environment at call time, so it never lands in a URL, the git config or the logs.
@@ -149,7 +133,7 @@ else
   git push --force origin "HEAD:refs/heads/${pr_branch}"
 fi
 
-# 6. Open or update the PR.
+# 5. Open or update the PR.
 title="chore: update docksec baselines"
 if pr=$(open_pr_number) && [ -n "$pr" ]; then
   log "Updating PR #$pr"

@@ -32,7 +32,8 @@ spec:
                     set -e
                     git config --global --add safe.directory "$PWD"
                     scripts/generate-triggers.sh
-                    git diff --exit-code -- .lighthouse/jenkins-x/triggers.yaml || { echo "triggers.yaml is out of date, run scripts/generate-triggers.sh and commit the result"; exit 1; }
+                    git add -N .lighthouse/jenkins-x/update-baselines.yaml
+                    git diff --exit-code -- .lighthouse/jenkins-x/triggers.yaml .lighthouse/jenkins-x/update-baselines.yaml || { echo "triggers.yaml or update-baselines.yaml is out of date, run scripts/generate-triggers.sh and commit the result"; exit 1; }
     podTemplate: {}
     serviceAccountName: tekton-bot
     timeout: 1h0m0s

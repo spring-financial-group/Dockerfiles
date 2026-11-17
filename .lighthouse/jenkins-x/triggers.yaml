@@ -269,6 +269,13 @@ spec:
     trigger: (?m)^/test( all| lint-pipelines.*),?(s+|$)
     rerun_command: /test lint-pipelines
     source: "lint-pipelines.yaml"
+  - name: update-baselines
+    context: "update-baselines"
+    always_run: false
+    optional: true
+    trigger: (?m)^/test( update-baselines.*),?(s+|$)
+    rerun_command: /test update-baselines
+    source: "update-baselines.yaml"
   postsubmits:
   - name: release
     source: "release.yaml"

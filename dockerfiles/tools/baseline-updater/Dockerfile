@@ -1,6 +1,6 @@
-# Runtime for the dockerfiles-baseline-updater CronJob (charts/dockerfiles-baseline-updater): the docksec image
-# (docksec, trivy, docker CLI, yq) plus git and jq. The CronJob clones this repo and runs scripts/update-baselines-pr.sh,
-# so the script isn't baked in here. The Docker daemon comes from a dind sidecar.
+# Runtime for the scan tasks of the update-baselines pipeline (.lighthouse/jenkins-x/update-baselines.yaml): the
+# docksec image (docksec, trivy, docker CLI, yq) plus git and jq, for scripts/create-baselines.sh. The pipeline runs the
+# scripts from its clone of the repo, so they aren't baked in here. The Docker daemon comes from a dind sidecar.
 FROM jx3mqubebuild.azurecr.io/spring-financial-group/docksec:latest
 
 RUN apt-get update \

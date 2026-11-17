@@ -14,7 +14,8 @@
 #   JOBS=N for the number of parallel scans with --all (default 4)
 #   PLATFORM=os/arch to build or pull (default linux/amd64, matching the pipeline)
 #   TRIVYDB_IMAGE=ref for the --trivydb image (default jx3mqubebuild.azurecr.io/ghcr-io/jenkins-x/trivydb:latest)
-#   PRUNE=true removes each image after its scan, so disk use stays at ~JOBS images (used by the baseline-updater CronJob)
+#   TRIVYDB_DIR=path uses an already-extracted copy of the trivydb image's /trivydb with --trivydb, instead of pulling it
+#   PRUNE=true removes each image after its scan, so disk use stays at ~JOBS images
 #   FAILED_FILE=path appends the dirs of failed images to this file with --all (default: a temp file)
 set -euox pipefail
 
@@ -36,10 +37,15 @@ if [ "$trivydb" = true ]; then
   # Same as the pipeline's copy-vulns-db step: the image ships the DB under /trivydb, laid out as a Trivy cache dir.
   TRIVY_CACHE_DIR=$(mktemp -d)
   trap 'rm -rf "$TRIVY_CACHE_DIR"' EXIT
-  docker pull --quiet "$trivydb_image" >/dev/null
-  trivydb_container=$(docker create "$trivydb_image" true)
-  docker cp "$trivydb_container:/trivydb/." "$TRIVY_CACHE_DIR/" >/dev/null || { docker rm "$trivydb_container" >/dev/null; exit 1; }
-  docker rm "$trivydb_container" >/dev/null
+  if [ -n "${TRIVYDB_DIR:-}" ]; then
+    # Already extracted (the update-baselines pipeline's clone task). Copied, so trivy's DB lock isn't on shared storage.
+    cp -R "$TRIVYDB_DIR/." "$TRIVY_CACHE_DIR/"
+  else
+    docker pull --quiet "$trivydb_image" >/dev/null
+    trivydb_container=$(docker create "$trivydb_image" true)
+    docker cp "$trivydb_container:/trivydb/." "$TRIVY_CACHE_DIR/" >/dev/null || { docker rm "$trivydb_container" >/dev/null; exit 1; }
+    docker rm "$trivydb_container" >/dev/null
+  fi
   export TRIVY_CACHE_DIR TRIVY_SKIP_DB_UPDATE=true
   docksec_flags="--offline"
 fi

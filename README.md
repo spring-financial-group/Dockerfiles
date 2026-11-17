@@ -83,33 +83,40 @@ flowchart LR
     P4 -->|No| P7["<b>Push and sign image</b><br/><small>crane push ... / cosign sign ...</small>"]
 ```
 
-### Baseline refresh (`dockerfiles-baseline-updater` CronJob)
-A CronJob in the `jx` namespace runs daily at 06:00 (Europe/London). It clones this repo and runs
-`scripts/update-baselines-pr.sh`, which rescans every published `:latest` image against `trivydb:latest` with
-`scripts/create-baselines.sh --trivydb --all` (`docksec ... --update-baseline`, no gate, no build, no push).
-If any `.docksec-baseline.json` changed, it force-pushes only those files to the `chore/update-docksec-baselines`
-branch and opens or updates a PR. The PR body lists the fingerprints added and removed for each image. The PR isn't
-auto-merged: merging accepts the added findings, so review them first. The baseline changes trigger the per-image PR
-pipelines, which gate against the new baselines. If nothing changed, any open baseline PR is closed as stale.
+### Baseline refresh (`update-baselines.yaml`)
+A manually triggered pipeline: comment `/test update-baselines` on any PR. Whichever PR it's run from, it always
+refreshes `main`'s baselines. It's plain Tekton, one task per step, sharing a workspace:
 
-If an image fails to pull or scan, its baseline is left alone, it's listed in the PR body and the Job is marked failed.
-The other images are still updated.
+1. **`git-clone`** clones `main` once and extracts one `trivydb:latest` snapshot, so every image is scanned against
+   the same DB.
+2. **`scan-<image>`**, one task per image, all in parallel, each with its own `docker:dind` sidecar, runs
+   `scripts/create-baselines.sh --trivydb <image-dir>` against the published `:latest` image
+   (`docksec ... --update-baseline`, no gate, no build, no push).
+3. **`commit-baselines`** runs `scripts/update-baselines-pr.sh`: if any `.docksec-baseline.json` changed, it makes one
+   commit with just those files, force-pushes it to `chore/update-docksec-baselines` and opens or updates a PR. If
+   nothing changed, any open baseline PR is closed as stale.
 
-- **Chart:** `charts/dockerfiles-baseline-updater`, released to the OCI chart repo by `release.yaml` on merge to `main`.
-- **Image:** `dockerfiles/tools/baseline-updater` (the docksec image plus git and jq).
-- **Docker:** docksec needs a Docker daemon, which a privileged `docker:dind` native sidecar provides. Images are
-  removed after each scan (`PRUNE=true`), so dind storage stays around `jobs` × the largest image.
-- **Tuning:** set `jobs`, `resources`, `dind.resources` and `dockerStorage.sizeLimit` in the chart values.
-- **Run it now:** `kubectl -n jx create job --from=cronjob/dockerfiles-baseline-updater baselines-manual-$(date +%s)`
-- **Run it locally:** `DRY_RUN=true scripts/update-baselines-pr.sh` scans and prints the PR body without pushing.
-  `scripts/create-baselines.sh` also refreshes a single image.
+The PR body lists the fingerprints added and removed for each image. The PR isn't auto-merged: merging accepts the
+added findings, so review them first. The baseline changes trigger the per-image PR pipelines, which gate against the
+new baselines.
+
+If an image fails to pull or scan, its baseline is left alone, it's listed in the PR body and `commit-baselines` is
+marked failed. The other images are still updated. If a scan *pod* dies (eviction, OOM), Tekton skips
+`commit-baselines`, so rerun the pipeline.
+
+- **Generated:** `scripts/generate-triggers.sh` writes `update-baselines.yaml` (one scan task per
+  `dockerfiles/<group>/<image>`) and its trigger. `lint-pipelines` fails if either is stale.
+- **Image:** the scan tasks use `dockerfiles/tools/baseline-updater` (the docksec image plus git and jq).
+- **Run it locally:** `scripts/create-baselines.sh --trivydb --all && DRY_RUN=true scripts/update-baselines-pr.sh`
+  rescans everything and prints the PR body without pushing. `scripts/create-baselines.sh` also refreshes a single image.
 
 ```mermaid
 flowchart LR
-    U0["<b>CronJob</b><br/><small>daily 06:00</small>"] --> U1["<b>Clone repo</b><br/><small>main</small>"]
-    U1 --> U2["<b>Pull + scan every image</b><br/><small>:latest, dind sidecar<br/>docksec ... --update-baseline</small>"]
-    U2 -->|Baselines changed| U3["<b>Open/update PR</b><br/><small>baseline JSON only<br/>chore/update-docksec-baselines</small>"]
-    U2 -->|No change| U5["<b>Close stale PR</b>"]
+    U0["<b>/test update-baselines</b><br/><small>on any PR</small>"] --> U1["<b>Clone main</b><br/><small>+ trivydb snapshot</small>"]
+    U1 --> U2["<b>scan-&lt;image&gt; x N</b><br/><small>parallel, :latest, dind sidecar<br/>docksec ... --update-baseline</small>"]
+    U2 --> U6["<b>commit-baselines</b><br/><small>one commit</small>"]
+    U6 -->|Baselines changed| U3["<b>Open/update PR</b><br/><small>baseline JSON only<br/>chore/update-docksec-baselines</small>"]
+    U6 -->|No change| U5["<b>Close stale PR</b>"]
     U3 -.->|Triggers| P["<b>Per-image PR pipelines</b>"]
     U3 --> U4["<b>Review + merge</b><br/><small>infra team</small>"]
 ```
