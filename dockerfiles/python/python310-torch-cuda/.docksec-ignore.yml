@@ -1,6 +1,6 @@
 ignores:
 - id: CVE-2022-1205
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2022-3523
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -30,7 +30,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2022-49359
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2022-49531
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -270,7 +270,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-21812
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2025-21927
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -285,7 +285,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-21947
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2025-21955
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -333,7 +333,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-37920
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2025-37926
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -375,7 +375,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-38615
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2025-38692
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -390,7 +390,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2025-39726
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2025-39800
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -714,7 +714,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-43456
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-43490
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -933,7 +933,7 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-68399
-  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-68401
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -1038,6 +1038,9 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72434
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-72463
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-72464
@@ -1182,6 +1185,9 @@ ignores:
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-74752
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-74753
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-80536
@@ -1871,14 +1877,23 @@ ignores:
 - id: CVE-2026-93067
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
+- id: CVE-2026-93095
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
+  expires: 2026-12-31
 - id: CVE-2026-93105
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93151
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-93154
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-93175
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-93189
+  reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 5.15.0-202.212"
   expires: 2026-12-31
 - id: CVE-2026-93192
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
