@@ -1,1 +1,4 @@
-ignores: []
+ignores:
+- id: CVE-2026-102554
+  reason: "com.google.guava:guava 33.4.6-jre bundled in Gradle 9.9.1 (/opt/gradle/lib) - fixed in 33.7.2; no Gradle release ships it yet, build-time only image"
+  expires: 2026-12-31
