@@ -74,6 +74,9 @@ ignores:
 - id: CVE-2026-112323
   reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-112366
+  reason: "picomatch in Node.js - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/all-sdks-debian:local (debian 13.7) - No fix reported"
   expires: 2026-12-31

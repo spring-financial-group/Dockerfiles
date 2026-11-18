@@ -41,6 +41,9 @@ ignores:
 - id: CVE-2026-112323
   reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
+- id: CVE-2026-112366
+  reason: "picomatch in Node.js - No fix reported"
+  expires: 2026-12-31
 - id: CVE-2026-118380
   reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
