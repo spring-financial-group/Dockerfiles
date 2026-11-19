@@ -197,3 +197,6 @@ ignores:
 - id: CVE-2026-99272
   reason: "linux-libc-dev in create-ignores/golang-pipeline:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-97054
+  reason: "gobuildcache still relies on go stdlib 1.27.3"
+  expires: 2026-12-3
