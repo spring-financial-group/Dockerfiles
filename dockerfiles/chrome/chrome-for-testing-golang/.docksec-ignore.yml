@@ -146,3 +146,6 @@ ignores:
 - id: CVE-2026-9538
   reason: "perl-base in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
+- id: CVE-2026-97054
+  reason: "gobuildcache still relies on go stdlib 1.27.3"
+  expires: 2026-12-31
