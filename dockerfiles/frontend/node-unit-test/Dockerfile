@@ -24,6 +24,8 @@ RUN npm install -g \
         libxrandr2 \
         libgbm1 \
         libasound2 \
-        linux-libc-dev
+        linux-libc-dev \
+        brace-expansion \
+        undici
 
 CMD ["bash"]
