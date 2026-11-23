@@ -1118,3 +1118,135 @@ ignores:
 - id: CVE-2026-99288
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - fixed in 6.1.192-1"
   expires: 2026-12-31
+- id: CVE-2026-99362 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-98103 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99302 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99304 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99310 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99312 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99324 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99346 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99355 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99357 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99366 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99387 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99388 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99389 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99419 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99424 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99441 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99454 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99460 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99471 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99531 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99565 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99568 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99583 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99590 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99591 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99603 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99634 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99659 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99661 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99662 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99677 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99679 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99707 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99709 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99754 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99758 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-99785 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-102276
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-102278
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-109383
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-109869
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-19534 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-87018 
+  reason: "linux-libc-dev - no fix reported"
+  expires: 2026-12-31

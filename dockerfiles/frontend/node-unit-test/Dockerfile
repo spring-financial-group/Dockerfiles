@@ -23,9 +23,6 @@ RUN npm install -g \
         libxfixes3 \
         libxrandr2 \
         libgbm1 \
-        libasound2 \
-        linux-libc-dev \
-        brace-expansion \
-        undici
+        libasound2
 
 CMD ["bash"]
