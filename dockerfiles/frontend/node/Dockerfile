@@ -1,5 +1,5 @@
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.22-alpine
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:26.13-alpine
 
-RUN npm install -g npm@11.19.0 @angular/cli@20.3 @angular/compiler-cli@20.3 typescript@5.8
+RUN npm install -g npm@11.20.0 @angular/cli@22.3 @angular/compiler-cli@22.3 typescript@6.0
 
 CMD ["/bin/sh"]
