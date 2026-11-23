@@ -1,12 +1,13 @@
 # Playwright on Alpine is still experimental, so we will use a Debian-based image for now. See https://playwright.dev/docs/intro#running-on-alpine-linux for more information.
-FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.22-bookworm
+FROM jx3mqubebuild.azurecr.io/docker-io/library/node:26.13-bookworm
+
 
 # Setting npm version on it's own line to avoid issues with it updating itself
-RUN npm install -g npm@11.10.0
+RUN npm install -g npm@11.20.0
 RUN npm install -g \
-    @angular/cli@20.3 \
-    @angular/compiler-cli@20.3 \
-    typescript@5.8 && \
+    @angular/cli@22.3 \
+    @angular/compiler-cli@22.3 \
+    typescript@6.0 && \
     apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
