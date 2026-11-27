@@ -24,7 +24,7 @@ ENV UV_PYTHON_INSTALL_DIR=/opt/uv/python
 RUN uv python install ${PYTHON_VERSION} \
     && uv pip uninstall --system --python ${PYTHON_VERSION} --break-system-packages pip
 
-ARG YQ_VERSION=v4.53.6
+ARG YQ_VERSION=v4.54.3
 ARG YQ_BINARY=yq_linux_amd64
 
 RUN wget -q https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq

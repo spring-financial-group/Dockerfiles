@@ -6,6 +6,7 @@ ARG TZ=Europe/London
 
 # Download and install Chrome for Testing, making it available on PATH as `chrome`
 RUN apt-get update \
+ && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \

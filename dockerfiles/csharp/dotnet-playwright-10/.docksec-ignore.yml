@@ -1,10 +1,4 @@
 ignores:
-- id: CVE-2026-109518
-  reason: "apt, libapt-pkg7.0 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - fixed in 3.2.1ubuntu0.1"
-  expires: 2026-12-31
-- id: CVE-2026-111497
-  reason: "libbrotli1 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - fixed in 1.2.0-3ubuntu0.1"
-  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/bin/pebble - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
@@ -49,9 +43,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-88092
   reason: "Microsoft.AspNetCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"
-  expires: 2026-12-31
-- id: CVE-2026-92392
-  reason: "curl, libcurl3t64-gnutls, libcurl4t64 in create-ignores/dotnet-playwright-10:local (ubuntu 26.04) - fixed in 8.18.0-1ubuntu2.8"
   expires: 2026-12-31
 - id: CVE-2026-96225
   reason: "Microsoft.NETCore.App.Runtime.linux-x64 in usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json - fixed in 8.0.32, 10.0.13, 11.0.0-rc.2, 9.0.21"

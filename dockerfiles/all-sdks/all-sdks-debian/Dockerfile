@@ -2,8 +2,8 @@ ARG GO_VERSION=1.27.4
 ARG JAVA_VERSION=17
 ARG DOTNET_VERSION=10.0
 ARG NODE_VERSION=24.22.1
-ARG NPM_VERSION=11.10.0
-ARG GRADLE_VERSION=8.13
+ARG NPM_VERSION=11.21.3
+ARG GRADLE_VERSION=8.14.8
 
 # These should be pinned to an SHA and updated by renovatebot
 FROM jx3mqubebuild.azurecr.io/docker-io/library/golang:${GO_VERSION}-bookworm AS go-builder

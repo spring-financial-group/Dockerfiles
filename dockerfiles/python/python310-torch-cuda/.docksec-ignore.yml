@@ -437,9 +437,6 @@ ignores:
 - id: CVE-2025-68806
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2025-68973
-  reason: "dirmngr, gnupg, gnupg-l10n, gnupg-utils, gnupg2, gpg, gpg-agent, gpg-wks-client, gpg-wks-server, gpgconf, gpgsm, gpgv in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 2.2.27-3ubuntu2.5"
-  expires: 2026-12-31
 - id: CVE-2025-71073
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
   expires: 2026-12-31
@@ -454,9 +451,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-100081
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-109518
-  reason: "apt, libapt-pkg6.0 in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 2.4.15ubuntu0.1"
   expires: 2026-12-31
 - id: CVE-2026-112390
   reason: "pillow in Python - fixed in 13.0.0"
@@ -655,9 +649,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-43490
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-45447
-  reason: "libssl3, openssl in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 3.0.2-0ubuntu1.25"
   expires: 2026-12-31
 - id: CVE-2026-45940
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
@@ -1033,9 +1024,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-80991
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-84782
-  reason: "libssl3, openssl in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - fixed in 3.0.2-0ubuntu1.30"
   expires: 2026-12-31
 - id: CVE-2026-89448
   reason: "linux-libc-dev in create-ignores/python310-torch-cuda:local (ubuntu 22.04) - No fix reported"

@@ -1,7 +1,7 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/node:24.22
 
 # Install required dependencies
-RUN apt update && apt install -y \
+RUN apt update && apt upgrade -y && apt install -y \
     unzip \
     wget \
     && rm -rf /var/lib/apt/lists/*
@@ -29,11 +29,11 @@ RUN sdkmanager --install "platform-tools" \
     "build-tools;36.0.0" \
     "cmdline-tools;latest"
 
-# Install Gradle 8.13
-RUN wget -q https://services.gradle.org/distributions/gradle-8.13-bin.zip -O /tmp/gradle.zip \
+# Install Gradle 8.14.8
+RUN wget -q https://services.gradle.org/distributions/gradle-8.14.8-bin.zip -O /tmp/gradle.zip \
     && unzip /tmp/gradle.zip -d /opt/ \
     && rm /tmp/gradle.zip \
-    && ln -s /opt/gradle-8.13/bin/gradle /usr/local/bin/gradle
+    && ln -s /opt/gradle-8.14.8/bin/gradle /usr/local/bin/gradle
 
 # Install Ruby required for Fastlane deployment
 RUN apt update && apt install -y ruby ruby-dev

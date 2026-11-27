@@ -134,12 +134,6 @@ ignores:
 - id: CVE-2026-100072
   reason: "linux-libc-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-102276
-  reason: "brace-expansion in Node.js - fixed in 5.0.10, 3.0.7, 2.1.5, 1.1.19"
-  expires: 2026-12-31
-- id: CVE-2026-102278
-  reason: "brace-expansion in Node.js - fixed in 5.0.11, 3.0.8, 2.1.6, 1.1.20"
-  expires: 2026-12-31
 - id: CVE-2026-105437
   reason: "git, git-man in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
   expires: 2026-12-31
@@ -160,12 +154,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-109090
   reason: "libxi6 in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-109383
-  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
-  expires: 2026-12-31
-- id: CVE-2026-109869
-  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
 - id: CVE-2026-111760
   reason: "git, git-man in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -244,9 +232,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libnss-systemd, libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv, systemd-timesyncd in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-19534
-  reason: "undici in Node.js - fixed in 6.28.1, 7.29.1, 8.10.2"
   expires: 2026-12-31
 - id: CVE-2026-27622
   reason: "libopenexr-3-1-30, libopenexr-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
@@ -481,9 +466,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-86144
   reason: "libxml2, libxml2-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-87018
-  reason: "undici in Node.js - fixed in 6.29.1, 7.30.1, 8.12.2"
   expires: 2026-12-31
 - id: CVE-2026-88806
   reason: "libx11-6, libx11-data, libx11-dev in create-ignores/node-unit-test:local (debian 12.15) - No fix reported"

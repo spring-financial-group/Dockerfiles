@@ -17,9 +17,6 @@ ignores:
 - id: CVE-2026-124709
   reason: "libssl3t64, openssl-provider-legacy in create-ignores/debian13-slim:local (debian 13.8) - No fix reported"
   expires: 2026-12-31
-- id: CVE-2026-124851
-  reason: "libzstd1 in create-ignores/debian13-slim:local (debian 13.8) - fixed in 1.5.7+dfsg-1+deb13u1"
-  expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libsystemd0, libudev1 in create-ignores/debian13-slim:local (debian 13.8) - No fix reported"
   expires: 2026-12-31

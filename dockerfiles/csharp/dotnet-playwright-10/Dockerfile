@@ -1,8 +1,7 @@
 FROM jx3mqubebuild.azurecr.io/mcr-microsoft-com/playwright/dotnet:v1.63.0-resolute
 
-# Upgrade openssl ahead of the upstream image (CVE-2026-84782)
 RUN apt-get update \
-    && apt-get install -y --only-upgrade openssl libssl3t64 \
+    && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install .NET 10

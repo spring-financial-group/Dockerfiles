@@ -1,6 +1,6 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
 
-ARG TFLINT_VERSION=v0.64.0
+ARG TFLINT_VERSION=v0.66.0
 
 RUN apk update && \
     apk upgrade && \

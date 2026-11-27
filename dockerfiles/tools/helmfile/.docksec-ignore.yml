@@ -78,158 +78,104 @@ ignores:
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.24.13, 1.25.7, 1.26.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-111943
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.10, 1.27.3"
-  expires: 2026-12-31
-- id: CVE-2026-116587
-  reason: "github.com/go-jose/go-jose/v4 in usr/local/bin/helmfile - fixed in 4.1.6"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.8, 1.26.1"
   expires: 2026-12-31
-- id: CVE-2026-25681
-  reason: "golang.org/x/net in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.55.0"
-  expires: 2026-12-31
-- id: CVE-2026-27136
-  reason: "golang.org/x/net in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.55.0"
-  expires: 2026-12-31
 - id: CVE-2026-27145
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.11, 1.26.4"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
 - id: CVE-2026-32280
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.9, 1.26.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.9, 1.26.2"
   expires: 2026-12-31
 - id: CVE-2026-32281
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.9, 1.26.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.9, 1.26.2"
   expires: 2026-12-31
 - id: CVE-2026-32283
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.9, 1.26.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.9, 1.26.2"
   expires: 2026-12-31
 - id: CVE-2026-33811
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.10, 1.26.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-33814
-  reason: "golang.org/x/net, stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.53.0, 1.25.10, 1.26.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-33818
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-35204
-  reason: "helm.sh/helm/v4 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 4.1.4"
-  expires: 2026-12-31
-- id: CVE-2026-35205
-  reason: "helm.sh/helm/v4 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 4.1.4"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-39820
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.10, 1.26.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-39821
-  reason: "golang.org/x/net, stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.57.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-39822
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
   expires: 2026-12-31
 - id: CVE-2026-39828
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39829
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39830
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39831
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39832
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39835
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-39836
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.10, 1.26.3"
-  expires: 2026-12-31
-- id: CVE-2026-39883
-  reason: "go.opentelemetry.io/otel/sdk in usr/local/bin/helmfile - fixed in 1.43.0"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-42499
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.10, 1.26.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-42504
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.11, 1.26.4"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
 - id: CVE-2026-42508
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
-  expires: 2026-12-31
-- id: CVE-2026-46595
-  reason: "golang.org/x/crypto in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-46597
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.52.0"
-  expires: 2026-12-31
-- id: CVE-2026-46600
-  reason: "golang.org/x/net in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.56.0"
-  expires: 2026-12-31
-- id: CVE-2026-46680
-  reason: "github.com/containerd/containerd in usr/local/bin/helmfile - fixed in 1.7.32"
-  expires: 2026-12-31
-- id: CVE-2026-50151
-  reason: "oras.land/oras-go/v2 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 2.6.1"
-  expires: 2026-12-31
-- id: CVE-2026-50163
-  reason: "oras.land/oras-go/v2 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 2.6.2"
-  expires: 2026-12-31
-- id: CVE-2026-53488
-  reason: "github.com/containerd/containerd in usr/local/bin/helmfile - fixed in 1.7.33"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-56851
-  reason: "golang.org/x/text in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.41.0"
+  reason: "golang.org/x/text in bin/docker-credential-acr-env - fixed in 0.41.0"
   expires: 2026-12-31
 - id: CVE-2026-56852
-  reason: "golang.org/x/text in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.39.0"
+  reason: "golang.org/x/text in bin/docker-credential-acr-env - fixed in 0.39.0"
   expires: 2026-12-31
 - id: CVE-2026-56853
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-56854
-  reason: "golang.org/x/crypto in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.55.0"
+  reason: "golang.org/x/crypto in bin/docker-credential-acr-env - fixed in 0.55.0"
   expires: 2026-12-31
 - id: CVE-2026-56858
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-56859
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-56860
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-56862
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
-  expires: 2026-12-31
-- id: CVE-2026-63209
-  reason: "github.com/klauspost/compress in usr/local/bin/helmfile - fixed in 1.18.7"
-  expires: 2026-12-31
-- id: CVE-2026-78661
-  reason: "golang.org/x/net in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.62.0"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-78667
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-78669
-  reason: "golang.org/x/net, stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 0.60.0, 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: CVE-2026-84304
-  reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.83.1"
-  expires: 2026-12-31
-- id: CVE-2026-84445
-  reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e"
-  expires: 2026-12-31
-- id: CVE-2026-85731
-  reason: "oras.land/oras-go/v2 in usr/local/bin/helm, usr/local/bin/helmfile - fixed in 2.6.2"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
 - id: CVE-2026-97031
-  reason: "stdlib in bin/docker-credential-acr-env, usr/local/bin/helm, usr/local/bin/helmfile - fixed in 1.26.9, 1.27.2"
-  expires: 2026-12-31
-- id: GHSA-hrxh-6v49-42gf
-  reason: "google.golang.org/grpc in usr/local/bin/helmfile - fixed in 1.82.1"
+  reason: "stdlib in bin/docker-credential-acr-env - fixed in 1.26.9, 1.27.2"
   expires: 2026-12-31
