@@ -1,1 +1,19 @@
-ignores: []
+ignores:
+- id: CVE-2026-11979
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r5"
+  expires: 2026-12-31
+- id: CVE-2026-86138
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r4"
+  expires: 2026-12-31
+- id: CVE-2026-86139
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r4"
+  expires: 2026-12-31
+- id: CVE-2026-86140
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r4"
+  expires: 2026-12-31
+- id: CVE-2026-86142
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r4"
+  expires: 2026-12-31
+- id: CVE-2026-86143
+  reason: "libxml2 in create-ignores/nginx-stable-alpine:local (alpine 3.24.4) - fixed in 2.13.9-r4"
+  expires: 2026-12-31

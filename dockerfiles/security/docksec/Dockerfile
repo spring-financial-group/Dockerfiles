@@ -1,10 +1,10 @@
 FROM jx3mqubebuild.azurecr.io/dhi-io/python:3.14-debian-dev AS builder
 
 ARG DOCKSEC_VERSION=2026.7.5
-ARG TRIVY_VERSION=0.73.0
+ARG TRIVY_VERSION=0.76.2
 ARG HADOLINT_VERSION=2.12.0
-ARG DOCKER_VERSION=29.7.1
-ARG YQ_VERSION=4.53.3
+ARG DOCKER_VERSION=29.10.1
+ARG YQ_VERSION=4.54.3
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \

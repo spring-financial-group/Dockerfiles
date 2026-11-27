@@ -17,6 +17,7 @@ ARG TARGETARCH=amd64
 COPY --from=golang /usr/local/go /usr/local/go
 RUN mkdir -p "$GOPATH"/{src,pkg,bin} \
  && apt-get update \
+ && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends \
     make \
  && rm -rf /var/lib/apt/lists/* \

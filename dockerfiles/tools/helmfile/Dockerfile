@@ -1,8 +1,8 @@
 FROM jx3mqubebuild.azurecr.io/docker-io/library/alpine:3.21
 
 ENV ACR_ENV_VERSION=0.0.4 \
-    HELM_VERSION=4.1.3 \
-    HELMFILE_VERSION=1.4.4
+    HELM_VERSION=4.3.2 \
+    HELMFILE_VERSION=1.8.5
 
 RUN apk add --no-cache ca-certificates git bash
 
