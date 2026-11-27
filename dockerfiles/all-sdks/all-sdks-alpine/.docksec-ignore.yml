@@ -41,9 +41,6 @@ ignores:
 - id: CVE-2026-112323
   reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
-- id: CVE-2026-112366
-  reason: "picomatch in Node.js - No fix reported"
-  expires: 2026-12-31
 - id: CVE-2026-118380
   reason: "krb5-libs in create-ignores/all-sdks-alpine:local (alpine 3.23.6) - fixed in 1.22.3-r0"
   expires: 2026-12-31
@@ -52,6 +49,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-13506
   reason: "org.bouncycastle:bcprov-jdk18on in Java - fixed in 1.85"
+  expires: 2026-12-31
+- id: CVE-2026-22816
+  reason: "org.gradle:gradle-core in Java - fixed in 8.14.4, 9.3.0"
+  expires: 2026-12-31
+- id: CVE-2026-22865
+  reason: "org.gradle:gradle-core in Java - fixed in 8.14.4, 9.3.0"
   expires: 2026-12-31
 - id: CVE-2026-23949
   reason: "jaraco.context in Python - fixed in 6.1.0"
@@ -142,7 +145,4 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-9496
   reason: "pacote in Node.js - fixed in 21.5.1"
-  expires: 2026-12-31
-- id: CVE-2026-97054
-  reason: "gobuildcache still relies on go stdlib 1.27.3"
   expires: 2026-12-31

@@ -3,7 +3,10 @@ ignores:
   reason: "libncursesw6, libtinfo6, ncurses-base, ncurses-bin in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-107364
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
+  expires: 2026-12-31
+- id: CVE-2026-107494
+  reason: "libssl3t64, openssl, openssl-provider-legacy in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-109089
   reason: "libxi6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -12,31 +15,31 @@ ignores:
   reason: "libxi6 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-112315
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112316
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112317
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112318
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112319
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112320
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112321
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112322
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-112323
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-113351
   reason: "libexpat1 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -51,10 +54,10 @@ ignores:
   reason: "libexpat1 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-118380
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-119079
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-119373
   reason: "libsqlite3-0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -67,6 +70,12 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-12064
   reason: "curl, libcurl4t64 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-124709
+  reason: "libssl3t64, openssl, openssl-provider-legacy in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  expires: 2026-12-31
+- id: CVE-2026-124851
+  reason: "libzstd1 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.5.7+dfsg-1+deb13u1"
   expires: 2026-12-31
 - id: CVE-2026-16742
   reason: "libpam-systemd, libsystemd-shared, libsystemd0, libudev1, systemd, systemd-sysv in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -90,10 +99,10 @@ ignores:
   reason: "libxml2 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
   expires: 2026-12-31
 - id: CVE-2026-71199
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-71200
-  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
+  reason: "libgssapi-krb5-2, libk5crypto3, libkrb5-3, libkrb5support0 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - fixed in 1.21.3-5+deb13u2"
   expires: 2026-12-31
 - id: CVE-2026-74860
   reason: "libxml2 in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
@@ -145,7 +154,4 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-9538
   reason: "perl-base in create-ignores/chrome-for-testing-golang:local (debian 13.7) - No fix reported"
-  expires: 2026-12-31
-- id: CVE-2026-97054
-  reason: "gobuildcache still relies on go stdlib 1.27.3"
   expires: 2026-12-31

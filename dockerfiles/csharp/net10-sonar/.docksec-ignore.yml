@@ -54,7 +54,7 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-39821
-  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.55.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "golang.org/x/net, stdlib in usr/local/bin/jx - fixed in 0.57.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-39822
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
@@ -87,9 +87,6 @@ ignores:
   reason: "stdlib in usr/local/bin/jx - fixed in 1.25.11, 1.26.4"
   expires: 2026-12-31
 - id: CVE-2026-42508
-  reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
-  expires: 2026-12-31
-- id: CVE-2026-46595
   reason: "golang.org/x/crypto in usr/local/bin/jx - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-46597

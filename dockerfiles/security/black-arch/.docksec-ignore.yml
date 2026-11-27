@@ -74,38 +74,11 @@ ignores:
 - id: CVE-2026-100354
   reason: "github.com/getkin/kin-openapi in usr/local/bin/nuclei - fixed in 0.149.0"
   expires: 2026-12-31
-- id: CVE-2026-105437
-  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
-  expires: 2026-12-31
-- id: CVE-2026-111760
-  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
-  expires: 2026-12-31
 - id: CVE-2026-111943
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.26.10, 1.27.3"
   expires: 2026-12-31
-- id: CVE-2026-114466
-  reason: "git, git-init-template, git-perl, perl-git in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 2.54.1-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123863
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123864
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123865
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123866
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123872
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-123874
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
-  expires: 2026-12-31
-- id: CVE-2026-126051
-  reason: "nodejs in create-ignores/black-arch:local (alpine 3.24.4) - fixed in 24.22.3-r0"
+- id: CVE-2026-115563
+  reason: "mcp in Python - fixed in 2.2.0, 1.30.0"
   expires: 2026-12-31
 - id: CVE-2026-25679
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.8, 1.26.1"
@@ -147,7 +120,7 @@ ignores:
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.10, 1.26.3"
   expires: 2026-12-31
 - id: CVE-2026-39821
-  reason: "golang.org/x/net, stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 0.55.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
+  reason: "golang.org/x/net, stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 0.57.0, 1.25.13, 1.26.6, 1.27.0-rc.3"
   expires: 2026-12-31
 - id: CVE-2026-39822
   reason: "stdlib in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 1.25.12, 1.26.5, 1.27.0-rc.2"
@@ -187,9 +160,6 @@ ignores:
   expires: 2026-12-31
 - id: CVE-2026-45022
   reason: "github.com/go-git/go-git/v5 in usr/local/bin/nuclei - fixed in 5.19.0"
-  expires: 2026-12-31
-- id: CVE-2026-46595
-  reason: "golang.org/x/crypto in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 0.52.0"
   expires: 2026-12-31
 - id: CVE-2026-46597
   reason: "golang.org/x/crypto in usr/local/bin/gitleaks, usr/local/bin/nuclei - fixed in 0.52.0"
